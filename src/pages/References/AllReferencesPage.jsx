@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { references } from '../../data/referenceData';
+import { references } from '../../data/ReferenceData';
 import { motion } from 'framer-motion';
 import ReferenceCard from './ReferenceCard';
 

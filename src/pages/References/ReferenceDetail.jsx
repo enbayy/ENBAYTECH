@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { references } from "../../data/referenceData";
+import { references } from "../../data/ReferenceData";
 
 const ReferencesDetailPage = () => {
     const { id } = useParams();
