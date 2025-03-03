@@ -4,18 +4,20 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./pages/Hero";
-import BrandsLogo from "./pages/References";
+import References from "./pages/References/References";
 import Testimonial from "./pages/Testimonial";
 import BlogsComp from "./pages/Blogs/BlogsComp";
 import Footer from "./components/Footer/Footer";
-import Services from "./pages/Services";
-import AllServices from "./pages/AllServicesPage";
+import Services from "./pages/Services/Services";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import ProductPage from "./pages/Products/ProductsPage";
-import AllReferencesPage from "./pages/AllReferencesPage";
 import BlogDetail from "./pages/Blogs/BlogDetail";
-import ServiceDetail from "./pages/ServiceDetail";
+import ServiceDetail from "./pages/Services/ServiceDetail";
+import ProductDetail from "./pages/Products/ProductsDetail";
+import AllServices from "./pages/Services/AllServicesPage";
+import AllReferencesPage from "./pages/References/AllReferencesPage";
+import ReferencesDetailPage from "./pages/References/ReferenceDetail";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -48,7 +50,7 @@ const App = () => {
           element={
             <>
               <Hero />
-              <BrandsLogo />
+              <References />
               <Services />
               <ProductPage />
               <Testimonial />
@@ -62,7 +64,9 @@ const App = () => {
         <Route path="/hakkimizda" element={<About />} />
         <Route path="/iletisim" element={<Contact />} />
         <Route path="/urunler" element={<ProductPage />} />
+        <Route path="/urunler/:id" element={<ProductDetail />} />
         <Route path="/referanslar" element={<AllReferencesPage />} />
+        <Route path="/referanslar/:id" element={<ReferencesDetailPage />} />
         <Route path="/" element={<BlogsComp />} />
         <Route path="/blog/:id" element={<BlogDetail />} />
       </Routes>

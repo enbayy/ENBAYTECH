@@ -5,7 +5,7 @@ const ReferenceCard = ({ id, title, imageUrl }) => {
     const navigate = useNavigate();
 
     const handleCardClick = () => {
-        navigate(`/references/${id}`);
+        navigate(`/referanslar/${id}`);
     };
 
     return (

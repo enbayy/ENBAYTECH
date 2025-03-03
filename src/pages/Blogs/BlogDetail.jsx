@@ -1,9 +1,11 @@
 import { useParams } from "react-router-dom";
 import { blog } from "../../data/BlogData";
+import { Link } from "react-router-dom";
 
 const BlogDetail = () => {
     const { id } = useParams();
     const blogData = blog.find((item) => item.id === parseInt(id));
+    const otherBlogs = blog.filter((item) => item.id !== parseInt(id));
 
     if (!blogData) {
         return <h2 className="text-center text-2xl font-semibold mt-10">Blog bulunamadı!</h2>;
@@ -25,7 +27,6 @@ const BlogDetail = () => {
             </div>
 
             <div className="mt-8">
-
                 {blogData.sections.map((section, index) => (
                     <div key={index} className="mt-8">
                         <h2 className="text-2xl font-semibold text-gray-800 border-l-4 border-primary pl-3">
@@ -35,6 +36,27 @@ const BlogDetail = () => {
                     </div>
                 ))}
             </div>
+
+            {otherBlogs.length > 0 && (
+                <div className="mt-16">
+                    <h2 className="text-2xl font-semibold text-gray-800 border-l-4 border-primary pl-3 mb-6">
+                        Bunlar da ilginizi çekebilir:
+                    </h2>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        {otherBlogs.slice(0, 3).map((item) => (
+                            <Link key={item.id} to={`/blog/${item.id}`} className="block">
+                                <div className="shadow-md rounded-lg overflow-hidden">
+                                    <img src={item.imageUrl} alt={item.title} className="w-full h-40 object-cover" />
+                                    <div className="p-4">
+                                        <h3 className="text-lg font-semibold">{item.title}</h3>
+                                        <p className="text-sm text-gray-600 mt-2">{item.sections[0]?.content.slice(0, 100)}...</p>
+                                    </div>
+                                </div>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+            )}
         </div>
     );
 };

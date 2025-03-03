@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { services } from "../data/ServicesData";
+import { services } from "../../data/ServicesData";
 
 const ServiceDetail = () => {
     const { id } = useParams();

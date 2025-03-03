@@ -35,8 +35,8 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="dark:bg-gray-950 dark:text-white duration-300 ">
-      <div className="container min-h-[620px] flex mt-10 sm:mt-0 flex-col items-center">
+    <div className="dark:bg-gray-950 dark:text-white duration-300 min-h-screen flex justify-center items-center">
+      <div className="container flex flex-col items-center">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 place-items-center">
           <div data-aos="zoom-in" className="order-1 sm:order-2 relative">
             <img
@@ -52,7 +52,7 @@ const Hero = () => {
               className="text-4xl sm:text-5xl font-semibold"
               style={{ lineHeight: 1.2 }}
             >
-              Kurumsal B2B Yazılım ve Web Teknolojileri Ajansı {" "}
+              Kurumsal B2B Yazılım ve Web Teknolojileri Ajansı{" "}
               <span className="text-primary">Engin Tasarım</span>
             </h1>
             <p data-aos="fade-up" data-aos-delay="300">

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
-import ReferenceCard from '../components/ReferenceCard';
-import { references } from '../data/referenceData';
+import { references } from '../../data/referenceData';
 import { motion } from 'framer-motion';
+import ReferenceCard from './ReferenceCard';
 
 const AllReferencesPage = () => {
     const referenceRefs = useRef([]);

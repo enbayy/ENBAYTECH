@@ -1,5 +1,5 @@
 import React from "react";
-import { services } from "../data/ServicesData";
+import { services } from "../../data/ServicesData";
 import { useNavigate } from "react-router-dom";
 
 const Services = () => {
@@ -10,7 +10,7 @@ const Services = () => {
     };
 
     return (
-        <section id="services" className="bg-white dark:bg-black dark:text-white py-12">
+        <section id="services" className="bg-gray-100 dark:bg-black dark:text-white py-12">
             <div className="container">
                 <div className="pb-12 text-center space-y-3">
                     <h1 data-aos="fade-up" className="text-3xl font-semibold text-black dark:text-primary">
