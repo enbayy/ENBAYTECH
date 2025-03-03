@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa6";
 
-const BlogCard = ({ imageUrl, title, description }) => {
+const BlogCard = ({ id, imageUrl, title, description }) => {
   return (
-    <>
-      <div className="dark:text-white group">
+    <Link to={`/blog/${id}`} className="group block">
+      <div className="dark:text-white">
         <div className="overflow-hidden">
           <img
             src={imageUrl}
@@ -20,7 +21,7 @@ const BlogCard = ({ imageUrl, title, description }) => {
           </div>
         </div>
       </div>
-    </>
+    </Link>
   );
 };
 

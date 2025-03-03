@@ -14,6 +14,8 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import ProductPage from "./pages/Products/ProductsPage";
 import AllReferencesPage from "./pages/AllReferencesPage";
+import BlogDetail from "./pages/Blogs/BlogDetail";
+import ServiceDetail from "./pages/ServiceDetail";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -47,19 +49,22 @@ const App = () => {
             <>
               <Hero />
               <BrandsLogo />
-              <ProductPage />
               <Services />
+              <ProductPage />
               <Testimonial />
               <BlogsComp />
             </>
           }
         />
         <Route path="/hizmetler" element={<Services />} />
+        <Route path="/hizmetler/:id" element={<ServiceDetail />} />
         <Route path="/hizmetlerimiz" element={<AllServices />} />
         <Route path="/hakkimizda" element={<About />} />
         <Route path="/iletisim" element={<Contact />} />
         <Route path="/urunler" element={<ProductPage />} />
         <Route path="/referanslar" element={<AllReferencesPage />} />
+        <Route path="/" element={<BlogsComp />} />
+        <Route path="/blog/:id" element={<BlogDetail />} />
       </Routes>
       <Footer />
     </div>
