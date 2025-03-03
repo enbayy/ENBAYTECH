@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Navbar from "./components/Navbar/Navbar";
@@ -12,6 +12,18 @@ import Services from "./pages/Services";
 import AllServices from "./pages/AllServicesPage";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import ProductPage from "./pages/Products/ProductsPage";
+import AllReferencesPage from "./pages/AllReferencesPage";
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
 
 const App = () => {
   useEffect(() => {
@@ -26,13 +38,16 @@ const App = () => {
 
   return (
     <div className="bg-white dark:bg-black dark:text-white text-black overflow-x-hidden">
+      <ScrollToTop />
       <Navbar />
       <Routes>
-        <Route path="/" element=
-          {
+        <Route
+          path="/"
+          element={
             <>
               <Hero />
               <BrandsLogo />
+              <ProductPage />
               <Services />
               <Testimonial />
               <BlogsComp />
@@ -43,6 +58,8 @@ const App = () => {
         <Route path="/hizmetlerimiz" element={<AllServices />} />
         <Route path="/hakkimizda" element={<About />} />
         <Route path="/iletisim" element={<Contact />} />
+        <Route path="/urunler" element={<ProductPage />} />
+        <Route path="/referanslar" element={<AllReferencesPage />} />
       </Routes>
       <Footer />
     </div>

@@ -12,18 +12,23 @@ export const MenuLinks = [
   },
   {
     id: 2,
-    name: "Hakkımızda",
-    link: "/hakkimizda",
-  },
-  {
-    id: 3,
     name: "Hizmetler",
     link: "/hizmetlerimiz",
   },
   {
+    id: 3,
+    name: "Ürünler",
+    link: "/urunler",
+  },
+  {
     id: 4,
-    name: "Projeler",
-    link: "/#projects",
+    name: "Referanslar",
+    link: "/referanslar",
+  },
+  {
+    id: 5,
+    name: "Hakkımızda",
+    link: "/hakkimizda",
   },
 ];
 const Navbar = () => {

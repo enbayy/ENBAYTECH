@@ -1,10 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaCheckCircle } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const About = () => {
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate("/iletisim")
+    }
     return (
-        <div className="w-full bg-black dark:bg-gray-300 py-24 relative overflow-hidden text-white dark:text-black">
+        <div className="w-full bg-white dark:bg-black py-24 relative overflow-hidden text-black dark:text-white">
             <div className="container mx-auto text-center px-6 sm:px-10 md:px-20 lg:px-40">
                 <motion.h1
                     className="text-4xl sm:text-5xl font-bold mb-6 relative"
@@ -43,7 +49,7 @@ const About = () => {
                     {["Anahtar teslim projeler", "Tasarım & Yazılım", "Mobil Uygulama", "Kreatif Hizmetler", "Dijital Ajans Hizmetleri"].map((item, index) => (
                         <motion.li
                             key={index}
-                            className="flex items-center gap-2 bg-gray-800 dark:bg-gray-100 p-4 rounded-lg shadow-md"
+                            className="flex items-center gap-2 bg-black dark:bg-gray-100 text-white dark:text-black p-4 rounded-lg shadow-md"
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.2 }}
@@ -99,12 +105,12 @@ const About = () => {
             </div>
 
             <div className="text-center mt-12">
-                <a
-                    href="/contact"
+                <button
+                    onClick={handleClick}
                     className="bg-[#FF8C00] text-black py-3 px-10 rounded-full text-lg font-semibold hover:bg-[#FF9A30] hover:text-white transition-all duration-500 shadow-lg transform hover:scale-105"
                 >
                     İletişime Geç
-                </a>
+                </button>
             </div>
         </div>
 
