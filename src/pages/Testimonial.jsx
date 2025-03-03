@@ -15,7 +15,13 @@ const Testimonial = () => {
     cssEase: "linear",
     pauseOnHover: true,
     pauseOnFocus: true,
+    appendDots: dots => (
+      <div>
+        <ul className="custom-dots"> {dots} </ul>
+      </div>
+    ),
   };
+
   return (
     <>
       <div className="py-10">
@@ -28,7 +34,7 @@ const Testimonial = () => {
               {testimonials.map(({ id, name, comment, img, company }) => {
                 return (
                   <div key={id} className="my-6">
-                    <div className="flex flex-col sm:flex-row gap-5 md:gap-14 p-4 mx-4 rounded-xl dark:bg-gray-800 relative">
+                    <div className="flex flex-col sm:flex-row gap-5 md:gap-14 p-4 mx-4 rounded-xl dark:bg-black relative">
                       <img
                         src={img}
                         alt=""
@@ -41,7 +47,7 @@ const Testimonial = () => {
                           “{comment}”
                         </p>
                       </div>
-                      <p className="text-black/10 text-[12rem] font-serif absolute bottom-0 right-0">
+                      <p className="text-black/10 dark:text-white/80 text-[12rem] font-serif absolute bottom-0 right-0">
                         ,,
                       </p>
                     </div>
@@ -52,6 +58,16 @@ const Testimonial = () => {
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        .custom-dots li button:before {
+          font-size: 10px;
+          color: #000;
+        }
+        .dark .custom-dots li button:before {
+          color: #fff;
+        }
+      `}</style>
     </>
   );
 };

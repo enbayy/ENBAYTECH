@@ -17,7 +17,7 @@ const ProductPage = () => {
                     {productsToDisplay.map((product) => (
                         <div
                             key={product.id}
-                            className="flex flex-col bg-white dark:bg-gray-900 shadow-lg rounded-xl overflow-hidden border-2 border-transparent hover:border-primary transition-all duration-300 p-6"
+                            className="flex flex-col bg-white dark:bg-black shadow-lg rounded-xl overflow-hidden border-2 border-transparent hover:border-primary transition-all duration-300 p-6"
                         >
                             <div className="w-full h-48 flex items-center justify-center rounded-xl overflow-hidden">
                                 <img src={product.imageUrl} alt={product.title} className="object-cover w-full h-full rounded-xl" />
