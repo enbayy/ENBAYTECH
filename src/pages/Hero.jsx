@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import hero from "../assets/hero.png";
+import { useNavigate } from "react-router-dom";
 
 const stats = [
   { value: 300, label: "Tamamlanan Proje" },
@@ -9,6 +10,11 @@ const stats = [
 
 const Hero = () => {
   const [counts, setCounts] = useState(stats.map(() => 0));
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/hizmetlerimiz")
+  }
 
   useEffect(() => {
     const duration = 2000;
@@ -59,6 +65,7 @@ const Hero = () => {
             teknoloji ortağınız.
           </p>
           <button
+            onClick={handleClick}
             data-aos="fade-up"
             data-aos-delay="500"
             className="text-white dark:text-black bg-primary hover:bg-primary-dark transition-all duration-300 px-8 py-4 rounded-full text-lg font-medium shadow-lg"
