@@ -48,11 +48,14 @@ const Navbar = () => {
     >
       <div className="container py-3 md:py-2">
         <div className="flex justify-between items-center">
-          <img
-            src="https://engintasarim.com/assets/images/logo.svg#logo"
-            alt="Logo"
-            className="w-[200px] h-auto"
-          />
+          <Link to="/">
+            <img
+              src="https://engintasarim.com/assets/images/logo.svg#logo"
+              alt="Logo"
+              className="w-[200px] h-auto"
+            />
+          </Link>
+
           <nav className="hidden md:block">
             <ul className="flex items-center gap-8">
               {MenuLinks.map(({ id, name, link }) => (

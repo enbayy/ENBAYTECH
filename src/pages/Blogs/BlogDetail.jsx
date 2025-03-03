@@ -44,12 +44,14 @@ const BlogDetail = () => {
                     </h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         {otherBlogs.slice(0, 3).map((item) => (
-                            <Link key={item.id} to={`/blog/${item.id}`} className="block">
-                                <div className="shadow-md rounded-lg overflow-hidden">
+                            <Link key={item.id} to={`/blog/${item.id}`} className="block h-full">
+                                <div className="shadow-md rounded-lg overflow-hidden flex flex-col h-full">
                                     <img src={item.imageUrl} alt={item.title} className="w-full h-40 object-cover" />
-                                    <div className="p-4">
+                                    <div className="p-4 flex flex-col flex-grow">
                                         <h3 className="text-lg font-semibold">{item.title}</h3>
-                                        <p className="text-sm text-gray-600 mt-2">{item.sections[0]?.content.slice(0, 100)}...</p>
+                                        <p className="text-sm text-gray-600 mt-2 flex-grow">
+                                            {item.sections[0]?.content.slice(0, 100)}...
+                                        </p>
                                     </div>
                                 </div>
                             </Link>
