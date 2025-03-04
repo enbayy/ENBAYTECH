@@ -34,8 +34,13 @@ const ScrollToTop = () => {
 };
 
 const Loading = () => (
-  <div className="flex items-center justify-center min-h-screen">
-    <p>Yükleniyor...</p>
+  <div className="fixed inset-0 flex items-center justify-center bg-white dark:bg-black">
+    <div className="flex flex-col items-center space-y-4">
+      <div className="w-16 h-16 border-4 border-yellow-500 border-t-transparent rounded-full animate-spin"></div>
+      <p className="text-lg font-semibold text-gray-700 dark:text-gray-300 animate-pulse">
+        Yükleniyor...
+      </p>
+    </div>
   </div>
 );
 
@@ -75,7 +80,7 @@ const App = () => {
 
       <Footer />
 
-      <div className="fixed bottom-5 right-5 z-50 flex flex-col items-center space-y-2">
+      <div className="fixed bottom-0 right-0 z-50 flex flex-col items-center space-y-2">
         <button
           onClick={() => setShowSocialIcons(!showSocialIcons)}
           className="bg-white text-black hover:bg-primary hover:text-white p-4 rounded-full shadow-lg transition-transform"

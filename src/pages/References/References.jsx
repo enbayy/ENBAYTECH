@@ -55,7 +55,7 @@ const References = () => {
   }, []);
 
   return (
-    <div className="overflow-hidden relative w-full bg-white py-6">
+    <div className="overflow-hidden relative w-full bg-white dark:bg-black py-6">
       <div className="flex items-center justify-center w-full">
         <div className="flex whitespace-nowrap gap-10" ref={marqueeRef}>
           {brands.concat(brands).map((brand, index) => (
@@ -63,7 +63,7 @@ const References = () => {
               key={index}
               src={brand}
               alt={`Brand ${index + 1}`}
-              className="h-12 sm:h-16 md:h-20 filter grayscale"
+              className="h-12 sm:h-16 md:h-20 filter grayscale dark:invert"
             />
           ))}
         </div>

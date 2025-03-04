@@ -15,7 +15,7 @@ const AllServices = () => {
     };
 
     return (
-        <section id="services" className="bg-gray-100 dark:bg-black dark:text-white py-16">
+        <section id="services" className="bg-white dark:bg-black dark:text-white py-16">
             <div className="container mx-auto px-6">
                 <div className="pb-12 text-center space-y-4">
                     <h1 data-aos="fade-up" className="text-4xl font-bold text-black dark:text-primary tracking-wide">
@@ -32,16 +32,16 @@ const AllServices = () => {
                             key={id}
                             data-aos="fade-up"
                             data-aos-delay={aosDelay}
-                            className="relative flex flex-col justify-between text-center bg-white dark:bg-gray-900 shadow-lg rounded-3xl overflow-hidden border border-gray-300 dark:border-gray-700 hover:shadow-2xl transition-all duration-300 p-8 h-full group"
+                            className="relative flex flex-col justify-between text-center bg-white dark:bg-black shadow-lg rounded-3xl overflow-hidden border border-gray-300 dark:border-gray-700 hover:shadow-2xl transition-all duration-300 p-8 h-full group"
                         >
                             <div>
                                 <div className="w-20 h-20 flex items-center justify-center rounded-full bg-gray-200 dark:bg-gray-800 shadow-md mx-auto">
                                     <img src={imageSrc} alt={title} className="object-contain w-14 h-14" />
                                 </div>
-                                <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mt-5">{title}</h2>
+                                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-5">{title}</h2>
                             </div>
                             <p
-                                className={`text-gray-600 dark:text-gray-400 mt-3 text-base leading-relaxed transition-all duration-300 overflow-hidden ${expanded === id ? "max-h-96" : "max-h-20"
+                                className={`text-gray-600 dark:text-gray-300 mt-3 text-base leading-relaxed transition-all duration-300 overflow-hidden ${expanded === id ? "max-h-96" : "max-h-20"
                                     }`}
                             >
                                 {description}
@@ -49,7 +49,7 @@ const AllServices = () => {
                             <div className="flex flex-col items-center gap-3 mt-3">
                                 <button
                                     onClick={() => toggleExpand(id)}
-                                    className="text-primary dark:text-orange-600 font-semibold text-sm hover:underline"
+                                    className="text-primary dark:text-orange-600 font-bold text-sm hover:underline"
                                 >
                                     {expanded === id ? "Daha Az Göster" : "Daha Fazla Oku"}
                                 </button>

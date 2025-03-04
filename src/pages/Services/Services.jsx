@@ -10,7 +10,7 @@ const Services = () => {
     };
 
     return (
-        <section id="services" className="bg-gray-100 dark:bg-black dark:text-white py-12">
+        <section id="services" className="bg-white dark:bg-black dark:text-white py-12">
             <div className="container">
                 <div className="pb-12 text-center space-y-3">
                     <h1 data-aos="fade-up" className="text-3xl font-semibold text-black dark:text-primary">
@@ -54,6 +54,7 @@ const Services = () => {
                     <button
                         onClick={() => navigate("/hizmetlerimiz")}
                         className="w-[120px] h-[40px] bg-primary text-white rounded-lg hover:bg-orange-600 transition"
+                        data-aos="zoom-in"
                     >
                         Daha Fazla
                     </button>

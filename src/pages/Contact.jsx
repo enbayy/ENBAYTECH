@@ -43,7 +43,7 @@ const Contact = () => {
                                         name="name"
                                         value={formData.name}
                                         onChange={handleChange}
-                                        className="w-full p-4 rounded-md text-black shadow-md focus:outline-none focus:ring-2 focus:ring-primary transition-all"
+                                        className="w-full p-4 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-primary transition-all border border-black"
                                         required
                                         placeholder="Adınızı girin"
                                     />
@@ -62,7 +62,7 @@ const Contact = () => {
                                         name="email"
                                         value={formData.email}
                                         onChange={handleChange}
-                                        className="w-full p-4 rounded-md text-black shadow-md focus:outline-none focus:ring-2 focus:ring-primary transition-all"
+                                        className="w-full p-4 rounded-md text-black border border-black focus:outline-none focus:ring-2 focus:ring-primary transition-all"
                                         required
                                         placeholder="E-posta adresinizi girin"
                                     />
@@ -80,7 +80,7 @@ const Contact = () => {
                                         name="message"
                                         value={formData.message}
                                         onChange={handleChange}
-                                        className="w-full p-4 h-40 rounded-md text-black shadow-md focus:outline-none focus:ring-2 focus:ring-primary transition-all"
+                                        className="w-full p-4 h-40 rounded-md text-black border border-black focus:outline-none focus:ring-2 focus:ring-primary transition-all"
                                         required
                                         placeholder="Mesajınızı buraya yazın"
                                     >
@@ -98,7 +98,7 @@ const Contact = () => {
                             </form>
                         </div>
                         <div className="bg-white dark:bg-black p-8 space-y-6">
-                            <div className="mt-8 sm:mt-28">
+                            <div className="mt-8 sm:mt-28 border-2 border-black">
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3012.356060725158!2d28.797169999999994!3d40.9736835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caba55f856610b%3A0x99aaacdd37715e26!2sEngin%20Tasar%C4%B1m!5e0!3m2!1str!2str!4v1740753164408!5m2!1str!2str"
                                     width="100%"
                                     height="350"

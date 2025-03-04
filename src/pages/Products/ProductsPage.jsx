@@ -10,13 +10,15 @@ const ProductPage = () => {
     return (
         <section className="bg-white dark:bg-black dark:text-white py-12">
             <div className="pb-12 text-center space-y-3">
-                <h1 className="text-3xl font-semibold text-black dark:text-primary">Ürünlerimiz</h1>
+                <h1 data-aos="fade-up" className="text-3xl font-semibold text-black dark:text-primary">Ürünlerimiz</h1>
             </div>
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {productsToDisplay.map((product) => (
                         <div
                             key={product.id}
+                            data-aos="fade-up"
+                            data-aos-delay={product.aosDelay}
                             className="flex flex-col bg-white dark:bg-black shadow-lg rounded-xl overflow-hidden border-2 border-transparent hover:border-primary transition-all duration-300 p-6"
                         >
                             <div className="w-full h-48 flex items-center justify-center rounded-xl overflow-hidden">

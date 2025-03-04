@@ -80,7 +80,7 @@ const Footer = () => {
 
                 <hr className="border-black my-8 dark:border-[#F9FAFB]" />
                 <div className="text-center -mb-8">
-                    <p className="text-black text-lg font-semibold opacity-80 dark:text-white select-none">
+                    <p className="text-black text-lg font-semibold dark:text-white select-none">
                         Engin Tasarım ve Elektronik San. Tic. Ltd. Şti. © 2025
                     </p>
                 </div>
