@@ -1,25 +1,46 @@
 import React from "react";
 import { MenuLinks } from "./Navbar";
+import { useNavigate } from "react-router-dom";
+import { HiX } from "react-icons/hi";
 
-const ResponsiveMenu = ({ showMenu }) => {
-  console.log("showMenu", showMenu);
+const ResponsiveMenu = ({ showMenu, toggleMenu }) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    toggleMenu();
+    navigate("/iletisim")
+  };
+
   return (
     <div
-      className={`${showMenu ? "left-0" : "-left-[100%]"
-        } fixed bottom-0 top-0 z-20 flex h-screen w-[75%] flex-col justify-between bg-white dark:bg-gray-900 dark:text-white px-8 pb-6 pt-16 text-black transition-all duration-200 md:hidden rounded-r-xl shadow-md`}
+      className={`fixed top-0 bottom-0 z-20 h-screen w-[75%] bg-white dark:bg-gray-900 
+      dark:text-white text-black px-8 pb-6 pt-16 shadow-md rounded-r-xl 
+      transition-all duration-300 flex flex-col justify-between ${showMenu ? "left-0" : "-left-full"}`}
     >
-      <div className="card">
+      <div>
+        <div className="flex justify-between items-center">
+          <h2 className="text-2xl font-semibold">Menü</h2>
+          <HiX size={30} className="cursor-pointer" onClick={toggleMenu} />
+        </div>
         <nav className="mt-12">
           <ul className="space-y-4 text-xl">
-            {MenuLinks.map((data) => (
-              <li key={data.name}>
-                <a href={data.link} className="mb-5 inline-block">
-                  {data.name}
+            {MenuLinks.map(({ id, name, link }) => (
+              <li key={id}>
+                <a href={link} className="mb-5 inline-block" onClick={toggleMenu}>
+                  {name}
                 </a>
               </li>
             ))}
           </ul>
         </nav>
+      </div>
+      <div className="pb-6">
+        <button
+          onClick={handleClick}
+          className="primary-btn w-full block py-4 font-medium text-lg text-center"
+        >
+          İletişime Geç
+        </button>
       </div>
     </div>
   );

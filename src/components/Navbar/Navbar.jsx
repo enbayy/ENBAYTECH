@@ -40,12 +40,11 @@ const Navbar = () => {
   };
 
   const handleClick = () => {
-    navigate("/iletisim")
-  }
+    navigate("/iletisim");
+  };
+
   return (
-    <div
-      className="relative z-10 w-full dark:bg-black dark:text-white duration-300"
-    >
+    <div className="relative z-10 w-full dark:bg-black dark:text-white duration-300">
       <div className="container py-3 md:py-2">
         <div className="flex justify-between items-center">
           <Link to="/">
@@ -55,29 +54,33 @@ const Navbar = () => {
               className="w-[200px] h-auto"
             />
           </Link>
-
-          <nav className="hidden md:block">
+          <nav className="hidden lg:block">
             <ul className="flex items-center gap-8">
               {MenuLinks.map(({ id, name, link }) => (
                 <li key={id} className="py-4">
                   <Link
                     to={link}
-                    className=" text-lg font-medium hover:text-primary py-2 hover:border-b-2 hover:border-primary transition-colors duration-500"
+                    className="text-xl font-medium hover:text-primary py-2 hover:border-b-2 hover:border-primary transition-colors duration-500"
                   >
                     {name}
                   </Link>
                 </li>
               ))}
-              <button onClick={handleClick} className="primary-btn font-medium">İletişime Geç</button>
+              <button
+                onClick={handleClick}
+                className="primary-btn font-medium text-lg"
+              >
+                İletişime Geç
+              </button>
               <DarkMode />
             </ul>
           </nav>
-          <div className="flex items-center gap-4 md:hidden ">
+          <div className="flex items-center gap-4 lg:hidden">
             <DarkMode />
             {showMenu ? (
               <HiMenuAlt1
                 onClick={toggleMenu}
-                className=" cursor-pointer transition-all"
+                className="cursor-pointer transition-all"
                 size={30}
               />
             ) : (
@@ -90,7 +93,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <ResponsiveMenu showMenu={showMenu} />
+      <ResponsiveMenu showMenu={showMenu} toggleMenu={toggleMenu} />
     </div>
   );
 };
