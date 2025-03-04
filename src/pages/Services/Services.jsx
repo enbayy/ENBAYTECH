@@ -26,7 +26,7 @@ const Services = () => {
                             key={service.id}
                             data-aos="fade-up"
                             data-aos-delay={service.aosDelay}
-                            className="flex items-center bg-white dark:bg-black shadow-lg rounded-xl overflow-hidden border-2 border-transparent hover:border-primary transition-all duration-300 p-6"
+                            className="relative flex items-center bg-white dark:bg-black shadow-lg rounded-xl overflow-hidden border-2 border-transparent  transition-all duration-300 p-6 group"
                         >
                             <div className="w-28 h-28 flex items-center justify-center rounded-xl">
                                 <img src={service.imageSrc} alt={service.title} className="object-cover w-full h-full rounded-xl" />
@@ -40,18 +40,20 @@ const Services = () => {
 
                                 <button
                                     onClick={() => handleDetailClick(service.id)}
-                                    className="w-[120px] h-[40px] bg-primary text-white rounded-lg hover:bg-opacity-80 transition mt-4"
+                                    className="w-[120px] h-[40px] bg-primary text-white rounded-lg hover:bg-orange-600 transition mt-4"
                                 >
                                     İncele
                                 </button>
                             </div>
+                            <span className="absolute left-0 bottom-0 w-0 h-[5px] bg-primary transition-all duration-300 group-hover:w-full"></span>
                         </div>
+
                     ))}
                 </div>
                 <div className="flex items-center justify-center mt-10">
                     <button
                         onClick={() => navigate("/hizmetlerimiz")}
-                        className="w-[120px] h-[40px] bg-primary text-white rounded-lg hover:bg-opacity-80 transition"
+                        className="w-[120px] h-[40px] bg-primary text-white rounded-lg hover:bg-orange-600 transition"
                     >
                         Daha Fazla
                     </button>

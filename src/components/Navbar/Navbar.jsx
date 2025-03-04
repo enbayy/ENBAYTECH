@@ -1,36 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { HiMenuAlt3, HiMenuAlt1 } from "react-icons/hi";
 import ResponsiveMenu from "./ResponsiveMenu";
 import DarkMode from "./DarkMode";
 import { Link, useNavigate } from "react-router-dom";
 
 export const MenuLinks = [
-  {
-    id: 1,
-    name: "Anasayfa",
-    link: "/",
-  },
-  {
-    id: 2,
-    name: "Hizmetler",
-    link: "/hizmetlerimiz",
-  },
-  {
-    id: 3,
-    name: "Ürünler",
-    link: "/urunler",
-  },
-  {
-    id: 4,
-    name: "Referanslar",
-    link: "/referanslar",
-  },
-  {
-    id: 5,
-    name: "Hakkımızda",
-    link: "/hakkimizda",
-  },
+  { id: 1, name: "Anasayfa", link: "/" },
+  { id: 2, name: "Hizmetler", link: "/hizmetlerimiz" },
+  { id: 3, name: "Ürünler", link: "/urunler" },
+  { id: 4, name: "Referanslar", link: "/referanslar" },
+  { id: 5, name: "Hakkımızda", link: "/hakkimizda" },
 ];
+
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const navigate = useNavigate();
@@ -60,7 +41,8 @@ const Navbar = () => {
                 <li key={id} className="py-4">
                   <Link
                     to={link}
-                    className="text-xl font-medium hover:text-primary py-2 hover:border-b-2 hover:border-primary transition-colors duration-500"
+                    className={`text-xl font-semibold py-2 px-3 rounded-lg transition-colors duration-300 cursor-pointer
+                      ${location.pathname === link ? "text-primary border-b-4 border-primary" : "text-black dark:text-white hover:text-primary hover:border-b-4 hover:border-primary"}`}
                   >
                     {name}
                   </Link>

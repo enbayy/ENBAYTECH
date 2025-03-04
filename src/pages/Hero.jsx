@@ -3,7 +3,7 @@ import hero from "../assets/hero.png";
 import { useNavigate } from "react-router-dom";
 
 const stats = [
-  { value: 300, label: "Tamamlanan Proje" },
+  { value: 300, label: "Bitmiş Proje" },
   { value: 20, label: "Yıllık Deneyim" },
   { value: 500, label: "Mutlu Müşteri" },
 ];
@@ -75,15 +75,15 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-12 mt-16">
+      <div className="flex flex-wrap justify-center items-center gap-12 mt-16">
         {stats.map((stat, index) => (
           <div
             key={index}
             data-aos="fade-up"
-            className="bg-white dark:bg-black shadow-xl px-10 py-8 rounded-2xl border border-black dark:border-white text-center w-44 sm:w-52"
+            className="bg-white dark:bg-black px-10 py-4 rounded-3xl border border-black dark:border-white text-center w-44 sm:w-52"
           >
-            <h1 className="text-5xl font-extrabold text-primary">+{counts[index]}</h1>
-            <p className="text-gray-800 dark:text-gray-300 text-lg font-medium mt-3">
+            <h1 className="text-5xl font-bold text-primary text-center">+{counts[index]}</h1>
+            <p className="text-gray-800 dark:text-gray-300 text-lg font-medium mt-3 text-center">
               {stat.label}
             </p>
           </div>

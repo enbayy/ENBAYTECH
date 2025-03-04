@@ -8,72 +8,61 @@ const ReferencesDetailPage = () => {
     const navigate = useNavigate();
 
     const [fadeIn, setFadeIn] = useState(false);
-    const [scaleUp, setScaleUp] = useState(false);
-
     useEffect(() => {
         setFadeIn(true);
-        const timer = setTimeout(() => setScaleUp(true), 200);
-        return () => clearTimeout(timer);
     }, []);
 
     if (!reference) {
         return (
-            <p className="text-center text-red-500 font-semibold text-xl py-12">
-                Referans bulunamadı!
-            </p>
+            <div className="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900">
+                <p className="text-center text-red-500 font-semibold text-2xl">
+                    Referans bulunamadı!
+                </p>
+            </div>
         );
     }
 
     return (
-        <div className="relative bg-white dark:bg-black min-h-screen overflow-hidden animate-fadeIn">
-
-            <div className="relative container mx-auto py-16 px-6 lg:px-20">
-                <h1
-                    className={`text-4xl lg:text-5xl font-bold text-center mt-10 mb-12 text-gray-800 leading-tight tracking-wide transition-transform duration-1000 ${fadeIn ? "opacity-100" : "opacity-0"}`}
-                >
-                </h1>
-
-                <div
-                    className={`flex justify-center mb-16 transition-transform duration-1000 ${scaleUp ? "scale-105" : "scale-100"}`}
-                >
-                    <a href={reference.link} target="_blank" rel="noopener noreferrer">
-                        <img
-                            src={reference.imageUrl}
-                            alt={reference.title}
-                            className="rounded-3xl w-full h-60 max-w-2xl md:max-w-xl border border-black transform transition-transform duration-500 ease-in-out hover:scale-105"
-                        />
-                    </a>
+        <div className="relative min-h-screen overflow-hidden py-16 bg-gray-50 dark:bg-black text-black dark:text-white">
+            <div className="absolute inset-0 bg-cover bg-center opacity-30 dark:opacity-60" style={{ backgroundImage: `url(${reference.imageUrl})`, filter: 'blur(6px)' }}>
+            </div>
+            <div className="container mx-auto px-6 lg:px-20 relative z-10">
+                <div className="text-center mb-12">
+                    <h1 className={`text-5xl font-bold tracking-wide transition-opacity duration-1000 ${fadeIn ? "opacity-100" : "opacity-0"}`}>
+                        {reference.title}
+                    </h1>
                 </div>
 
-                {reference.sections.map((section, index) => (
-                    <div
-                        key={index}
-                        className={`mb-12 p-8 bg-white dark:bg-black rounded-2xl shadow-lg border-t-4 border-orange-500 hover:shadow-2xl hover:scale-105 transition-all duration-300 ${fadeIn ? "opacity-100" : "opacity-0"}`}
-                        style={{ transitionDelay: `${index * 200}ms` }}
-                    >
-                        <h2 className="text-2xl font-semibold text-black dark:text-white mb-6 tracking-wide">
-                            {section.heading}
-                        </h2>
-                        {Array.isArray(section.content) ? (
-                            <ul className="list-disc pl-8 space-y-4 text-lg text-black dark:text-white">
-                                {section.content.map((item, idx) => (
-                                    <li key={idx} className="transition-all duration-300">
-                                        {item}
-                                    </li>
-                                ))}
-                            </ul>
-                        ) : (
-                            <p className="text-lg text-black dark:text-white">
-                                {section.content}
-                            </p>
-                        )}
-                    </div>
-                ))}
-            </div>
-            <div className="mt-10 flex justify-center">
-                <button onClick={() => navigate(-1)} className="px-6 py-2 bg-primary text-white rounded-lg hover:bg-opacity-80">
-                    Geri Dön
-                </button>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    {reference.sections.map((section, index) => (
+                        <div
+                            key={index}
+                            className={`p-8 bg-white dark:bg-black rounded-lg shadow-md border-l-4 border-orange-500 hover:shadow-xl transition-all duration-300 ${fadeIn ? "opacity-100" : "opacity-0"}`}
+                            style={{ transitionDelay: `${index * 200}ms` }}
+                        >
+                            <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+                                {section.heading}
+                            </h2>
+                            {Array.isArray(section.content) ? (
+                                <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+                                    {section.content.map((item, idx) => (
+                                        <li key={idx} className="leading-relaxed">{item}</li>
+                                    ))}
+                                </ul>
+                            ) : (
+                                <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                                    {section.content}
+                                </p>
+                            )}
+                        </div>
+                    ))}
+                </div>
+
+                <div className="mt-12 flex justify-center">
+                    <button onClick={() => navigate(-1)} className="px-6 py-3 bg-orange-500 text-white font-medium rounded-lg shadow-md hover:bg-orange-600 transition-colors duration-300">
+                        Geri Dön
+                    </button>
+                </div>
             </div>
         </div>
     );

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { FaMobileAlt } from "react-icons/fa";
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -91,7 +90,7 @@ const Contact = () => {
                                 <div className="text-center">
                                     <button
                                         type="submit"
-                                        className="inline-block font-semibold py-3 px-6 bg-primary text-white hover:bg-primary/80 duration-200 tracking-widest uppercase rounded-md shadow-lg"
+                                        className="inline-block font-semibold py-3 px-6 bg-primary text-white hover:bg-orange-600 duration-200 tracking-widest uppercase rounded-md shadow-lg"
                                     >
                                         Mesajı Gönder
                                     </button>
