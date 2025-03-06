@@ -10,7 +10,7 @@ const About = () => {
         navigate("/iletisim")
     }
     return (
-        <div className="w-full bg-white dark:bg-black py-24 relative overflow-hidden text-black dark:text-white">
+        <div data-aos="fade-up" className="w-full bg-white dark:bg-black py-24 relative overflow-hidden text-black dark:text-white">
             <div className="container mx-auto text-center px-6 sm:px-10 md:px-20 lg:px-40">
                 <p className="text-4xl sm:text-5xl font-bold mb-6 relative">
                     Hakkımızda
@@ -44,7 +44,7 @@ const About = () => {
                     ))}
                 </ul>
             </div>
-            
+
             <div className="space-y-6 mt-12 px-6 lg:px-20 container mx-auto">
                 <h3 className="text-2xl font-semibold text-[#FF8C00]">Nasıl Başlıyoruz ve Nasıl İlerliyoruz?</h3>
                 <p>Öncelikle sizi anlamak ve dinlemekle başlamayı tercih ediyoruz. Sizi iyi anlamak, ihtiyaçlarınızı belirlemek, hangi hizmetin sizin için daha uygun olabileceğine karar vermek için sizinle yapacağımız ilk görüşmede mevcut durumunuzu ve hedeflerinizi anlamaya çalışıyoruz.</p>

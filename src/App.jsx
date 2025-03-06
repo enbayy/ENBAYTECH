@@ -46,6 +46,19 @@ const Loading = () => (
 
 const App = () => {
   const [showSocialIcons, setShowSocialIcons] = useState(true);
+  const [scrollPercentage, setScrollPercentage] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollProgress = (scrollTop / scrollHeight) * 100;
+      setScrollPercentage(scrollProgress);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     AOS.init({
@@ -61,6 +74,13 @@ const App = () => {
     <div className="bg-white dark:bg-black dark:text-white text-black overflow-x-hidden">
       <ScrollToTop />
       <Navbar />
+
+      <div className="fixed top-0 left-0 right-0 h-1 bg-white z-30">
+        <div
+          className="h-full bg-primary"
+          style={{ width: `${scrollPercentage}%` }}
+        ></div>
+      </div>
 
       <Suspense fallback={<Loading />}>
         <Routes>
