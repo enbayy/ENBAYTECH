@@ -12,7 +12,7 @@ const ProductPage = () => {
             <div className="pb-12 text-center space-y-3 relative">
                 <h1
                     data-aos="fade-up"
-                    className="text-primary text-4xl font-bold bg-clip-text"
+                    className="text-black text-4xl font-bold bg-clip-text"
                 >
                     Ürünlerimiz
                 </h1>

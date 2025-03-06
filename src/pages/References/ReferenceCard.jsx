@@ -25,7 +25,7 @@ const ReferenceCard = ({ id, title, imageUrl }) => {
                 }}
             ></div>
 
-            <div className="absolute inset-0 bg-gradient-to-t from-black opacity-0 group-hover:opacity-60 transition-all duration-500"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black opacity-0 transition-all duration-500"></div>
 
             <div className="relative z-10 p-6 text-white transition-all duration-300 group-hover:bg-transparent group-hover:opacity-100">
             </div>

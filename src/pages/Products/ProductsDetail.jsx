@@ -13,20 +13,10 @@ const ProductDetail = () => {
 
     return (
         <section className="bg-gray-50 dark:bg-black dark:text-white py-12">
-            <div className="max-w-5xl mx-auto px-6">
-                <div className="relative w-full h-72 md:h-[450px] rounded-lg overflow-hidden shadow-lg">
-                    <img
-                        src={product.imageUrl}
-                        alt={product.title}
-                        className="w-full h-full object-cover brightness-75 transform scale-105 transition-all duration-500 hover:scale-100"
-                    />
-                    <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-b from-black/60 to-black/30">
-                        <h1 className="text-3xl md:text-5xl font-bold text-white text-center px-6 drop-shadow-lg">
-                            {product.title}
-                        </h1>
-                    </div>
-                </div>
-
+            <div data-aos="fade-up" className="max-w-5xl mx-auto px-6">
+                <h1 className="text-3xl md:text-5xl font-semibold text-black text-center px-6 drop-shadow-lg">
+                    {product.title}
+                </h1>
                 <p className="text-gray-700 dark:text-gray-300 mt-8 text-lg leading-relaxed tracking-wide border-l-4 border-primary pl-4">
                     {product.description}
                 </p>
@@ -69,7 +59,36 @@ const ProductDetail = () => {
                         </div>
                     ))}
                 </div>
-
+                <div className="mt-12">
+                    <h2 className="text-3xl font-semibold text-gray-900 border-l-4 border-primary pl-4 mb-6">
+                        İlgili Ürünler
+                    </h2>
+                    <div className="grid md:grid-cols-3 gap-6">
+                        {products
+                            .filter((s) => s.id !== product.id)
+                            .slice(0, 3)
+                            .map((relatedProduct) => (
+                                <div
+                                    key={relatedProduct.id}
+                                    className="bg-white p-4 rounded-lg shadow-md cursor-pointer transition-all duration-300 hover:shadow-xl"
+                                    onClick={() => navigate(`/urunler/${relatedProduct.id}`)}
+                                >
+                                    <img
+                                        src={relatedProduct.imageUrl}
+                                        alt={relatedProduct.title}
+                                        className="w-full h-40 object-cover rounded-md mb-4"
+                                    />
+                                    <h3 className="text-xl font-semibold text-gray-900">{relatedProduct.title}</h3>
+                                    <p className="text-gray-600 mt-2 text-sm">{relatedProduct.description.slice(0, 80)}...</p>
+                                    <ul className="text-gray-600 mt-2 text-sm">
+                                        {relatedProduct.technicalSpecs.slice(0, 3).map((spec, index) => (
+                                            <li key={index}>{spec}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            ))}
+                    </div>
+                </div>
                 <div className="mt-10 flex justify-center">
                     <button
                         onClick={() => navigate(-1)}

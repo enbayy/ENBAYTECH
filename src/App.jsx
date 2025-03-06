@@ -91,10 +91,14 @@ const App = () => {
           className={`flex flex-col space-y-2 transition-all duration-500 ${showSocialIcons ? "translate-x-0 opacity-100" : "translate-x-20 opacity-0 pointer-events-none"
             }`}
         >
-          <a href="https://wa.me/905522312086" target="_blank" rel="noopener noreferrer" className="bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-primary"><RiWhatsappFill size={25} /></a>
-          <a href="https://www.instagram.com/engin_tasarim/" target="_blank" rel="noopener noreferrer" className="bg-pink-500 text-white p-4 rounded-full shadow-lg hover:bg-primary"><FaInstagram size={25} /></a>
-          <a href="https://www.linkedin.com/company/engintasarim/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="bg-blue-700 text-white p-4 rounded-full shadow-lg hover:bg-primary"><FaLinkedin size={25} /></a>
-          <a href="https://x.com/engintasarim" target="_blank" rel="noopener noreferrer" className="bg-black text-white p-4 rounded-full shadow-lg hover:bg-primary"><FaSquareXTwitter size={25} /></a>
+          <a href="https://wa.me/905522312086" target="_blank" rel="noopener noreferrer" className="bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-primary"><RiWhatsappFill size={25} />
+          </a>
+          <a href="https://www.instagram.com/engin_tasarim/" target="_blank" rel="noopener noreferrer" className="bg-pink-500 text-white p-4 rounded-full shadow-lg hover:bg-primary"><FaInstagram size={25} />
+          </a>
+          <a href="https://www.linkedin.com/company/engintasarim/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="bg-blue-700 text-white p-4 rounded-full shadow-lg hover:bg-primary"><FaLinkedin size={25} />
+          </a>
+          <a href="https://x.com/engintasarim" target="_blank" rel="noopener noreferrer" className="bg-black text-white p-4 rounded-full shadow-lg hover:bg-primary"><FaSquareXTwitter size={25} />
+          </a>
         </div>
       </div>
     </div>

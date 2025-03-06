@@ -22,22 +22,17 @@ const ReferencesDetailPage = () => {
         );
     }
 
+    function getRandomReferences(arr) {
+        const shuffled = [...arr].sort(() => 0.5 - Math.random());
+        return shuffled.slice(0, 3);
+    }
+
     return (
         <section className="bg-gray-50 dark:bg-black dark:text-white py-12">
-            <div className="max-w-5xl mx-auto px-6">
-                <div className="relative w-full h-72 md:h-[450px] rounded-lg overflow-hidden shadow-lg">
-                    <img
-                        src={reference.imageUrl}
-                        alt={reference.title}
-                        className="w-full h-full object-cover brightness-75 transform scale-105 transition-all duration-500 hover:scale-100"
-                    />
-                    <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-b from-black/60 to-black/30">
-                        <h1 className="text-3xl md:text-5xl font-bold text-white text-center px-6 drop-shadow-lg">
-                            {reference.title}
-                        </h1>
-                    </div>
-                </div>
-
+            <div data-aos="fade-up" className="max-w-5xl mx-auto px-6">
+                <h1 className="text-3xl md:text-5xl font-semibold text-black text-center px-6 drop-shadow-lg">
+                    {reference.title}
+                </h1>
                 <div className="mt-8 text-lg leading-relaxed tracking-wide border-l-4 border-primary pl-4 text-gray-700 dark:text-gray-300">
                     {reference.description}
                 </div>
@@ -60,10 +55,31 @@ const ReferencesDetailPage = () => {
                         </div>
                     ))}
                 </div>
-
+                <div className="mt-12">
+                    <h2 className="text-3xl font-semibold text-gray-900 border-l-4 border-primary pl-4 mb-6">
+                        Diğer Referanslar
+                    </h2>
+                    <div className="grid md:grid-cols-3 gap-6">
+                        {getRandomReferences(references)
+                            .filter((r) => r.id !== reference.id)
+                            .map((relatedReference) => (
+                                <div
+                                    key={relatedReference.id}
+                                    className="bg-white rounded-lg shadow-md cursor-pointer transition-all duration-300 hover:shadow-xl"
+                                    onClick={() => navigate(`/referanslar/${relatedReference.id}`)}
+                                >
+                                    <img
+                                        src={relatedReference.imageUrl}
+                                        alt={relatedReference.title}
+                                        className="w-full h-full object-cover rounded-md"
+                                    />
+                                </div>
+                            ))}
+                    </div>
+                </div>
                 <div className="mt-10 flex justify-center">
-                    <button 
-                        onClick={() => navigate(-1)} 
+                    <button
+                        onClick={() => navigate(-1)}
                         className="px-6 py-3 bg-primary text-white rounded-lg shadow-md transition-all duration-300 hover:bg-opacity-80"
                     >
                         Geri Dön
