@@ -34,16 +34,16 @@ const AllReferencesPage = () => {
 
     return (
         <div className="w-full bg-white dark:bg-black relative overflow-hidden">
-                <div className="relative mb-10 p-6 text-black dark:text-white">
-                    <div className='container text-center px-6 sm:px-10 md:px-20 lg:px-40 flex flex-col gap-y-5'>
-                        <h1 className="relative text-2xl sm:text-3xl md:text-4xl font-semibold break-words">Referanslarımız</h1>
-                        <p className="relative text-base sm:text-lg md:text-xl break-words">
-                            Bizimle çalışarak başarıya ulaşan birçok firmayı görmektesiniz. Her biri kendi alanında öncü
-                            ve bizimle güçlü bir işbirliği kurarak başarılarını daha da ileriye taşıdılar. İşte referanslarımız!
-                        </p>
-                    </div>
+            <div className="relative mb-10 p-6 text-black dark:text-white">
+                <div className='container text-center px-6 sm:px-10 md:px-20 lg:px-40 flex flex-col gap-y-5'>
+                    <h1 className="relative text-2xl sm:text-3xl md:text-4xl font-semibold break-words">Referanslarımız</h1>
+                    <p className="relative text-base sm:text-lg md:text-xl break-words">
+                        Bizimle çalışarak başarıya ulaşan birçok firmayı görmektesiniz. Her biri kendi alanında öncü
+                        ve bizimle güçlü bir işbirliği kurarak başarılarını daha da ileriye taşıdılar. İşte referanslarımız!
+                    </p>
                 </div>
-        
+            </div>
+
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -55,7 +55,7 @@ const AllReferencesPage = () => {
                         <div
                             key={reference.id}
                             ref={(el) => (referenceRefs.current[index] = el)}
-                            className="flex flex-col opacity-0 transform scale-75 transition-all duration-700 ease-out border border-black rounded-xl"
+                            className="flex flex-col opacity-0 transform scale-75 transition-all duration-700 ease-out rounded-lg"
                         >
                             <ReferenceCard
                                 id={reference.id}

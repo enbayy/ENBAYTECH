@@ -56,12 +56,12 @@ const AllServices = () => {
 
                                 <button
                                     onClick={() => handleDetailClick(id)}
-                                    className="w-[120px] h-[40px] bg-primary text-white rounded-lg hover:bg-opacity-80 transition mt-2"
+                                    className="w-[120px] h-[40px] bg-primary text-white rounded-lg hover:bg-orange-600 transition mt-2"
                                 >
                                     İncele
                                 </button>
                             </div>
-                            <span className="absolute inset-x-0 bottom-0 w-0 h-[4px] bg-primary transition-all duration-300 group-hover:w-full"></span>
+                            <span className="absolute inset-x-0 bottom-0 w-0 h-[6px] bg-primary transition-all duration-300 group-hover:w-full"></span>
                         </div>
                     ))}
                 </div>

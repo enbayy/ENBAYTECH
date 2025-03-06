@@ -18,27 +18,27 @@ const ServiceDetail = () => {
 
     return (
         <div data-aos="fade-up" className="max-w-5xl mx-auto p-6 animate-fadeIn">
-            <h1 className="text-3xl md:text-5xl font-semibold text-black text-center px-6 drop-shadow-lg">
+            <h1 className="text-3xl md:text-5xl font-semibold text-black dark:text-white text-center px-6 drop-shadow-lg">
                 {service.title}
             </h1>
-            <p className="text-gray-700 mt-8 text-lg leading-relaxed tracking-wide border-l-4 border-primary pl-4">
+            <p className="text-gray-600 dark:text-gray-400 mt-8 text-lg leading-relaxed tracking-wide border-l-4 border-primary pl-4">
                 {service.description}
             </p>
             <div className="mt-10 space-y-8">
                 {service.sections.map((section, index) => (
                     <div
                         key={index}
-                        className="bg-gray-50 rounded-lg p-6 shadow-md transition-all duration-500 hover:shadow-xl"
+                        className="bg-white dark:bg-black shadow-sm shadow-black dark:shadow-white p-6 transition-all duration-500"
                     >
-                        <h2 className="text-2xl font-semibold text-gray-900 border-l-4 border-primary pl-4">
+                        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white border-l-4 border-primary pl-4">
                             {section.heading}
                         </h2>
-                        <p className="text-gray-700 mt-3 leading-relaxed">{section.content}</p>
+                        <p className="text-gray-700 dark:text-gray-300 mt-3 leading-relaxed">{section.content}</p>
                     </div>
                 ))}
             </div>
             <div className="mt-12">
-                <h2 className="text-3xl font-semibold text-gray-900 border-l-4 border-primary pl-4 mb-6">
+                <h2 className="text-3xl font-semibold text-gray-900 dark:text-white border-l-4 border-primary pl-4 mb-6">
                     İlgili Hizmetler
                 </h2>
                 <div className="grid md:grid-cols-3 gap-6">
@@ -48,7 +48,7 @@ const ServiceDetail = () => {
                         .map((relatedService) => (
                             <div
                                 key={relatedService.id}
-                                className="bg-white p-4 rounded-lg shadow-md cursor-pointer transition-all duration-300 hover:shadow-xl"
+                                className="bg-white dark:bg-black p-4 rounded-lg shadow-md cursor-pointer transition-all duration-300 hover:scale-105 border border-black dark:border-white"
                                 onClick={() => navigate(`/hizmetler/${relatedService.id}`)}
                             >
                                 <img
@@ -56,8 +56,8 @@ const ServiceDetail = () => {
                                     alt={relatedService.title}
                                     className="w-full h-40 object-cover rounded-md mb-4"
                                 />
-                                <h3 className="text-xl font-semibold text-gray-900">{relatedService.title}</h3>
-                                <p className="text-gray-600 mt-2 text-sm">{relatedService.description.slice(0, 80)}...</p>
+                                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{relatedService.title}</h3>
+                                <p className="text-gray-600 dark:text-gray-300 mt-2 text-sm">{relatedService.description.slice(0, 80)}...</p>
                             </div>
                         ))}
                 </div>

@@ -45,9 +45,8 @@ const Services = () => {
                                     İncele
                                 </button>
                             </div>
-                            <span className="absolute left-0 bottom-0 w-0 h-[5px] bg-primary transition-all duration-300 group-hover:w-full"></span>
+                            <span className="absolute left-0 bottom-0 w-0 h-[6px] bg-primary transition-all duration-300 group-hover:w-full"></span>
                         </div>
-
                     ))}
                 </div>
                 <div className="flex items-center justify-center mt-10">

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const ReferenceCard = ({ id, title, imageUrl }) => {
+const ReferenceCard = ({ id, imageUrl }) => {
     const navigate = useNavigate();
 
     const handleCardClick = () => {
@@ -10,7 +10,7 @@ const ReferenceCard = ({ id, title, imageUrl }) => {
 
     return (
         <div
-            className="relative cursor-pointer rounded-lg overflow-hidden group transition-all duration-500 transform hover:scale-105 hover:shadow-2xl h-48"
+            className="relative cursor-pointer rounded-lg overflow-hidden group transition-all duration-500 transform hover:scale-110 hover:shadow-2xl h-48 border border-black"
             onClick={handleCardClick}
             style={{
                 background: "white",
@@ -19,7 +19,7 @@ const ReferenceCard = ({ id, title, imageUrl }) => {
             }}
         >
             <div
-                className="absolute inset-0 bg-cover bg-center transition-all duration-500 group-hover:scale-110"
+                className="absolute inset-0 bg-cover bg-center transition-all duration-500"
                 style={{
                     backgroundImage: `url(${imageUrl})`,
                 }}
@@ -30,8 +30,8 @@ const ReferenceCard = ({ id, title, imageUrl }) => {
             <div className="relative z-10 p-6 text-white transition-all duration-300 group-hover:bg-transparent group-hover:opacity-100">
             </div>
             <div
-                className="absolute inset-0 border-2 border-transparent rounded-lg transition-all duration-300"
-            ></div>
+                className="absolute inset-0 border-2 border-transparent rounded-lg transition-all duration-300">
+            </div>
         </div>
     );
 };

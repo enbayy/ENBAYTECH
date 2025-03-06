@@ -14,14 +14,14 @@ const ProductDetail = () => {
     return (
         <section className="bg-gray-50 dark:bg-black dark:text-white py-12">
             <div data-aos="fade-up" className="max-w-5xl mx-auto px-6">
-                <h1 className="text-3xl md:text-5xl font-semibold text-black text-center px-6 drop-shadow-lg">
+                <h1 className="text-3xl md:text-5xl font-semibold text-black dark:text-white text-center px-6 drop-shadow-lg">
                     {product.title}
                 </h1>
                 <p className="text-gray-700 dark:text-gray-300 mt-8 text-lg leading-relaxed tracking-wide border-l-4 border-primary pl-4">
                     {product.description}
                 </p>
 
-                <div className="mt-10 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                <div className="mt-10 bg-white dark:bg-black p-6 rounded-lg shadow-sm shadow-black dark:shadow-white">
                     <h2 className="text-2xl font-semibold text-gray-900 dark:text-white border-l-4 border-primary pl-4">
                         Teknik Özellikler
                     </h2>
@@ -32,13 +32,13 @@ const ProductDetail = () => {
                     </ul>
                 </div>
 
-                <div className="mt-10 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                <div className="mt-10 bg-white dark:bg-black p-6 rounded-lg shadow-sm shadow-black dark:shadow-white">
                     <h2 className="text-2xl font-semibold text-gray-900 dark:text-white border-l-4 border-primary pl-4">
                         Kullanıcı Yorumları
                     </h2>
                     <div className="mt-4 space-y-4">
                         {product.userReviews.map((review, idx) => (
-                            <div key={idx} className="p-4 bg-gray-50 dark:bg-gray-900 rounded-lg shadow">
+                            <div key={idx} className="p-4 bg-gray-50 dark:bg-black rounded-lg shadow">
                                 <p className="text-lg font-semibold text-primary">{review.reviewer}</p>
                                 <p className="text-yellow-500">
                                     {"★".repeat(review.rating)}{"☆".repeat(5 - review.rating)}
@@ -51,7 +51,7 @@ const ProductDetail = () => {
 
                 <div className="mt-10 space-y-8">
                     {product.sections?.map((section, index) => (
-                        <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                        <div key={index} className="bg-white dark:bg-black p-6 rounded-lg shadow-sm shadow-black dark:shadow-white">
                             <h2 className="text-2xl font-semibold text-gray-900 dark:text-white border-l-4 border-primary pl-4">
                                 {section.heading}
                             </h2>
@@ -60,7 +60,7 @@ const ProductDetail = () => {
                     ))}
                 </div>
                 <div className="mt-12">
-                    <h2 className="text-3xl font-semibold text-gray-900 border-l-4 border-primary pl-4 mb-6">
+                    <h2 className="text-3xl font-semibold text-black dark:text-white border-l-4 border-primary pl-4 mb-6">
                         İlgili Ürünler
                     </h2>
                     <div className="grid md:grid-cols-3 gap-6">
@@ -70,7 +70,7 @@ const ProductDetail = () => {
                             .map((relatedProduct) => (
                                 <div
                                     key={relatedProduct.id}
-                                    className="bg-white p-4 rounded-lg shadow-md cursor-pointer transition-all duration-300 hover:shadow-xl"
+                                    className="bg-white dark:bg-black  p-4 rounded-lg shadow-md cursor-pointer transition-all duration-300 hover:scale-105 border border-black dark:border-white"
                                     onClick={() => navigate(`/urunler/${relatedProduct.id}`)}
                                 >
                                     <img
@@ -78,9 +78,9 @@ const ProductDetail = () => {
                                         alt={relatedProduct.title}
                                         className="w-full h-40 object-cover rounded-md mb-4"
                                     />
-                                    <h3 className="text-xl font-semibold text-gray-900">{relatedProduct.title}</h3>
-                                    <p className="text-gray-600 mt-2 text-sm">{relatedProduct.description.slice(0, 80)}...</p>
-                                    <ul className="text-gray-600 mt-2 text-sm">
+                                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{relatedProduct.title}</h3>
+                                    <p className="text-gray-600 dark:text-gray-300 mt-2 text-sm">{relatedProduct.description.slice(0, 80)}...</p>
+                                    <ul className="text-gray-600 dark:text-gray-300 mt-2 text-sm">
                                         {relatedProduct.technicalSpecs.slice(0, 3).map((spec, index) => (
                                             <li key={index}>{spec}</li>
                                         ))}

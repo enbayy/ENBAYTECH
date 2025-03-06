@@ -12,35 +12,20 @@ const About = () => {
     return (
         <div className="w-full bg-white dark:bg-black py-24 relative overflow-hidden text-black dark:text-white">
             <div className="container mx-auto text-center px-6 sm:px-10 md:px-20 lg:px-40">
-                <motion.h1
-                    className="text-4xl sm:text-5xl font-bold mb-6 relative"
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1 }}
-                >
+                <p className="text-4xl sm:text-5xl font-bold mb-6 relative">
                     Hakkımızda
-                </motion.h1>
-                <motion.p
-                    className="text-lg sm:text-xl leading-relaxed"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1, delay: 0.2 }}
-                >
+                </p>
+                <p className="text-lg sm:text-xl leading-relaxed">
                     Engin Tasarım ve Elektronik San. Tic. Ltd. Şti. İstanbul tasarım şirketleri arasında 20 yılı aşkın deneyimiyle dijital ajans olarak hizmet vermektedir.
-                </motion.p>
+                </p>
             </div>
 
             <div className="container mx-auto px-6 lg:px-20 mt-12">
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1 }}
-                    className="space-y-8 text-lg leading-relaxed"
-                >
+                <div className="space-y-8 text-lg leading-relaxed">
                     <p>Engin Tasarım, web tasarım, e-ticaret, dijital pazarlama ve yazılım alanlarında 20 yılı aşkın tecrübeyle hizmet vermektedir.</p>
                     <p>Türkiye, Amerika, Belçika, Almanya, Hollanda ve Avusturya gibi birçok ülkede özel çözümler sunmaktadır.</p>
                     <p>Yüksek kaliteli butik çözümler sunarak, müşterilerinin markalaşma ve ihracat süreçlerine katkıda bulunmaktadır.</p>
-                </motion.div>
+                </div>
             </div>
 
             <div className="mt-12 container mx-auto px-6 lg:px-20">
