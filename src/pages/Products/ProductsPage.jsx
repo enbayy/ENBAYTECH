@@ -9,8 +9,16 @@ const ProductPage = () => {
 
     return (
         <section className="bg-white dark:bg-black dark:text-white py-12">
-            <div className="pb-12 text-center space-y-3">
-                <h1 data-aos="fade-up" className="text-3xl font-semibold text-black dark:text-primary">Ürünlerimiz</h1>
+            <div className="pb-12 text-center space-y-3 relative">
+                <h1
+                    data-aos="fade-up"
+                    className="text-primary text-4xl font-bold bg-clip-text"
+                >
+                    Ürünlerimiz
+                </h1>
+                <p data-aos="fade-up" className="text-lg text-gray-600 dark:text-gray-400">
+                    Sunduğumuz kaliteli ve profesyonel ürünlerle işinizi bir adım öteye taşıyın.
+                </p>
             </div>
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -19,7 +27,7 @@ const ProductPage = () => {
                             key={product.id}
                             data-aos="fade-up"
                             data-aos-delay={product.aosDelay}
-                            className="flex flex-col bg-white dark:bg-black shadow-lg rounded-xl overflow-hidden border-2 border-transparent hover:border-primary transition-all duration-300 p-6"
+                            className="group relative flex flex-col bg-white dark:bg-black shadow-lg rounded-xl overflow-hidden border-2 border-transparent transition-all duration-300 p-6"
                         >
                             <div className="w-full h-48 flex items-center justify-center rounded-xl overflow-hidden">
                                 <img src={product.imageUrl} alt={product.title} className="object-cover w-full h-full rounded-xl" />
@@ -37,6 +45,7 @@ const ProductPage = () => {
                                         İncele
                                     </button>
                                 </div>
+                                <span className="absolute left-0 bottom-0 w-0 h-[5px] bg-primary transition-all duration-300 group-hover:w-full"></span>
                             </div>
                         </div>
                     ))}

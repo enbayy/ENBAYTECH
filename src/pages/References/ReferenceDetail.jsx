@@ -23,48 +23,54 @@ const ReferencesDetailPage = () => {
     }
 
     return (
-        <div className="relative min-h-screen overflow-hidden py-16 bg-gray-50 dark:bg-black text-black dark:text-white">
-            <div className="absolute inset-0 bg-cover bg-center opacity-30 dark:opacity-60" style={{ backgroundImage: `url(${reference.imageUrl})`, filter: 'blur(6px)' }}>
-            </div>
-            <div className="container mx-auto px-6 lg:px-20 relative z-10">
-                <div className="text-center mb-12">
-                    <h1 className={`text-5xl font-bold tracking-wide transition-opacity duration-1000 ${fadeIn ? "opacity-100" : "opacity-0"}`}>
-                        {reference.title}
-                    </h1>
+        <section className="bg-gray-50 dark:bg-black dark:text-white py-12">
+            <div className="max-w-5xl mx-auto px-6">
+                <div className="relative w-full h-72 md:h-[450px] rounded-lg overflow-hidden shadow-lg">
+                    <img
+                        src={reference.imageUrl}
+                        alt={reference.title}
+                        className="w-full h-full object-cover brightness-75 transform scale-105 transition-all duration-500 hover:scale-100"
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-b from-black/60 to-black/30">
+                        <h1 className="text-3xl md:text-5xl font-bold text-white text-center px-6 drop-shadow-lg">
+                            {reference.title}
+                        </h1>
+                    </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div className="mt-8 text-lg leading-relaxed tracking-wide border-l-4 border-primary pl-4 text-gray-700 dark:text-gray-300">
+                    {reference.description}
+                </div>
+
+                <div className="mt-10 space-y-8">
                     {reference.sections.map((section, index) => (
-                        <div
-                            key={index}
-                            className={`p-8 bg-white dark:bg-black rounded-lg shadow-md border-l-4 border-orange-500 hover:shadow-xl transition-all duration-300 ${fadeIn ? "opacity-100" : "opacity-0"}`}
-                            style={{ transitionDelay: `${index * 200}ms` }}
-                        >
-                            <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+                        <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                            <h2 className="text-2xl font-semibold text-gray-900 dark:text-white border-l-4 border-primary pl-4">
                                 {section.heading}
                             </h2>
                             {Array.isArray(section.content) ? (
-                                <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+                                <ul className="mt-3 space-y-2 text-gray-700 dark:text-gray-300 list-disc pl-5">
                                     {section.content.map((item, idx) => (
                                         <li key={idx} className="leading-relaxed">{item}</li>
                                     ))}
                                 </ul>
                             ) : (
-                                <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                                    {section.content}
-                                </p>
+                                <p className="mt-3 text-gray-700 dark:text-gray-300">{section.content}</p>
                             )}
                         </div>
                     ))}
                 </div>
 
-                <div className="mt-12 flex justify-center">
-                    <button onClick={() => navigate(-1)} className="px-6 py-3 bg-orange-500 text-white font-medium rounded-lg shadow-md hover:bg-orange-600 transition-colors duration-300">
+                <div className="mt-10 flex justify-center">
+                    <button 
+                        onClick={() => navigate(-1)} 
+                        className="px-6 py-3 bg-primary text-white rounded-lg shadow-md transition-all duration-300 hover:bg-opacity-80"
+                    >
                         Geri Dön
                     </button>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

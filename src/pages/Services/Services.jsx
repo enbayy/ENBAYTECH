@@ -26,7 +26,7 @@ const Services = () => {
                             key={service.id}
                             data-aos="fade-up"
                             data-aos-delay={service.aosDelay}
-                            className="relative flex items-center bg-white dark:bg-black shadow-lg rounded-xl overflow-hidden border-2 border-transparent  transition-all duration-300 p-6 group"
+                            className="relative flex items-center bg-white dark:bg-black shaddow-lg rounded-xl overflow-hidden border border-black transition-all duration-300 p-6 group"
                         >
                             <div className="w-28 h-28 flex items-center justify-center rounded-xl">
                                 <img src={service.imageSrc} alt={service.title} className="object-cover w-full h-full rounded-xl" />
