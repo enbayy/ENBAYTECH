@@ -15,10 +15,10 @@ const AllServices = () => {
     };
 
     return (
-        <section id="services" className="bg-white dark:bg-black dark:text-white py-16">
+        <section id="services" className="bg-white dark:bg-black dark:text-white py-12">
             <div className="container mx-auto px-6">
                 <div className="pb-12 text-center space-y-4">
-                    <h1 data-aos="fade-up" className="text-4xl font-bold text-black dark:text-primary tracking-wide">
+                    <h1 data-aos="fade-up" className="relative text-2xl sm:text-3xl md:text-4xl font-semibold break-words">
                         Hizmetlerimiz
                     </h1>
                     <p data-aos="fade-up" className="text-gray-700 dark:text-gray-300 text-lg max-w-2xl mx-auto">
@@ -32,10 +32,10 @@ const AllServices = () => {
                             key={id}
                             data-aos="fade-up"
                             data-aos-delay={aosDelay}
-                            className="relative flex flex-col justify-between text-center bg-white dark:bg-black shadow-lg rounded-xl overflow-hidden border border-black dark:border-gray-700 transition-all duration-300 p-8 h-full group"
+                            className="relative flex flex-col justify-between text-center bg-white dark:bg-black shadow-lg rounded-xl overflow-hidden border border-black dark:border-white transition-all duration-300 p-8 h-full group gap-y-2"
                         >
-                            <div>
-                                <div className="w-20 h-20 flex items-center justify-center rounded-full bg-gray-200 dark:bg-gray-800 shadow-md mx-auto">
+                            <div className="">
+                                <div className="w-20 h-20 flex items-center justify-center rounded-full bg-gray-200 dark:bg-gray-800 mx-auto">
                                     <img src={imageSrc} alt={title} className="object-contain w-14 h-14" />
                                 </div>
                                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-5">{title}</h2>

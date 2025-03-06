@@ -12,7 +12,7 @@ const ProductPage = () => {
             <div className="pb-12 text-center space-y-3 relative">
                 <h1
                     data-aos="fade-up"
-                    className="text-black dark:text-primary text-4xl font-bold bg-clip-text"
+                    className="relative text-2xl sm:text-3xl md:text-4xl font-semibold break-words"
                 >
                     Ürünlerimiz
                 </h1>
@@ -27,7 +27,7 @@ const ProductPage = () => {
                             key={product.id}
                             data-aos="fade-up"
                             data-aos-delay={product.aosDelay}
-                            className="group relative flex flex-col bg-white dark:bg-black shadow-lg rounded-xl overflow-hidden border border-black transition-all duration-300 p-6"
+                            className="group relative flex flex-col bg-white dark:bg-black shadow-lg rounded-xl overflow-hidden border border-black dark:border-white transition-all duration-300 p-6"
                         >
                             <div className="w-full h-48 flex items-center justify-center rounded-xl overflow-hidden">
                                 <img src={product.imageUrl} alt={product.title} className="object-cover w-full h-full rounded-xl" />

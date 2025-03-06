@@ -5,11 +5,11 @@ import DarkMode from "./DarkMode";
 import { Link, useNavigate } from "react-router-dom";
 
 export const MenuLinks = [
-  { id: 1, name: "Anasayfa", link: "/" },
-  { id: 2, name: "Hizmetler", link: "/hizmetlerimiz" },
-  { id: 3, name: "Ürünler", link: "/urunler" },
-  { id: 4, name: "Referanslar", link: "/referanslar" },
-  { id: 5, name: "Hakkımızda", link: "/hakkimizda" },
+  { id: 1, name: "ANASAYFA", link: "/" },
+  { id: 2, name: "HİZMETLER", link: "/hizmetlerimiz" },
+  { id: 3, name: "ÜRÜNLER", link: "/urunler" },
+  { id: 4, name: "REFERANSLAR", link: "/referanslar" },
+  { id: 5, name: "HAKKIMIZDA", link: "/hakkimizda" },
 ];
 
 const Navbar = () => {
@@ -28,20 +28,16 @@ const Navbar = () => {
     <div className="relative z-10 w-full dark:bg-black dark:text-white duration-300">
       <div className="container py-3 md:py-2">
         <div className="flex justify-between items-center">
-          <Link to="/">
-            <img
-              src="https://engintasarim.com/assets/images/logo.svg#logo"
-              alt="Logo"
-              className="w-[200px] h-auto"
-            />
+          <Link to="/" className="text-orange-500 text-3xl">
+            engintasarım
           </Link>
           <nav className="hidden lg:block">
-            <ul className="flex items-center gap-8">
+            <ul className="flex items-center gap-6">
               {MenuLinks.map(({ id, name, link }) => (
                 <li key={id} className="py-4">
                   <Link
                     to={link}
-                    className={`text-xl font-semibold py-2 px-3 rounded-lg transition-colors duration-300 cursor-pointer
+                    className={`text-xl font-normal py-2 px-3 rounded-lg transition-colors duration-300 cursor-pointer
                       ${location.pathname === link ? "text-primary border-b-4 border-primary" : "text-black dark:text-white hover:text-primary hover:border-b-4 hover:border-primary"}`}
                   >
                     {name}
@@ -50,9 +46,9 @@ const Navbar = () => {
               ))}
               <button
                 onClick={handleClick}
-                className="primary-btn font-medium text-lg"
+                className="primary-btn font-normal text-lg"
               >
-                İletişime Geç
+                İLETİŞİME GEÇ
               </button>
               <DarkMode />
             </ul>

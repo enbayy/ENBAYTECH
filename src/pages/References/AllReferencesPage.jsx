@@ -33,7 +33,7 @@ const AllReferencesPage = () => {
     }, []);
 
     return (
-        <div className="w-full bg-white dark:bg-black relative overflow-hidden">
+        <div data-aos="fade-up" className="w-full bg-white dark:bg-black relative overflow-hidden py-12">
             <div className="relative mb-10 p-6 text-black dark:text-white">
                 <div className='container text-center px-6 sm:px-10 md:px-20 lg:px-40 flex flex-col gap-y-5'>
                     <h1 className="relative text-2xl sm:text-3xl md:text-4xl font-semibold break-words">Referanslarımız</h1>

@@ -44,9 +44,7 @@ const About = () => {
                     ))}
                 </ul>
             </div>
-
-
-
+            
             <div className="space-y-6 mt-12 px-6 lg:px-20 container mx-auto">
                 <h3 className="text-2xl font-semibold text-[#FF8C00]">Nasıl Başlıyoruz ve Nasıl İlerliyoruz?</h3>
                 <p>Öncelikle sizi anlamak ve dinlemekle başlamayı tercih ediyoruz. Sizi iyi anlamak, ihtiyaçlarınızı belirlemek, hangi hizmetin sizin için daha uygun olabileceğine karar vermek için sizinle yapacağımız ilk görüşmede mevcut durumunuzu ve hedeflerinizi anlamaya çalışıyoruz.</p>

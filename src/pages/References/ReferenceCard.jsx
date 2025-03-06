@@ -10,13 +10,8 @@ const ReferenceCard = ({ id, imageUrl }) => {
 
     return (
         <div
-            className="relative cursor-pointer rounded-lg overflow-hidden group transition-all duration-500 transform hover:scale-110 hover:shadow-2xl h-48 border border-black"
+            className="relative cursor-pointer rounded-lg overflow-hidden group transition-all duration-500 transform hover:scale-110 h-48 border border-black dark:bg-white"
             onClick={handleCardClick}
-            style={{
-                background: "white",
-                boxShadow: "0px 6px 30px rgba(0, 0, 0, 0.1)",
-                borderRadius: "12px",
-            }}
         >
             <div
                 className="absolute inset-0 bg-cover bg-center transition-all duration-500"
