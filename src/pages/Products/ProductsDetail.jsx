@@ -92,7 +92,7 @@ const ProductDetail = () => {
                 <div className="mt-10 flex justify-center">
                     <button
                         onClick={() => navigate(-1)}
-                        className="px-6 py-3 bg-primary text-white rounded-lg shadow-md transition-all duration-300 hover:bg-opacity-80"
+                        className="px-6 py-3 bg-primary text-white rounded-tl-2xl rounded-br-2xl shadow-md transition-all duration-300 hover:bg-opacity-80 font-semibold"
                     >
                         Geri Dön
                     </button>

@@ -11,16 +11,16 @@ const About = () => {
     }
     return (
         <div data-aos="fade-up" className="w-full bg-white dark:bg-black py-24 relative overflow-hidden text-black dark:text-white">
-            <div className="container mx-auto text-center px-6 sm:px-10 md:px-20 lg:px-40">
-                <p className="text-4xl sm:text-5xl font-bold mb-6 relative">
-                    Hakkımızda
+            <div className="mx-auto text-start px-6 sm:px-10 md:px-20 lg:px-40">
+                <p className="text-3xl sm:text-4xl font-bold mb-6 relative text-center">
+                    HAKKIMIZDA
                 </p>
                 <p className="text-lg sm:text-xl leading-relaxed">
                     Engin Tasarım ve Elektronik San. Tic. Ltd. Şti. İstanbul tasarım şirketleri arasında 20 yılı aşkın deneyimiyle dijital ajans olarak hizmet vermektedir.
                 </p>
             </div>
 
-            <div className="container mx-auto px-6 lg:px-20 mt-12">
+            <div className="container mx-auto px-6 lg:px-20 mt-7">
                 <div className="space-y-8 text-lg leading-relaxed">
                     <p>Engin Tasarım, web tasarım, e-ticaret, dijital pazarlama ve yazılım alanlarında 20 yılı aşkın tecrübeyle hizmet vermektedir.</p>
                     <p>Türkiye, Amerika, Belçika, Almanya, Hollanda ve Avusturya gibi birçok ülkede özel çözümler sunmaktadır.</p>

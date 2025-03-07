@@ -68,7 +68,7 @@ const Hero = () => {
             onClick={handleClick}
             data-aos="fade-up"
             data-aos-delay="500"
-            className="text-white dark:text-black bg-primary hover:bg-primary-dark transition-all duration-300 px-8 py-4 rounded-tl-2xl rounded-br-2xl text-lg font-medium shadow-lg"
+            className="text-white dark:text-black bg-primary hover:bg-primary-dark transition-all duration-300 px-7 py-3 rounded-tl-2xl rounded-br-2xl text-lg font-semibold shadow-lg"
           >
             Daha Fazla
           </button>

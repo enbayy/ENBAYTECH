@@ -19,7 +19,7 @@ const AllServices = () => {
             <div className="container mx-auto px-6">
                 <div className="pb-12 text-center space-y-4">
                     <h1 data-aos="fade-up" className="relative text-2xl sm:text-3xl md:text-4xl font-semibold break-words">
-                        Hizmetlerimiz
+                        HİZMETLERİMİZ
                     </h1>
                     <p data-aos="fade-up" className="text-gray-700 dark:text-gray-300 text-lg max-w-2xl mx-auto">
                         Profesyonel hizmetlerimizle işinizi bir üst seviyeye taşıyın.

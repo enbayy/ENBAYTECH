@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { HiMenuAlt3, HiMenuAlt1 } from "react-icons/hi";
 import ResponsiveMenu from "./ResponsiveMenu";
 import DarkMode from "./DarkMode";
@@ -28,46 +28,45 @@ const Navbar = () => {
     <div className="relative z-10 w-full dark:bg-black dark:text-white duration-300">
       <div className="container py-3 md:py-2">
         <div className="flex justify-between items-center">
-          <Link to="/" className="text-orange-500 text-3xl">
+          <Link to="/" className="text-orange-500 text-3xl font-bold">
             engintasarım
           </Link>
-          <nav className="hidden lg:block">
-            <ul className="flex items-center gap-6">
+
+          <nav className="hidden lg:flex items-center gap-6">
+            <ul className="flex items-center gap-4">
               {MenuLinks.map(({ id, name, link }) => (
-                <li key={id} className="py-4">
+                <li key={id}>
                   <Link
                     to={link}
-                    className={`text-xl font-medium py-2 px-3 rounded-lg transition-colors duration-300 cursor-pointer
-                      ${location.pathname === link ? "text-primary border-b-2 border-primary" : "text-black dark:text-white hover:text-primary hover:border-b-2 hover:border-primary"}`}
+                    className={`relative px-4 py-2 inline-block cursor-pointer text-xl font-medium transition-colors duration-300
+                      ${location.pathname === link
+                        ? "text-primary font-semibold"
+                        : "text-black dark:text-white hover:text-primary"
+                      } before:bg-primary before:absolute before:-bottom-0 before:left-0 before:block before:h-[4px] before:w-full before:origin-bottom-right before:scale-x-0 before:transition before:duration-300 before:ease-in-out hover:before:origin-bottom-left hover:before:scale-x-100`}
                   >
                     {name}
                   </Link>
                 </li>
               ))}
-              <button
-                onClick={handleClick}
-                className="primary-btn font-medium text-lg"
-              >
-                İLETİŞİME GEÇ
-              </button>
-              <DarkMode />
             </ul>
           </nav>
-          <div className="flex items-center gap-4 lg:hidden">
+
+          <div className="flex items-center gap-3 lg:gap-6">
+            <button
+              onClick={handleClick}
+              className="hidden lg:block primary-btn font-medium text-lg"
+            >
+              İLETİŞİME GEÇ
+            </button>
+
             <DarkMode />
-            {showMenu ? (
-              <HiMenuAlt1
-                onClick={toggleMenu}
-                className="cursor-pointer transition-all"
-                size={30}
-              />
-            ) : (
-              <HiMenuAlt3
-                onClick={toggleMenu}
-                className="cursor-pointer transition-all"
-                size={30}
-              />
-            )}
+            <div className="lg:hidden">
+              {showMenu ? (
+                <HiMenuAlt1 onClick={toggleMenu} className="cursor-pointer" size={30} />
+              ) : (
+                <HiMenuAlt3 onClick={toggleMenu} className="cursor-pointer" size={30} />
+              )}
+            </div>
           </div>
         </div>
       </div>
