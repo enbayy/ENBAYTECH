@@ -28,7 +28,7 @@ const ServiceDetail = () => {
                 {service.sections.map((section, index) => (
                     <div
                         key={index}
-                        className="bg-white dark:bg-black shadow-sm shadow-black dark:shadow-white p-6 transition-all duration-500"
+                        className="bg-gray-100 dark:bg-black shadow-xl shadow-gray-300 rounded-tl-3xl rounded-br-3xl dark:shadow-gray-800 p-6 transition-all duration-500"
                     >
                         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white border-l-4 border-primary pl-4">
                             {section.heading}
@@ -48,7 +48,7 @@ const ServiceDetail = () => {
                         .map((relatedService) => (
                             <div
                                 key={relatedService.id}
-                                className="bg-white dark:bg-black p-4 rounded-lg shadow-md cursor-pointer transition-all duration-300 hover:scale-105 border border-black dark:border-white"
+                                className="bg-white dark:bg-black p-4 rounded-tl-3xl rounded-br-3xl shadow-xl shadow-gray-300 cursor-pointer transition-all duration-300 hover:scale-105 border border-gray-300 dark:border-white"
                                 onClick={() => navigate(`/hizmetler/${relatedService.id}`)}
                             >
                                 <img

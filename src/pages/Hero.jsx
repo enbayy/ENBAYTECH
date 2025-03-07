@@ -68,7 +68,7 @@ const Hero = () => {
             onClick={handleClick}
             data-aos="fade-up"
             data-aos-delay="500"
-            className="text-white dark:text-black bg-primary hover:bg-primary-dark transition-all duration-300 px-8 py-4 rounded-full text-lg font-medium shadow-lg"
+            className="text-white dark:text-black bg-primary hover:bg-primary-dark transition-all duration-300 px-8 py-4 rounded-tl-2xl rounded-br-2xl text-lg font-medium shadow-lg"
           >
             Daha Fazla
           </button>
@@ -80,15 +80,19 @@ const Hero = () => {
           <div
             key={index}
             data-aos="fade-up"
-            className="bg-white dark:bg-black px-10 py-4 rounded-3xl border border-black dark:border-white text-center w-44 sm:w-52"
+            className="bg-white dark:bg-black px-10 py-4 rounded-3xl text-center w-44 sm:w-52"
           >
-            <h1 className="text-5xl font-bold text-primary text-center">+{counts[index]}</h1>
-            <p className="text-gray-800 dark:text-gray-300 text-lg font-medium mt-3 text-center">
-              {stat.label}
-            </p>
+            <div className="flex items-center justify-between">
+              <h1 className="text-5xl font-bold text-primary">{counts[index]}+</h1>
+              <p className="text-gray-800 dark:text-gray-300 text-lg font-bold ml-4">
+                {stat.label}
+              </p>
+            </div>
           </div>
         ))}
       </div>
+
+
     </div>
   );
 };

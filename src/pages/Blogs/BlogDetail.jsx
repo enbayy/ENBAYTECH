@@ -45,7 +45,7 @@ const BlogDetail = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         {otherBlogs.slice(0, 3).map((item) => (
                             <Link key={item.id} to={`/blog/${item.id}`} className="block h-full">
-                                <div className="shadow-md rounded-lg overflow-hidden flex flex-col h-full">
+                                <div className="rounded-tl-3xl rounded-br-3xl shadow-xl overflow-hidden flex flex-col h-full hover:scale-105 duration-300">
                                     <img src={item.imageUrl} alt={item.title} className="w-full h-40 object-cover" />
                                     <div className="p-4 flex flex-col flex-grow">
                                         <h3 className="text-lg font-semibold">{item.title}</h3>

@@ -8,8 +8,11 @@ const ReferencesDetailPage = () => {
     const navigate = useNavigate();
 
     const [fadeIn, setFadeIn] = useState(false);
+    const [randomReferences, setRandomReferences] = useState([]);
+
     useEffect(() => {
         setFadeIn(true);
+        setRandomReferences(getRandomReferences(references));
     }, []);
 
     if (!reference) {
@@ -39,7 +42,7 @@ const ReferencesDetailPage = () => {
 
                 <div className="mt-10 space-y-8">
                     {reference.sections.map((section, index) => (
-                        <div key={index} className="bg-white dark:bg-black p-6 rounded-lg shadow-sm shadow-black dark:shadow-white">
+                        <div key={index} className="bg-gray-100 dark:bg-black p-6 shadow-xl shadow-gray-300 rounded-tl-3xl rounded-br-3xl dark:shadow-gray-800">
                             <h2 className="text-2xl font-semibold text-gray-900 dark:text-white border-l-4 border-primary pl-4">
                                 {section.heading}
                             </h2>
@@ -60,12 +63,12 @@ const ReferencesDetailPage = () => {
                         Diğer Referanslar
                     </h2>
                     <div className="grid md:grid-cols-3 gap-6">
-                        {getRandomReferences(references)
+                        {randomReferences
                             .filter((r) => r.id !== reference.id)
                             .map((relatedReference) => (
                                 <div
                                     key={relatedReference.id}
-                                    className="bg-white rounded-lg shadow-md cursor-pointer transition-all duration-300 hover:scale-105 border border-black"
+                                    className="bg-white rounded-tl-3xl rounded-br-3xl shadow-xl shadow-gray-300 cursor-pointer transition-all duration-300 hover:scale-105 border border-black"
                                     onClick={() => navigate(`/referanslar/${relatedReference.id}`)}
                                 >
                                     <img

@@ -32,7 +32,7 @@ const AllServices = () => {
                             key={id}
                             data-aos="fade-up"
                             data-aos-delay={aosDelay}
-                            className="relative flex flex-col justify-between text-center bg-white dark:bg-black shadow-lg rounded-xl overflow-hidden border border-black dark:border-white transition-all duration-300 p-8 h-full group gap-y-2"
+                            className="relative flex flex-col justify-between text-center bg-white dark:bg-black shadow-xl shadow-gray-300 dark:shadow-gray-700 rounded-tl-3xl rounded-br-3xl overflow-hidden border border-gray-300 dark:border-white transition-all duration-300 p-8 h-full group gap-y-2"
                         >
                             <div className="">
                                 <div className="w-20 h-20 flex items-center justify-center rounded-full bg-gray-200 dark:bg-gray-800 mx-auto">

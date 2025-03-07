@@ -14,7 +14,7 @@ const ProductPage = () => {
                     data-aos="fade-up"
                     className="relative text-2xl sm:text-3xl md:text-4xl font-semibold break-words"
                 >
-                    Ürünlerimiz
+                    ÜRÜNLERİMİZ
                 </h1>
                 <p data-aos="fade-up" className="text-lg text-gray-600 dark:text-gray-400">
                     Sunduğumuz kaliteli ve profesyonel ürünlerle işinizi bir adım öteye taşıyın.
@@ -27,10 +27,10 @@ const ProductPage = () => {
                             key={product.id}
                             data-aos="fade-up"
                             data-aos-delay={product.aosDelay}
-                            className="group relative flex flex-col bg-white dark:bg-black shadow-lg rounded-xl overflow-hidden border border-black dark:border-white transition-all duration-300 p-6"
+                            className="group relative flex flex-col bg-white dark:bg-black shadow-xl shadow-gray-300 dark:shadow-gray-700 rounded-tl-3xl rounded-br-3xl overflow-hidden border border-gray-300 dark:border-white transition-all duration-300 p-6"
                         >
-                            <div className="w-full h-48 flex items-center justify-center rounded-xl overflow-hidden">
-                                <img src={product.imageUrl} alt={product.title} className="object-cover w-full h-full rounded-xl" />
+                            <div className="w-full h-48 flex items-center justify-center rounded-tl-3xl rounded-br-3xl overflow-hidden">
+                                <img src={product.imageUrl} alt={product.title} className="object-cover w-full h-full rounded-tl-3xl rounded-br-3xl" />
                             </div>
                             <div className="mt-4 flex-1 flex flex-col justify-between">
                                 <h2 className="text-xl font-semibold">{product.title}</h2>
@@ -40,7 +40,7 @@ const ProductPage = () => {
                                 <div className="flex justify-center">
                                     <button
                                         onClick={() => navigate(`/urunler/${product.id}`)}
-                                        className="w-[120px] h-[40px] bg-primary text-white rounded-lg hover:bg-orange-600 transition mt-4"
+                                        className="w-[120px] h-[40px] bg-primary text-white shadow-xl rounded-tl-2xl rounded-br-2xl hover:bg-orange-600 transition mt-4"
                                     >
                                         İncele
                                     </button>

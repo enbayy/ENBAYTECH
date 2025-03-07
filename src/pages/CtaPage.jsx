@@ -27,7 +27,7 @@ const CtaPage = () => {
                     <a
                         href="/iletisim"
                         data-aos="zoom-in"
-                        className="relative px-6 py-4 text-lg font-bold uppercase tracking-wide rounded-full shadow-xl bg-orange-500 text-white hover:bg-orange-600 transition-all duration-500 "
+                        className="relative px-6 py-4 text-lg font-bold uppercase tracking-wide rounded-tl-2xl rounded-br-2xl shadow-md shadow-orange-500 bg-orange-500 text-white hover:bg-orange-600 transition-all duration-500 "
                     >
                         🚀 Şimdi Başla
                     </a>

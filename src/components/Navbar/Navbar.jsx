@@ -37,8 +37,8 @@ const Navbar = () => {
                 <li key={id} className="py-4">
                   <Link
                     to={link}
-                    className={`text-xl font-normal py-2 px-3 rounded-lg transition-colors duration-300 cursor-pointer
-                      ${location.pathname === link ? "text-primary border-b-4 border-primary" : "text-black dark:text-white hover:text-primary hover:border-b-4 hover:border-primary"}`}
+                    className={`text-xl font-medium py-2 px-3 rounded-lg transition-colors duration-300 cursor-pointer
+                      ${location.pathname === link ? "text-primary border-b-2 border-primary" : "text-black dark:text-white hover:text-primary hover:border-b-2 hover:border-primary"}`}
                   >
                     {name}
                   </Link>
@@ -46,7 +46,7 @@ const Navbar = () => {
               ))}
               <button
                 onClick={handleClick}
-                className="primary-btn font-normal text-lg"
+                className="primary-btn font-medium text-lg"
               >
                 İLETİŞİME GEÇ
               </button>

@@ -21,7 +21,7 @@ const ProductDetail = () => {
                     {product.description}
                 </p>
 
-                <div className="mt-10 bg-white dark:bg-black p-6 rounded-lg shadow-sm shadow-black dark:shadow-white">
+                <div className="mt-10 bg-gray-100 dark:bg-black p-6 shadow-xl shadow-gray-300 rounded-tl-3xl rounded-br-3xl dark:shadow-gray-800">
                     <h2 className="text-2xl font-semibold text-gray-900 dark:text-white border-l-4 border-primary pl-4">
                         Teknik Özellikler
                     </h2>
@@ -32,13 +32,13 @@ const ProductDetail = () => {
                     </ul>
                 </div>
 
-                <div className="mt-10 bg-white dark:bg-black p-6 rounded-lg shadow-sm shadow-black dark:shadow-white">
+                <div className="mt-10 bg-gray-100 dark:bg-black p-6 shadow-xl shadow-gray-300 rounded-tl-3xl rounded-br-3xl dark:shadow-gray-800">
                     <h2 className="text-2xl font-semibold text-gray-900 dark:text-white border-l-4 border-primary pl-4">
                         Kullanıcı Yorumları
                     </h2>
                     <div className="mt-4 space-y-4">
                         {product.userReviews.map((review, idx) => (
-                            <div key={idx} className="p-4 bg-gray-50 dark:bg-black rounded-lg shadow">
+                            <div key={idx} className="p-4 bg-gray-100 dark:bg-black rounded-lg shadow">
                                 <p className="text-lg font-semibold text-primary">{review.reviewer}</p>
                                 <p className="text-yellow-500">
                                     {"★".repeat(review.rating)}{"☆".repeat(5 - review.rating)}
@@ -51,7 +51,7 @@ const ProductDetail = () => {
 
                 <div className="mt-10 space-y-8">
                     {product.sections?.map((section, index) => (
-                        <div key={index} className="bg-white dark:bg-black p-6 rounded-lg shadow-sm shadow-black dark:shadow-white">
+                        <div key={index} className="bg-gray-100 dark:bg-black p-6 shadow-xl shadow-gray-300 rounded-tl-3xl rounded-br-3xl dark:shadow-gray-800">
                             <h2 className="text-2xl font-semibold text-gray-900 dark:text-white border-l-4 border-primary pl-4">
                                 {section.heading}
                             </h2>
@@ -70,7 +70,7 @@ const ProductDetail = () => {
                             .map((relatedProduct) => (
                                 <div
                                     key={relatedProduct.id}
-                                    className="bg-white dark:bg-black  p-4 rounded-lg shadow-md cursor-pointer transition-all duration-300 hover:scale-105 border border-black dark:border-white"
+                                    className="bg-white dark:bg-black  p-4 rounded-tl-3xl rounded-br-3xl shadow-xl shadow-gray-300 cursor-pointer transition-all duration-300 hover:scale-105 border border-gray-300 dark:border-white"
                                     onClick={() => navigate(`/urunler/${relatedProduct.id}`)}
                                 >
                                     <img

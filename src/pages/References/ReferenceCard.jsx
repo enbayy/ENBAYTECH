@@ -10,7 +10,7 @@ const ReferenceCard = ({ id, imageUrl }) => {
 
     return (
         <div
-            className="relative cursor-pointer rounded-lg overflow-hidden group transition-all duration-500 transform hover:scale-110 h-48 border border-black dark:bg-white"
+            className="relative cursor-pointer rounded-tl-3xl rounded-br-3xl shadow-xl shadow-gray-300 dark:shadow-gray-500 overflow-hidden group transition-all duration-500 transform hover:scale-110 h-48 border border-black dark:bg-white"
             onClick={handleCardClick}
         >
             <div
@@ -18,8 +18,8 @@ const ReferenceCard = ({ id, imageUrl }) => {
                 style={{
                     backgroundImage: `url(${imageUrl})`,
                 }}
-            ></div>
-
+            >
+            </div>
             <div className="absolute inset-0 bg-gradient-to-t from-black opacity-0 transition-all duration-500"></div>
 
             <div className="relative z-10 p-6 text-white transition-all duration-300 group-hover:bg-transparent group-hover:opacity-100">
