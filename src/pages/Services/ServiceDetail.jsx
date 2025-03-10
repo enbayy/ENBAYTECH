@@ -17,27 +17,46 @@ const ServiceDetail = () => {
     }
 
     return (
-        <div data-aos="fade-up" className="max-w-5xl mx-auto p-6 animate-fadeIn">
-            <h1 className="text-3xl md:text-5xl font-semibold text-black dark:text-white text-center px-6 drop-shadow-lg">
-                {service.title}
-            </h1>
-            <p className="text-gray-600 dark:text-gray-400 mt-8 text-lg leading-relaxed tracking-wide border-l-4 border-primary pl-4">
-                {service.description}
-            </p>
-            <div className="mt-10 space-y-8">
-                {service.sections.map((section, index) => (
-                    <div
-                        key={index}
-                        className="bg-gray-100 dark:bg-black shadow-xl shadow-gray-300 rounded-tl-3xl rounded-br-3xl dark:shadow-gray-800 p-6 transition-all duration-500"
-                    >
-                        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white border-l-4 border-primary pl-4">
-                            {section.heading}
-                        </h2>
-                        <p className="text-gray-700 dark:text-gray-300 mt-3 leading-relaxed">{section.content}</p>
-                    </div>
-                ))}
+        <section className="bg-gray-50 dark:bg-black dark:text-white py-12">
+            <div className="relative bg-gray-900 text-white py-16 px-8 text-center">
+                <img
+                    src={service.imageSrc}
+                    alt={service.title}
+                    className="absolute inset-0 w-full h-full object-cover opacity-20"
+                />
+                <h1 className="text-5xl font-bold drop-shadow-lg relative">{service.title}</h1>
             </div>
-            <div className="mt-12">
+
+            <div className="max-w-6xl mx-auto px-6 mt-12 grid md:grid-cols-2 gap-10 items-center">
+                <img src={service.imageSrc} alt={service.title} />
+                <div>
+                    <h2 className="text-3xl font-semibold text-gray-900 dark:text-white border-l-4 border-primary pl-4">
+                        Hizmet Açıklaması
+                    </h2>
+                    <p className="mt-4 text-gray-700 dark:text-gray-300 leading-relaxed">
+                        {service.description}
+                    </p>
+                </div>
+            </div>
+
+            <div className="max-w-6xl mx-auto px-6 mt-12 bg-gray-100 dark:bg-gray-900 p-8 rounded-lg shadow-lg">
+                <h2 className="text-3xl font-semibold text-gray-900 dark:text-white border-l-4 border-primary pl-4">
+                    Hizmet Bölümleri
+                </h2>
+                <div className="mt-6 space-y-6">
+                    {service.sections.map((section, index) => (
+                        <div
+                            key={index}
+                            className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow"
+                        >
+                            <h3 className="text-xl font-semibold text-primary">{section.heading}</h3>
+                            <p className="text-gray-700 dark:text-gray-300 mt-2">{section.content}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            <div className="max-w-6xl mx-auto px-6 mt-12">
                 <h2 className="text-3xl font-semibold text-gray-900 dark:text-white border-l-4 border-primary pl-4 mb-6">
                     İlgili Hizmetler
                 </h2>
@@ -48,7 +67,7 @@ const ServiceDetail = () => {
                         .map((relatedService) => (
                             <div
                                 key={relatedService.id}
-                                className="bg-white dark:bg-black p-4 rounded-tl-3xl rounded-br-3xl shadow-xl shadow-gray-800 cursor-pointer transition-all duration-300 hover:scale-105 border border-gray-300 dark:border-white"
+                                className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg cursor-pointer hover:scale-105 transition"
                                 onClick={() => navigate(`/hizmetler/${relatedService.id}`)}
                             >
                                 <img
@@ -56,21 +75,26 @@ const ServiceDetail = () => {
                                     alt={relatedService.title}
                                     className="w-full h-40 object-cover rounded-md mb-4"
                                 />
-                                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{relatedService.title}</h3>
-                                <p className="text-gray-600 dark:text-gray-300 mt-2 text-sm">{relatedService.description.slice(0, 80)}...</p>
+                                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                                    {relatedService.title}
+                                </h3>
+                                <p className="text-gray-600 dark:text-gray-300 mt-2 text-sm">
+                                    {relatedService.description.slice(0, 80)}...
+                                </p>
                             </div>
                         ))}
                 </div>
             </div>
-            <div className="mt-10 flex justify-center">
+
+            <div className="mt-12 flex justify-center">
                 <button
                     onClick={() => navigate(-1)}
-                    className="flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-tl-2xl rounded-br-2xl shadow-md transition-all duration-300 hover:bg-orange-600 font-semibold"
+                    className="flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg shadow-md transition hover:bg-orange-600 font-semibold"
                 >
                     <FaArrowLeft /> Geri Dön
                 </button>
             </div>
-        </div>
+        </section>
     );
 };
 
