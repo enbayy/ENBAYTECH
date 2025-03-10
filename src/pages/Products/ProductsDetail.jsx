@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { products } from "../../data/ProductData";
+import { FaArrowLeft } from "react-icons/fa6";
 
 const ProductDetail = () => {
     const { id } = useParams();
@@ -92,9 +93,9 @@ const ProductDetail = () => {
                 <div className="mt-10 flex justify-center">
                     <button
                         onClick={() => navigate(-1)}
-                        className="px-6 py-3 bg-primary text-white rounded-tl-2xl rounded-br-2xl shadow-md transition-all duration-300 hover:bg-opacity-80 font-semibold"
+                        className="flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-tl-2xl rounded-br-2xl shadow-md transition-all duration-300 hover:bg-orange-600 font-semibold"
                     >
-                        Geri Dön
+                        <FaArrowLeft /> Geri Dön
                     </button>
                 </div>
             </div>
