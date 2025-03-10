@@ -18,7 +18,7 @@ const Contact = () => {
     };
 
     return (
-        <div data-aos="zoom-in" className="dark:bg-black dark:text-white">
+        <div data-aos="zoom-in" data-aos-once="true" className="dark:bg-black dark:text-white">
             <div className="container mx-auto px-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-0">
                     <div className="bg-white dark:bg-black p-8 space-y-6">
@@ -26,12 +26,11 @@ const Contact = () => {
                         <p className="text-black dark:text-white">
                             Sorularınız için bizimle iletişime geçin.
                         </p>
-
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div>
                                 <label
                                     htmlFor="name"
-                                    className="text-black dark:text-white block mb-2 font-medium"
+                                    className="text-black dark:text-white block mb-2 font-bold"
                                 >
                                     Adınız
                                 </label>
@@ -50,7 +49,7 @@ const Contact = () => {
                             <div>
                                 <label
                                     htmlFor="email"
-                                    className="text-black dark:text-white block mb-2 font-medium"
+                                    className="text-black dark:text-white block mb-2 font-bold"
                                 >
                                     E-posta
                                 </label>
@@ -69,7 +68,7 @@ const Contact = () => {
                             <div>
                                 <label
                                     htmlFor="message"
-                                    className="text-black dark:text-white block mb-2 font-medium"
+                                    className="text-black dark:text-white block mb-2 font-bold"
                                 >
                                     Mesajınız
                                 </label>

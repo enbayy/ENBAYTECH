@@ -12,9 +12,9 @@ const Services = () => {
     return (
         <section id="services" className="bg-white dark:bg-black dark:text-white py-12">
             <div className="container">
-                <div className="mb-8 text-center space-y-3">
+                <div data-aos="zoom-in" data-aos-once="true" className="mb-8 text-center space-y-3">
                     <div className="flex justify-between">
-                        <h1 data-aos="fade-up" className="relative text-2xl sm:text-3xl md:text-4xl font-semibold break-words">
+                        <h1 className="relative text-2xl sm:text-3xl md:text-4xl font-semibold break-words">
                             HİZMETLERİMİZ
                         </h1>
                         <button
@@ -26,11 +26,10 @@ const Services = () => {
                         </button>
                     </div>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div data-aos="zoom-in" data-aos-once="true" className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {services.slice(0, 4).map((service) => (
                         <div
                             key={service.id}
-                            data-aos="fade-up"
                             data-aos-delay={service.aosDelay}
                             className="relative flex items-center bg-white dark:bg-black shadow-xl shadow-gray-300 dark:shadow-gray-800 rounded-tl-3xl rounded-br-3xl overflow-hidden border border-gray-300 transition-all duration-300 p-6 group"
                         >
@@ -55,12 +54,10 @@ const Services = () => {
                                     İncele
                                 </button>
                             </div>
-                            <span className="absolute left-0 bottom-0 w-0 h-[6px] bg-primary transition-all duration-300 group-hover:w-full"></span>
+                            <span className="absolute left-0 bottom-0 w-0 h-[6px] bg-primary transition-all duration-300 group-hover:w-full">
+                            </span>
                         </div>
                     ))}
-                </div>
-                <div className="flex items-center justify-center mt-10">
-
                 </div>
             </div>
         </section >

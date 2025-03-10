@@ -1,4 +1,4 @@
-import anonim from "../assets/anonim.png";
+import anonim from "../assets/hero.png";
 
 export const testimonials = [
     {
@@ -7,7 +7,7 @@ export const testimonials = [
         company: "Teknoloji A.Ş.",
         comment:
             "Bu yazılım bizim için gerçekten çok faydalı oldu. EnCRM ile iş süreçlerimizi büyük ölçüde iyileştik!",
-        image: anonim,
+        img: anonim,
     },
     {
         id: 2,
@@ -15,7 +15,7 @@ export const testimonials = [
         company: "Dijital Dünya",
         comment:
             "B2B E-ticaret platformu sayesinde satışlarımız önemli ölçüde arttı. Harika bir çözüm!",
-        image: anonim,
+        img: anonim,
     },
     {
         id: 3,
@@ -23,6 +23,6 @@ export const testimonials = [
         company: "Yenilikçi Çözümler Ltd.",
         comment:
             "Dijital dönüşüm sürecimizde yanımızda oldukları için teşekkür ederiz. Çok profesyonel bir ekip.",
-        image: anonim,
+        img: anonim,
     },
 ];

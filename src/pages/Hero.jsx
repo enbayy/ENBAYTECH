@@ -41,28 +41,23 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center bg-white dark:bg-black text-black dark:text-white px-6 md:px-12 lg:px-24 xl:px-32">
-      <div className="flex flex-col lg:flex-row items-center justify-between w-full max-w-6xl gap-10 lg:gap-20">
+    <section id="hero" className="bg-white dark:bg-black dark:text-white py-12">
+      <div className="container flex flex-col lg:flex-row items-center justify-between w-full max-w-6xl gap-10 lg:gap-20">
         <div data-aos="zoom-in" className="lg:w-1/2 text-center lg:text-left space-y-6">
-          <h1
-            className="text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight"
-          >
+          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight">
             Kurumsal B2B Yazılım ve Web Teknolojileri Ajansı{" "}
             <span className="text-primary underline underline-offset-4">
               Engin Tasarım
             </span>
           </h1>
-          <p
-            data-aos-delay="300"
-            className="text-lg text-gray-800 dark:text-gray-300"
-          >
+          <p data-aos-delay="300" className="text-lg text-gray-800 dark:text-gray-300">
             Web yazılımları, B2B e-ticaret sistemleri ve dijital dönüşüm
             çözümleriyle teknoloji ortağınız.
           </p>
           <button
             onClick={handleClick}
             data-aos-delay="500"
-            className="text-white dark:text-black bg-primary hover:bg-primary-dark transition-all duration-300 px-7 py-3 rounded-tl-2xl rounded-br-2xl text-lg font-semibold shadow-lg"
+            className="text-white dark:text-black bg-primary hover:bg-orange-600 transition-all duration-300 px-7 py-3 rounded-tl-2xl rounded-br-2xl text-lg font-semibold shadow-lg"
           >
             Daha Fazla
           </button>
@@ -93,7 +88,7 @@ const Hero = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

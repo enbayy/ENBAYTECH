@@ -12,10 +12,10 @@ const About = () => {
     return (
         <section id="about-detail">
             <div className="dark:bg-dark bg-slate-100 sm:min-h-[800px] sm:grid sm:place-items-center duration-300">
-                <div className="container">
+                <div data-aos="zoom-in" data-aos-once="true" className="container">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 place-items-center">
                         <div>
-                            <div data-aos="zoom-in" className="space-y-6 sm:p-16 pb-6">
+                            <div className="space-y-6 sm:p-16 pb-6">
                                 <h1 className="text-3xl sm:text-4xl font-bold font-sans">
                                     Hakkımızda
                                 </h1>
@@ -65,13 +65,13 @@ const About = () => {
 
                                 <button
                                     onClick={handleClick}
-                                    className="bg-[#FF8C00] hover:bg-[#FF9A30] text-black py-3 px-10 rounded-full text-lg font-semibold transition-all duration-500 shadow-lg transform hover:scale-105"
+                                    className="bg-primary hover:bg-orange-600 text-white py-3 px-10 rounded-full text-lg font-semibold transition-all duration-500 shadow-lg"
                                 >
                                     İletişime Geç
                                 </button>
                             </div>
                         </div>
-                        <div data-aos="zoom-in" data-aos-once="true">
+                        <div>
                             <img
                                 src={malzeme}
                                 alt="Company Image"

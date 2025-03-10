@@ -10,17 +10,16 @@ const ProductPage = () => {
     return (
         <section className="bg-white dark:bg-black dark:text-white py-12">
             <div className="container">
-                <div className="mb-8 text-center space-y-3">
-                    <h1 data-aos="fade-up" className="flex relative text-2xl sm:text-3xl md:text-4xl font-semibold break-words">
+                <div data-aos="zoom-in" data-aos-once="true" className="mb-8 text-center space-y-3">
+                    <h1 className="flex relative text-2xl sm:text-3xl md:text-4xl font-semibold break-words">
                         ÜRÜNLERİMİZ
                     </h1>
                 </div>
                 <div>
-                    <div className=" grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div data-aos="zoom-in" data-aos-once="true" className=" grid grid-cols-1 md:grid-cols-3 gap-6">
                         {productsToDisplay.map((product) => (
                             <div
                                 key={product.id}
-                                data-aos="fade-up"
                                 data-aos-delay={product.aosDelay}
                                 className="group relative flex flex-col bg-white dark:bg-black shadow-xl shadow-gray-300 dark:shadow-gray-800 rounded-tl-3xl rounded-br-3xl overflow-hidden border border-gray-300 dark:border-white transition-all duration-300 p-6"
                             >

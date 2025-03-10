@@ -15,13 +15,13 @@ const AllServices = () => {
     };
 
     return (
-        <section id="services" className="bg-white dark:bg-black dark:text-white py-12">
+        <section data-aos="zoom-in" id="services" className="bg-white dark:bg-black dark:text-white py-12">
             <div className="container mx-auto px-6">
                 <div className="pb-12 text-center space-y-4">
-                    <h1 data-aos="fade-up" className="relative text-2xl sm:text-3xl md:text-4xl font-semibold break-words">
+                    <h1 className="relative text-2xl sm:text-3xl md:text-4xl font-semibold break-words">
                         HİZMETLERİMİZ
                     </h1>
-                    <p data-aos="fade-up" className="text-gray-700 dark:text-gray-300 text-lg max-w-2xl mx-auto">
+                    <p className="text-gray-700 dark:text-gray-300 text-lg max-w-2xl mx-auto">
                         Profesyonel hizmetlerimizle işinizi bir üst seviyeye taşıyın.
                     </p>
                 </div>
@@ -30,8 +30,6 @@ const AllServices = () => {
                     {services.map(({ id, title, description, imageSrc, aosDelay }) => (
                         <div
                             key={id}
-                            data-aos="fade-up"
-                            data-aos-delay={aosDelay}
                             className="relative flex flex-col justify-between text-center bg-white dark:bg-black shadow-xl shadow-gray-300 dark:shadow-gray-800 rounded-tl-3xl rounded-br-3xl overflow-hidden border border-gray-300 dark:border-white transition-all duration-300 p-8 h-full group gap-y-2"
                         >
                             <div className="">
@@ -61,7 +59,8 @@ const AllServices = () => {
                                     İncele
                                 </button>
                             </div>
-                            <span className="absolute inset-x-0 bottom-0 w-0 h-[6px] bg-primary transition-all duration-300 group-hover:w-full"></span>
+                            <span className="absolute inset-x-0 bottom-0 w-0 h-[6px] bg-primary transition-all duration-300 group-hover:w-full">
+                            </span>
                         </div>
                     ))}
                 </div>

@@ -5,9 +5,6 @@ import "aos/dist/aos.css";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import { RiWhatsappFill } from "react-icons/ri";
-import { FaInstagram, FaLinkedin } from "react-icons/fa";
-import { FaSquareXTwitter } from "react-icons/fa6";
-import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import CtaPage from "./pages/CtaPage";
 
 const Hero = lazy(() => import("./pages/Hero"));
@@ -100,27 +97,14 @@ const App = () => {
 
       <Footer />
 
-      <div className="fixed bottom-0 right-0 z-50 flex flex-col items-center space-y-2">
-        <button
-          onClick={() => setShowSocialIcons(!showSocialIcons)}
-          className="bg-white text-black hover:bg-primary hover:text-white p-4 rounded-full shadow-lg transition-transform"
-        >
-          {showSocialIcons ? <IoIosArrowForward size={25} /> : <IoIosArrowBack size={25} />}
-        </button>
-        <div
-          className={`flex flex-col space-y-2 transition-all duration-500 ${showSocialIcons ? "translate-x-0 opacity-100" : "translate-x-20 opacity-0 pointer-events-none"
-            }`}
-        >
-          <a href="https://wa.me/905522312086" target="_blank" rel="noopener noreferrer" className="bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-primary"><RiWhatsappFill size={25} />
-          </a>
-          <a href="https://www.instagram.com/engin_tasarim/" target="_blank" rel="noopener noreferrer" className="bg-pink-500 text-white p-4 rounded-full shadow-lg hover:bg-primary"><FaInstagram size={25} />
-          </a>
-          <a href="https://www.linkedin.com/company/engintasarim/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="bg-blue-700 text-white p-4 rounded-full shadow-lg hover:bg-primary"><FaLinkedin size={25} />
-          </a>
-          <a href="https://x.com/engintasarim" target="_blank" rel="noopener noreferrer" className="bg-black text-white p-4 rounded-full shadow-lg hover:bg-primary"><FaSquareXTwitter size={25} />
-          </a>
-        </div>
-      </div>
+      <a
+        href="https://wa.me/905522312086"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-3 right-3 z-50 flex flex-col items-center space-y-2 bg-green-500 text-white p-4 rounded-full hover:bg-primary"
+      >
+        <RiWhatsappFill size={25} />
+      </a>
     </div>
   );
 };
