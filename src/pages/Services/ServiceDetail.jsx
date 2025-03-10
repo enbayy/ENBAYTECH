@@ -48,7 +48,7 @@ const ServiceDetail = () => {
                         .map((relatedService) => (
                             <div
                                 key={relatedService.id}
-                                className="bg-white dark:bg-black p-4 rounded-tl-3xl rounded-br-3xl shadow-xl shadow-gray-300 cursor-pointer transition-all duration-300 hover:scale-105 border border-gray-300 dark:border-white"
+                                className="bg-white dark:bg-black p-4 rounded-tl-3xl rounded-br-3xl shadow-xl shadow-gray-800 cursor-pointer transition-all duration-300 hover:scale-105 border border-gray-300 dark:border-white"
                                 onClick={() => navigate(`/hizmetler/${relatedService.id}`)}
                             >
                                 <img

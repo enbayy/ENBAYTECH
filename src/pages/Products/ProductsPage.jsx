@@ -22,7 +22,7 @@ const ProductPage = () => {
                                 key={product.id}
                                 data-aos="fade-up"
                                 data-aos-delay={product.aosDelay}
-                                className="group relative flex flex-col bg-white dark:bg-black shadow-xl shadow-gray-300 dark:shadow-gray-700 rounded-tl-3xl rounded-br-3xl overflow-hidden border border-gray-300 dark:border-white transition-all duration-300 p-6"
+                                className="group relative flex flex-col bg-white dark:bg-black shadow-xl shadow-gray-300 dark:shadow-gray-800 rounded-tl-3xl rounded-br-3xl overflow-hidden border border-gray-300 dark:border-white transition-all duration-300 p-6"
                             >
                                 <div className="w-full h-48 flex items-center justify-center rounded-tl-3xl rounded-br-3xl overflow-hidden">
                                     <img src={product.imageUrl} alt={product.title} className="object-cover w-full h-full rounded-tl-3xl rounded-br-3xl" />

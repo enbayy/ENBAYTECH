@@ -25,7 +25,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="relative z-10 w-full dark:bg-black dark:text-white duration-300">
+    <div className="h-20 flex items-center justify-center relative z-10 w-full dark:bg-black dark:text-white duration-300 shadow">
       <div className="container py-3 md:py-2">
         <div className="flex justify-between items-center">
           <Link to="/" className="text-orange-500 text-3xl font-bold">
@@ -50,15 +50,13 @@ const Navbar = () => {
               ))}
             </ul>
           </nav>
-
           <div className="flex items-center gap-3 lg:gap-6">
             <button
               onClick={handleClick}
               className="hidden lg:block primary-btn font-medium text-lg"
             >
-              İLETİŞİME GEÇ
+              TEKLİF AL
             </button>
-
             <DarkMode />
             <div className="lg:hidden">
               {showMenu ? (

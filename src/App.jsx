@@ -75,7 +75,7 @@ const App = () => {
       <ScrollToTop />
       <Navbar />
 
-      <div className="fixed top-0 left-0 right-0 h-1 bg-white z-30">
+      <div className="fixed top-0 left-0 right-0 h-1 bg-white dark:bg-black z-30">
         <div
           className="h-full bg-primary"
           style={{ width: `${scrollPercentage}%` }}

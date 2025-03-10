@@ -39,7 +39,7 @@ const ResponsiveMenu = ({ showMenu, toggleMenu }) => {
           onClick={handleClick}
           className="primary-btn w-full block py-4 font-medium text-lg text-center"
         >
-          İletişime Geç
+          TEKLİF AL
         </button>
       </div>
     </div>

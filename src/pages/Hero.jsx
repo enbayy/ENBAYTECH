@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import hero from "../assets/hero.png";
+import hero from "../assets/hero2.png";
 import { useNavigate } from "react-router-dom";
 
 const stats = [
@@ -13,8 +13,8 @@ const Hero = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("/hizmetlerimiz")
-  }
+    navigate("/hizmetlerimiz");
+  };
 
   useEffect(() => {
     const duration = 2000;
@@ -41,58 +41,58 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center bg-white dark:bg-black text-black dark:text-white px-12 sm:px-16">
-      <div className="flex flex-col sm:flex-row-reverse justify-between items-center text-center sm:text-left max-w-6xl w-full gap-16 sm:gap-24">
-        <div data-aos="zoom-in" className="sm:w-1/2 flex justify-center">
-          <img
-            src={hero}
-            alt="Hero"
-            className="w-full max-w-[320px] sm:max-w-[400px] md:max-w-[450px] rounded-xl"
-          />
-        </div>
-
-        <div className="sm:w-1/2 space-y-8">
+    <div className="min-h-screen flex flex-col justify-center items-center bg-white dark:bg-black text-black dark:text-white px-6 md:px-12 lg:px-24 xl:px-32">
+      <div className="flex flex-col lg:flex-row items-center justify-between w-full max-w-6xl gap-10 lg:gap-20">
+        <div data-aos="zoom-in" className="lg:w-1/2 text-center lg:text-left space-y-6">
           <h1
-            data-aos="fade-up"
-            className="text-4xl sm:text-5xl font-extrabold tracking-tight"
-            style={{ lineHeight: 1.3 }}
+            className="text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight"
           >
             Kurumsal B2B Yazılım ve Web Teknolojileri Ajansı{" "}
-            <span className="text-primary underline underline-offset-4">Engin Tasarım</span>
+            <span className="text-primary underline underline-offset-4">
+              Engin Tasarım
+            </span>
           </h1>
-          <p data-aos="fade-up" data-aos-delay="300" className="text-lg text-black dark:text-white">
-            Web yazılımları, B2B e-ticaret sistemleri ve dijital dönüşüm çözümleriyle
-            teknoloji ortağınız.
+          <p
+            data-aos-delay="300"
+            className="text-lg text-gray-800 dark:text-gray-300"
+          >
+            Web yazılımları, B2B e-ticaret sistemleri ve dijital dönüşüm
+            çözümleriyle teknoloji ortağınız.
           </p>
           <button
             onClick={handleClick}
-            data-aos="fade-up"
             data-aos-delay="500"
             className="text-white dark:text-black bg-primary hover:bg-primary-dark transition-all duration-300 px-7 py-3 rounded-tl-2xl rounded-br-2xl text-lg font-semibold shadow-lg"
           >
             Daha Fazla
           </button>
         </div>
+        <img
+          src={hero}
+          data-aos="zoom-in"
+          alt="Hero"
+          className="w-72 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl h-auto object-cover rounded-xl"
+        />
       </div>
 
-      <div className="flex flex-wrap justify-center items-center gap-12 mt-16">
-        {stats.map((stat, index) => (
-          <div
-            key={index}
-            data-aos="fade-up"
-            className="bg-white dark:bg-black px-10 py-4 rounded-3xl text-center w-44 sm:w-52"
-          >
-            <div className="flex items-center justify-between">
-              <h1 className="text-5xl font-bold text-primary">{counts[index]}+</h1>
-              <p className="text-gray-800 dark:text-gray-300 text-lg font-bold ml-4">
+      <div className="w-full flex flex-col items-center mt-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-10 lg:gap-12 text-center">
+          {stats.map((stat, index) => (
+            <div
+              key={index}
+              data-aos="fade-up"
+              className="bg-white dark:bg-black px-8 py-6 rounded-3xl w-40 sm:w-48 md:w-52"
+            >
+              <h1 className="text-5xl font-bold text-primary">
+                {counts[index]}+
+              </h1>
+              <p className="text-gray-800 dark:text-gray-300 text-lg font-bold mt-2">
                 {stat.label}
               </p>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-
-
     </div>
   );
 };
