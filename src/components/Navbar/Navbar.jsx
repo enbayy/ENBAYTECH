@@ -28,7 +28,7 @@ const Navbar = () => {
     <div className="h-20 flex items-center justify-center relative z-10 w-full dark:bg-black dark:text-white duration-300">
       <div className="container py-3 md:py-2">
         <div className="flex justify-between items-center">
-          <Link to="/" className="text-orange-500 text-3xl font-bold">
+          <Link to="/" className="text-primary text-3xl font-bold">
             engintasarım
           </Link>
           <nav className="hidden lg:flex items-center gap-6">
