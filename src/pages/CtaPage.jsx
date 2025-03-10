@@ -9,23 +9,23 @@ const CtaPage = () => {
             </div>
             <div className="relative z-10 max-w-4xl flex items-center justify-center flex-col">
                 <h2
-                    className="text-5xl sm:text-6xl font-extrabold tracking-wide leading-[1.4] bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-yellow-500 drop-shadow-lg pb-4"
+                    className="text-5xl sm:text-6xl font-extrabold tracking-wide leading-[1.4] bg-clip-text text-transparent bg-primary drop-shadow-lg pb-4"
                 >
-                    Dijital Dönüşümünüz Başlıyor! 🚀
+                    Dijital Dönüşümünüz Başlıyor!
                 </h2>
                 <p
                     className="text-lg sm:text-xl mt-6 opacity-80 max-w-2xl mx-auto text-black dark:text-white"
                 >
                     B2B e-ticaret sistemleri, özel web yazılımları ve yenilikçi çözümlerle işinizi geleceğe taşıyın.
-                    <span className="font-bold text-orange-400"> Sizi ileriye götürecek teknolojiyi keşfedin!</span>
+                    <span className="font-bold text-primary"> Sizi ileriye götürecek teknolojiyi keşfedin!</span>
                 </p>
 
-                <div className="mt-8 flex flex-col sm:flex-row justify-center gap-6">
+                <div className="mt-8 flex flex-col sm:flex-row justify-center">
                     <a
                         href="/iletisim"
-                        className="relative px-6 py-4 text-lg font-bold uppercase tracking-wide rounded-tl-2xl rounded-br-2xl shadow-md shadow-orange-500 bg-orange-500 text-white hover:bg-orange-600 transition-all duration-500 "
+                        className="relative px-6 py-4 text-xl font-bold uppercase tracking-wide rounded-tl-2xl rounded-br-2xl bg-orange-500 text-white hover:bg-orange-600"
                     >
-                        🚀 Şimdi Başla
+                        ŞİMDİ BAŞLA
                     </a>
                 </div>
             </div>
