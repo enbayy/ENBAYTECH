@@ -32,7 +32,7 @@ const Services = () => {
                             key={service.id}
                             data-aos="fade-up"
                             data-aos-delay={service.aosDelay}
-                            className="relative flex items-center bg-white dark:bg-black shadow-xl shadow-gray-300 dark:shadow-gray-700 rounded-tl-3xl rounded-br-3xl overflow-hidden border border-gray-300 transition-all duration-300 p-6 group"
+                            className="relative flex items-center bg-white dark:bg-black shadow-xl shadow-gray-300 dark:shadow-gray-800 rounded-tl-3xl rounded-br-3xl overflow-hidden border border-gray-300 transition-all duration-300 p-6 group"
                         >
                             <div className="w-28 h-28 flex items-center justify-center rounded-xl overflow-hidden perspective-1000">
                                 <img
