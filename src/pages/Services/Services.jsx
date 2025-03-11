@@ -12,15 +12,15 @@ const Services = () => {
     return (
         <section id="services" className="bg-white dark:bg-black dark:text-white py-12">
             <div className="container">
-                <div data-aos="zoom-in" data-aos-once="true" className="mb-8 text-center space-y-3">
-                    <div className="flex justify-between">
-                        <h1 className="relative text-2xl sm:text-3xl md:text-4xl font-semibold break-words">
+                <div className="mb-8 text-center space-y-3">
+                    <div data-aos="zoom-in" data-aos-once="true" className="flex justify-between">
+                        <h1 className="border-l-8 border-primary/50 py-2 pl-2 relative text-2xl sm:text-3xl md:text-4xl font-semibold break-words">
                             HİZMETLERİMİZ
                         </h1>
                         <button
                             onClick={() => navigate("/hizmetlerimiz")}
-                            className="w-[120px] h-[40px] bg-primary text-white rounded-lg hover:bg-orange-600 transition"
                             data-aos="zoom-in"
+                            className="flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-tl-2xl rounded-br-2xl shadow-md transition hover:bg-orange-600 font-semibold"
                         >
                             Hepsini gör
                         </button>
@@ -43,7 +43,7 @@ const Services = () => {
                             <div className="ml-6 flex-1 flex flex-col justify-between h-full">
                                 <h2 className="text-xl font-semibold">{service.title}</h2>
                                 <h2 className="text-xl font-semibold">{service.name}</h2>
-                                <p className="text-gray-600 dark:text-gray-400 mt-2">
+                                <p className="text-gray-600 dark:text-gray-400 mt-2 font-poppins">
                                     {service.description.split(" ").slice(0, 25).join(" ")}...
                                 </p>
 

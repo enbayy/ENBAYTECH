@@ -34,10 +34,10 @@ const ReferencesDetailPage = () => {
     return (
         <section className="bg-gray-50 dark:bg-black dark:text-white py-12">
             <div data-aos="fade-up" className="max-w-5xl mx-auto px-6">
-                <h1 className="text-3xl md:text-5xl font-semibold text-black dark:text-white text-center px-6 drop-shadow-lg">
+                <h1 className="text-3xl md:text-5xl font-semibold text-black dark:text-white text-center px-6 drop-shadow-lg font-poppins">
                     {reference.title}
                 </h1>
-                <div className="mt-8 text-lg leading-relaxed tracking-wide border-l-4 border-primary pl-4 text-gray-700 dark:text-gray-300">
+                <div className="mt-8 text-lg leading-relaxed tracking-wide border-l-4 border-primary pl-4 text-gray-700 dark:text-gray-300 font-poppins">
                     {reference.description}
                 </div>
 
@@ -50,11 +50,11 @@ const ReferencesDetailPage = () => {
                             {Array.isArray(section.content) ? (
                                 <ul className="mt-3 space-y-2 text-gray-700 dark:text-gray-300 list-disc pl-5">
                                     {section.content.map((item, idx) => (
-                                        <li key={idx} className="leading-relaxed">{item}</li>
+                                        <li key={idx} className="leading-relaxed font-poppins">{item}</li>
                                     ))}
                                 </ul>
                             ) : (
-                                <p className="mt-3 text-gray-700 dark:text-gray-300">{section.content}</p>
+                                <p className="mt-3 text-gray-700 dark:text-gray-300 font-poppins">{section.content}</p>
                             )}
                         </div>
                     ))}

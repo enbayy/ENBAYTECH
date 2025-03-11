@@ -11,7 +11,7 @@ const ProductPage = () => {
         <section className="bg-white dark:bg-black dark:text-white py-12">
             <div className="container">
                 <div data-aos="zoom-in" data-aos-once="true" className="mb-8 text-center space-y-3">
-                    <h1 className="flex relative text-2xl sm:text-3xl md:text-4xl font-semibold break-words">
+                    <h1 className="border-l-8 border-primary/50 py-2 pl-2 flex relative text-2xl sm:text-3xl md:text-4xl font-semibold break-words">
                         ÜRÜNLERİMİZ
                     </h1>
                 </div>
@@ -28,7 +28,7 @@ const ProductPage = () => {
                                 </div>
                                 <div className="mt-4 flex-1 flex flex-col justify-between">
                                     <h2 className="text-xl font-semibold">{product.title}</h2>
-                                    <p className="text-gray-600 dark:text-gray-400 mt-2">
+                                    <p className="text-gray-600 dark:text-gray-400 mt-2 font-poppins">
                                         {product.description.split(" ").slice(0, 25).join(" ")}...
                                     </p>
                                     <div className="flex justify-center">

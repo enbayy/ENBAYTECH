@@ -19,46 +19,33 @@ const About = () => {
                                 <h1 className="text-3xl sm:text-4xl font-bold font-sans">
                                     Hakkımızda
                                 </h1>
-                                <p className="leading-8 tracking-wide">
+                                <p className="leading-8 tracking-wide font-poppins">
                                     Engin Tasarım ve Elektronik San. Tic. Ltd. Şti. İstanbul tasarım şirketleri arasında 20 yılı aşkın deneyimiyle dijital ajans olarak hizmet vermektedir. Bu süre zarfında, birçok başarılı projeye imza atmış ve müşterilerinin dijital dünyada kendilerini güçlü bir şekilde temsil etmelerini sağlamıştır.
                                 </p>
-                                <p>
+                                <p className="leading-8 tracking-wide font-poppins">
                                     Engin Tasarım, web tasarım, e-ticaret, dijital pazarlama ve yazılım alanlarında 20 yılı aşkın tecrübeyle hizmet vermektedir. Teknolojik gelişmeleri yakından takip ederek, müşterilerine her zaman en güncel ve etkili dijital çözümleri sunmaktadır.
                                 </p>
-                                <p>
+                                <p className="leading-8 tracking-wide font-poppins">
                                     Her projede yenilikçi ve özgün yaklaşımlar benimseyerek, dijital dünyada güçlü ve uzun vadeli başarılar elde edilmesine katkı sağlamaktadır. Her aşamada kaliteli hizmet anlayışıyla çalışarak, müşteri memnuniyetini ön planda tutmaktadır.
                                 </p>
 
-                                <div className="space-y-2">
-                                    <h2 className="text-2xl font-semibold text-[#FF8C00]">
+                                <div className="space-y-5">
+                                    <h2 className="text-2xl font-semibold text-black">
                                         Vizyon ve Misyon
                                     </h2>
-                                    <p className="leading-8">
+                                    <p className="leading-8 tracking-wide font-poppins">
                                         Engin Tasarım, yüksek kaliteli web çözümleri ve dijital hizmetler sunarak küresel ölçekte müşterilerinin başarılarını artırmayı hedefler. Teknolojik inovasyonla birleşen deneyim, her projenin güçlü bir temel üzerine inşa edilmesini sağlar.
                                     </p>
-                                    <p>
+                                    <p className="leading-8 tracking-wide font-poppins">
                                         Müşterilerine dijital alanda yenilikçi, etkili ve ölçeklenebilir çözümler sağlayarak, onların işlerini dijital dünyada dönüştürür ve büyütür. Engin Tasarım, her zaman müşteri odaklı yaklaşım sergileyerek, iş ortaklarının gelişimine katkı sağlar.
                                     </p>
                                 </div>
 
                                 <div className="space-y-2">
-                                    <h2 className="text-2xl font-semibold text-[#FF8C00]">
-                                        Değerlerimiz
-                                    </h2>
-                                    <ul className="list-disc pl-6">
-                                        <li>Mükemmeliyet ve kalite odaklılık</li>
-                                        <li>Sürekli yenilik ve gelişim</li>
-                                        <li>Müşteri memnuniyeti ve güven</li>
-                                        <li>Takım çalışması ve işbirliği</li>
-                                        <li>Şeffaflık ve dürüstlük</li>
-                                    </ul>
-                                </div>
-
-                                <div className="space-y-2">
-                                    <h2 className="text-2xl font-semibold text-[#FF8C00]">
+                                    <h2 className="text-2xl font-semibold text-black">
                                         Ekibimiz
                                     </h2>
-                                    <p className="leading-8">
+                                    <p className="leading-8 tracking-wide font-poppins">
                                         Engin Tasarım, yazılım ve tasarım konularında uzmanlaşmış dinamik bir ekipten oluşur. Her proje, uzman ekibimiz tarafından titizlikle yönetilerek zamanında ve yüksek kalitede teslim edilir. Ekip üyelerimiz, her projede müşteri beklentilerini aşmak için birlikte çalışmaktadır.
                                     </p>
                                 </div>

@@ -29,7 +29,7 @@ const BlogDetail = () => {
             <div className="mt-8">
                 {blogData.sections.map((section, index) => (
                     <div key={index} className="mt-8">
-                        <h2 className="text-2xl font-semibold text-gray-800 border-l-4 border-primary pl-3">
+                        <h2 className="text-2xl font-semibold text-gray-800 border-l-4 border-primary/50 pl-3">
                             {section.heading}
                         </h2>
                         <p className="text-gray-700 mt-3 leading-relaxed">{section.content}</p>

@@ -34,12 +34,12 @@ const AllReferencesPage = () => {
 
     return (
         <div data-aos="fade-up" className="w-full bg-white dark:bg-black relative overflow-hidden py-12">
-            <div className="relative mb-10 p-6 text-black dark:text-white">
-                <div className='container text-center px-6 sm:px-10 md:px-20 lg:px-40 flex flex-col gap-y-5'>
-                    <h1 className="relative text-2xl sm:text-3xl md:text-4xl font-semibold break-words">
+            <div className="container mx-auto px-4 sm:px-6 md:px-12 lg:px-20 xl:px-24 relative mb-10 text-black dark:text-white">
+                <div className="text-start flex flex-col gap-y-5">
+                    <h1 className="border-l-8 border-primary/50 py-2 pl-2 text-2xl sm:text-3xl md:text-4xl font-semibold break-words">
                         REFERANSLARIMIZ
                     </h1>
-                    <p className="relative text-base sm:text-lg md:text-xl break-words">
+                    <p className="text-base sm:text-lg md:text-xl break-words font-poppins">
                         Bizimle çalışarak başarıya ulaşan birçok firmayı görmektesiniz. Her biri kendi alanında öncü
                         ve bizimle güçlü bir işbirliği kurarak başarılarını daha da ileriye taşıdılar. İşte referanslarımız!
                     </p>
@@ -50,14 +50,14 @@ const AllReferencesPage = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1 }}
-                className="container mx-auto px-6 lg:px-20 text-white w-full relative z-0"
+                className="container mx-auto px-4 sm:px-6 md:px-12 lg:px-20 xl:px-24 text-white w-full relative z-0"
             >
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-12">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12">
                     {references.map((reference, index) => (
                         <div
                             key={reference.id}
                             ref={(el) => (referenceRefs.current[index] = el)}
-                            className="flex flex-col opacity-0 transform scale-75 transition-all duration-700 ease-out rounded-lg"
+                            className="flex flex-col opacity-0 transform scale-100 transition-all duration-700 ease-out rounded-lg w-full min-h-[200px]"
                         >
                             <ReferenceCard
                                 id={reference.id}

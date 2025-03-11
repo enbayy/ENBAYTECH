@@ -24,23 +24,23 @@ const ServiceDetail = () => {
                     alt={service.title}
                     className="absolute inset-0 w-full h-full object-cover opacity-20"
                 />
-                <h1 className="text-5xl font-bold drop-shadow-lg relative">{service.title}</h1>
+                <h1 className="text-5xl font-bold drop-shadow-lg relative font-poppins">{service.title}</h1>
             </div>
 
             <div className="max-w-6xl mx-auto px-6 mt-12 grid md:grid-cols-2 gap-10 items-center">
                 <img src={service.imageSrc} alt={service.title} />
                 <div>
-                    <h2 className="text-3xl font-semibold text-gray-900 dark:text-white border-l-4 border-primary pl-4">
+                    <h2 className="text-3xl font-semibold text-gray-900 dark:text-white border-l-4 border-primary/50 pl-4">
                         Hizmet Açıklaması
                     </h2>
-                    <p className="mt-4 text-gray-700 dark:text-gray-300 leading-relaxed">
+                    <p className="mt-4 text-gray-700 dark:text-gray-300 leading-relaxed font-poppins">
                         {service.description}
                     </p>
                 </div>
             </div>
 
             <div className="max-w-6xl mx-auto px-6 mt-12 bg-gray-100 dark:bg-gray-900 p-8 rounded-lg shadow-lg">
-                <h2 className="text-3xl font-semibold text-gray-900 dark:text-white border-l-4 border-primary pl-4">
+                <h2 className="text-3xl font-semibold text-gray-900 dark:text-white border-l-4 border-primary/50 pl-4">
                     Hizmet Bölümleri
                 </h2>
                 <div className="mt-6 space-y-6">
@@ -50,7 +50,7 @@ const ServiceDetail = () => {
                             className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow"
                         >
                             <h3 className="text-xl font-semibold text-primary">{section.heading}</h3>
-                            <p className="text-gray-700 dark:text-gray-300 mt-2">{section.content}</p>
+                            <p className="text-gray-700 dark:text-gray-300 mt-2 font-poppins">{section.content}</p>
                         </div>
                     ))}
                 </div>
@@ -78,7 +78,7 @@ const ServiceDetail = () => {
                                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                                     {relatedService.title}
                                 </h3>
-                                <p className="text-gray-600 dark:text-gray-300 mt-2 text-sm">
+                                <p className="text-gray-600 dark:text-gray-300 mt-2 text-sm font-poppins">
                                     {relatedService.description.slice(0, 80)}...
                                 </p>
                             </div>
@@ -89,7 +89,7 @@ const ServiceDetail = () => {
             <div className="mt-12 flex justify-center">
                 <button
                     onClick={() => navigate(-1)}
-                    className="flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg shadow-md transition hover:bg-orange-600 font-semibold"
+                    className="flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-tl-2xl rounded-br-2xl shadow-md transition hover:bg-orange-600 font-semibold"
                 >
                     <FaArrowLeft /> Geri Dön
                 </button>

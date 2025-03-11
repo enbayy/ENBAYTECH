@@ -22,8 +22,8 @@ const Contact = () => {
             <div className="container mx-auto px-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-0">
                     <div className="bg-white dark:bg-black p-8 space-y-6">
-                        <h2 className="text-3xl sm:text-4xl font-semibold text-black dark:text-white">Bize Ulaşın</h2>
-                        <p className="text-black dark:text-white">
+                        <h2 className="text-3xl sm:text-4xl font-semibold text-black dark:text-white font-poppins">Bize Ulaşın</h2>
+                        <p className="text-black dark:text-white font-poppins">
                             Sorularınız için bizimle iletişime geçin.
                         </p>
                         <form onSubmit={handleSubmit} className="space-y-6">

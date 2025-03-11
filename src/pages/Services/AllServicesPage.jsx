@@ -17,13 +17,10 @@ const AllServices = () => {
     return (
         <section data-aos="zoom-in" id="services" className="bg-white dark:bg-black dark:text-white py-12">
             <div className="container mx-auto px-6">
-                <div className="pb-12 text-center space-y-4">
-                    <h1 className="relative text-2xl sm:text-3xl md:text-4xl font-semibold break-words">
+                <div className="pb-12 text-start space-y-4">
+                    <h1 className="border-l-8 border-primary/50 py-2 pl-2 relative text-2xl sm:text-3xl md:text-4xl font-semibold break-words">
                         HİZMETLERİMİZ
                     </h1>
-                    <p className="text-gray-700 dark:text-gray-300 text-lg max-w-2xl mx-auto">
-                        Profesyonel hizmetlerimizle işinizi bir üst seviyeye taşıyın.
-                    </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">

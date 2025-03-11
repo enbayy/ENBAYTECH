@@ -16,23 +16,22 @@ const ProductDetail = () => {
         <section className="bg-gray-50 dark:bg-black dark:text-white py-12">
             <div className="relative bg-gray-900 text-white py-16 px-8 text-center">
                 <img src={product.imageUrl} alt={product.title} className="absolute inset-0 w-full h-full object-cover opacity-20" />
-                <h1 className="text-5xl font-bold drop-shadow-lg relative">{product.title}</h1>
-                <p className="mt-4 text-xl opacity-80 relative">{product.shortDescription}</p>
+                <h1 className="text-5xl font-bold drop-shadow-lg relative font-poppins">{product.title}</h1>
             </div>
 
             <div className="max-w-6xl mx-auto px-6 mt-12 grid md:grid-cols-2 gap-10 items-center">
                 <img src={product.imageUrl} alt={product.title} />
                 <div>
-                    <h2 className="text-3xl font-semibold text-gray-900 dark:text-white border-l-4 border-primary pl-4">Ürün Açıklaması</h2>
-                    <p className="mt-4 text-gray-700 dark:text-gray-300 leading-relaxed">{product.description}</p>
+                    <h2 className="text-3xl font-semibold text-gray-900 dark:text-white border-l-4 border-primary/50 pl-4">Ürün Açıklaması</h2>
+                    <p className="mt-4 text-gray-700 dark:text-gray-300 leading-relaxed font-poppins">{product.description}</p>
                 </div>
             </div>
 
             <div className="max-w-6xl mx-auto px-6 mt-12 bg-gray-100 dark:bg-gray-900 p-8 rounded-lg shadow-lg">
-                <h2 className="text-3xl font-semibold text-gray-900 dark:text-white border-l-4 border-primary pl-4">Teknik Özellikler</h2>
+                <h2 className="text-3xl font-semibold text-gray-900 dark:text-white border-l-4 border-primary/50 pl-4">Teknik Özellikler</h2>
                 <ul className="mt-4 space-y-3 text-gray-700 dark:text-gray-300">
                     {product.technicalSpecs.map((spec, idx) => (
-                        <li key={idx} className="flex items-center gap-3">
+                        <li key={idx} className="flex items-center gap-3 font-poppins">
                             <FaCheckCircle className="text-primary" /> {spec}
                         </li>
                     ))}
@@ -40,16 +39,16 @@ const ProductDetail = () => {
             </div>
 
             <div className="max-w-6xl mx-auto px-6 mt-12 bg-gray-100 dark:bg-gray-900 p-8 rounded-lg shadow-lg">
-                <h2 className="text-3xl font-semibold text-gray-900 dark:text-white border-l-4 border-primary pl-4">Kullanıcı Yorumları</h2>
+                <h2 className="text-3xl font-semibold text-gray-900 dark:text-white border-l-4 border-primary/50 pl-4">Kullanıcı Yorumları</h2>
                 <div className="mt-6 space-y-6">
                     {product.userReviews.map((review, idx) => (
                         <div key={idx} className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow">
-                            <p className="text-lg font-semibold text-primary">{review.reviewer}</p>
-                            <p className="flex items-center text-yellow-500">
+                            <p className="text-lg font-semibold text-primary font-poppins">{review.reviewer}</p>
+                            <p className="flex items-center text-yellow-500 ">
                                 {[...Array(review.rating)].map((_, i) => <FaStar key={i} />)}
                                 {[...Array(5 - review.rating)].map((_, i) => <FaStar key={i} className="text-gray-400" />)}
                             </p>
-                            <p className="text-gray-700 dark:text-gray-300 mt-2">{review.review}</p>
+                            <p className="text-gray-700 dark:text-gray-300 mt-2 font-poppins">{review.review}</p>
                         </div>
                     ))}
                 </div>
@@ -62,7 +61,7 @@ const ProductDetail = () => {
                         <div key={relatedProduct.id} className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg cursor-pointer hover:scale-105 transition" onClick={() => navigate(`/urunler/${relatedProduct.id}`)}>
                             <img src={relatedProduct.imageUrl} alt={relatedProduct.title} className="w-full h-40 object-cover rounded-md mb-4" />
                             <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{relatedProduct.title}</h3>
-                            <p className="text-gray-600 dark:text-gray-300 mt-2 text-sm">{relatedProduct.description.slice(0, 80)}...</p>
+                            <p className="text-gray-600 dark:text-gray-300 mt-2 text-sm font-poppins">{relatedProduct.description.slice(0, 80)}...</p>
                         </div>
                     ))}
                 </div>

@@ -41,32 +41,32 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="hero" className="bg-white dark:bg-black dark:text-white py-12">
-      <div className="container flex flex-col lg:flex-row items-center justify-between w-full max-w-6xl gap-10 lg:gap-20">
-        <div data-aos="zoom-in" className="lg:w-1/2 text-center lg:text-left space-y-6">
-          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight">
-            Kurumsal B2B Yazılım ve Web Teknolojileri Ajansı{" "}
+    <section id="hero" className="bg-white dark:bg-black dark:text-white py-16">
+      <div className="container flex flex-col lg:flex-row items-center justify-between w-full max-w-6xl gap-14 lg:gap-24">
+        <div data-aos="zoom-in" className="lg:w-1/2 text-center lg:text-left space-y-8">
+          <h1 className="text-5xl sm:text-6xl font-bold tracking-tight leading-tight font-poppins">
+            Dijital Dönüşümde Güvenilir İş Ortağınız <br />
             <span className="text-primary underline underline-offset-4">
               Engin Tasarım
             </span>
           </h1>
-          <p data-aos-delay="300" className="text-lg text-gray-800 dark:text-gray-300">
-            Web yazılımları, B2B e-ticaret sistemleri ve dijital dönüşüm
-            çözümleriyle teknoloji ortağınız.
+          <p data-aos-delay="300" className="text-xl text-gray-800 dark:text-gray-300 font-poppins">
+            Kurumsal yazılım çözümleri, B2B e-ticaret sistemleri ve özel web projeleriyle
+            markanızı dijital dünyada güçlendiriyoruz.
           </p>
           <button
             onClick={handleClick}
             data-aos-delay="500"
-            className="text-white dark:text-black bg-primary hover:bg-orange-600 transition-all duration-300 px-7 py-3 rounded-tl-2xl rounded-br-2xl text-lg font-semibold shadow-lg"
+            className="text-white dark:text-black bg-primary hover:bg-orange-600 transition-all duration-300 px-9 py-4 rounded-tl-3xl rounded-br-3xl text-xl font-bold shadow-lg font-poppins"
           >
-            Daha Fazla
+            Hemen Başla
           </button>
         </div>
         <img
           src={hero}
           data-aos="zoom-in"
           alt="Hero"
-          className="w-72 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl h-auto object-cover rounded-xl"
+          className="w-80 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-2xl h-auto object-cover rounded-2xl"
         />
       </div>
 
@@ -81,7 +81,7 @@ const Hero = () => {
               <h1 className="text-5xl font-bold text-primary">
                 {counts[index]}+
               </h1>
-              <p className="text-gray-800 dark:text-gray-300 text-lg font-bold mt-2">
+              <p className="text-gray-800 dark:text-gray-300 text-lg font-bold mt-2 font-poppins">
                 {stat.label}
               </p>
             </div>

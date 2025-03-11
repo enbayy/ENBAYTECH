@@ -28,6 +28,7 @@ const Testimonial = () => {
         <div className="container">
           <div
             data-aos="fade-up"
+            data-aos-once="true"
             className="grid grid-cols-1 max-w-screen-xl mx-auto gap-6"
           >
             <Slider {...settings}>
@@ -43,7 +44,7 @@ const Testimonial = () => {
                       <div className="space-y-4">
                         <h1 className="text-2xl font-bold">{name}</h1>
                         <h1 className="text-lg font-semibold">{company}</h1>
-                        <p className="text-gray-500 text-black/80 dark:text-white/80 xl:pr-40">
+                        <p className="text-gray-500 text-black/80 dark:text-white/80 xl:pr-40 font-poppins">
                           “{comment}”
                         </p>
                       </div>
