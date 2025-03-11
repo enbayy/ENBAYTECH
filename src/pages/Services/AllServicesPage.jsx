@@ -13,7 +13,6 @@ const AllServices = () => {
                         HİZMETLERİMİZ
                     </h1>
                 </div>
-
                 <div>
                     <div data-aos="zoom-in" data-aos-once="true" className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                         {services.map(({ id, title, description, imageSrc, aosDelay }) => (
@@ -23,7 +22,7 @@ const AllServices = () => {
                                 className="group relative flex flex-col bg-white dark:bg-black shadow-xl shadow-gray-300 dark:shadow-gray-800 rounded-tl-3xl rounded-br-3xl overflow-hidden border border-gray-300 dark:border-white transition-all duration-300 p-6"
                             >
                                 <div className="w-full aspect-w-16 aspect-h-9 flex items-center justify-center rounded-tl-3xl rounded-br-3xl overflow-hidden">
-                                    <img src={imageSrc} alt={title} className="w-full h-full object-contain" />
+                                    <img src={imageSrc} alt={title} className="w-full h-full object-contain" loading="lazy" />
                                 </div>
                                 <div className="mt-4 flex-1 flex flex-col justify-between">
                                     <h2 className="text-xl font-semibold">{title}</h2>

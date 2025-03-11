@@ -13,7 +13,7 @@ const BlogDetail = () => {
 
     return (
         <div className="max-w-4xl mx-auto p-6">
-            <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden">
+            <div className="relative w-full h-64 md:h-96 overflow-hidden rounded-br-3xl rounded-tl-3xl">
                 <img
                     src={blogData.imageUrl}
                     alt={blogData.title}
@@ -46,7 +46,7 @@ const BlogDetail = () => {
                         {otherBlogs.slice(0, 3).map((item) => (
                             <Link key={item.id} to={`/blog/${item.id}`} className="block h-full">
                                 <div className="rounded-tl-3xl rounded-br-3xl shadow-xl overflow-hidden flex flex-col h-full hover:scale-105 duration-300">
-                                    <img src={item.imageUrl} alt={item.title} className="w-full h-40 object-cover" />
+                                    <img src={item.imageUrl} alt={item.title} className="w-full h-40 object-cover rounded-br-3xl rounded-tl-3xl" />
                                     <div className="p-4 flex flex-col flex-grow">
                                         <h3 className="text-lg font-semibold">{item.title}</h3>
                                         <p className="text-sm text-gray-600 mt-2 flex-grow">

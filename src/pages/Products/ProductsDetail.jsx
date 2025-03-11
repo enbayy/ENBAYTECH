@@ -20,7 +20,7 @@ const ProductDetail = () => {
             </div>
 
             <div className="max-w-6xl mx-auto px-6 mt-12 grid md:grid-cols-2 gap-10 items-center">
-                <img src={product.imageUrl} alt={product.title} />
+                <img src={product.imageUrl} alt={product.title} className="rounded-br-3xl rounded-tl-3xl" />
                 <div>
                     <h2 className="text-3xl font-semibold text-gray-900 dark:text-white border-l-4 border-primary/50 pl-4">Ürün Açıklaması</h2>
                     <p className="mt-4 text-gray-700 dark:text-gray-300 leading-relaxed font-poppins">{product.description}</p>
@@ -57,13 +57,28 @@ const ProductDetail = () => {
             <div className="max-w-6xl mx-auto px-6 mt-12">
                 <h2 className="text-3xl font-semibold text-gray-900 dark:text-white border-l-4 border-primary pl-4 mb-6">İlgili Ürünler</h2>
                 <div className="grid md:grid-cols-3 gap-6">
-                    {products.filter((s) => s.id !== product.id).slice(0, 3).map((relatedProduct) => (
-                        <div key={relatedProduct.id} className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg cursor-pointer hover:scale-105 transition" onClick={() => navigate(`/urunler/${relatedProduct.id}`)}>
-                            <img src={relatedProduct.imageUrl} alt={relatedProduct.title} className="w-full h-40 object-cover rounded-md mb-4" />
-                            <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{relatedProduct.title}</h3>
-                            <p className="text-gray-600 dark:text-gray-300 mt-2 text-sm font-poppins">{relatedProduct.description.slice(0, 80)}...</p>
-                        </div>
-                    ))}
+                    {products
+                        .filter((s) => s.id !== product.id)
+                        .slice(0, 3)
+                        .map((relatedProduct) => (
+                            <div
+                                key={relatedProduct.id}
+                                className="bg-white dark:bg-gray-800 rounded-tl-3xl rounded-br-3xl shadow-xl cursor-pointer hover:scale-105 transition overflow-hidden flex flex-col h-full"
+                                onClick={() => navigate(`/urunler/${relatedProduct.id}`)}
+                            >
+                                <img
+                                    src={relatedProduct.imageUrl}
+                                    alt={relatedProduct.title}
+                                    className="w-full h-40 object-cover rounded-br-3xl rounded-tl-3xl"
+                                />
+                                <div className="p-6 flex flex-col flex-grow">
+                                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{relatedProduct.title}</h3>
+                                    <p className="text-sm text-gray-600 dark:text-gray-300 mt-2 flex-grow">
+                                        {relatedProduct.description.slice(0, 80)}...
+                                    </p>
+                                </div>
+                            </div>
+                        ))}
                 </div>
             </div>
 

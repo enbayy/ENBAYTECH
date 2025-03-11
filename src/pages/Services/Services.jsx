@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { services } from "../../data/ServicesData";
 import { useNavigate } from "react-router-dom";
 
 const Services = () => {
     const navigate = useNavigate();
+    const [randomServices, setRandomServices] = useState([]);
+
+    useEffect(() => {
+        const selectedServices = [...services].sort(() => 0.5 - Math.random()).slice(0, 4);
+        setRandomServices(selectedServices);
+    }, []);
 
     const handleDetailClick = (id) => {
         navigate(`/hizmetler/${id}`);
@@ -20,24 +26,24 @@ const Services = () => {
                         <button
                             onClick={() => navigate("/hizmetlerimiz")}
                             data-aos="zoom-in"
-                            className="flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-tl-2xl rounded-br-2xl shadow-md transition hover:bg-orange-600 font-semibold"
+                            className="flex items-center gap-2 px-5 py-3 bg-primary text-white rounded-tl-2xl rounded-br-2xl shadow-md transition hover:bg-orange-600 font-semibold"
                         >
                             Hepsini gör
                         </button>
                     </div>
                 </div>
                 <div data-aos="zoom-in" data-aos-once="true" className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {services.slice(0, 4).map((service) => (
+                    {randomServices.map((service) => (
                         <div
                             key={service.id}
                             data-aos-delay={service.aosDelay}
                             className="relative flex items-center bg-white dark:bg-black shadow-xl shadow-gray-300 dark:shadow-gray-800 rounded-tl-3xl rounded-br-3xl overflow-hidden border border-gray-300 transition-all duration-300 p-6 group"
                         >
-                            <div className="w-28 h-28 flex items-center justify-center rounded-xl overflow-hidden perspective-1000">
+                            <div className="aspect-w-16 h-24 flex items-center justify-center overflow-hidden perspective-1000">
                                 <img
                                     src={service.imageSrc}
                                     alt={service.title}
-                                    className="object-cover w-full h-full rounded-xl transition-transform duration-500 ease-in-out transform hover:rotate-[360deg]"
+                                    className="object-contain aspect-w-16 h-24 rounded-br-3xl rounded-tl-3xl transition-transform duration-500 ease-in-out transform hover:scale-110"
                                 />
                             </div>
                             <div className="ml-6 flex-1 flex flex-col justify-between h-full">
@@ -60,7 +66,7 @@ const Services = () => {
                     ))}
                 </div>
             </div>
-        </section >
+        </section>
     );
 };
 
