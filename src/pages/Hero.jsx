@@ -46,7 +46,7 @@ const Hero = () => {
         <div data-aos="zoom-in" className="lg:w-1/2 text-center lg:text-left space-y-8">
           <h1 className="text-5xl sm:text-6xl font-bold tracking-tight leading-tight font-poppins">
             Dijital Dönüşümde Güvenilir İş Ortağınız <br />
-            <span className="text-primary underline underline-offset-4">
+            <span className="text-primary underline underline-offset-8">
               Engin Tasarım
             </span>
           </h1>
