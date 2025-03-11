@@ -1,65 +1,49 @@
-import React, { useState } from "react";
-import { services } from "../../data/ServicesData";
+import React from "react";
 import { useNavigate } from "react-router-dom";
+import { services } from "../../data/ServicesData";
 
 const AllServices = () => {
     const navigate = useNavigate();
-    const [expanded, setExpanded] = useState(null);
-
-    const handleDetailClick = (id) => {
-        navigate(`/hizmetler/${id}`);
-    };
-
-    const toggleExpand = (id) => {
-        setExpanded(expanded === id ? null : id);
-    };
 
     return (
-        <section data-aos="zoom-in" id="services" className="bg-white dark:bg-black dark:text-white py-12">
-            <div className="container mx-auto px-6">
-                <div className="pb-12 text-start space-y-4">
-                    <h1 className="border-l-8 border-primary/50 py-2 pl-2 relative text-2xl sm:text-3xl md:text-4xl font-semibold break-words">
+        <section className="bg-white dark:bg-black dark:text-white py-12">
+            <div className="container">
+                <div data-aos="zoom-in" data-aos-once="true" className="mb-8 text-center space-y-3">
+                    <h1 className="border-l-8 border-primary/50 py-2 pl-2 flex relative text-2xl sm:text-3xl md:text-4xl font-semibold break-words">
                         HİZMETLERİMİZ
                     </h1>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    {services.map(({ id, title, description, imageSrc, aosDelay }) => (
-                        <div
-                            key={id}
-                            className="relative flex flex-col justify-between text-center bg-white dark:bg-black shadow-xl shadow-gray-300 dark:shadow-gray-800 rounded-tl-3xl rounded-br-3xl overflow-hidden border border-gray-300 dark:border-white transition-all duration-300 p-8 h-full group gap-y-2"
-                        >
-                            <div className="">
-                                <div className="w-20 h-20 flex items-center justify-center rounded-full bg-gray-200 dark:bg-gray-800 mx-auto">
-                                    <img src={imageSrc} alt={title} className="object-contain w-14 h-14" />
-                                </div>
-                                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-5">{title}</h2>
-                            </div>
-                            <p
-                                className={`text-gray-600 dark:text-gray-300 mt-3 text-base leading-relaxed transition-all duration-300 overflow-hidden ${expanded === id ? "max-h-96" : "max-h-20"
-                                    }`}
+                <div>
+                    <div data-aos="zoom-in" data-aos-once="true" className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                        {services.map(({ id, title, description, imageSrc, aosDelay }) => (
+                            <div
+                                key={id}
+                                data-aos-delay={aosDelay}
+                                className="group relative flex flex-col bg-white dark:bg-black shadow-xl shadow-gray-300 dark:shadow-gray-800 rounded-tl-3xl rounded-br-3xl overflow-hidden border border-gray-300 dark:border-white transition-all duration-300 p-6"
                             >
-                                {description}
-                            </p>
-                            <div className="flex flex-col items-center gap-3 mt-3">
-                                <button
-                                    onClick={() => toggleExpand(id)}
-                                    className="text-primary dark:text-orange-600 font-bold text-sm hover:underline"
-                                >
-                                    {expanded === id ? "Daha Az Göster" : "Daha Fazla Oku"}
-                                </button>
+                                <div className="w-full aspect-w-16 aspect-h-9 flex items-center justify-center rounded-tl-3xl rounded-br-3xl overflow-hidden">
+                                    <img src={imageSrc} alt={title} className="w-full h-full object-contain" />
+                                </div>
+                                <div className="mt-4 flex-1 flex flex-col justify-between">
+                                    <h2 className="text-xl font-semibold">{title}</h2>
+                                    <p className="text-gray-600 dark:text-gray-400 mt-2 font-poppins">
+                                        {description.split(" ").slice(0, 25).join(" ")}...
+                                    </p>
+                                    <div className="flex justify-center">
+                                        <button
+                                            onClick={() => navigate(`/hizmetler/${id}`)}
+                                            className="w-[120px] h-[40px] bg-primary text-white shadow-xl rounded-tl-2xl rounded-br-2xl hover:bg-orange-600 transition mt-4"
+                                        >
+                                            İncele
+                                        </button>
+                                    </div>
 
-                                <button
-                                    onClick={() => handleDetailClick(id)}
-                                    className="w-[120px] h-[40px] bg-primary text-white rounded-lg hover:bg-orange-600 transition mt-2"
-                                >
-                                    İncele
-                                </button>
+                                    <span className="absolute left-0 bottom-0 w-0 h-[6px] bg-primary transition-all duration-300 group-hover:w-full"></span>
+                                </div>
                             </div>
-                            <span className="absolute inset-x-0 bottom-0 w-0 h-[6px] bg-primary transition-all duration-300 group-hover:w-full">
-                            </span>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>
