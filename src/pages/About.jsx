@@ -24,7 +24,7 @@ const About = () => {
                     <h1 className="text-5xl font-extrabold text-[#E76F51] dark:text-[#E9C46A]">
                         Hakkımızda
                     </h1>
-                    <p className="mt-6 text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
+                    <p className="mt-6 text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto font-poppins">
                         Engin Tasarım, İstanbul'da 20 yılı aşkın süredir faaliyet gösteren, yenilikçi çözümler sunan bir dijital ajanstır. Web tasarım, e-ticaret, yazılım çözümleri ve dijital pazarlama alanlarında öncü bir marka olarak, müşterilerimize en iyi hizmeti sunmayı amaçlıyoruz. Modern teknolojiye dayalı çözümler geliştirerek markaların dijital dünyada güçlü bir konum elde etmesini sağlıyoruz.
                     </p>
                 </div>
@@ -34,13 +34,13 @@ const About = () => {
                         <h2 className="text-3xl font-semibold text-[#E76F51] dark:text-[#E9C46A]" data-aos="fade-right">
                             Misyonumuz
                         </h2>
-                        <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed" data-aos="fade-right">
+                        <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed font-poppins" data-aos="fade-right">
                             Müşterilerimizin işlerini büyütmelerine yardımcı olmak için yenilikçi, kullanıcı dostu ve yüksek kaliteli dijital çözümler sunuyoruz. Teknolojinin gücünü kullanarak işletmelerin daha geniş kitlelere ulaşmasını ve rekabet avantajı elde etmesini sağlıyoruz.
                         </p>
                         <h2 className="text-3xl font-semibold text-[#E76F51] dark:text-[#E9C46A]" data-aos="fade-left">
                             Vizyonumuz
                         </h2>
-                        <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed" data-aos="fade-left">
+                        <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed font-poppins" data-aos="fade-left">
                             Teknoloji ve tasarımın mükemmel uyumunu yakalayarak, en yaratıcı ve yenilikçi çözümleri üretmek, sektörde fark yaratan projelere imza atmak ve müşterilerimize dijital dünyada en iyi deneyimi sunmak.
                         </p>
                     </div>
@@ -56,7 +56,7 @@ const About = () => {
                     <h2 className="text-4xl font-bold text-[#E76F51] dark:text-[#E9C46A]" data-aos="fade-up">
                         Ekibimiz
                     </h2>
-                    <p className="mt-6 text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto" data-aos="fade-up">
+                    <p className="mt-6 text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto font-poppins" data-aos="fade-up">
                         Engin Tasarım, farklı alanlarda uzmanlaşmış deneyimli bir ekipten oluşmaktadır. Yazılım mühendisleri, grafik tasarımcılar, dijital pazarlama uzmanları ve içerik üreticilerimiz, her projeye özel, yenilikçi çözümler sunarak markaların dijital dünyada başarılı olmasını sağlamaktadır.
                     </p>
                     <div className="grid md:grid-cols-3 gap-10 mt-12">

@@ -11,7 +11,7 @@ const ProductPage = () => {
         <section className="bg-[#F8FAFC] dark:bg-[#0F172A] text-[#1E293B] dark:text-white py-12">
             <div className="container">
                 <div className="mb-8 text-center space-y-3">
-                    <h1 data-aos="fade-right" data-aos-once="true" className="border-l-8 border-[#E76F51] dark:border-[#E9C46A] py-2 pl-2 flex relative text-2xl sm:text-3xl md:text-4xl font-semibold break-words">
+                    <h1 data-aos="fade-right" data-aos-once="true" className="text-[#E76F51] dark:text-[#E9C46A] border-l-8 border-[#E76F51] dark:border-[#E9C46A] py-2 pl-2 flex relative text-2xl sm:text-3xl md:text-4xl font-semibold break-words">
                         ÜRÜNLERİMİZ
                     </h1>
                 </div>
