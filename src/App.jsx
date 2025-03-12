@@ -5,8 +5,6 @@ import "aos/dist/aos.css";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import { RiWhatsappFill } from "react-icons/ri";
-import CtaPage from "./pages/CtaPage";
-import AllProducts from "./pages/Products/AllProductsPage";
 
 const Hero = lazy(() => import("./pages/Hero"));
 const References = lazy(() => import("./pages/References/References"));
@@ -15,12 +13,14 @@ const BlogsComp = lazy(() => import("./pages/Blogs/BlogsComp"));
 const Services = lazy(() => import("./pages/Services/Services"));
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
+const CtaPage = lazy(() => import("./pages/CtaPage"));
 const ProductPage = lazy(() => import("./pages/Products/ProductsPage"));
 const BlogDetail = lazy(() => import("./pages/Blogs/BlogDetail"));
 const ServiceDetail = lazy(() => import("./pages/Services/ServiceDetail"));
 const ProductDetail = lazy(() => import("./pages/Products/ProductsDetail"));
 const AllServices = lazy(() => import("./pages/Services/AllServicesPage"));
 const AllReferencesPage = lazy(() => import("./pages/References/AllReferencesPage"));
+const AllProducts = lazy(() => import("./pages/Products/AllProductsPage"));
 const ReferencesDetailPage = lazy(() => import("./pages/References/ReferenceDetail"));
 
 const ScrollToTop = () => {
@@ -68,6 +68,10 @@ const App = () => {
     AOS.refresh();
   }, []);
 
+  useEffect(() => {
+    import("./pages/Services/Services");
+  }, []);
+
   return (
     <div className="bg-white dark:bg-black dark:text-white text-black overflow-x-hidden">
       <ScrollToTop />
@@ -77,13 +81,33 @@ const App = () => {
         <div
           className="h-full bg-primary"
           style={{ width: `${scrollPercentage}%` }}
-        ></div>
+        />
       </div>
 
       <Suspense fallback={<Loading />}>
         <Routes>
-          <Route path="/" element={<><Hero /><References /><Services /><ProductPage /><Testimonial /><BlogsComp /><CtaPage /></>} />
-          <Route path="/hizmetler" element={<Services />} />
+          <Route
+            path="/"
+            element={
+              <>
+                <Hero />
+                <References />
+                <Services />
+                <ProductPage />
+                <Testimonial />
+                <BlogsComp />
+                <CtaPage />
+              </>
+            }
+          />
+          <Route
+            path="/hizmetler"
+            element={
+              <Suspense fallback={<Loading />}>
+                <Services />
+              </Suspense>
+            }
+          />
           <Route path="/hizmetler/:id" element={<ServiceDetail />} />
           <Route path="/hizmetlerimiz" element={<AllServices />} />
           <Route path="/hakkimizda" element={<About />} />

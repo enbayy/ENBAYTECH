@@ -1,6 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { services } from "../../data/ServicesData";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const AllServices = () => {
     const navigate = useNavigate();
@@ -22,7 +24,12 @@ const AllServices = () => {
                                 className="group relative flex flex-col bg-transparent rounded-tl-3xl rounded-br-3xl overflow-hidden border border-[#E76F51] dark:border-[#E9C46A] transition-all duration-300 p-6"
                             >
                                 <div className="w-full aspect-w-16 aspect-h-9 flex items-center justify-center rounded-tl-3xl rounded-br-3xl overflow-hidden">
-                                    <img src={imageSrc} alt={title} className="w-full h-full object-contain" loading="lazy" />
+                                    <LazyLoadImage
+                                        effect="blur"
+                                        src={imageSrc}
+                                        alt={title}
+                                        className="w-full h-full object-contain"
+                                    />
                                 </div>
                                 <div className="mt-4 flex-1 flex flex-col justify-between">
                                     <h2 className="text-xl font-semibold text-[#E76F51] dark:text-[#E9C46A]">{title}</h2>

@@ -24,7 +24,7 @@ const Testimonial = () => {
 
   return (
     <>
-      <div className="py-10 bg-[#F8FAFC] dark:bg-[#0F172A] text-[#1E293B] dark:text-white">
+      <div className="py-10  text-[#1E293B] dark:text-white">
         <div className="container">
           <div
             data-aos="fade-up"
@@ -35,7 +35,7 @@ const Testimonial = () => {
               {testimonials.map(({ id, name, comment, img, company }) => {
                 return (
                   <div key={id} className="my-6">
-                    <div className="flex flex-col sm:flex-row gap-5 md:gap-14 p-6 mx-4 rounded-xl bg-transparent shadow-lg relative">
+                    <div className="flex flex-col sm:flex-row gap-5 md:gap-14 p-6 mx-4 rounded-xl bg-transparent relative">
                       <img
                         src={img}
                         alt={name}

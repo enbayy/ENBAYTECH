@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { services } from "../../data/ServicesData";
 import { useNavigate } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const Services = () => {
     const navigate = useNavigate();
@@ -40,15 +42,14 @@ const Services = () => {
                     {randomServices.map((service) => (
                         <div
                             key={service.id}
-                            data-aos-delay={service.aosDelay}
                             className="relative flex flex-col md:flex-row items-center bg-transparent rounded-tl-3xl rounded-br-3xl overflow-hidden transition-all duration-300 p-6 group"
                         >
                             <div className="w-32 h-32 flex items-center justify-center overflow-hidden perspective-1000">
-                                <img
+                                <LazyLoadImage
+                                    effect="blur"
                                     src={service.imageSrc}
                                     alt={service.title}
                                     className="object-cover w-28 h-28 rounded-tl-3xl rounded-br-3xl md:rounded-full transition-transform duration-500 ease-in-out transform hover:scale-110"
-                                    loading="lazy"
                                 />
                             </div>
                             <div className="mt-4 md:mt-0 md:ml-6 flex-1 flex flex-col justify-between h-full text-center md:text-left">
