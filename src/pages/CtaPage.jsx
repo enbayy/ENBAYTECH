@@ -15,7 +15,7 @@ const CtaPage = () => {
                 <div className="mt-10 flex flex-col sm:flex-row justify-center">
                     <a
                         href="/iletisim"
-                        className="relative px-8 py-4 text-xl font-bold tracking-wide rounded-tl-3xl rounded-br-3xl bg-[#E76F51] dark:bg-[#E9C46A] text-white dark:text-[#0F172A] transition-all duration-300 transform hover:scale-105 hover:shadow-[0px_10px_30px_rgba(231,111,81,0.3)] dark:hover:shadow-[0px_10px_30px_rgba(233,196,106,0.3)] hover:bg-[#D65A4A] dark:hover:bg-[#D4A857] font-poppins border border-[#E76F51] dark:border-[#E9C46A]"
+                        className="relative px-9 py-4 text-xl text-white font-bold tracking-wide rounded-tl-3xl rounded-br-3xl bg-[#E76F51] dark:bg-[#E9C46A] duration-200 hover:bg-[#E9C46A] dark:hover:bg-[#BF3A26] font-poppins"
                     >
                         Teklif Al
                     </a>

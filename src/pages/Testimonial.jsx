@@ -24,12 +24,12 @@ const Testimonial = () => {
 
   return (
     <>
-      <div className="py-10  text-[#1E293B] dark:text-white">
+      <div className="bg-[#F8FAFC] dark:bg-[#0F172A] text-[#0F172A] dark:text-white py-10">
         <div className="container">
           <div
             data-aos="fade-up"
             data-aos-once="true"
-            className="grid grid-cols-1 max-w-screen-xl mx-auto gap-6"
+            className="grid grid-cols-1 max-w-screen-xl mx-auto gap-6 border-y-2 border-[#E76F51] dark:border-[#E9C46A] rounded-tl-3xl rounded-br-3xl"
           >
             <Slider {...settings}>
               {testimonials.map(({ id, name, comment, img, company }) => {
