@@ -47,6 +47,7 @@ const Services = () => {
                                     src={service.imageSrc}
                                     alt={service.title}
                                     className="object-cover w-28 h-28 rounded-tl-3xl rounded-br-3xl md:rounded-full transition-transform duration-500 ease-in-out transform hover:scale-110"
+                                    loading="lazy"
                                 />
                             </div>
                             <div className="mt-4 md:mt-0 md:ml-6 flex-1 flex flex-col justify-between h-full text-center md:text-left">

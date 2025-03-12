@@ -1,6 +1,5 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import malzeme from '../assets/hero2.png';
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const About = () => {
     const navigate = useNavigate();
@@ -10,62 +9,55 @@ const About = () => {
     };
 
     return (
-        <section id="about-detail">
-            <div className="dark:bg-dark bg-slate-100 sm:min-h-[800px] sm:grid sm:place-items-center duration-300">
-                <div data-aos="zoom-in" data-aos-once="true" className="container">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 place-items-center">
-                        <div>
-                            <div className="space-y-6 sm:p-16 pb-6">
-                                <h1 className="text-3xl sm:text-4xl font-bold font-sans">
-                                    Hakkımızda
-                                </h1>
-                                <p className="leading-8 tracking-wide font-poppins">
-                                    Engin Tasarım ve Elektronik San. Tic. Ltd. Şti. İstanbul tasarım şirketleri arasında 20 yılı aşkın deneyimiyle dijital ajans olarak hizmet vermektedir. Bu süre zarfında, birçok başarılı projeye imza atmış ve müşterilerinin dijital dünyada kendilerini güçlü bir şekilde temsil etmelerini sağlamıştır.
-                                </p>
-                                <p className="leading-8 tracking-wide font-poppins">
-                                    Engin Tasarım, web tasarım, e-ticaret, dijital pazarlama ve yazılım alanlarında 20 yılı aşkın tecrübeyle hizmet vermektedir. Teknolojik gelişmeleri yakından takip ederek, müşterilerine her zaman en güncel ve etkili dijital çözümleri sunmaktadır.
-                                </p>
-                                <p className="leading-8 tracking-wide font-poppins">
-                                    Her projede yenilikçi ve özgün yaklaşımlar benimseyerek, dijital dünyada güçlü ve uzun vadeli başarılar elde edilmesine katkı sağlamaktadır. Her aşamada kaliteli hizmet anlayışıyla çalışarak, müşteri memnuniyetini ön planda tutmaktadır.
-                                </p>
+        <section id="about-detail" className="bg-[#F8FAFC] dark:bg-[#0F172A] text-[#1E293B] dark:text-white py-16">
+            <div className="container mx-auto px-6 lg:px-12">
+                <div className="text-center mb-16">
+                    <h1 className="text-5xl font-extrabold text-[#E76F51] dark:text-[#E9C46A]">
+                        Hakkımızda
+                    </h1>
+                    <p className="mt-6 text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
+                        Engin Tasarım, İstanbul'da 20 yılı aşkın süredir faaliyet gösteren, yenilikçi çözümler sunan bir dijital ajanstır. Web tasarım, e-ticaret, yazılım çözümleri ve dijital pazarlama alanlarında öncü bir marka olarak, müşterilerimize en iyi hizmeti sunmayı amaçlıyoruz. Modern teknolojiye dayalı çözümler geliştirerek markaların dijital dünyada güçlü bir konum elde etmesini sağlıyoruz.
+                    </p>
+                </div>
 
-                                <div className="space-y-5">
-                                    <h2 className="text-2xl font-semibold text-black">
-                                        Vizyon ve Misyon
-                                    </h2>
-                                    <p className="leading-8 tracking-wide font-poppins">
-                                        Engin Tasarım, yüksek kaliteli web çözümleri ve dijital hizmetler sunarak küresel ölçekte müşterilerinin başarılarını artırmayı hedefler. Teknolojik inovasyonla birleşen deneyim, her projenin güçlü bir temel üzerine inşa edilmesini sağlar.
-                                    </p>
-                                    <p className="leading-8 tracking-wide font-poppins">
-                                        Müşterilerine dijital alanda yenilikçi, etkili ve ölçeklenebilir çözümler sağlayarak, onların işlerini dijital dünyada dönüştürür ve büyütür. Engin Tasarım, her zaman müşteri odaklı yaklaşım sergileyerek, iş ortaklarının gelişimine katkı sağlar.
-                                    </p>
-                                </div>
-
-                                <div className="space-y-2">
-                                    <h2 className="text-2xl font-semibold text-black">
-                                        Ekibimiz
-                                    </h2>
-                                    <p className="leading-8 tracking-wide font-poppins">
-                                        Engin Tasarım, yazılım ve tasarım konularında uzmanlaşmış dinamik bir ekipten oluşur. Her proje, uzman ekibimiz tarafından titizlikle yönetilerek zamanında ve yüksek kalitede teslim edilir. Ekip üyelerimiz, her projede müşteri beklentilerini aşmak için birlikte çalışmaktadır.
-                                    </p>
-                                </div>
-
-                                <button
-                                    onClick={handleClick}
-                                    className="bg-primary hover:bg-orange-600 text-white py-3 px-10 rounded-full text-lg font-semibold transition-all duration-500 shadow-lg"
-                                >
-                                    İletişime Geç
-                                </button>
-                            </div>
-                        </div>
-                        <div>
-                            <img
-                                src={malzeme}
-                                alt="Company Image"
-                                className="sm:scale-125 sm:-translate-x-11 max-h-[500px] drop-shadow-[2px_10px_6px_rgba(0,0,0,0.50)] mb-8 sm:mb-0 sm:-mt-16"
-                            />
-                        </div>
+                <div className="grid md:grid-cols-2 gap-12 items-center">
+                    <div className="space-y-6">
+                        <h2 className="text-3xl font-semibold text-[#E76F51] dark:text-[#E9C46A]">Misyonumuz</h2>
+                        <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                            Müşterilerimizin işlerini büyütmelerine yardımcı olmak için yenilikçi, kullanıcı dostu ve yüksek kaliteli dijital çözümler sunuyoruz. Teknolojinin gücünü kullanarak işletmelerin daha geniş kitlelere ulaşmasını ve rekabet avantajı elde etmesini sağlıyoruz.
+                        </p>
+                        <h2 className="text-3xl font-semibold text-[#E76F51] dark:text-[#E9C46A]">Vizyonumuz</h2>
+                        <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                            Teknoloji ve tasarımın mükemmel uyumunu yakalayarak, en yaratıcı ve yenilikçi çözümleri üretmek, sektörde fark yaratan projelere imza atmak ve müşterilerimize dijital dünyada en iyi deneyimi sunmak.
+                        </p>
                     </div>
+                    <div className="grid grid-cols-2 gap-6">
+                        <div className="h-48 bg-gray-200 dark:bg-gray-800 rounded-xl flex justify-center items-center">Resim 1</div>
+                        <div className="h-48 bg-gray-200 dark:bg-gray-800 rounded-xl flex justify-center items-center">Resim 2</div>
+                        <div className="h-48 bg-gray-200 dark:bg-gray-800 rounded-xl flex justify-center items-center">Resim 3</div>
+                        <div className="h-48 bg-gray-200 dark:bg-gray-800 rounded-xl flex justify-center items-center">Resim 4</div>
+                    </div>
+                </div>
+
+                <div className="mt-20 text-center">
+                    <h2 className="text-4xl font-bold text-[#E76F51] dark:text-[#E9C46A]">Ekibimiz</h2>
+                    <p className="mt-6 text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
+                        Engin Tasarım, farklı alanlarda uzmanlaşmış deneyimli bir ekipten oluşmaktadır. Yazılım mühendisleri, grafik tasarımcılar, dijital pazarlama uzmanları ve içerik üreticilerimiz, her projeye özel, yenilikçi çözümler sunarak markaların dijital dünyada başarılı olmasını sağlamaktadır.
+                    </p>
+                    <div className="grid md:grid-cols-3 gap-10 mt-12">
+                        <div className="h-56 bg-gray-200 dark:bg-gray-800 rounded-xl flex justify-center items-center">Resim 1</div>
+                        <div className="h-56 bg-gray-200 dark:bg-gray-800 rounded-xl flex justify-center items-center">Resim 2</div>
+                        <div className="h-56 bg-gray-200 dark:bg-gray-800 rounded-xl flex justify-center items-center">Resim 3</div>
+                    </div>
+                </div>
+
+                <div className="mt-20 text-center">
+                    <button
+                        onClick={handleClick}
+                        className="bg-[#E76F51] dark:bg-[#E9C46A] hover:bg-[#E9C46A] dark:hover:bg-[#BF3A26] text-white px-9 py-4 rounded-tl-3xl rounded-br-3xl text-lg font-semibold transition-all duration-500 shadow-xl hover:opacity-90"
+                    >
+                        İletişime Geç
+                    </button>
                 </div>
             </div>
         </section>

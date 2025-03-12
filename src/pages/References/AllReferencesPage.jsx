@@ -33,18 +33,18 @@ const AllReferencesPage = () => {
     }, []);
 
     return (
-        <div data-aos="fade-up" className="w-full bg-[#F8FAFC] dark:bg-[#0F172A] text-[#1E293B] dark:text-white relative overflow-hidden py-12">
-        <div className="container mx-auto px-4 sm:px-6 md:px-12 lg:px-20 xl:px-24 relative mb-10">
-            <div className="text-start flex flex-col gap-y-5">
-                <h1 className="border-l-8 border-[#E76F51] dark:border-[#E9C46A] py-2 pl-2 text-2xl sm:text-3xl md:text-4xl font-semibold break-words">
-                    REFERANSLARIMIZ
-                </h1>
-                <p className="text-base sm:text-lg md:text-xl break-words font-poppins">
-                    Bizimle çalışarak başarıya ulaşan birçok firmayı görmektesiniz. Her biri kendi alanında öncü
-                    ve bizimle güçlü bir işbirliği kurarak başarılarını daha da ileriye taşıdılar. İşte referanslarımız!
-                </p>
+        <div className="w-full bg-[#F8FAFC] dark:bg-[#0F172A] text-[#1E293B] dark:text-white relative overflow-hidden py-12">
+            <div data-aos="fade-up" className="container mx-auto px-4 sm:px-6 md:px-12 lg:px-20 xl:px-24 relative mb-10">
+                <div className="text-start flex flex-col gap-y-5">
+                    <h1 className="border-l-8 border-[#E76F51] dark:border-[#E9C46A] py-2 pl-2 text-2xl sm:text-3xl md:text-4xl font-semibold break-words">
+                        REFERANSLARIMIZ
+                    </h1>
+                    <p className="text-base sm:text-lg md:text-xl break-words font-poppins">
+                        Bizimle çalışarak başarıya ulaşan birçok firmayı görmektesiniz. Her biri kendi alanında öncü
+                        ve bizimle güçlü bir işbirliği kurarak başarılarını daha da ileriye taşıdılar. İşte referanslarımız!
+                    </p>
+                </div>
             </div>
-        </div>
 
             <motion.div
                 initial={{ opacity: 0 }}
@@ -52,7 +52,7 @@ const AllReferencesPage = () => {
                 transition={{ duration: 1 }}
                 className="container mx-auto px-4 sm:px-6 md:px-12 lg:px-20 xl:px-24 text-white w-full relative z-0"
             >
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12">
+                <div data-aos="fade-up" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12">
                     {references.map((reference, index) => (
                         <div
                             key={reference.id}

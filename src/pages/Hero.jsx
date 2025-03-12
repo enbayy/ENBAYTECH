@@ -41,7 +41,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="hero" className="relative bg-[#F8FAFC] dark:bg-[#0F172A] text-[#1B1F3B] dark:text-white py-28">
+    <section id="hero" className="relative bg-[#F8FAFC] dark:bg-[#0F172A] text-[#1B1F3B] dark:text-white py-12">
       <div className="container flex flex-col lg:flex-row items-center justify-between w-full max-w-6xl gap-14 lg:gap-24">
         <div data-aos="zoom-in" className="lg:w-1/2 text-center lg:text-left space-y-8">
           <h1 className="text-5xl sm:text-6xl font-bold tracking-tight leading-tight font-poppins">
@@ -66,7 +66,7 @@ const Hero = () => {
           src={hero}
           data-aos="zoom-in"
           alt="Hero"
-          className="w-80 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-2xl h-auto object-cover rounded-2xl"
+          className="w-80 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-2xl h-auto object-cover rounded-2xl drop-shadow-[2px_10px_6px_rgba(0,0,0,0.50)]"
         />
       </div>
 
@@ -75,7 +75,7 @@ const Hero = () => {
           {stats.map((stat, index) => (
             <div
               key={index}
-              data-aos="fade-up"
+              data-aos="zoom-in"
               className="px-8 py-6 rounded-3xl w-40 sm:w-48 md:w-52"
             >
               <h1 className="text-5xl font-bold text-[#E76F51] dark:text-[#E9C46A]">
