@@ -77,7 +77,7 @@ const Contact = () => {
                             <div className="text-center">
                                 <button
                                     type="submit"
-                                    className="inline-block font-semibold py-3 px-6 bg-[#E76F51] dark:bg-[#E9C46A] text-white dark:text-[#1E293B] hover:bg-[#E9C46A] dark:hover:bg-[#BF3A26] duration-200 tracking-widest uppercase rounded-md shadow-lg"
+                                    className="inline-block font-semibold px-9 py-4 bg-[#E76F51] dark:bg-[#E9C46A] text-white hover:bg-[#E9C46A] dark:hover:bg-[#BF3A26] duration-200 tracking-widest uppercase rounded-tl-3xl rounded-br-3xl"
                                 >
                                     Mesajı Gönder
                                 </button>

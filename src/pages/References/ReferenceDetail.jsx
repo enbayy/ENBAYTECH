@@ -18,8 +18,8 @@ const ReferencesDetailPage = () => {
 
     if (!reference) {
         return (
-            <div className="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900">
-                <p className="text-center text-red-500 font-semibold text-2xl">
+            <div className="flex items-center justify-center min-h-screen bg-[#F8FAFC] dark:bg-[#0F172A]">
+                <p className="text-center text-[#E76F51] dark:text-[#E9C46A] font-semibold text-2xl">
                     Referans bulunamadı!
                 </p>
             </div>
@@ -32,35 +32,35 @@ const ReferencesDetailPage = () => {
     }
 
     return (
-        <section className="bg-gray-50 dark:bg-black dark:text-white py-12">
+        <section className="bg-[#F8FAFC] dark:bg-[#0F172A] text-[#1E293B] dark:text-white py-12">
             <div data-aos="fade-up" className="max-w-5xl mx-auto px-6">
-                <h1 className="text-3xl md:text-5xl font-semibold text-black dark:text-white text-center px-6 drop-shadow-lg font-poppins">
+                <h1 className="text-3xl md:text-5xl font-semibold text-[#E76F51] dark:text-[#E9C46A] text-center px-6 drop-shadow-lg">
                     {reference.title}
                 </h1>
-                <div className="mt-8 text-lg leading-relaxed tracking-wide border-l-4 border-primary pl-4 text-gray-700 dark:text-gray-300 font-poppins">
+                <div className="mt-8 text-lg leading-relaxed tracking-wide border-l-4 border-[#E76F51] dark:border-[#E9C46A] pl-4 text-[#1E293B] dark:text-white">
                     {reference.description}
                 </div>
 
                 <div className="mt-10 space-y-8">
                     {reference.sections.map((section, index) => (
-                        <div key={index} className="bg-gray-100 dark:bg-black p-6 shadow-xl shadow-gray-300 rounded-tl-3xl rounded-br-3xl dark:shadow-gray-800">
-                            <h2 className="text-2xl font-semibold text-gray-900 dark:text-white border-l-4 border-primary pl-4">
+                        <div key={index} className="bg-[#F8FAFC] dark:bg-[#0F172A] p-6 shadow-lg rounded-tl-3xl rounded-br-3xl border border-[#E76F51] dark:border-[#E9C46A]">
+                            <h2 className="text-2xl font-semibold text-[#E76F51] dark:text-[#E9C46A] border-l-4 border-[#E76F51] dark:border-[#E9C46A] pl-4">
                                 {section.heading}
                             </h2>
                             {Array.isArray(section.content) ? (
-                                <ul className="mt-3 space-y-2 text-gray-700 dark:text-gray-300 list-disc pl-5">
+                                <ul className="mt-3 space-y-2 text-[#1E293B] dark:text-white list-disc pl-5">
                                     {section.content.map((item, idx) => (
-                                        <li key={idx} className="leading-relaxed font-poppins">{item}</li>
+                                        <li key={idx} className="leading-relaxed">{item}</li>
                                     ))}
                                 </ul>
                             ) : (
-                                <p className="mt-3 text-gray-700 dark:text-gray-300 font-poppins">{section.content}</p>
+                                <p className="mt-3 text-[#1E293B] dark:text-white">{section.content}</p>
                             )}
                         </div>
                     ))}
                 </div>
                 <div className="mt-12">
-                    <h2 className="text-3xl font-semibold text-black dark:text-white border-l-4 border-primary pl-4 mb-6">
+                    <h2 className="text-3xl font-semibold text-[#E76F51] dark:text-[#E9C46A] border-l-4 border-[#E76F51] dark:border-[#E9C46A] pl-4 mb-6">
                         Diğer Referanslar
                     </h2>
                     <div className="grid md:grid-cols-3 gap-6">
@@ -69,7 +69,7 @@ const ReferencesDetailPage = () => {
                             .map((relatedReference) => (
                                 <div
                                     key={relatedReference.id}
-                                    className="bg-white rounded-tl-3xl rounded-br-3xl shadow-xl shadow-gray-300 cursor-pointer transition-all duration-300 hover:scale-105 border border-black"
+                                    className="bg-white rounded-tl-3xl rounded-br-3xl cursor-pointer transition-all duration-300 hover:scale-105 border border-black"
                                     onClick={() => navigate(`/referanslar/${relatedReference.id}`)}
                                 >
                                     <img
@@ -84,7 +84,7 @@ const ReferencesDetailPage = () => {
                 <div className="mt-10 flex justify-center">
                     <button
                         onClick={() => navigate(-1)}
-                        className="flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-tl-2xl rounded-br-2xl shadow-md transition-all duration-300 hover:bg-orange-600 font-semibold"
+                        className="flex items-center gap-2 px-6 py-3 bg-[#E76F51] dark:bg-[#E9C46A] text-white rounded-tl-2xl rounded-br-2xl shadow-md transition-all duration-300 hover:bg-[#E9C46A] dark:hover:bg-[#BF3A26] font-semibold"
                     >
                         <FaArrowLeft /> Geri Dön
                     </button>

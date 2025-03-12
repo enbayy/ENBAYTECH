@@ -17,8 +17,8 @@ const ServiceDetail = () => {
     }
 
     return (
-        <section className="bg-gray-50 dark:bg-black dark:text-white py-12">
-            <div className="relative bg-gray-900 text-white py-16 px-8 text-center">
+        <section className="bg-[#F8FAFC] dark:bg-[#0F172A] text-[#1E293B] dark:text-white py-12">
+            <div className="relative bg-[#E76F51] dark:bg-[#E9C46A] text-white py-16 px-8 text-center">
                 <img
                     src={service.imageSrc}
                     alt={service.title}
@@ -30,34 +30,34 @@ const ServiceDetail = () => {
             <div className="max-w-6xl mx-auto px-6 mt-12 grid md:grid-cols-2 gap-10 items-center">
                 <img src={service.imageSrc} alt={service.title} className="rounded-br-3xl rounded-tl-3xl" />
                 <div>
-                    <h2 className="text-3xl font-semibold text-gray-900 dark:text-white border-l-4 border-primary/50 pl-4">
+                    <h2 className="text-3xl font-semibold text-[#E76F51] dark:text-[#E9C46A] border-l-4 border-[#E76F51] dark:border-[#E9C46A] pl-4">
                         Hizmet Açıklaması
                     </h2>
-                    <p className="mt-4 text-gray-700 dark:text-gray-300 leading-relaxed font-poppins">
+                    <p className="mt-4 text-[#1E293B] dark:text-[#E9E9E9] leading-relaxed font-poppins">
                         {service.description}
                     </p>
                 </div>
             </div>
 
-            <div className="max-w-6xl mx-auto px-6 mt-12 bg-gray-100 dark:bg-gray-900 p-8 rounded-lg shadow-lg">
-                <h2 className="text-3xl font-semibold text-gray-900 dark:text-white border-l-4 border-primary/50 pl-4">
+            <div className="max-w-6xl mx-auto px-6 mt-12 bg-[#F8FAFC] dark:bg-[#0F172A] p-8 rounded-lg shadow-lg">
+                <h2 className="text-3xl font-semibold text-[#E76F51] dark:text-[#E9C46A] border-l-4 border-[#E76F51] dark:border-[#E9C46A] pl-4">
                     Hizmet Bölümleri
                 </h2>
                 <div className="mt-6 space-y-6">
                     {service.sections.map((section, index) => (
                         <div
                             key={index}
-                            className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow"
+                            className="p-6 bg-white dark:bg-[#1E293B] rounded-lg shadow"
                         >
-                            <h3 className="text-xl font-semibold text-primary">{section.heading}</h3>
-                            <p className="text-gray-700 dark:text-gray-300 mt-2 font-poppins">{section.content}</p>
+                            <h3 className="text-xl font-semibold text-[#E76F51] dark:text-[#E9C46A]">{section.heading}</h3>
+                            <p className="text-[#1E293B] dark:text-[#E9E9E9] mt-2 font-poppins">{section.content}</p>
                         </div>
                     ))}
                 </div>
             </div>
 
             <div className="max-w-6xl mx-auto px-6 mt-12">
-                <h2 className="text-3xl font-semibold text-gray-900 dark:text-white border-l-4 border-primary pl-4 mb-6">
+                <h2 className="text-3xl font-semibold text-[#E76F51] dark:text-[#E9C46A] border-l-4 border-[#E76F51] dark:border-[#E9C46A] pl-4 mb-6">
                     İlgili Hizmetler
                 </h2>
                 <div className="grid md:grid-cols-3 gap-6">
@@ -67,7 +67,7 @@ const ServiceDetail = () => {
                         .map((relatedService) => (
                             <div
                                 key={relatedService.id}
-                                className="bg-white dark:bg-gray-800 rounded-tl-3xl rounded-br-3xl shadow-xl cursor-pointer hover:scale-105 transition overflow-hidden flex flex-col h-full"
+                                className="bg-white dark:bg-[#1E293B] rounded-tl-3xl rounded-br-3xl shadow-xl cursor-pointer hover:scale-105 transition overflow-hidden flex flex-col h-full"
                                 onClick={() => navigate(`/hizmetler/${relatedService.id}`)}
                             >
                                 <img
@@ -76,10 +76,10 @@ const ServiceDetail = () => {
                                     className="w-full h-40 object-cover rounded-br-3xl rounded-tl-3xl"
                                 />
                                 <div className="p-6 flex flex-col flex-grow">
-                                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                                    <h3 className="text-lg font-semibold text-[#1E293B] dark:text-white">
                                         {relatedService.title}
                                     </h3>
-                                    <p className="text-sm text-gray-600 dark:text-gray-300 mt-2 flex-grow">
+                                    <p className="text-sm text-[#1E293B] dark:text-[#E9E9E9] mt-2 flex-grow">
                                         {relatedService.description.slice(0, 80)}...
                                     </p>
                                 </div>
@@ -91,7 +91,7 @@ const ServiceDetail = () => {
             <div className="mt-12 flex justify-center">
                 <button
                     onClick={() => navigate(-1)}
-                    className="flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-tl-2xl rounded-br-2xl shadow-md transition hover:bg-orange-600 font-semibold"
+                    className="flex items-center gap-2 px-6 py-3 bg-[#E76F51] dark:bg-[#E9C46A] text-white rounded-lg shadow-md transition hover:bg-[#E9C46A] dark:hover:bg-[#BF3A26] font-semibold"
                 >
                     <FaArrowLeft /> Geri Dön
                 </button>
