@@ -43,7 +43,7 @@ const Hero = () => {
   return (
     <section id="hero" className="relative bg-[#F8FAFC] dark:bg-[#0F172A] text-[#1B1F3B] dark:text-white py-12">
       <div className="container flex flex-col lg:flex-row items-center justify-between w-full max-w-6xl gap-14 lg:gap-24">
-        <div data-aos="zoom-in" className="lg:w-1/2 text-center lg:text-left space-y-8">
+        <div data-aos="fade-right" className="lg:w-1/2 text-center lg:text-left space-y-8">
           <h1 className="text-5xl sm:text-6xl font-bold tracking-tight leading-tight font-poppins">
             Dijital Dönüşümde Güvenilir İş Ortağınız <br />
             <span className="text-[#E76F51] dark:text-[#E9C46A] underline underline-offset-8">
@@ -64,7 +64,7 @@ const Hero = () => {
         </div>
         <img
           src={hero}
-          data-aos="zoom-in"
+          data-aos="fade-left"
           alt="Hero"
           className="w-80 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-2xl h-auto object-cover rounded-2xl drop-shadow-[2px_10px_6px_rgba(0,0,0,0.50)]"
         />

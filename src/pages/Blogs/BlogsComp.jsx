@@ -5,9 +5,10 @@ import { Link } from "react-router-dom";
 const BlogsComp = () => {
   return (
     <div className="bg-[#F8FAFC] dark:bg-[#0F172A] dark:text-white py-10 pb-14">
-      <section data-aos="fade-up-left" data-aos-once="true" className="container">
+      <section className="container">
         <h1
           data-aos="fade-up-left"
+          data-aos-once="true"
           className="my-8 border-l-8 border-[#E76F51]/50 dark:border-[#E9C46A]/50 py-2 pl-2 text-3xl font-semibold text-[#E76F51] dark:text-[#E9C46A]"
         >
           B2B Dijital Pazarlama Atölyesi
