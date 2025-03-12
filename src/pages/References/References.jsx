@@ -55,7 +55,7 @@ const References = () => {
   }, []);
 
   return (
-    <div className="overflow-hidden relative w-full bg-white dark:bg-black py-6">
+    <div className="overflow-hidden relative w-full bg-[#F8FAFC] dark:bg-[#0F172A] py-6">
       <div className="flex items-center justify-center w-full">
         <div className="flex whitespace-nowrap gap-10" ref={marqueeRef}>
           {brands.concat(brands).map((brand, index) => (

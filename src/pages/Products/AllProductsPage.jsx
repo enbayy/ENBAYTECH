@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import { products } from "../../data/ProductData";
 
-const ProductPage = () => {
-    const [showAllProducts, setShowAllProducts] = useState(false);
-    const productsToDisplay = showAllProducts ? products : products.slice(0, 6);
+const AllProducts = () => {
     const navigate = useNavigate();
 
     return (
@@ -12,16 +10,16 @@ const ProductPage = () => {
             <div className="container">
                 <div data-aos="zoom-in" data-aos-once="true" className="mb-8 text-center space-y-3">
                     <h1 className="border-l-8 border-[#E76F51] dark:border-[#E9C46A] py-2 pl-2 flex relative text-2xl sm:text-3xl md:text-4xl font-semibold break-words">
-                        ÜRÜNLERİMİZ
+                        TÜM ÜRÜNLER
                     </h1>
                 </div>
                 <div>
                     <div data-aos="zoom-in" data-aos-once="true" className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        {productsToDisplay.map((product) => (
+                        {products.map((product) => (
                             <div
                                 key={product.id}
                                 data-aos-delay={product.aosDelay}
-                                className="group relative flex flex-col bg-transparent rounded-tl-3xl rounded-br-3xl overflow-hidden transition-all duration-300 p-6"
+                                className="group relative flex flex-col bg-transparent rounded-tl-3xl rounded-br-3xl overflow-hidden border border-[#E76F51] dark:border-[#E9C46A] transition-all duration-300 p-6"
                             >
                                 <div className="w-full aspect-w-16 aspect-h-9 flex items-center justify-center rounded-tl-3xl rounded-br-3xl overflow-hidden">
                                     <img src={product.imageUrl} alt={product.title} className="w-full h-full object-contain" />
@@ -50,4 +48,4 @@ const ProductPage = () => {
     );
 };
 
-export default ProductPage;
+export default AllProducts;

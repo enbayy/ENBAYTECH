@@ -41,23 +41,23 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="hero" className="bg-white dark:bg-black dark:text-white py-16">
+    <section id="hero" className="relative bg-[#F8FAFC] dark:bg-[#0F172A] text-[#1B1F3B] dark:text-white py-28">
       <div className="container flex flex-col lg:flex-row items-center justify-between w-full max-w-6xl gap-14 lg:gap-24">
         <div data-aos="zoom-in" className="lg:w-1/2 text-center lg:text-left space-y-8">
           <h1 className="text-5xl sm:text-6xl font-bold tracking-tight leading-tight font-poppins">
             Dijital Dönüşümde Güvenilir İş Ortağınız <br />
-            <span className="text-primary underline underline-offset-8">
+            <span className="text-[#E76F51] dark:text-[#E9C46A] underline underline-offset-8">
               Engin Tasarım
             </span>
           </h1>
-          <p data-aos-delay="300" className="text-xl text-gray-800 dark:text-gray-300 font-poppins">
+          <p data-aos-delay="300" className="text-xl text-gray-700 dark:text-gray-400 font-poppins">
             Kurumsal yazılım çözümleri, B2B e-ticaret sistemleri ve özel web projeleriyle
             markanızı dijital dünyada güçlendiriyoruz.
           </p>
           <button
             onClick={handleClick}
             data-aos-delay="500"
-            className="text-white dark:text-black bg-primary hover:bg-orange-600 transition-all duration-300 px-9 py-4 rounded-tl-3xl rounded-br-3xl text-xl font-bold shadow-lg font-poppins"
+            className="text-white bg-[#E76F51] dark:bg-[#E9C46A] hover:bg-[#E9C46A] dark:hover:bg-[#BF3A26] transition-all duration-300 px-9 py-4 rounded-tl-3xl rounded-br-3xl text-xl shadow-lg font-poppins"
           >
             Hemen Başla
           </button>
@@ -76,12 +76,12 @@ const Hero = () => {
             <div
               key={index}
               data-aos="fade-up"
-              className="bg-white dark:bg-black px-8 py-6 rounded-3xl w-40 sm:w-48 md:w-52"
+              className="px-8 py-6 rounded-3xl w-40 sm:w-48 md:w-52"
             >
-              <h1 className="text-5xl font-bold text-primary">
+              <h1 className="text-5xl font-bold text-[#E76F51] dark:text-[#E9C46A]">
                 {counts[index]}+
               </h1>
-              <p className="text-gray-800 dark:text-gray-300 text-lg font-bold mt-2 font-poppins">
+              <p className="text-gray-700 dark:text-gray-400 text-lg font-bold mt-2 font-poppins">
                 {stat.label}
               </p>
             </div>

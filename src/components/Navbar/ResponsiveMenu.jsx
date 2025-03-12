@@ -13,7 +13,7 @@ const ResponsiveMenu = ({ showMenu, toggleMenu }) => {
 
   return (
     <div
-      className={`fixed top-0 bottom-0 z-20 h-screen w-[75%] bg-white dark:bg-gray-900 
+      className={`fixed top-0 bottom-0 z-20 h-screen w-[75%] bg-white dark:bg-black 
       dark:text-white text-black px-8 pb-6 pt-16 shadow-md rounded-r-xl 
       transition-all duration-300 flex flex-col justify-between ${showMenu ? "left-0" : "-left-full"}`}
     >
@@ -37,7 +37,7 @@ const ResponsiveMenu = ({ showMenu, toggleMenu }) => {
       <div className="pb-6">
         <button
           onClick={handleClick}
-          className="primary-btn hover:bg-orange-600 w-full block py-4 font-medium text-lg text-center"
+          className="primary-btn hover:bg-orange-600 w-full block py-4 font-semibold text-lg text-center"
         >
           TEKLİF AL
         </button>

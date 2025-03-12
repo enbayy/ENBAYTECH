@@ -24,7 +24,7 @@ const Testimonial = () => {
 
   return (
     <>
-      <div className="py-10">
+      <div className="py-10 bg-[#F8FAFC] dark:bg-[#0F172A] text-[#1E293B] dark:text-white">
         <div className="container">
           <div
             data-aos="fade-up"
@@ -35,20 +35,20 @@ const Testimonial = () => {
               {testimonials.map(({ id, name, comment, img, company }) => {
                 return (
                   <div key={id} className="my-6">
-                    <div className="flex flex-col sm:flex-row gap-5 md:gap-14 p-4 mx-4 rounded-xl dark:bg-black relative">
+                    <div className="flex flex-col sm:flex-row gap-5 md:gap-14 p-6 mx-4 rounded-xl bg-transparent shadow-lg relative">
                       <img
                         src={img}
-                        alt=""
-                        className="block mx-auto h-[300px] w-full sm:w-[200px] object-cover"
+                        alt={name}
+                        className="block mx-auto h-[300px] w-full sm:w-[200px] object-cover rounded-lg"
                       />
                       <div className="space-y-4">
-                        <h1 className="text-2xl font-bold">{name}</h1>
+                        <h1 className="text-2xl font-bold text-[#E76F51] dark:text-[#E9C46A]">{name}</h1>
                         <h1 className="text-lg font-semibold">{company}</h1>
-                        <p className="text-gray-500 text-black/80 dark:text-white/80 xl:pr-40 font-poppins">
+                        <p className="text-gray-600 dark:text-gray-300 xl:pr-40 font-poppins">
                           “{comment}”
                         </p>
                       </div>
-                      <p className="text-black/10 dark:text-white/80 text-[12rem] font-serif absolute bottom-0 right-0">
+                      <p className="text-[#E76F51]/20 dark:text-[#E9C46A]/30 text-[10rem] font-serif absolute bottom-2 right-5">
                         ,,
                       </p>
                     </div>
@@ -63,10 +63,10 @@ const Testimonial = () => {
       <style jsx>{`
         .custom-dots li button:before {
           font-size: 10px;
-          color: #000;
+          color: #E76F51;
         }
         .dark .custom-dots li button:before {
-          color: #fff;
+          color: #E9C46A;
         }
       `}</style>
     </>

@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import { RiWhatsappFill } from "react-icons/ri";
 import CtaPage from "./pages/CtaPage";
+import AllProducts from "./pages/Products/AllProductsPage";
 
 const Hero = lazy(() => import("./pages/Hero"));
 const References = lazy(() => import("./pages/References/References"));
@@ -88,6 +89,7 @@ const App = () => {
           <Route path="/hakkimizda" element={<About />} />
           <Route path="/iletisim" element={<Contact />} />
           <Route path="/urunler" element={<ProductPage />} />
+          <Route path="/urunlerimiz" element={<AllProducts />} />
           <Route path="/urunler/:id" element={<ProductDetail />} />
           <Route path="/referanslar" element={<AllReferencesPage />} />
           <Route path="/referanslar/:id" element={<ReferencesDetailPage />} />
@@ -101,7 +103,7 @@ const App = () => {
         href="https://wa.me/905522312086"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-3 right-3 z-50 flex flex-col items-center space-y-2 bg-green-500 text-white p-4 rounded-full hover:bg-primary"
+        className="fixed bottom-3 right-3 z-50 flex flex-col items-center space-y-2 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full"
       >
         <RiWhatsappFill size={25} />
       </a>

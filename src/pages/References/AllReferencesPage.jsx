@@ -33,18 +33,18 @@ const AllReferencesPage = () => {
     }, []);
 
     return (
-        <div data-aos="fade-up" className="w-full bg-white dark:bg-black relative overflow-hidden py-12">
-            <div className="container mx-auto px-4 sm:px-6 md:px-12 lg:px-20 xl:px-24 relative mb-10 text-black dark:text-white">
-                <div className="text-start flex flex-col gap-y-5">
-                    <h1 className="border-l-8 border-primary/50 py-2 pl-2 text-2xl sm:text-3xl md:text-4xl font-semibold break-words">
-                        REFERANSLARIMIZ
-                    </h1>
-                    <p className="text-base sm:text-lg md:text-xl break-words font-poppins">
-                        Bizimle çalışarak başarıya ulaşan birçok firmayı görmektesiniz. Her biri kendi alanında öncü
-                        ve bizimle güçlü bir işbirliği kurarak başarılarını daha da ileriye taşıdılar. İşte referanslarımız!
-                    </p>
-                </div>
+        <div data-aos="fade-up" className="w-full bg-[#F8FAFC] dark:bg-[#0F172A] text-[#1E293B] dark:text-white relative overflow-hidden py-12">
+        <div className="container mx-auto px-4 sm:px-6 md:px-12 lg:px-20 xl:px-24 relative mb-10">
+            <div className="text-start flex flex-col gap-y-5">
+                <h1 className="border-l-8 border-[#E76F51] dark:border-[#E9C46A] py-2 pl-2 text-2xl sm:text-3xl md:text-4xl font-semibold break-words">
+                    REFERANSLARIMIZ
+                </h1>
+                <p className="text-base sm:text-lg md:text-xl break-words font-poppins">
+                    Bizimle çalışarak başarıya ulaşan birçok firmayı görmektesiniz. Her biri kendi alanında öncü
+                    ve bizimle güçlü bir işbirliği kurarak başarılarını daha da ileriye taşıdılar. İşte referanslarımız!
+                </p>
             </div>
+        </div>
 
             <motion.div
                 initial={{ opacity: 0 }}
