@@ -37,7 +37,7 @@ const ResponsiveMenu = ({ showMenu, toggleMenu }) => {
       <div className="pb-6">
         <button
           onClick={handleClick}
-          className="primary-btn hover:bg-orange-600 w-full block py-4 font-semibold text-lg text-center"
+          className="bg-[#E76F51] dark:bg-[#E9C46A] hover:bg-[#E9C46A] dark:hover:bg-[#BF3A26] transition-all duration-300 w-full block py-4 font-semibold text-lg text-center rounded-tl-2xl rounded-br-2xl"
         >
           TEKLİF AL
         </button>

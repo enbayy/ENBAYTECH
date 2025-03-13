@@ -56,7 +56,7 @@ const Navbar = () => {
         <div className="flex items-center gap-4">
           <button
             onClick={handleClick}
-            className="hidden lg:block text-white bg-[#E76F51] dark:bg-[#E9C46A] hover:bg-[#E9C46A] dark:hover:bg-[#BF3A26] transition-all duration-300 px-5 py-2 rounded-tl-xl rounded-br-xl text-lg font-semibold  font-poppins"
+            className="hidden lg:block text-white bg-[#E76F51] dark:bg-[#E9C46A] hover:bg-[#E9C46A] dark:hover:bg-[#BF3A26] transition-all duration-300 px-5 py-2 rounded-tl-2xl rounded-br-2xl text-lg font-semibold  font-poppins"
           >
             TEKLİF AL
           </button>

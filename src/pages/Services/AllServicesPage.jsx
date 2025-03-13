@@ -21,19 +21,20 @@ const AllServices = () => {
                             <div
                                 key={id}
                                 data-aos-delay={aosDelay}
-                                className="group relative flex flex-col bg-transparent rounded-tl-3xl rounded-br-3xl overflow-hidden border border-[#E76F51] dark:border-[#E9C46A] transition-all duration-300 p-6"
+                                className="group relative flex items-center flex-col bg-transparent rounded-tl-3xl rounded-br-3xl overflow-hidden border border-[#E76F51] dark:border-[#E9C46A] transition-all duration-300 p-6"
                             >
-                                <div className="w-full aspect-w-16 aspect-h-9 flex items-center justify-center rounded-tl-3xl rounded-br-3xl overflow-hidden">
+                                <div className="w-16 h-16 flex items-center justify-center rounded-full overflow-hidden bg-[#E76F51] dark:bg-[#E9C46A]">
                                     <LazyLoadImage
                                         effect="blur"
                                         src={imageSrc}
                                         alt={title}
-                                        className="w-full h-full object-contain"
+                                        className="w-10 h-10 object-contain grayscale hover:grayscale-0 transition"
                                     />
                                 </div>
+
                                 <div className="mt-4 flex-1 flex flex-col justify-between">
-                                    <h2 className="text-xl font-semibold text-[#E76F51] dark:text-[#E9C46A]">{title}</h2>
-                                    <p className="text-[#1E293B] dark:text-white mt-2 font-poppins">
+                                    <h2 className="text-xl font-semibold text-[#E76F51] dark:text-[#E9C46A] text-center">{title}</h2>
+                                    <p className="text-[#1E293B] dark:text-white mt-2 font-poppins text-center">
                                         {description.split(" ").slice(0, 25).join(" ")}...
                                     </p>
                                     <div className="flex justify-center">
