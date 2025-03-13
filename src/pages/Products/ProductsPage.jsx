@@ -23,7 +23,7 @@ const ProductPage = () => {
                                 data-aos-delay={product.aosDelay}
                                 className="group perspective"
                             >
-                                <div className="relative w-full h-[300px] transform-style-3d transition-transform duration-500 group-hover:rotate-y-180 rounded-tl-3xl rounded-br-3xl border border-[#E76F51] dark:border-[#E9C46A]">
+                                <div className="relative w-full h-[300px] transform-style-3d transition-transform duration-500 group-hover:rotate-y-180 rounded-tl-3xl rounded-br-3xl border border-[#E76F51] dark:border-[#E9C46A] cursor-default">
                                     <div className="absolute inset-0 flex flex-col items-center justify-center bg-transparent rounded-tl-3xl rounded-br-3xl shadow-md backface-hidden group-hover:opacity-0 group-hover:invisible transition-opacity duration-500 gap-y-4">
                                         <div className="relative">
                                             <img src={product.imageUrl} alt={product.title} className="w-40 h-40 object-contain relative p-6" />

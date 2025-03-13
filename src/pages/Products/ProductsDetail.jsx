@@ -20,7 +20,11 @@ const ProductDetail = () => {
             </div>
 
             <div className="max-w-6xl mx-auto px-6 mt-12 grid md:grid-cols-2 gap-10 items-center">
-                <img src={product.imageUrl} alt={product.title} className="rounded-br-3xl rounded-tl-3xl" />
+                <div className="relative flex items-center justify-center">
+                    <div className="absolute w-80 h-80 bg-[#E76F51] dark:bg-[#E9C46A] rounded-full z-10"></div>
+                    <img src={product.imageUrl} alt={product.title} className="p-6 relative z-20 w-72 h-72 object-contain" />
+                </div>
+
                 <div>
                     <h2 className="text-3xl font-semibold text-[#E76F51] dark:text-[#E9C46A] border-l-4 border-[#E76F51] dark:border-[#E9C46A] pl-4">Ürün Açıklaması</h2>
                     <p className="mt-4 text-[#1E293B] dark:text-[#E9E9E9] leading-relaxed font-poppins">{product.description}</p>
@@ -66,11 +70,12 @@ const ProductDetail = () => {
                                 className="bg-white dark:bg-[#1E293B] rounded-tl-3xl rounded-br-3xl shadow-xl cursor-pointer hover:scale-105 transition overflow-hidden flex flex-col h-full"
                                 onClick={() => navigate(`/urunler/${relatedProduct.id}`)}
                             >
-                                <img
-                                    src={relatedProduct.imageUrl}
-                                    alt={relatedProduct.title}
-                                    className="w-full h-56 object-contain rounded-br-3xl rounded-tl-3xl"
-                                />
+                                <div className="relative flex items-center justify-center p-3">
+                                    <div className="absolute w-48 h-48 bg-[#E76F51] dark:bg-[#E9C46A] rounded-full z-10"></div>
+                                    <img src={relatedProduct.imageUrl}
+                                        alt={relatedProduct.title}
+                                        className="p-6 relative z-20 w-48 h-48 object-contain" />
+                                </div>
                                 <div className="p-6 flex flex-col flex-grow">
                                     <h3 className="text-lg font-semibold text-[#1E293B] dark:text-white">{relatedProduct.title}</h3>
                                     <p className="text-base text-[#1E293B] dark:text-[#E9E9E9] mt-2 flex-grow">
