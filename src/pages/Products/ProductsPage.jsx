@@ -24,10 +24,13 @@ const ProductPage = () => {
                                 className="group perspective"
                             >
                                 <div className="relative w-full h-[300px] transform-style-3d transition-transform duration-500 group-hover:rotate-y-180 rounded-tl-3xl rounded-br-3xl border border-[#E76F51] dark:border-[#E9C46A]">
-                                    <div className="absolute inset-0 flex flex-col items-center justify-center bg-transparent rounded-tl-3xl rounded-br-3xl shadow-md backface-hidden group-hover:opacity-0 group-hover:invisible transition-opacity duration-500 gap-y-2">
-                                        <img src={product.imageUrl} alt={product.title} className="w-40 h-40 object-contain" />
+                                    <div className="absolute inset-0 flex flex-col items-center justify-center bg-transparent rounded-tl-3xl rounded-br-3xl shadow-md backface-hidden group-hover:opacity-0 group-hover:invisible transition-opacity duration-500 gap-y-4">
+                                        <div className="relative">
+                                            <img src={product.imageUrl} alt={product.title} className="w-44 h-44 object-contain relative p-6" />
+                                            <div className="absolute inset-0 bg-[#E76F51] rounded-full dark:bg-[#E9C46A] -z-10">
+                                            </div>
+                                        </div>
                                         <h2 className="text-2xl font-semibold text-[#E76F51] dark:text-[#E9C46A] mt-2">{product.title}</h2>
-
                                     </div>
                                     <div className="absolute inset-0 flex flex-col gap-y-10 items-center justify-center bg-[#E76F51] dark:bg-[#E9C46A] text-white p-6 rounded-tl-3xl rounded-br-3xl transform rotate-y-180 backface-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-500">
                                         <p className="text-lg text-center font-poppins line-clamp-5 leading-relaxed">{product.description}</p>

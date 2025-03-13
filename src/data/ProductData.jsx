@@ -1,6 +1,6 @@
-import pixmart from '../assets/pixmartReady.png';
-import encrm from '../assets/crm2.png';
-import b2b from '../assets/b2b.png';
+import pixmart from '../assets/pixmartReady.ico';
+import encrm from '../assets/crm2.ico';
+import b2b from '../assets/b2b2.ico';
 
 export const products = [
     {
