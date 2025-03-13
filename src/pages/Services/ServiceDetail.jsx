@@ -73,13 +73,13 @@ const ServiceDetail = () => {
                                 <img
                                     src={relatedService.imageSrc}
                                     alt={relatedService.title}
-                                    className="w-full h-40 object-cover rounded-br-3xl rounded-tl-3xl"
+                                    className="w-full h-56 object-contain rounded-br-3xl rounded-tl-3xl"
                                 />
                                 <div className="p-6 flex flex-col flex-grow">
                                     <h3 className="text-lg font-semibold text-[#1E293B] dark:text-white">
                                         {relatedService.title}
                                     </h3>
-                                    <p className="text-sm text-[#1E293B] dark:text-[#E9E9E9] mt-2 flex-grow">
+                                    <p className="text-base text-[#1E293B] dark:text-[#E9E9E9] mt-2 flex-grow">
                                         {relatedService.description.slice(0, 80)}...
                                     </p>
                                 </div>

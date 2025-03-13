@@ -1,12 +1,12 @@
-import pixmart from '../assets/pixmartReady.jpg';
-import encrm from '../assets/crm.jpg';
-import b2b from '../assets/ai.jpg';
+import pixmart from '../assets/pixmartReady.png';
+import encrm from '../assets/crm2.png';
+import b2b from '../assets/b2b.png';
 
 export const products = [
     {
         id: 1,
         title: "Pixmart Ready",
-        description: "Pixmart Ready, estetik açıdan modern ve fonksiyonel bir tasarıma sahip, yüksek performanslı bir cihazdır. Kullanıcı dostu arayüzü ile her yaştan kullanıcıya hitap eder.",
+        description: "Pixmart Ready, estetik açıdan modern ve fonksiyonel bir tasarıma sahip, yüksek performanslı bir cihazdır. Gelişmiş donanımı sayesinde hem profesyonel hem de günlük kullanım için mükemmel bir çözüm sunar. 4K çözünürlüklü geniş ekranı, keskin görüntüler ve zengin renklerle üst düzey bir deneyim sağlar. Güçlü işlemcisi ve yüksek hızlı SSD depolama birimi ile çoklu görevleri rahatça yerine getirir. Kullanıcı dostu arayüzü sayesinde herkes için kolay kullanım imkanı sunan Pixmart Ready, dayanıklı yapısı ve şık tasarımıyla ofis ve ev ortamlarında vazgeçilmez bir teknolojik araçtır.",
         imageUrl: pixmart,
         price: "4,999 ₺",
         technicalSpecs: [
@@ -50,7 +50,7 @@ export const products = [
     {
         id: 2,
         title: "EnCRM",
-        description: "EnCRM, müşteri ilişkilerini etkin bir şekilde yönetmenizi sağlayan bir yazılımdır. Hızlı veri analizi ve entegrasyonu ile işletmenizin müşteri ilişkilerini en üst seviyeye çıkarır.",
+        description: "EnCRM, işletmelerin müşteri ilişkilerini en verimli şekilde yönetmesini sağlayan akıllı bir yazılımdır. Müşteri bilgilerini düzenli ve güvenli bir şekilde saklarken, gelişmiş analiz araçlarıyla detaylı raporlama ve stratejik planlama imkanı sunar. Otomatikleştirilmiş süreçler sayesinde müşteri taleplerine hızlı yanıt vermeyi kolaylaştırır ve iş akışlarını optimize eder. EnCRM, farklı sektörlerdeki firmaların satışlarını ve müşteri memnuniyetini artırmalarına yardımcı olmak için tasarlanmıştır. Kolay entegrasyon seçenekleri sayesinde mevcut iş süreçlerine hızla adapte edilebilir.",
         imageUrl: encrm,
         price: "2,499 ₺/ay",
         technicalSpecs: [
@@ -94,7 +94,7 @@ export const products = [
     {
         id: 3,
         title: "B2B E-Ticaret",
-        description: "B2B E-Ticaret, toptan satışlar için özel olarak tasarlanmış, güçlü ve güvenli bir platformdur. Entegre ödeme sistemleri, müşteri yönetim araçları ve sipariş takibi gibi bir dizi özellik sunar.",
+        description: "B2B E-Ticaret, büyük ölçekli işletmeler ve toptan satış yapan firmalar için geliştirilmiş güvenilir bir ticaret platformudur. Gelişmiş sipariş yönetimi, kullanıcı dostu envanter takibi ve entegre ödeme sistemleri sayesinde iş süreçlerini hızlandırır. Platform, alıcılar ve satıcılar arasındaki iletişimi kolaylaştırarak ticaret deneyimini daha verimli hale getirir. SAP, Oracle ve ERP sistemleri ile sorunsuz entegrasyon sağlayarak, iş süreçlerini otomatize eder. Güçlü güvenlik önlemleri ve yedekleme çözümleri ile verilerinizi her zaman güvende tutar. B2B E-Ticaret, dijital dünyada rekabetçi kalmak isteyen işletmeler için vazgeçilmez bir çözümdür.",
         imageUrl: b2b,
         price: "5,499 ₺/yıl",
         technicalSpecs: [
