@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import hero from "../assets/hero2.png";
 import { useNavigate } from "react-router-dom";
 import RevealLinks from "../components/RevealLinks";
+import PhoneCard from "../components/Phone";
 
 const stats = [
   { value: 300, label: "Bitmiş Proje" },
@@ -46,23 +46,17 @@ const Hero = () => {
       <div className="container flex flex-col-reverse lg:flex-row items-center justify-between w-full max-w-6xl gap-14 lg:gap-24">
         <div data-aos="fade-right" className="lg:w-1/2 text-center lg:text-left">
           <RevealLinks />
-
           <button
             onClick={handleClick}
             data-aos-delay="500"
-            className="text-white bg-[#E76F51] dark:bg-[#E9C46A] hover:bg-[#E9C46A] dark:hover:bg-[#BF3A26] transition-all duration-300 px-9 py-4 rounded-tl-3xl rounded-br-3xl text-xl shadow-lg font-poppins uppercase font-semibold mt-5"
+            className="text-white bg-[#E76F51] dark:bg-[#E9C46A] hover:bg-[#E9C46A] dark:hover:bg-[#BF3A26] transition-all duration-300 px-9 py-4 rounded-tl-3xl rounded-br-3xl text-xl shadow-lg font-poppins uppercase font-semibold mt-5 flex justify-start"
           >
             Hemen Başla
           </button>
-
         </div>
-        <img
-          src={hero}
-          data-aos="fade-left"
-          alt="Hero"
-          className="w-96 max-w-xs sm:max-w-xs md:max-w-md lg:max-w-lg xl:max-w-2xl h-auto object-cover rounded-2xl 
-        dark:shadow-white/50 drop-shadow-[2px_2px_6px_rgba(0,0,0,0.5)] dark:drop-shadow-[2px_2px_6px_rgba(255,255,255,0.5)]"
-        />
+        <div data-aos="fade-left">
+          <PhoneCard />
+        </div>
       </div>
       <div className="w-full flex flex-col items-center mt-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-10 lg:gap-12 text-center">

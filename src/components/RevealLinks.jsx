@@ -134,7 +134,7 @@ const RevealLinks = () => {
                 <FlipLink2>ENGİN</FlipLink2>
                 <FlipLink2>TASARIM</FlipLink2>
             </div>
-            <p data-aos-delay="300" className="text-xl text-gray-700 dark:text-gray-400 font-poppins mt-3">
+            <p data-aos-delay="300" className="text-xl text-gray-700 dark:text-gray-400 font-poppins mt-3 text-start">
                 Kurumsal yazılım çözümleri, B2B e-ticaret sistemleri ve özel web projeleriyle
                 markanızı dijital dünyada güçlendiriyoruz.
             </p>
