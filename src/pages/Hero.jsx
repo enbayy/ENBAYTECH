@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import hero from "../assets/hero2.png";
 import { useNavigate } from "react-router-dom";
+import RevealLinks from "../components/RevealLinks";
 
 const stats = [
   { value: 300, label: "Bitmiş Proje" },
@@ -41,32 +42,25 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="hero" className="relative bg-[#F8FAFC] dark:bg-[#0F172A] text-[#1B1F3B] dark:text-white py-24">
+    <section id="hero" className="relative bg-[#F8FAFC] dark:bg-[#0F172A] text-[#1B1F3B] dark:text-white py-20">
       <div className="container flex flex-col-reverse lg:flex-row items-center justify-between w-full max-w-6xl gap-14 lg:gap-24">
-        <div data-aos="fade-right" className="lg:w-1/2 text-center lg:text-left space-y-8">
-          <h1 className="text-5xl sm:text-6xl font-bold tracking-tight leading-tight font-poppins">
-            Dijital Dönüşümde Güvenilir İş Ortağınız <br />
-            <span className="text-[#E76F51] dark:text-[#E9C46A] underline underline-offset-8">
-              Engin Tasarım
-            </span>
-          </h1>
-          <p data-aos-delay="300" className="text-xl text-gray-700 dark:text-gray-400 font-poppins">
-            Kurumsal yazılım çözümleri, B2B e-ticaret sistemleri ve özel web projeleriyle
-            markanızı dijital dünyada güçlendiriyoruz.
-          </p>
+        <div data-aos="fade-right" className="lg:w-1/2 text-center lg:text-left">
+          <RevealLinks />
+
           <button
             onClick={handleClick}
             data-aos-delay="500"
-            className="text-white bg-[#E76F51] dark:bg-[#E9C46A] hover:bg-[#E9C46A] dark:hover:bg-[#BF3A26] transition-all duration-300 px-9 py-4 rounded-tl-3xl rounded-br-3xl text-xl shadow-lg font-poppins uppercase font-semibold"
+            className="text-white bg-[#E76F51] dark:bg-[#E9C46A] hover:bg-[#E9C46A] dark:hover:bg-[#BF3A26] transition-all duration-300 px-9 py-4 rounded-tl-3xl rounded-br-3xl text-xl shadow-lg font-poppins uppercase font-semibold mt-5"
           >
             Hemen Başla
           </button>
+
         </div>
         <img
           src={hero}
           data-aos="fade-left"
           alt="Hero"
-          className="w-80 max-w-xs sm:max-w-xs md:max-w-md lg:max-w-lg xl:max-w-2xl h-auto object-cover rounded-2xl 
+          className="w-96 max-w-xs sm:max-w-xs md:max-w-md lg:max-w-lg xl:max-w-2xl h-auto object-cover rounded-2xl 
         dark:shadow-white/50 drop-shadow-[2px_2px_6px_rgba(0,0,0,0.5)] dark:drop-shadow-[2px_2px_6px_rgba(255,255,255,0.5)]"
         />
       </div>
