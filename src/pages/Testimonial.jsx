@@ -36,11 +36,17 @@ const Testimonial = () => {
                 return (
                   <div key={id} className="my-6">
                     <div className="flex flex-col sm:flex-row gap-5 md:gap-14 p-6 mx-4 rounded-xl bg-transparent relative">
-                      <img
-                        src={img}
-                        alt={name}
-                        className="block mx-auto h-[300px] w-full sm:w-[200px] object-cover rounded-lg"
-                      />
+                      {img ? (
+                        <img
+                          src={img}
+                          alt={`Resim ${id}`}
+                          className="block mx-auto h-[300px] w-full sm:w-[200px] rounded-lg object-cover"
+                        />
+                      ) : (
+                        <div className="flex items-center justify-center h-[300px] w-full sm:w-[200px] bg-gray-300 text-gray-600 rounded-lg text-xl font-bold">
+                          {`Resim ${id}`}
+                        </div>
+                      )}
                       <div className="space-y-4">
                         <h1 className="text-2xl font-bold text-[#E76F51] dark:text-[#E9C46A]">{name}</h1>
                         <h1 className="text-lg font-semibold">{company}</h1>
@@ -59,7 +65,6 @@ const Testimonial = () => {
           </div>
         </div>
       </div>
-
       <style jsx>{`
         .custom-dots li button:before {
           font-size: 10px;

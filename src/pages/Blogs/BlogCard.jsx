@@ -6,7 +6,7 @@ const BlogCard = ({ id, imageUrl, title, description }) => {
   return (
     <Link to={`/blog/${id}`} className="group block">
       <div className="dark:text-white">
-        <div className="overflow-hidden">
+        <div className="overflow-hidden rounded-tl-3xl">
           <img
             src={imageUrl}
             alt="No image"

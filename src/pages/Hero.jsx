@@ -41,7 +41,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="hero" className="relative bg-[#F8FAFC] dark:bg-[#0F172A] text-[#1B1F3B] dark:text-white py-12">
+    <section id="hero" className="relative bg-[#F8FAFC] dark:bg-[#0F172A] text-[#1B1F3B] dark:text-white py-24">
       <div className="container flex flex-col-reverse lg:flex-row items-center justify-between w-full max-w-6xl gap-14 lg:gap-24">
         <div data-aos="fade-right" className="lg:w-1/2 text-center lg:text-left space-y-8">
           <h1 className="text-5xl sm:text-6xl font-bold tracking-tight leading-tight font-poppins">
@@ -66,10 +66,10 @@ const Hero = () => {
           src={hero}
           data-aos="fade-left"
           alt="Hero"
-          className="w-80 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-2xl h-auto object-cover rounded-2xl drop-shadow-[2px_10px_6px_rgba(0,0,0,0.50)]"
+          className="w-80 max-w-xs sm:max-w-xs md:max-w-md lg:max-w-lg xl:max-w-2xl h-auto object-cover rounded-2xl 
+        dark:shadow-white/50 drop-shadow-[2px_2px_6px_rgba(0,0,0,0.5)] dark:drop-shadow-[2px_2px_6px_rgba(255,255,255,0.5)]"
         />
       </div>
-
       <div className="w-full flex flex-col items-center mt-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-10 lg:gap-12 text-center">
           {stats.map((stat, index) => (

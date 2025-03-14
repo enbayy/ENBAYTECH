@@ -27,8 +27,11 @@ const ServiceDetail = () => {
                 <h1 className="text-5xl font-bold drop-shadow-lg relative font-poppins">{service.title}</h1>
             </div>
 
-            <div className="max-w-6xl mx-auto px-6 mt-12 grid md:grid-cols-2 gap-10 items-center">
-                <img src={service.imageSrc} alt={service.title} className="rounded-br-3xl rounded-tl-3xl" />
+            <div className="max-w-6xl mx-auto px-6 mt-12 grid md:grid-cols-2 gap-10 items-center p-6">
+                <div className="relative flex items-center justify-center">
+                    <div className="absolute w-80 h-80 bg-[#E76F51] dark:bg-[#E9C46A] rounded-full z-10"></div>
+                    <img src={service.imageSrc} alt={service.title} className="p-6 relative z-20 w-72 h-72 object-contain" />
+                </div>
                 <div>
                     <h2 className="text-3xl font-semibold text-[#E76F51] dark:text-[#E9C46A] border-l-4 border-[#E76F51] dark:border-[#E9C46A] pl-4">
                         Hizmet Açıklaması
