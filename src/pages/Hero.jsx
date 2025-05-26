@@ -1,79 +1,45 @@
-import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import RevealLinks from "../components/RevealLinks";
-import PhoneCard from "../components/Phone";
-
-const stats = [
-  { value: 300, label: "Bitmiş Proje" },
-  { value: 20, label: "Yıllık Deneyim" },
-  { value: 500, label: "Mutlu Müşteri" },
-];
+import React from "react";
 
 const Hero = () => {
-  const [counts, setCounts] = useState(stats.map(() => 0));
-  const navigate = useNavigate();
-
-  const handleClick = () => {
-    navigate("/hizmetlerimiz");
-  };
-
-  useEffect(() => {
-    const duration = 2000;
-    const steps = 100;
-    const intervalTime = duration / steps;
-    const intervals = stats.map((stat, index) => {
-      let count = 0;
-      const increment = stat.value / steps;
-      return setInterval(() => {
-        count += increment;
-        if (count >= stat.value) {
-          count = stat.value;
-          clearInterval(intervals[index]);
-        }
-        setCounts((prevCounts) => {
-          const newCounts = [...prevCounts];
-          newCounts[index] = Math.floor(count);
-          return newCounts;
-        });
-      }, intervalTime);
-    });
-
-    return () => intervals.forEach(clearInterval);
-  }, []);
-
   return (
-    <section id="hero" className="relative bg-[#F8FAFC] dark:bg-[#0F172A] text-[#1B1F3B] dark:text-white py-20">
-      <div className="container flex flex-col-reverse lg:flex-row items-center justify-between w-full max-w-6xl gap-14 lg:gap-24">
-        <div data-aos="fade-right" className="lg:w-1/2 text-center lg:text-left">
-          <RevealLinks />
-          <button
-            onClick={handleClick}
-            data-aos-delay="500"
-            className="text-white bg-[#E76F51] dark:bg-[#E9C46A] hover:bg-[#E9C46A] dark:hover:bg-[#BF3A26] transition-all duration-300 px-9 py-4 rounded-tl-3xl rounded-br-3xl text-xl shadow-lg font-poppins uppercase font-semibold mt-5 flex justify-start"
-          >
-            Hemen Başla
-          </button>
-        </div>
-        <div data-aos="fade-left">
-          <PhoneCard />
-        </div>
-      </div>
-      <div className="w-full flex flex-col items-center mt-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-10 lg:gap-12 text-center">
-          {stats.map((stat, index) => (
-            <div
-              key={index}
-              data-aos="zoom-in"
-              className="px-8 py-6 rounded-3xl w-40 sm:w-48 md:w-52"
+    <section
+      id="hero"
+      className="relative bg-[#f9f9f9] dark:from-color1 dark:to-color2 py-24 px-6 md:px-12 lg:px-20"
+    >
+      <div className="container mx-auto flex flex-col-reverse lg:flex-row items-center gap-12">
+        <div className="lg:w-1/2 max-w-xl text-center lg:text-left">
+          <h1 className="text-5xl md:text-6xl font-bold color1 dark:color5 leading-tight font-roboto">
+            Dijital Varlığınızı <br />
+            <span className="text-color2 dark:text-color4">Profesyonel</span> <br />
+            Tasarımlarla Güçlendirin.
+          </h1>
+          <p className="mt-6 text-lg md:text-xl color3 dark:color4 font-roboto leading-relaxed">
+            İşletmenize özel web çözümleri ve etkileyici marka kimlikleri <br />
+            ile hedef kitleniz üzerinde kalıcı izler bırakın.
+          </p>
+
+          <div className="mt-10 flex justify-center lg:justify-start gap-6">
+            <button
+              onClick={() => alert("Ücretsiz teklif talebi gönderildi!")}
+              className="bg-color2 hover:bg-color1 dark:bg-color3 dark:hover:bg-color4 text-color5 dark:text-color1 font-semibold px-12 py-4 rounded-full shadow-lg transition duration-300"
             >
-              <h1 className="text-5xl font-bold text-[#E76F51] dark:text-[#E9C46A]">
-                {counts[index]}+
-              </h1>
-              <p className="text-gray-700 dark:text-gray-400 text-lg font-bold mt-2 font-poppins">
-                {stat.label}
-              </p>
-            </div>
-          ))}
+              Ücretsiz Teklif Alın
+            </button>
+            <a
+              href="#portfolio"
+              className="inline-block px-12 py-4 border-2 border-color2 dark:border-color4 rounded-full font-semibold text-color2 dark:text-color4 hover:bg-color2 hover:text-color5 dark:hover:bg-color4 dark:hover:text-color1 transition duration-300"
+            >
+              Portfolyomuzu İnceleyin
+            </a>
+          </div>
+        </div>
+
+        <div className="lg:w-1/2 max-w-xl mx-auto">
+          <img
+            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
+            alt="ENBAYTECH"
+            className="rounded-3xl shadow-2xl border-4 border-[#685d5f]"
+          />
         </div>
       </div>
     </section>

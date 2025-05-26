@@ -6,50 +6,63 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 
 const AllServices = () => {
     const navigate = useNavigate();
+
+    const handleDetailClick = (id) => {
+        navigate(`/hizmetler/${id}`);
+    };
+
     return (
-        <section className="bg-[#F8FAFC] dark:bg-[#0F172A] text-[#1E293B] dark:text-white py-12">
-            <div className="container">
-                <div data-aos="zoom-in" data-aos-once="true" className="mb-8 text-center space-y-3">
-                    <h1 className="border-l-8 border-[#E76F51] dark:border-[#E9C46A] py-2 pl-2 flex relative text-2xl sm:text-3xl md:text-4xl font-semibold break-words">
-                        HİZMETLERİMİZ
+        <section
+            id="all-services"
+            className="bg-[#f9f9f9] dark:bg-color1 text-color2 dark:text-color5 py-12"
+        >
+            <div className="container mx-auto px-4">
+                <div className="mb-8 text-center space-y-3">
+                    <h1
+                        data-aos="zoom-in"
+                        data-aos-once="true"
+                        className="text-color1 dark:text-color4 border-l-8 border-color2 dark:border-color4 py-2 pl-2 text-2xl sm:text-3xl md:text-4xl font-semibold break-words"
+                    >
+                        TÜM HİZMETLER
                     </h1>
                 </div>
-                <div>
-                    <div data-aos="zoom-in" data-aos-once="true" className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                        {services.map(({ id, title, description, imageSrc, aosDelay }) => (
-                            <div
-                                key={id}
-                                data-aos-delay={aosDelay}
-                                className="group relative flex items-center flex-col bg-transparent rounded-tl-3xl rounded-br-3xl overflow-hidden border border-[#E76F51] dark:border-[#E9C46A] transition-all duration-300 p-6"
-                            >
-                                <div className="w-24 h-24 flex items-center justify-center rounded-full overflow-hidden bg-[#E76F51] dark:bg-[#E9C46A]">
-                                    <LazyLoadImage
-                                        effect="blur"
-                                        src={imageSrc}
-                                        alt={title}
-                                        className="w-16 h-16 object-contain grayscale hover:grayscale-0 transition"
-                                    />
-                                </div>
 
-                                <div className="mt-4 flex-1 flex flex-col justify-between">
-                                    <h2 className="text-xl font-semibold text-[#E76F51] dark:text-[#E9C46A]">{title}</h2>
-                                    <p className="text-lg text-[#1E293B] dark:text-white mt-3 font-poppins text-start line-clamp-4 leading-relaxed overflow-hidden">
-                                        {description}
-                                    </p>
-                                    <div className="flex justify-start">
-                                        <button
-                                            onClick={() => navigate(`/hizmetler/${id}`)}
-                                            className="w-[120px] h-[40px] bg-[#E76F51] dark:bg-[#E9C46A] text-white rounded-tl-2xl rounded-br-2xl hover:bg-[#E9C46A] dark:hover:bg-[#BF3A26] transition mt-4"
-                                        >
-                                            İncele
-                                        </button>
-                                    </div>
+                <div
+                    data-aos="fade-up"
+                    data-aos-once="true"
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+                >
+                    {services.map((service) => (
+                        <div
+                            key={service.id}
+                            className="relative flex flex-col md:flex-row items-center bg-color5 dark:bg-color2 rounded-2xl shadow-lg p-6 transition-transform duration-300 hover:scale-[1.03] border border-color3 dark:border-color4"
+                        >
+                            <div className="w-24 h-24 flex items-center justify-center rounded-full bg-color2 dark:bg-color4 shadow-md">
+                                <LazyLoadImage
+                                    effect="blur"
+                                    src={service.imageSrc}
+                                    alt={service.title}
+                                    className="w-16 h-16 object-contain"
+                                />
+                            </div>
 
-                                    <span className="absolute left-0 bottom-0 w-0 h-[6px] bg-[#E76F51] dark:bg-[#E9C46A] transition-all duration-300 group-hover:w-full"></span>
+                            <div className="mt-6 md:mt-0 md:ml-8 flex-1 flex flex-col justify-center h-full text-center md:text-left">
+                                <h2 className="text-2xl font-bold text-color2 dark:text-color4">{service.title}</h2>
+                                <h3 className="text-xl font-semibold text-color1 dark:text-color5 mt-1">{service.name}</h3>
+                                <p className="text-base text-color3 dark:text-color4 mt-3 leading-relaxed line-clamp-4">
+                                    {service.description}
+                                </p>
+                                <div className="flex justify-center md:justify-start">
+                                    <button
+                                        onClick={() => handleDetailClick(service.id)}
+                                        className="w-[120px] h-[40px] bg-color2 dark:bg-color4 text-color5 dark:text-color1 rounded-tl-2xl rounded-br-2xl hover:bg-color4 dark:hover:bg-color3 transition mt-4"
+                                    >
+                                        İncele
+                                    </button>
                                 </div>
                             </div>
-                        ))}
-                    </div>
+                        </div>
+                    ))}
                 </div>
             </div>
         </section>

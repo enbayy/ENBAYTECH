@@ -2,75 +2,101 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { services } from "../data/ServicesData";
 
 const About = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        AOS.init({ duration: 1000, once: true });
+        AOS.init({ duration: 1200, once: true });
     }, []);
 
-    const handleClick = () => {
+    const handleContactClick = () => {
         navigate("/iletisim");
     };
 
     return (
         <section
-            id="about-detail"
-            className="bg-[#F8FAFC] dark:bg-[#0F172A] text-[#1E293B] dark:text-white py-16"
+            id="about"
+            className="bg-[#f9f9f9] text-color1 py-20 px-4 sm:px-8 lg:px-16"
+            style={{ fontFamily: "'Poppins', sans-serif" }}
         >
-            <div className="container mx-auto px-6 lg:px-12">
-                <div className="text-center mb-16" data-aos="fade-up">
-                    <h1 className="text-5xl font-extrabold text-[#E76F51] dark:text-[#E9C46A]">
-                        Hakkımızda
+            <div className="max-w-7xl mx-auto">
+                <div className="text-center mb-20" data-aos="fade-up">
+                    <h1 className="text-5xl font-extrabold color2 tracking-wide mb-6">
+                        Enbaytech Hakkında
                     </h1>
-                    <p className="mt-6 text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto font-poppins">
-                        Engin Tasarım, İstanbul'da 20 yılı aşkın süredir faaliyet gösteren, yenilikçi çözümler sunan bir dijital ajanstır. Web tasarım, e-ticaret, yazılım çözümleri ve dijital pazarlama alanlarında öncü bir marka olarak, müşterilerimize en iyi hizmeti sunmayı amaçlıyoruz. Modern teknolojiye dayalı çözümler geliştirerek markaların dijital dünyada güçlü bir konum elde etmesini sağlıyoruz.
+                    <p className="max-w-3xl mx-auto text-lg color3 leading-relaxed">
+                        Enbaytech, dijital dünyada işletmelerin ihtiyaç duyduğu profesyonel web çözümleri sunan,
+                        İstanbul merkezli bir teknoloji firmasıdır. Web tasarımı, logo tasarımı, SEO çalışmaları,
+                        hosting ve domain hizmetleri ile web sitesi bakımı alanlarında uzman ekibimizle müşterilerimizin
+                        dijital varlıklarını güçlendiriyoruz.
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-12 items-center">
-                    <div className="space-y-6">
-                        <h2 className="text-3xl font-semibold text-[#E76F51] dark:text-[#E9C46A]" data-aos="fade-right">
-                            Misyonumuz
-                        </h2>
-                        <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed font-poppins" data-aos="fade-right">
-                            Müşterilerimizin işlerini büyütmelerine yardımcı olmak için yenilikçi, kullanıcı dostu ve yüksek kaliteli dijital çözümler sunuyoruz. Teknolojinin gücünü kullanarak işletmelerin daha geniş kitlelere ulaşmasını ve rekabet avantajı elde etmesini sağlıyoruz.
-                        </p>
-                        <h2 className="text-3xl font-semibold text-[#E76F51] dark:text-[#E9C46A]" data-aos="fade-left">
-                            Vizyonumuz
-                        </h2>
-                        <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed font-poppins" data-aos="fade-left">
-                            Teknoloji ve tasarımın mükemmel uyumunu yakalayarak, en yaratıcı ve yenilikçi çözümleri üretmek, sektörde fark yaratan projelere imza atmak ve müşterilerimize dijital dünyada en iyi deneyimi sunmak.
+                <div className="grid md:grid-cols-2 gap-14 mb-24">
+                    <div
+                        data-aos="fade-right"
+                        className="flex flex-col items-center text-center p-8 bg-color5 border border-color4 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-500"
+                    >
+                        <div className="mb-6 text-6xl" aria-hidden="true" style={{ color: "#112224" }}>
+                            🎯
+                        </div>
+                        <h2 className="text-3xl font-semibold color2 mb-3">Misyonumuz</h2>
+                        <p className="text-lg color3 leading-relaxed max-w-md">
+                            Müşterilerimize, yenilikçi ve güvenilir dijital çözümler sunarak; işletmelerin
+                            online varlıklarını güçlendirmek, marka değerlerini artırmak ve hedef kitlelerine
+                            daha etkili ulaşmalarını sağlamak en büyük önceliğimizdir.
                         </p>
                     </div>
-                    <div className="grid grid-cols-2 gap-6">
-                        <div className="h-48 bg-gray-200 dark:bg-gray-800 rounded-xl flex justify-center items-center" data-aos="zoom-in">Resim 1</div>
-                        <div className="h-48 bg-gray-200 dark:bg-gray-800 rounded-xl flex justify-center items-center" data-aos="zoom-in">Resim 2</div>
-                        <div className="h-48 bg-gray-200 dark:bg-gray-800 rounded-xl flex justify-center items-center" data-aos="zoom-in">Resim 3</div>
-                        <div className="h-48 bg-gray-200 dark:bg-gray-800 rounded-xl flex justify-center items-center" data-aos="zoom-in">Resim 4</div>
+                    <div
+                        data-aos="fade-left"
+                        className="flex flex-col items-center text-center p-8 bg-color5 border border-color4 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-500"
+                    >
+                        <div className="mb-6 text-6xl" aria-hidden="true" style={{ color: "#112224" }}>
+                            🌟
+                        </div>
+                        <h2 className="text-3xl font-semibold color2 mb-3">Vizyonumuz</h2>
+                        <p className="text-lg color3 leading-relaxed max-w-md">
+                            Teknolojideki gelişmeleri yakından takip ederek, müşterilerimize en son
+                            dijital trendlerle uyumlu, kaliteli ve sürdürülebilir çözümler sunan öncü firma olmak.
+                        </p>
                     </div>
                 </div>
 
-                <div className="mt-20 text-center">
-                    <h2 className="text-4xl font-bold text-[#E76F51] dark:text-[#E9C46A]" data-aos="fade-up">
-                        Ekibimiz
-                    </h2>
-                    <p className="mt-6 text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto font-poppins" data-aos="fade-up">
-                        Engin Tasarım, farklı alanlarda uzmanlaşmış deneyimli bir ekipten oluşmaktadır. Yazılım mühendisleri, grafik tasarımcılar, dijital pazarlama uzmanları ve içerik üreticilerimiz, her projeye özel, yenilikçi çözümler sunarak markaların dijital dünyada başarılı olmasını sağlamaktadır.
-                    </p>
-                    <div className="grid md:grid-cols-3 gap-10 mt-12">
-                        <div className="h-56 bg-gray-200 dark:bg-gray-800 rounded-xl flex justify-center items-center" data-aos="flip-left">Resim 1</div>
-                        <div className="h-56 bg-gray-200 dark:bg-gray-800 rounded-xl flex justify-center items-center" data-aos="flip-up">Resim 2</div>
-                        <div className="h-56 bg-gray-200 dark:bg-gray-800 rounded-xl flex justify-center items-center" data-aos="flip-right">Resim 3</div>
-                    </div>
-                </div>
-
-                <div className="mt-20 text-center">
-                    <button
-                        onClick={handleClick}
-                        className="bg-[#E76F51] dark:bg-[#E9C46A] hover:bg-[#E9C46A] dark:hover:bg-[#BF3A26] text-white px-9 py-4 rounded-tl-3xl rounded-br-3xl text-lg font-semibold transition-all duration-500 shadow-xl hover:opacity-90"
+                <div>
+                    <h2
+                        className="text-4xl font-bold color2 text-center mb-16 tracking-wide"
                         data-aos="fade-up"
+                    >
+                        Hizmetlerimiz
+                    </h2>
+                    <div className="grid gap-12 sm:grid-cols-2 md:grid-cols-3 max-w-6xl mx-auto">
+                        {services.map((service, index) => (
+                            <div
+                                key={service.id}
+                                className="bg-color5 border border-color4 rounded-2xl p-8 shadow-md hover:shadow-2xl transition-shadow duration-400 cursor-pointer"
+                                data-aos="fade-up"
+                                data-aos-delay={index * 150}
+                            >
+                                <h3 className="text-2xl font-semibold mb-4 color1 tracking-wide">
+                                    {service.title}
+                                </h3>
+                                <p className="color3 leading-relaxed">{service.description}</p>
+                                <img
+                                    src={service.imageSrc}
+                                    alt={service.title}
+                                    className="w-14 h-14 mt-4"
+                                />
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                <div className="mt-28 text-center" data-aos="fade-up">
+                    <button
+                        onClick={handleContactClick}
+                        className="bg-color1 hover:bg-color2 text-color5 px-12 py-5 rounded-full text-xl font-bold shadow-lg transition transform hover:scale-105 duration-300"
                     >
                         İletişime Geç
                     </button>

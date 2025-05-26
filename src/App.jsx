@@ -5,22 +5,17 @@ import "aos/dist/aos.css";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import { RiWhatsappFill } from "react-icons/ri";
+import { AboutSection } from "./pages/AboutSection";
 
 const Hero = lazy(() => import("./pages/Hero"));
 const References = lazy(() => import("./pages/References/References"));
-const Testimonial = lazy(() => import("./pages/Testimonial"));
-const BlogsComp = lazy(() => import("./pages/Blogs/BlogsComp"));
 const Services = lazy(() => import("./pages/Services/Services"));
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
 const CtaPage = lazy(() => import("./pages/CtaPage"));
-const ProductPage = lazy(() => import("./pages/Products/ProductsPage"));
-const BlogDetail = lazy(() => import("./pages/Blogs/BlogDetail"));
 const ServiceDetail = lazy(() => import("./pages/Services/ServiceDetail"));
-const ProductDetail = lazy(() => import("./pages/Products/ProductsDetail"));
 const AllServices = lazy(() => import("./pages/Services/AllServicesPage"));
 const AllReferencesPage = lazy(() => import("./pages/References/AllReferencesPage"));
-const AllProducts = lazy(() => import("./pages/Products/AllProductsPage"));
 const ReferencesDetailPage = lazy(() => import("./pages/References/ReferenceDetail"));
 
 const ScrollToTop = () => {
@@ -79,7 +74,7 @@ const App = () => {
 
       <div className="fixed top-0 left-0 right-0 h-1 bg-white dark:bg-black z-30">
         <div
-          className="h-full bg-primary"
+          className="h-full bg-[#757174]"
           style={{ width: `${scrollPercentage}%` }}
         />
       </div>
@@ -91,12 +86,9 @@ const App = () => {
             element={
               <>
                 <Hero />
-                <References />
                 <Services />
-                <ProductPage />
-                <Testimonial />
-                <BlogsComp />
-                <CtaPage />
+                <AboutSection />
+                <Contact />
               </>
             }
           />
@@ -112,12 +104,8 @@ const App = () => {
           <Route path="/hizmetlerimiz" element={<AllServices />} />
           <Route path="/hakkimizda" element={<About />} />
           <Route path="/iletisim" element={<Contact />} />
-          <Route path="/urunler" element={<ProductPage />} />
-          <Route path="/urunlerimiz" element={<AllProducts />} />
-          <Route path="/urunler/:id" element={<ProductDetail />} />
           <Route path="/referanslar" element={<AllReferencesPage />} />
           <Route path="/referanslar/:id" element={<ReferencesDetailPage />} />
-          <Route path="/blog/:id" element={<BlogDetail />} />
         </Routes>
       </Suspense>
 
