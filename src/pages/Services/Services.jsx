@@ -43,7 +43,7 @@ const Services = () => {
             <div className="mx-auto px-4">
                 <div className="mb-8 text-center space-y-3">
                     <div className="flex justify-between items-center">
-                        <h1 className="text-color1 dark:text-[#d4cfce] border-l-8 border-color2 dark:border-color4 py-2 pl-2 text-2xl sm:text-3xl md:text-4xl font-semibold break-words">
+                        <h1 className="text-color1 dark:text-[#d4cfce] border-l-8 border-[#392f2f] dark:border-[#d4cfce] py-2 pl-2 text-2xl sm:text-3xl md:text-4xl font-semibold break-words">
                             HİZMETLERİMİZ
                         </h1>
                         <button

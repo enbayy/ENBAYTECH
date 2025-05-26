@@ -59,23 +59,16 @@ const Hero = () => {
           </motion.p>
 
           <motion.div
-            className="mt-10 flex flex-col sm:flex-row justify-center lg:justify-start gap-4 sm:gap-8"
+            className="mt-10 flex justify-start"
             variants={textVariants}
           >
-            <button
-              onClick={() => alert("Ücretsiz teklif talebi gönderildi!")}
-              className="bg-[#112224] hover:bg-[#000003] dark:bg-[#757174] dark:hover:bg-[#d4cfce] text-[#f9f9f9] dark:text-[#000003] font-semibold px-6 py-3 sm:px-10 sm:py-3 md:px-14 md:py-4 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 text-sm sm:text-base"
-            >
-              Ücretsiz Teklif Alın
-            </button>
             <a
-              href="#portfolio"
+              href="#iletisim"
               className="inline-block px-6 py-3 sm:px-10 sm:py-3 md:px-14 md:py-4 border-2 border-[#112224] dark:border-[#d4cfce] rounded-full font-semibold text-[#112224] dark:text-[#d4cfce] hover:bg-[#112224] hover:text-[#f9f9f9] dark:hover:bg-[#d4cfce] dark:hover:text-[#000003] transition duration-300 ease-in-out text-sm sm:text-base"
             >
-              Portfolyomuzu İnceleyin
+              Hemen Başla
             </a>
           </motion.div>
-
         </motion.div>
 
         <motion.div
