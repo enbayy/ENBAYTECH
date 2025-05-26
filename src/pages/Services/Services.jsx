@@ -1,18 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { services } from "../../data/ServicesData";
 import { useNavigate } from "react-router-dom";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import { motion } from "framer-motion";
-import "react-lazy-load-image-component/src/effects/blur.css";
 
 const cardVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 20 },
     visible: (i) => ({
         opacity: 1,
         y: 0,
         transition: {
-            delay: i * 0.2,
-            duration: 0.6,
+            delay: i * 0.15,
+            duration: 0.5,
             ease: "easeOut",
         },
     }),
@@ -34,28 +32,28 @@ const Services = () => {
             .sort(() => 0.5 - Math.random())
             .slice(0, 4 - priorityServices.length);
         const selectedServices = [...priorityServices, ...randomOthers];
-
-        setRandomServices(selectedServices);
+        setRandomServices(services.slice(0, 4));
     }, []);
 
     return (
-        <section id="services" className="container bg-[#f9f9f9] dark:bg-[#000003] py-12">
-            <div className="mx-auto px-6 md:px-12 lg:px-20">
-                <div className="mb-8 text-center space-y-3">
-                    <div className="flex justify-between items-center">
-                        <h1 className="text-color1 dark:text-[#d4cfce] border-l-8 border-[#392f2f] dark:border-[#d4cfce] py-2 pl-2 text-2xl sm:text-3xl md:text-4xl font-semibold break-words">
-                            HİZMETLERİMİZ
-                        </h1>
-                        <button
-                            onClick={() => navigate("/hizmetlerimiz")}
-                            className="w-[120px] h-[40px] bg-color2 dark:text-[#d4cfce] rounded-tl-2xl rounded-br-2xl hover:bg-color4 dark:hover:bg-color3 transition mt-4"
-                        >
-                            Hepsini gör
-                        </button>
-                    </div>
+        <section
+            id="services"
+            className="container bg-[#f9f9f9] dark:bg-[#000003] py-16"
+        >
+            <div className="mx-auto">
+                <div className="flex flex-col md:flex-row justify-between items-center mb-12">
+                    <h1 className="text-4xl font-bold font-inter text-[#392f2f] dark:text-[#d4cfce] mb-6 md:mb-0">
+                        HİZMETLERİMİZ
+                    </h1>
+                    <button
+                        onClick={() => navigate("/hizmetlerimiz")}
+                        className="w-[120px] h-[40px] bg-color2 text-[#392f2f] dark:text-[#d4cfce] rounded-2xl border-2 hover:border-4 transition mt-4 font-inter"
+                    >
+                        Hepsini gör
+                    </button>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                     {randomServices.map((service, index) => (
                         <motion.div
                             key={service.id}
@@ -64,28 +62,17 @@ const Services = () => {
                             whileInView="visible"
                             viewport={{ once: true, amount: 0.3 }}
                             variants={cardVariants}
-                            className="relative flex flex-col md:flex-row items-center bg-color5 dark:bg-color2 rounded-2xl shadow-lg p-6 transition-transform duration-300 hover:scale-[1.03] border border-color3 dark:border-color4"
+                            className="bg-[#f9f9f9] dark:bg-[#000003] dark:border dark:border-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition"
                         >
-                            <div className="w-24 h-24 flex items-center justify-center rounded-full bg-color2 dark:bg-color4 shadow-md">
-                                <LazyLoadImage
-                                    effect="blur"
-                                    src={service.imageSrc}
-                                    alt={service.title}
-                                    className="w-16 h-16 object-contain"
-                                />
-                            </div>
-
-                            <div className="mt-6 md:mt-0 md:ml-8 flex-1 flex flex-col justify-center h-full text-center md:text-left">
-                                <h2 className="text-2xl font-bold text-color2 dark:text-color4">
-                                    {service.title}
-                                </h2>
-                                <h3 className="text-xl font-semibold text-color1 dark:text-color5 mt-1">
-                                    {service.name}
-                                </h3>
-                                <p className="text-base text-color3 dark:text-color4 mt-3 leading-relaxed line-clamp-4">
-                                    {service.description}
-                                </p>
-                            </div>
+                            <h2 className="text-3xl font-semibold text-[#392f2f] dark:text-[#d4cfce] mb-2 font-inter">
+                                {service.title}
+                            </h2>
+                            <h3 className="text-xl font-medium text-gray-800 dark:text-gray-200 mb-4 font-inter">
+                                {service.name}
+                            </h3>
+                            <p className="text-gray-600 dark:text-gray-300 leading-relaxed line-clamp-5 font-poppins">
+                                {service.description}
+                            </p>
                         </motion.div>
                     ))}
                 </div>

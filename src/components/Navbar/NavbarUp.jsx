@@ -3,7 +3,7 @@ import { FaPhone, FaEnvelope } from 'react-icons/fa';
 
 const NavbarUp = () => {
     return (
-        <div className="bg-[#f9f9f9] dark:bg-[#000003] flex items-center justify-center text-white">
+        <div className="bg-[#f9f9f9] dark:bg-[#000003] flex items-center justify-center text-white py-1">
             <div className="container mx-auto px-4 py-2 max-w-screen-lg">
                 <div className="flex flex-wrap justify-center md:justify-around items-center gap-4 md:gap-8">
                     <div className="flex items-center gap-2 md:gap-2">

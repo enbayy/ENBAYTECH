@@ -6,8 +6,8 @@ import logoDark from "../../assets/enbayLogo3.png"
 
 const Footer = () => {
     return (
-        <footer className="bg-[#f9f9f9] dark:bg-[#000003] py-16">
-            <div className="container mx-auto px-6">
+        <footer className="container bg-[#f9f9f9] dark:bg-[#000003] py-16">
+            <div className="mx-auto">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12">
 
                     <div className="flex flex-col items-center space-y-5">
@@ -21,7 +21,7 @@ const Footer = () => {
                             alt="logo dark"
                             className="h-20 w-20 hidden dark:block"
                         />
-                        <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 dark:text-gray-100 font-inter tracking-wide">
+                        <h2 className="text-3xl sm:text-4xl font-bold font-inter text-gray-800 dark:text-gray-100 font-inter tracking-wide">
                             ENBAYTECH
                         </h2>
 
@@ -57,7 +57,7 @@ const Footer = () => {
                     </div>
 
                     <div className="flex flex-col items-center sm:items-start space-y-4">
-                        <h4 className="text-[#392f2f] dark:text-[#d4cfce] text-2xl font-semibold font-inter">Hizmetlerimiz</h4>
+                        <h4 className="text-[#392f2f] dark:text-[#d4cfce] text-2xl font-semibold font-inter">HİZMETLERİMİZ</h4>
                         {[
                             { id: 1, name: "Web Tasarımı" },
                             { id: 2, name: "Logo Tasarımı" },
@@ -68,7 +68,7 @@ const Footer = () => {
                         ].map(service => (
                             <div
                                 key={service.id}
-                                className="flex items-center space-x-2 text-[#392f2f] dark:text-[#d4cfce] hover:text-[#d4cfce] dark:hover:text-[#757174] transition-colors duration-300"
+                                className="flex items-center space-x-2 text-[#392f2f] font-poppins dark:text-[#d4cfce] hover:text-[#d4cfce] dark:hover:text-[#757174] transition-colors duration-300"
                             >
                                 <IoMdArrowDropright size={20} />
                                 <span className="text-lg">{service.name}</span>
@@ -77,7 +77,7 @@ const Footer = () => {
                     </div>
 
                     <div className="flex flex-col items-center sm:items-start space-y-4">
-                        <h4 className="text-2xl font-semibold text-[#392f2f] dark:text-[#d4cfce] font-inter">Tanıtım Sayfaları</h4>
+                        <h4 className="text-2xl font-semibold text-[#392f2f] dark:text-[#d4cfce] font-inter">HIZLI ERİŞİM</h4>
                         {[
                             { link: "#", name: "ANASAYFA" },
                             { link: "#hakkimizda", name: "HAKKIMIZDA" },
@@ -87,7 +87,7 @@ const Footer = () => {
                             <a
                                 key={page.link}
                                 href={page.link}
-                                className="flex items-center space-x-2 text-[#392f2f] dark:text-[#d4cfce]  hover:text-[#d4cfce] dark:hover:text-[#757174] transition-colors duration-300"
+                                className="flex items-center space-x-2 text-[#392f2f] dark:text-[#d4cfce] font-poppins hover:text-[#d4cfce] dark:hover:text-[#757174] transition-colors duration-300"
                             >
                                 <IoMdArrowDropright size={20} />
                                 <span className="text-lg">{page.name}</span>
@@ -96,9 +96,9 @@ const Footer = () => {
                     </div>
 
                     <div className="flex flex-col items-center sm:items-start space-y-4">
-                        <h4 className="text-2xl font-semibold text-[#392f2f] dark:text-[#d4cfce] font-inter">İletişim</h4>
-                        <p className="text-lg text-[#392f2f] dark:text-[#d4cfce]">1enesbayar@gmail.com</p>
-                        <p className="text-lg text-[#392f2f] dark:text-[#d4cfce]">+90 552 231 20 86</p>
+                        <h4 className="text-2xl font-semibold text-[#392f2f] dark:text-[#d4cfce] font-inter">İLETİŞİM</h4>
+                        <p className="text-lg text-[#392f2f] dark:text-[#d4cfce] font-poppins">1enesbayar@gmail.com</p>
+                        <p className="text-lg text-[#392f2f] dark:text-[#d4cfce] font-poppins">+90 552 231 20 86</p>
                     </div>
                 </div>
 

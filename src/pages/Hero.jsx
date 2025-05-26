@@ -25,7 +25,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative bg-[#f9f9f9] dark:bg-[#000003] py-0 md:py-24 px-6 md:px-12 lg:px-20"
+      className="relative bg-[#f9f9f9] dark:bg-[#000003] py-0 md:py-24"
     >
       <motion.div
         className="container mx-auto flex flex-col-reverse lg:flex-row items-center gap-16"
@@ -39,7 +39,7 @@ const Hero = () => {
           variants={textVariants}
         >
           <motion.h1
-            className="text-[#392f2f] dark:text-[#d4cfce] text-5xl md:text-6xl font-bold leading-tight font-roboto color1 dark:color5"
+            className="text-[#392f2f] dark:text-[#d4cfce] text-5xl md:text-6xl font-bold font-inter leading-tight font-roboto color1 dark:color5"
             variants={textVariants}
           >
             Dijital Varlığınızı <br />
@@ -51,7 +51,7 @@ const Hero = () => {
           </motion.h1>
 
           <motion.p
-            className="mt-6 text-lg md:text-xl font-roboto leading-relaxed text-[#392f2f] dark:text-[#d4cfce]"
+            className="mt-6 text-lg md:text-xl font-poppins leading-relaxed text-[#392f2f] dark:text-[#d4cfce]"
             variants={textVariants}
           >
             İşletmenize özel web çözümleri ve etkileyici marka kimlikleri ile <br />
@@ -64,7 +64,7 @@ const Hero = () => {
           >
             <a
               href="#iletisim"
-              className="inline-block px-6 py-3 sm:px-10 sm:py-3 md:px-14 md:py-4 border-2 border-[#112224] dark:border-[#d4cfce] rounded-full font-semibold text-[#112224] dark:text-[#d4cfce] hover:bg-[#112224] hover:text-[#f9f9f9] dark:hover:bg-[#d4cfce] dark:hover:text-[#000003] transition duration-300 ease-in-out text-sm sm:text-base"
+              className="inline-block px-6 py-3 sm:px-10 sm:py-3 md:px-14 md:py-4 border-2 border-[#112224] dark:border-[#d4cfce] rounded-full font-semibold text-[#112224] dark:text-[#d4cfce] hover:bg-[#112224] hover:text-[#f9f9f9] dark:hover:bg-[#d4cfce] dark:hover:text-[#000003] transition duration-300 ease-in-out text-sm sm:text-base font-inter"
             >
               Hemen Başla
             </a>

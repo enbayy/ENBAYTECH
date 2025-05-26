@@ -12,8 +12,6 @@ const Hero = lazy(() => import("./pages/Hero"));
 const Services = lazy(() => import("./pages/Services/Services"));
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
-const CtaPage = lazy(() => import("./pages/CtaPage"));
-const ServiceDetail = lazy(() => import("./pages/Services/ServiceDetail"));
 const AllServices = lazy(() => import("./pages/Services/AllServicesPage"));
 
 const ScrollToTop = () => {
@@ -98,7 +96,6 @@ const App = () => {
               </Suspense>
             }
           />
-          <Route path="/hizmetler/:id" element={<ServiceDetail />} />
           <Route path="/hizmetlerimiz" element={<AllServices />} />
           <Route path="/hakkimizda" element={<About />} />
           <Route path="/iletisim" element={<Contact />} />

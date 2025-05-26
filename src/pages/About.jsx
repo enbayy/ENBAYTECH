@@ -18,15 +18,15 @@ const About = () => {
     return (
         <section
             id="about"
-            className="bg-[#f9f9f9] dark:bg-[#000003] py-20 px-4 sm:px-8 lg:px-16"
+            className="container bg-[#f9f9f9] dark:bg-[#000003] py-20 px-4 sm:px-8 lg:px-16"
             style={{ fontFamily: "'Poppins', sans-serif" }}
         >
-            <div className="max-w-7xl mx-auto">
+            <div className="mx-auto">
                 <div className="text-center mb-20" data-aos="fade-up">
-                    <h1 className="text-[#392f2f] dark:text-[#d4cfce] text-5xl font-extrabold color2 tracking-wide mb-6">
+                    <h1 className="text-[#392f2f] dark:text-[#d4cfce] text-5xl font-bold color2 tracking-wide mb-6 font-inter">
                         ENBAYTECH Hakkında
                     </h1>
-                    <p className="text-[#392f2f] dark:text-[#d4cfce] max-w-3xl mx-auto text-lg color3 leading-relaxed">
+                    <p className="text-[#392f2f] dark:text-[#d4cfce] max-w-3xl mx-auto text-lg color3 leading-relaxed font-poppins">
                         ENBAYTECH, dijital dünyada işletmelerin ihtiyaç duyduğu profesyonel web çözümleri sunan,
                         İstanbul merkezli bir teknoloji firmasıdır. Web tasarımı, logo tasarımı, SEO çalışmaları,
                         hosting ve domain hizmetleri ile web sitesi bakımı alanlarında uzman ekibimizle müşterilerimizin
@@ -42,8 +42,8 @@ const About = () => {
                         <div className="mb-6 text-6xl" aria-hidden="true" style={{ color: "#112224" }}>
                             🎯
                         </div>
-                        <h2 className="text-[#392f2f] dark:text-[#d4cfce] text-3xl font-semibold color2 mb-3">Misyonumuz</h2>
-                        <p className="text-[#392f2f] dark:text-[#d4cfce] text-lg color3 leading-relaxed max-w-md">
+                        <h2 className="text-[#392f2f] dark:text-[#d4cfce] text-3xl font-semibold color2 mb-3 font-inter">Misyonumuz</h2>
+                        <p className="text-[#392f2f] dark:text-[#d4cfce] text-lg color3 leading-relaxed max-w-md font-poppins">
                             Müşterilerimize, yenilikçi ve güvenilir dijital çözümler sunarak; işletmelerin
                             online varlıklarını güçlendirmek, marka değerlerini artırmak ve hedef kitlelerine
                             daha etkili ulaşmalarını sağlamak en büyük önceliğimizdir.
@@ -56,8 +56,8 @@ const About = () => {
                         <div className="mb-6 text-6xl" aria-hidden="true" style={{ color: "#112224" }}>
                             🌟
                         </div>
-                        <h2 className="text-[#392f2f] dark:text-[#d4cfce] text-3xl font-semibold color2 mb-3">Vizyonumuz</h2>
-                        <p className="text-[#392f2f] dark:text-[#d4cfce] text-lg color3 leading-relaxed max-w-md">
+                        <h2 className="text-[#392f2f] dark:text-[#d4cfce] text-3xl font-semibold color2 mb-3 font-inter">Vizyonumuz</h2>
+                        <p className="text-[#392f2f] dark:text-[#d4cfce] text-lg color3 leading-relaxed max-w-md font-poppins">
                             Teknolojideki gelişmeleri yakından takip ederek, müşterilerimize en son
                             dijital trendlerle uyumlu, kaliteli ve sürdürülebilir çözümler sunan öncü firma olmak.
                         </p>
@@ -66,10 +66,10 @@ const About = () => {
 
                 <div>
                     <h2
-                        className="text-4xl font-bold color2 text-center mb-16 tracking-wide"
+                        className="text-4xl font-bold color2 text-center mb-16 tracking-wide font-inter"
                         data-aos="fade-up"
                     >
-                        Hizmetlerimiz
+                        HİZMETLERİMİZ
                     </h2>
                     <div className="grid gap-12 sm:grid-cols-2 md:grid-cols-3 max-w-6xl mx-auto">
                         {services.map((service, index) => (
@@ -79,15 +79,10 @@ const About = () => {
                                 data-aos="fade-up"
                                 data-aos-delay={index * 150}
                             >
-                                <h3 className="text-2xl font-semibold mb-4 color1 tracking-wide">
+                                <h3 className="text-2xl font-semibold mb-4 color1 tracking-wide font-inter">
                                     {service.title}
                                 </h3>
-                                <p className="color3 leading-relaxed">{service.description}</p>
-                                <img
-                                    src={service.imageSrc}
-                                    alt={service.title}
-                                    className="w-14 h-14 mt-4"
-                                />
+                                <p className="color3 leading-relaxed font-poppins">{service.description}</p>
                             </div>
                         ))}
                     </div>
@@ -96,9 +91,9 @@ const About = () => {
                 <div className="mt-28 text-center" data-aos="fade-up">
                     <button
                         onClick={handleContactClick}
-                        className="bg-color1 hover:bg-color2 text-color5 px-12 py-5 rounded-full text-xl font-bold shadow-lg transition transform hover:scale-105 duration-300"
+                        className="text-[#392f2f] dark:text-[#d4cfce] px-6 py-3 rounded-2xl border-2 hover:border-4 text-lg font-semibold font-inter"
                     >
-                        İletişime Geç
+                       İLETİŞİME GEÇ
                     </button>
                 </div>
             </div>

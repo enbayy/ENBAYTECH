@@ -6,9 +6,9 @@ import { HiX } from "react-icons/hi";
 const ResponsiveMenu = ({ showMenu, toggleMenu }) => {
   const navigate = useNavigate();
 
-  const handleClick = () => {
+  const handleNavigate = (link) => {
     toggleMenu();
-    navigate("/iletisim")
+    navigate(link);
   };
 
   return (
@@ -19,16 +19,19 @@ const ResponsiveMenu = ({ showMenu, toggleMenu }) => {
     >
       <div>
         <div className="flex justify-between items-center">
-          <h2 className="text-2xl font-semibold">Menü</h2>
+          <h2 className="text-2xl font-semibold font-inter">MENÜ</h2>
           <HiX size={30} className="cursor-pointer" onClick={toggleMenu} />
         </div>
         <nav className="mt-12">
           <ul className="space-y-4 text-xl">
             {MenuLinks.map(({ id, name, link }) => (
               <li key={id}>
-                <a href={link} className="mb-5 inline-block" onClick={toggleMenu}>
+                <button
+                  onClick={() => handleNavigate(link)}
+                  className="mb-5 inline-block text-left w-full font-inter font-semibold"
+                >
                   {name}
-                </a>
+                </button>
               </li>
             ))}
           </ul>
