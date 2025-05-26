@@ -12,8 +12,8 @@ export const AboutSection = () => {
     ];
 
     return (
-        <section className="bg-[#f9f9f9] dark:bg-[#000003] py-12 font-sans">
-            <div className="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+        <section className="container bg-[#f9f9f9] dark:bg-[#000003] py-12 font-sans">
+            <div className="mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
                 <motion.div
                     initial={{ x: -60, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
