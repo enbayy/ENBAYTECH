@@ -40,7 +40,7 @@ const Services = () => {
 
     return (
         <section id="services" className="container bg-[#f9f9f9] dark:bg-[#000003] py-12">
-            <div className="mx-auto px-4">
+            <div className="mx-auto px-6 md:px-12 lg:px-20">
                 <div className="mb-8 text-center space-y-3">
                     <div className="flex justify-between items-center">
                         <h1 className="text-color1 dark:text-[#d4cfce] border-l-8 border-[#392f2f] dark:border-[#d4cfce] py-2 pl-2 text-2xl sm:text-3xl md:text-4xl font-semibold break-words">

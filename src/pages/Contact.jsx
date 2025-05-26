@@ -8,7 +8,7 @@ const ContactSection = () => {
     return (
         <section
             id="contact"
-            className="bg-[#f9f9f9] dark:bg-[#000003] py-12 text-color1 px-4 sm:px-8 lg:px-16"
+            className="bg-[#f9f9f9] dark:bg-[#000003] py-12 text-color1 px-6 md:px-12 lg:px-20"
         >
             <div data-aos="zoom-in" className="max-w-4xl mx-auto">
                 <div className="text-center mb-10">
@@ -37,7 +37,7 @@ const ContactSection = () => {
                             </label>
                             <input
                                 type="email"
-                                placeholder="ornek@site.com"
+                                placeholder="ornek@gmail.com"
                                 className="w-full px-4 py-3 bg-color4 text-color1 rounded-lg outline-none focus:ring-2 focus:ring-color2"
                                 required
                             />
