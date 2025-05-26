@@ -25,8 +25,8 @@ const ScrollToTop = () => {
 const Loading = () => (
   <div className="fixed inset-0 flex items-center justify-center bg-[#f9f9f9] dark:bg-[#000003]">
     <div className="flex flex-col items-center space-y-4">
-      <div className="w-16 h-16 border-4 border-[#757174] border-t-transparent rounded-full animate-spin"></div>
-      <p className="text-lg font-semibold text-[#392f2f] dark:text-[#d4cfce] animate-pulse">
+      <div className="w-16 h-16 border-4 border-[#10b981] border-t-transparent rounded-full animate-spin"></div>
+      <p className="text-lg font-semibold text-[#10b981] dark:text-[#10b981] animate-pulse">
         Yükleniyor...
       </p>
     </div>
@@ -64,13 +64,13 @@ const App = () => {
   }, []);
 
   return (
-    <div className="bg-[#f9f9f9] dark:bg-[#000003] dark:text-white text-black overflow-x-hidden">
+    <div className="bg-[#f0fdf4] dark:bg-[#1a1f1c] dark:text-white text-black overflow-x-hidden">
       <ScrollToTop />
       <NavbarUp />
       <Navbar />
       <div className="fixed top-0 left-0 right-0 h-1 bg-white dark:bg-black z-30">
         <div
-          className="h-full bg-[#757174]"
+          className="h-full bg-[#10b981]"
           style={{ width: `${scrollPercentage}%` }}
         />
       </div>

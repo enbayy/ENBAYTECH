@@ -6,7 +6,7 @@ import logoDark from "../../assets/enbayLogo3.png"
 
 const Footer = () => {
     return (
-        <footer className="container bg-[#f9f9f9] dark:bg-[#000003] py-16">
+        <footer className="container bg-[#f0fdf4] dark:bg-[#1a1f1c] py-16">
             <div className="mx-auto">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12">
 
@@ -21,7 +21,7 @@ const Footer = () => {
                             alt="logo dark"
                             className="h-20 w-20 hidden dark:block"
                         />
-                        <h2 className="text-3xl sm:text-4xl font-bold font-inter text-gray-800 dark:text-gray-100 font-inter tracking-wide">
+                        <h2 className="text-3xl sm:text-4xl font-bold font-inter text-[#0f172a] dark:text-[#e0f2f1] font-inter tracking-wide">
                             ENBAYTECH
                         </h2>
 
@@ -30,7 +30,7 @@ const Footer = () => {
                                 href="https://www.linkedin.com/in/enbayar"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-700 dark:text-gray-300 hover:text-[#d4cfce] transition-colors duration-300"
+                                className="text-gray-700 dark:text-gray-300 hover:text-[#10b981] dark:hover:text-[#10b981] transition-colors duration-300"
                                 aria-label="LinkedIn"
                             >
                                 <FaLinkedin size={28} />
@@ -39,7 +39,7 @@ const Footer = () => {
                                 href="https://github.com/enbayy"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-700 dark:text-gray-300 hover:text-[#d4cfce] transition-colors duration-300"
+                                className="text-gray-700 dark:text-gray-300 hover:text-[#10b981] dark:hover:text-[#10b981] transition-colors duration-300"
                                 aria-label="GitHub"
                             >
                                 <FaGithub size={28} />
@@ -48,7 +48,7 @@ const Footer = () => {
                                 href="https://www.instagram.com/enbayar"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-700 dark:text-gray-300 hover:text-[#d4cfce] transition-colors duration-300"
+                                className="text-gray-700 dark:text-gray-300 hover:text-[#10b981] dark:hover:text-[#10b981] transition-colors duration-300"
                                 aria-label="Instagram"
                             >
                                 <FaInstagram size={28} />
@@ -57,7 +57,7 @@ const Footer = () => {
                     </div>
 
                     <div className="flex flex-col items-center sm:items-start space-y-4">
-                        <h4 className="text-[#392f2f] dark:text-[#d4cfce] text-2xl font-semibold font-inter">HİZMETLERİMİZ</h4>
+                        <h4 className="text-[#0f172a] dark:text-[#e0f2f1] text-2xl font-semibold font-inter">HİZMETLERİMİZ</h4>
                         {[
                             { id: 1, name: "Web Tasarımı" },
                             { id: 2, name: "Logo Tasarımı" },
@@ -68,7 +68,7 @@ const Footer = () => {
                         ].map(service => (
                             <div
                                 key={service.id}
-                                className="flex items-center space-x-2 text-[#392f2f] font-poppins dark:text-[#d4cfce] hover:text-[#d4cfce] dark:hover:text-[#757174] transition-colors duration-300"
+                                className="flex items-center space-x-2 text-[#392f2f] font-poppins dark:text-[#d4cfce] hover:text-[#10b981] dark:hover:text-[#10b981] transition-colors duration-300"
                             >
                                 <IoMdArrowDropright size={20} />
                                 <span className="text-lg">{service.name}</span>
@@ -77,7 +77,7 @@ const Footer = () => {
                     </div>
 
                     <div className="flex flex-col items-center sm:items-start space-y-4">
-                        <h4 className="text-2xl font-semibold text-[#392f2f] dark:text-[#d4cfce] font-inter">HIZLI ERİŞİM</h4>
+                        <h4 className="text-2xl font-semibold text-[#0f172a] dark:text-[#e0f2f1] font-inter">HIZLI ERİŞİM</h4>
                         {[
                             { link: "#", name: "ANASAYFA" },
                             { link: "#hakkimizda", name: "HAKKIMIZDA" },
@@ -87,7 +87,7 @@ const Footer = () => {
                             <a
                                 key={page.link}
                                 href={page.link}
-                                className="flex items-center space-x-2 text-[#392f2f] dark:text-[#d4cfce] font-poppins hover:text-[#d4cfce] dark:hover:text-[#757174] transition-colors duration-300"
+                                className="flex items-center space-x-2 text-[#0f172a] dark:text-[#e0f2f1] font-poppins hover:text-[#10b981] dark:hover:text-[#10b981] transition-colors duration-300"
                             >
                                 <IoMdArrowDropright size={20} />
                                 <span className="text-lg">{page.name}</span>
@@ -96,16 +96,16 @@ const Footer = () => {
                     </div>
 
                     <div className="flex flex-col items-center sm:items-start space-y-4">
-                        <h4 className="text-2xl font-semibold text-[#392f2f] dark:text-[#d4cfce] font-inter">İLETİŞİM</h4>
-                        <p className="text-lg text-[#392f2f] dark:text-[#d4cfce] font-poppins">1enesbayar@gmail.com</p>
-                        <p className="text-lg text-[#392f2f] dark:text-[#d4cfce] font-poppins">+90 552 231 20 86</p>
+                        <h4 className="text-2xl font-semibold text-[#0f172a] dark:text-[#e0f2f1] font-inter">İLETİŞİM</h4>
+                        <p className="text-lg text-[#0f172a] dark:text-[#e0f2f1] font-poppins">1enesbayar@gmail.com</p>
+                        <p className="text-lg text-[#0f172a] dark:text-[#e0f2f1] font-poppins">+90 552 231 20 86</p>
                     </div>
                 </div>
 
                 <hr className="border-gray-300 dark:border-gray-700 my-10" />
 
                 <div className="text-center -mb-8">
-                    <p className="text-[#392f2f] dark:text-[#d4cfce] text-sm select-none font-poppins font-semibold">
+                    <p className="text-[#0f172a] dark:text-[#e0f2f1] text-sm select-none font-poppins font-semibold">
                         © 2025 ENBAYTECH. Tüm Hakları Saklıdır.
                     </p>
                 </div>

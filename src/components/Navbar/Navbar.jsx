@@ -22,8 +22,8 @@ const Navbar = () => {
   };
 
   return (
-    <header className="container relative bg-[#f9f9f9] dark:bg-[#000003] z-50">
-      <div className="mx-auto py-4 flex items-center justify-between">
+    <header className=" relative bg-[#f0fdf4] dark:bg-[#1a1f1c] z-50">
+      <div className="container mx-auto py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <img
             src={logoLight}
@@ -37,7 +37,7 @@ const Navbar = () => {
           />
           <Link
             to="/"
-            className="text-[#392f2f] dark:text-[#d4cfce] text-2xl md:text-3xl font-bold tracking-wide font-roboto"
+            className="text-[#0f172a] dark:text-[#e0f2f1] text-2xl md:text-3xl font-bold tracking-wide font-roboto"
           >
             ENBAYTECH
           </Link>
@@ -50,14 +50,14 @@ const Navbar = () => {
                 <Link
                   to={link}
                   className={`relative px-3 py-2 inline-block text-lg font-semibold font-inter transition-all duration-300
-                  ${location.pathname === link
-                      ? "text-[#392f2f] dark:text-[#d4cfce] border-b-2 border-[#392f2f] dark:border-[#f9f9f9]"
-                      : "text-[#392f2f] dark:text-[#d4cfce] hover:text-[#000003] dark:hover:text-[#f9f9f9]"
+              ${location.pathname === link
+                      ? "text-[#059669] border-b-2 border-[#059669]"
+                      : "text-[#0f172a] dark:text-[#e0f2f1] hover:text-[#10b981] dark:hover:text-[#10b981]"
                     }
-                  before:absolute before:bottom-0 before:left-0 before:w-full before:h-[2px]
-                  before:bg-[#757174] before:scale-x-0 before:origin-right 
-                  before:transition before:duration-300 before:ease-in-out 
-                  hover:before:scale-x-100 hover:before:origin-left`}
+              before:absolute before:bottom-0 before:left-0 before:w-full before:h-[2px]
+              before:bg-[#10b981] before:scale-x-0 before:origin-right 
+              before:transition before:duration-300 before:ease-in-out 
+              hover:before:scale-x-100 hover:before:origin-left`}
                 >
                   {name}
                 </Link>
@@ -72,13 +72,13 @@ const Navbar = () => {
             {showMenu ? (
               <HiMenuAlt1
                 onClick={toggleMenu}
-                className="cursor-pointer text-[#392f2f] dark:text-[#d4cfce]"
+                className="cursor-pointer text-[#0f172a] dark:text-[#e0f2f1]"
                 size={30}
               />
             ) : (
               <HiMenuAlt3
                 onClick={toggleMenu}
-                className="cursor-pointer text-[#392f2f] dark:text-[#d4cfce]"
+                className="cursor-pointer text-[#0f172a] dark:text-[#e0f2f1]"
                 size={30}
               />
             )}
@@ -88,6 +88,7 @@ const Navbar = () => {
 
       <ResponsiveMenu showMenu={showMenu} toggleMenu={toggleMenu} />
     </header>
+
   );
 };
 

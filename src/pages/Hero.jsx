@@ -25,7 +25,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative bg-[#f9f9f9] dark:bg-[#000003] py-0 md:py-24"
+      className="relative bg-[#f0fdf4] dark:bg-[#1a1f1c] py-0 md:py-24"
     >
       <motion.div
         className="container mx-auto flex flex-col-reverse lg:flex-row items-center gap-16"
@@ -39,19 +39,17 @@ const Hero = () => {
           variants={textVariants}
         >
           <motion.h1
-            className="text-[#392f2f] dark:text-[#d4cfce] text-5xl md:text-6xl font-bold font-inter leading-tight font-roboto color1 dark:color5"
+            className="text-[#0f172a] dark:text-[#e0f2f1] text-5xl md:text-6xl font-extrabold font-roboto leading-tight tracking-tight"
             variants={textVariants}
           >
             Dijital Varlığınızı <br />
-            <span className="text-[#392f2f] dark:text-[#d4cfce]">
-              Profesyonel
-            </span>{" "}
+            <span className="text-[#059669] dark:text-[#10b981]">Profesyonel</span>{" "}
             <br />
-            Tasarımlarla Güçlendirin.
+            Tasarımlarla <span className="underline decoration-[#059669] dark:decoration-[#10b981]">Güçlendirin</span>.
           </motion.h1>
 
           <motion.p
-            className="mt-6 text-lg md:text-xl font-poppins leading-relaxed text-[#392f2f] dark:text-[#d4cfce]"
+            className="mt-6 text-lg md:text-xl font-poppins leading-relaxed text-[#0f172a] dark:text-[#e0f2f1]"
             variants={textVariants}
           >
             İşletmenize özel web çözümleri ve etkileyici marka kimlikleri ile <br />
@@ -59,12 +57,12 @@ const Hero = () => {
           </motion.p>
 
           <motion.div
-            className="mt-10 flex justify-start"
+            className="mt-10 flex justify-center sm:justify-start"
             variants={textVariants}
           >
             <a
               href="#iletisim"
-              className="inline-block px-6 py-3 sm:px-10 sm:py-3 md:px-14 md:py-4 border-2 border-[#112224] dark:border-[#d4cfce] rounded-full font-semibold text-[#112224] dark:text-[#d4cfce] hover:bg-[#112224] hover:text-[#f9f9f9] dark:hover:bg-[#d4cfce] dark:hover:text-[#000003] transition duration-300 ease-in-out text-sm sm:text-base font-inter"
+              className="inline-block px-6 py-3 sm:px-10 sm:py-3 md:px-14 md:py-4 border-2 border-[#0f172a] dark:border-[#e0f2f1] rounded-full font-semibold text-[#0f172a] dark:text-[#e0f2f1] hover:bg-[#10b981] hover:text-white dark:hover:bg-[#10b981] dark:hover:text-[#1a1f1c] transition duration-300 ease-in-out text-sm sm:text-base font-inter"
             >
               Hemen Başla
             </a>
@@ -72,13 +70,13 @@ const Hero = () => {
         </motion.div>
 
         <motion.div
-          className="lg:w-1/2 max-w-xl mx-auto flex justify-center"
+          className="lg:w-1/2 max-w-xs sm:max-w-md md:max-w-xl mx-auto flex justify-center"
           variants={imageVariants}
         >
           <img
             src={hero}
             alt="ENBAYTECH"
-            className="rounded-3xl shadow-2xl border-4 border-[#112224] dark:border-[#d4cfce] hover:shadow-[#112224] dark:hover:shadow-[#d4cfce] transition-shadow duration-500"
+            className="rounded-3xl shadow-2xl border-4 border-[#059669] dark:border-[#10b981] hover:shadow-[#059669] dark:hover:shadow-[#10b981] transition-shadow duration-500"
           />
         </motion.div>
       </motion.div>
