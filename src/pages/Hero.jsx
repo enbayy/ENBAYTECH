@@ -25,7 +25,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative bg-[#f9f9f9] dark:bg-[#000003] py-24 px-6 md:px-12 lg:px-20"
+      className="relative bg-[#f9f9f9] dark:bg-[#000003] py-0 md:py-24 px-6 md:px-12 lg:px-20"
     >
       <motion.div
         className="container mx-auto flex flex-col-reverse lg:flex-row items-center gap-16"
