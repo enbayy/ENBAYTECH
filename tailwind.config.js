@@ -25,19 +25,6 @@ export default {
           sm: "3rem",
         },
       },
-      keyframes: {
-        pulseShadow: {
-          '0%, 100%': {
-            boxShadow: '0 0 0 0 rgba(16, 185, 129, 0.4)',
-          },
-          '50%': {
-            boxShadow: '0 0 20px 10px rgba(16, 185, 129, 0.6)',
-          },
-        },
-      },
-      animation: {
-        pulseShadow: 'pulseShadow 2s ease-in-out infinite',
-      },
     },
   },
   plugins: [],

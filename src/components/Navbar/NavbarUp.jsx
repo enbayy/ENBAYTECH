@@ -16,7 +16,7 @@ const NavbarUp = () => {
                     <div className="flex items-center gap-2 md:gap-2">
                         <FaEnvelope size={20} className="text-[#059669] dark:text-[#10b981]" />
                         <div className="flex gap-2 flex-wrap">
-                            <p className="text-[#0f172a] dark:text-[#e0f2f1] font-semibold">MAİL:</p>
+                            <p className="text-[#0f172a] dark:text-[#e0f2f1] font-semibold">E-MAİL:</p>
                             <a
                                 href="mailto:1enesbayar@gmail.com"
                                 className="text-[#0f172a] dark:text-[#e0f2f1] hover:underline font-semibold"

@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { services } from "../../data/ServicesData";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const cardVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 30 },
     visible: (i) => ({
         opacity: 1,
         y: 0,
         transition: {
-            delay: i * 0.15,
+            delay: i * 0.1,
             duration: 0.5,
             ease: "easeOut",
         },
@@ -18,63 +18,60 @@ const cardVariants = {
 
 const Services = () => {
     const navigate = useNavigate();
-    const [randomServices, setRandomServices] = useState([]);
-
-    useEffect(() => {
-        const priorityTitles = ["Web Tasarımı", "Logo Tasarımı", "SEO Çalışması"];
-        const priorityServices = services.filter((service) =>
-            priorityTitles.includes(service.title)
-        );
-        const otherServices = services.filter(
-            (service) => !priorityTitles.includes(service.title)
-        );
-        const randomOthers = otherServices
-            .sort(() => 0.5 - Math.random())
-            .slice(0, 4 - priorityServices.length);
-        const selectedServices = [...priorityServices, ...randomOthers];
-        setRandomServices(services.slice(0, 4));
-    }, []);
+    const firstSixServices = services.slice(0, 6);
 
     return (
         <section
             id="services"
-            className="container bg-[#f0fdf4] dark:bg-[#1a1f1c] py-16"
+            className="bg-[#f0fdf4] dark:bg-[#1a1f1c] py-20 px-4"
         >
-            <div className="mx-auto">
-                <div className="flex flex-col md:flex-row justify-between items-center mb-12">
-                    <h1 className="text-4xl font-bold font-inter text-[#0f172a] dark:text-[#e0f2f1] mb-6 md:mb-0">
-                        HİZMETLERİMİZ
+            <div className="max-w-7xl mx-auto">
+                <div className="text-center mb-16">
+                    <h1 className="text-4xl md:text-5xl font-bold text-[#0f172a] dark:text-white font-inter">
+                        Markanız İçin Neler Yapabiliriz?
                     </h1>
-                    <button
-                        onClick={() => navigate("/hizmetlerimiz")}
-                        className="w-[140px] h-[44px] bg-[#10b981] dark:bg-[#059669] text-white rounded-2xl hover:scale-105 transition font-inter font-medium"
-                    >
-                        Hepsini gör
-                    </button>
+                    <p className="mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                        Markanızı dijital dünyada öne çıkaracak yaratıcı ve teknik çözümler
+                        sunuyoruz.
+                    </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                    {randomServices.map((service, index) => (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    {firstSixServices.map((service, index) => (
                         <motion.div
                             key={service.id}
                             custom={index}
                             initial="hidden"
                             whileInView="visible"
-                            viewport={{ once: true, amount: 0.3 }}
+                            viewport={{ once: true, amount: 0.2 }}
                             variants={cardVariants}
-                            className="bg-white dark:bg-[#1a1f1c] border border-[#10b981] dark:border-[#10b981] rounded-3xl p-8 shadow-xl hover:shadow-2xl transition"
+                            className="bg-[#f6fdf8] dark:bg-[#1b1f1d] border border-gray-200 dark:border-gray-700 rounded-2xl p-6 shadow-md hover:shadow-lg hover:-translate-y-1 transition duration-300"
                         >
-                            <h2 className="text-3xl font-semibold text-[#0f172a] dark:text-[#e0f2f1] mb-2 font-inter">
-                                {service.title}
-                            </h2>
-                            <h3 className="text-xl font-medium text-[#0f172a] dark:text-[#e0f2f1] mb-4 font-inter">
+                            <div className="flex items-center gap-4 mb-4">
+                                <div className="bg-[#ecfdf5] dark:bg-[#065f46] p-3 rounded-full">
+                                    {service.icon}
+                                </div>
+                                <h2 className="text-xl font-semibold text-gray-900 dark:text-white font-inter">
+                                    {service.title}
+                                </h2>
+                            </div>
+                            <h3 className="text-sm text-gray-500 dark:text-gray-400 mb-2 font-medium">
                                 {service.name}
                             </h3>
-                            <p className="text-[#0f172a] dark:text-[#e0f2f1] leading-relaxed line-clamp-5 font-poppins">
+                            <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed font-poppins line-clamp-5">
                                 {service.description}
                             </p>
                         </motion.div>
                     ))}
+                </div>
+
+                <div className="text-center mt-12">
+                    <button
+                        onClick={() => navigate("/hizmetlerimiz")}
+                        className="px-6 py-3 bg-[#10b981] dark:bg-[#059669] text-white text-base font-medium rounded-xl hover:scale-105 transition"
+                    >
+                        Tüm Hizmetlerimizi Gör
+                    </button>
                 </div>
             </div>
         </section>

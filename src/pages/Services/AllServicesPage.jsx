@@ -26,49 +26,54 @@ const AllServices = () => {
   return (
     <section
       id="all-services"
-      className="container bg-[#f0fdf4] dark:bg-[#1a1f1c] py-12"
+      className="bg-[#f0fdf4] dark:bg-[#1a1f1c] py-20 px-4"
     >
-      <div className="mx-auto px-4">
-        <div className="mb-8 text-center space-y-3">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
           <motion.h1
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className="text-[#0f172a] dark:text-[#e0f2f1] border-l-8 border-[#10b981] dark:border-[#10b981] py-2 pl-2 text-2xl sm:text-3xl md:text-4xl font-semibold break-words font-inter"
+            className="text-4xl md:text-5xl font-bold text-[#0f172a] dark:text-white font-inter"
           >
-            TÜM HİZMETLER
+            Tüm Hizmetlerimiz
           </motion.h1>
+          <p className="mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            Ajansımızın sunduğu tüm dijital çözümlerle tanışın.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {services.map((service, index) => (
             <motion.div
               key={service.id}
               custom={index}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.2 }}
               variants={cardVariants}
-              className="flex flex-col bg-[#f0fdf4] dark:bg-[#1a1f1c] rounded-2xl shadow-lg p-6 transition-transform duration-300 hover:scale-[1.03] border border-[#10b981] dark:border-[#10b981] cursor-pointer"
+              className="bg-[#f6fdf8] dark:bg-[#1b1f1d] border border-gray-200 dark:border-gray-700 rounded-2xl p-6 shadow-md hover:shadow-lg hover:-translate-y-1 transition duration-300 cursor-pointer"
               onClick={() => handleDetailClick(service.id)}
             >
-              <div className="flex-1 flex flex-col justify-center text-center md:text-left">
-                <h2 className="text-3xl font-semibold text-[#0f172a] dark:text-[#e0f2f1] mb-2 font-inter">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="bg-[#ecfdf5] dark:bg-[#065f46] p-3 rounded-full">
+                  {service.icon}
+                </div>
+                <h2 className="text-xl font-semibold text-gray-900 dark:text-white font-inter">
                   {service.title}
                 </h2>
-                <h3 className="text-xl font-medium text-[#0f172a] dark:text-[#e0f2f1] mb-4 font-inter">
-                  {service.name}
-                </h3>
-                <p className="text-[#1f2937] dark:text-[#d1d5db] leading-relaxed line-clamp-5 font-poppins">
-                  {service.description}
-                </p>
               </div>
+              <h3 className="text-sm text-gray-500 dark:text-gray-400 mb-2 font-medium">
+                {service.name}
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed font-poppins line-clamp-5">
+                {service.description}
+              </p>
             </motion.div>
           ))}
         </div>
       </div>
     </section>
-
   );
 };
 
