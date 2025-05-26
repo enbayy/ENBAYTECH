@@ -21,7 +21,7 @@ const Footer = () => {
                             alt="logo dark"
                             className="h-20 w-20 hidden dark:block"
                         />
-                        <h2 className="text-3xl sm:text-4xl font-bold font-inter text-[#0f172a] dark:text-[#e0f2f1] font-inter tracking-wide">
+                        <h2 className="text-3xl sm:text-4xl font-bold font-inter text-[#0f172a] dark:text-[#e0f2f1] tracking-wide">
                             ENBAYTECH
                         </h2>
 

@@ -22,7 +22,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className=" relative bg-[#f0fdf4] dark:bg-[#1a1f1c] z-50">
+    <header className="relative bg-[#fff7ed] dark:bg-[#7c2d12] z-50">
       <div className="container mx-auto py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <img
@@ -50,12 +50,13 @@ const Navbar = () => {
                 <Link
                   to={link}
                   className={`relative px-3 py-2 inline-block text-lg font-semibold font-inter transition-all duration-300
-              ${location.pathname === link
-                      ? "text-[#059669] border-b-2 border-[#059669]"
-                      : "text-[#0f172a] dark:text-[#e0f2f1] hover:text-[#10b981] dark:hover:text-[#10b981]"
-                    }
+              ${
+                location.pathname === link
+                  ? "text-[#f97316] border-b-2 border-[#f97316]" // turuncu aktif link
+                  : "text-[#0f172a] dark:text-[#e0f2f1] hover:text-[#fb923c] dark:hover:text-[#fb923c]" // hover turuncu
+              }
               before:absolute before:bottom-0 before:left-0 before:w-full before:h-[2px]
-              before:bg-[#10b981] before:scale-x-0 before:origin-right 
+              before:bg-[#fb923c] before:scale-x-0 before:origin-right 
               before:transition before:duration-300 before:ease-in-out 
               hover:before:scale-x-100 hover:before:origin-left`}
                 >
@@ -88,7 +89,6 @@ const Navbar = () => {
 
       <ResponsiveMenu showMenu={showMenu} toggleMenu={toggleMenu} />
     </header>
-
   );
 };
 

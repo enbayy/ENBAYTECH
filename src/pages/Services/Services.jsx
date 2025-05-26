@@ -23,7 +23,7 @@ const Services = () => {
     return (
         <section
             id="services"
-            className="container bg-[#f0fdf4] dark:bg-[#1a1f1c] py-20"
+            className="container bg-[#fff7ed] dark:bg-[#7c2d12] py-20"
         >
             <div className="mx-auto">
                 <div className="text-center mb-16">
@@ -45,10 +45,10 @@ const Services = () => {
                             whileInView="visible"
                             viewport={{ once: true, amount: 0.2 }}
                             variants={cardVariants}
-                            className="bg-[#f0fdf4] dark:bg-[#1a1f1c] border border-gray-200 dark:border-gray-700 rounded-2xl p-6 shadow-md hover:shadow-lg shadow-gray-700 hover:-translate-y-1 transition duration-300"
+                            className="bg-[#fff7ed] dark:bg-[#7c2d12] border border-gray-200 dark:border-gray-700 rounded-2xl p-6 shadow-md hover:shadow-lg shadow-gray-700 hover:-translate-y-1 transition duration-300"
                         >
                             <div className="flex items-center gap-4 mb-4">
-                                <div className="bg-[#ecfdf5] dark:bg-[#065f46] p-3 rounded-full">
+                                <div className="bg-[#ffedd5] dark:bg-[#a1430f] p-3 rounded-full">
                                     {service.icon}
                                 </div>
                                 <h2 className="text-xl font-semibold text-gray-900 dark:text-white font-inter">
@@ -68,7 +68,7 @@ const Services = () => {
                 <div className="text-center mt-12">
                     <button
                         onClick={() => navigate("/hizmetlerimiz")}
-                        className="px-6 py-3 bg-[#10b981] dark:bg-[#059669] text-white text-base font-medium rounded-full hover:scale-105 transition"
+                        className="px-6 py-3 bg-[#f97316] dark:bg-[#c2410c] text-white text-base font-medium rounded-full hover:scale-105 transition"
                     >
                         Tüm Hizmetlerimizi Gör
                     </button>
