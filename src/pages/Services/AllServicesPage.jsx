@@ -26,19 +26,19 @@ const AllServices = () => {
   return (
     <section
       id="all-services"
-      className="bg-[#f0fdf4] dark:bg-[#1a1f1c] py-20 px-4"
+      className="bg-[#f0fdf4] dark:bg-[#1a1f1c] py-12 px-4"
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="container mx-auto">
         <div className="text-center mb-16">
           <motion.h1
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className="text-4xl md:text-5xl font-bold text-[#0f172a] dark:text-white font-inter"
+            className="text-3xl md:text-4xl font-bold text-[#0f172a] dark:text-white font-inter"
           >
-            Tüm Hizmetlerimiz
+            TÜM HİZMETLERİMİZ
           </motion.h1>
-          <p className="mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="mt-4 text-base text-gray-600 dark:text-gray-400 mx-auto font-poppins">
             Ajansımızın sunduğu tüm dijital çözümlerle tanışın.
           </p>
         </div>
@@ -52,7 +52,7 @@ const AllServices = () => {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={cardVariants}
-              className="bg-[#f6fdf8] dark:bg-[#1b1f1d] border border-gray-200 dark:border-gray-700 rounded-2xl p-6 shadow-md hover:shadow-lg hover:-translate-y-1 transition duration-300 cursor-pointer"
+              className="bg-[#f0fdf4] dark:bg-[#1a1f1c] border border-gray-200 dark:border-gray-700 rounded-2xl p-6 shadow-md hover:shadow-lg shadow-gray-700 hover:-translate-y-1 transition duration-300 cursor-pointer"
               onClick={() => handleDetailClick(service.id)}
             >
               <div className="flex items-center gap-4 mb-4">

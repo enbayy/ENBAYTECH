@@ -75,7 +75,7 @@ const About = () => {
                         {services.map((service, index) => (
                             <div
                                 key={service.id}
-                                className="bg-color5 border border-color4 rounded-2xl p-8 shadow-md hover:shadow-2xl transition-shadow duration-400 cursor-pointer"
+                                className="bg-[#f0fdf4] dark:bg-[#1a1f1c] border border-gray-200 dark:border-gray-700 rounded-2xl p-6 shadow-md hover:shadow-lg shadow-gray-700 transition-shadow duration-400 cursor-pointer"
                                 data-aos="fade-up"
                                 data-aos-delay={index * 150}
                             >
@@ -91,9 +91,9 @@ const About = () => {
                 <div className="mt-28 text-center" data-aos="fade-up">
                     <button
                         onClick={handleContactClick}
-                        className="text-[#392f2f] dark:text-[#d4cfce] px-6 py-3 rounded-2xl border-2 hover:border-4 text-lg font-semibold font-inter"
+                        className="text-[#392f2f] dark:text-[#d4cfce] px-6 py-3 rounded-full border-2 hover:border-4 text-lg font-semibold font-inter"
                     >
-                       İLETİŞİME GEÇ
+                        İLETİŞİME GEÇ
                     </button>
                 </div>
             </div>

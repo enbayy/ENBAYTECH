@@ -68,7 +68,7 @@ const Services = () => {
                 <div className="text-center mt-12">
                     <button
                         onClick={() => navigate("/hizmetlerimiz")}
-                        className="px-6 py-3 bg-[#10b981] dark:bg-[#059669] text-white text-base font-medium rounded-xl hover:scale-105 transition"
+                        className="px-6 py-3 bg-[#10b981] dark:bg-[#059669] text-white text-base font-medium rounded-full hover:scale-105 transition"
                     >
                         Tüm Hizmetlerimizi Gör
                     </button>

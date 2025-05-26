@@ -71,7 +71,7 @@ const ContactSection = () => {
                     <div className="text-center">
                         <button
                             type="submit"
-                            className="text-[#0f172a] dark:text-[#e0f2f1] w-[120px] h-[40px] border-2 hover:border-4 rounded-2xl hover:bg-color1 transition duration-300 font-inter"
+                            className="text-[#0f172a] dark:text-[#e0f2f1] w-[120px] h-[40px] border-2 hover:border-4 rounded-full hover:bg-color1 transition duration-300 font-inter"
                         >
                             Gönder
                         </button>
