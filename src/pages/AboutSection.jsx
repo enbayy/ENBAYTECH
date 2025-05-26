@@ -38,7 +38,7 @@ export const AboutSection = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: index * 0.2, duration: 0.4 }}
                                 viewport={{ once: true }}
-                                className="bg-[#ffffff] dark:bg-[#252c28] border border-[#cce3da] dark:border-[#333d37] text-[#0f172a] dark:text-[#e0f2f1] font-semibold font-inter shadow-md px-6 py-4 rounded-lg flex items-center gap-3"
+                                className="bg-[#f0fdf4] dark:bg-[#1a1f1c] border border-gray-200 dark:border-gray-700 rounded-2xl text-[#0f172a] dark:text-[#e0f2f1] font-semibold font-inter shadow-md hover:shadow-lg shadow-gray-700 px-6 py-4 flex items-center gap-3"
                             >
                                 <span className="text-2xl">{icon}</span> {text}
                             </motion.div>

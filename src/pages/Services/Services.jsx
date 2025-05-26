@@ -45,7 +45,7 @@ const Services = () => {
                             whileInView="visible"
                             viewport={{ once: true, amount: 0.2 }}
                             variants={cardVariants}
-                            className="bg-[#f6fdf8] dark:bg-[#1b1f1d] border border-gray-200 dark:border-gray-700 rounded-2xl p-6 shadow-md hover:shadow-lg hover:-translate-y-1 transition duration-300"
+                            className="bg-[#f0fdf4] dark:bg-[#1a1f1c] border border-gray-200 dark:border-gray-700 rounded-2xl p-6 shadow-md hover:shadow-lg shadow-gray-700 hover:-translate-y-1 transition duration-300"
                         >
                             <div className="flex items-center gap-4 mb-4">
                                 <div className="bg-[#ecfdf5] dark:bg-[#065f46] p-3 rounded-full">
