@@ -21,7 +21,7 @@ const NavbarUp = () => {
                                 href="mailto:1enesbayar@gmail.com"
                                 className="text-[#0f172a] dark:text-[#e0f2f1] hover:underline font-semibold"
                             >
-                                1enesbayar@gmail.com
+                                info@enbaytech.com
                             </a>
                         </div>
                     </div>

@@ -97,7 +97,7 @@ const Footer = () => {
 
                     <div className="flex flex-col items-center sm:items-start space-y-4">
                         <h4 className="text-2xl font-semibold text-[#0f172a] dark:text-[#e0f2f1] font-inter">İLETİŞİM</h4>
-                        <p className="text-lg text-[#0f172a] dark:text-[#e0f2f1] font-poppins">1enesbayar@gmail.com</p>
+                        <p className="text-lg text-[#0f172a] dark:text-[#e0f2f1] font-poppins">info@enbaytech.com</p>
                         <p className="text-lg text-[#0f172a] dark:text-[#e0f2f1] font-poppins">+90 552 231 20 86</p>
                     </div>
                 </div>
