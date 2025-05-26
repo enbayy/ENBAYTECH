@@ -24,10 +24,10 @@ const About = () => {
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-20" data-aos="fade-up">
                     <h1 className="text-[#392f2f] dark:text-[#d4cfce] text-5xl font-extrabold color2 tracking-wide mb-6">
-                        Enbaytech Hakkında
+                        ENBAYTECH Hakkında
                     </h1>
                     <p className="text-[#392f2f] dark:text-[#d4cfce] max-w-3xl mx-auto text-lg color3 leading-relaxed">
-                        Enbaytech, dijital dünyada işletmelerin ihtiyaç duyduğu profesyonel web çözümleri sunan,
+                        ENBAYTECH, dijital dünyada işletmelerin ihtiyaç duyduğu profesyonel web çözümleri sunan,
                         İstanbul merkezli bir teknoloji firmasıdır. Web tasarımı, logo tasarımı, SEO çalışmaları,
                         hosting ve domain hizmetleri ile web sitesi bakımı alanlarında uzman ekibimizle müşterilerimizin
                         dijital varlıklarını güçlendiriyoruz.
