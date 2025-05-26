@@ -23,9 +23,9 @@ const Services = () => {
     return (
         <section
             id="services"
-            className="bg-[#f0fdf4] dark:bg-[#1a1f1c] py-20 px-4"
+            className="container bg-[#f0fdf4] dark:bg-[#1a1f1c] py-20"
         >
-            <div className="max-w-7xl mx-auto">
+            <div className="mx-auto">
                 <div className="text-center mb-16">
                     <h1 className="text-4xl md:text-5xl font-bold text-[#0f172a] dark:text-white font-inter">
                         Markanız İçin Neler Yapabiliriz?
