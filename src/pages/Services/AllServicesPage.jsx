@@ -74,14 +74,6 @@ const AllServices = () => {
                 <p className="text-base text-color3 dark:text-color4 mt-3 leading-relaxed line-clamp-4">
                   {service.description}
                 </p>
-                <div className="flex justify-center md:justify-start">
-                  <button
-                    onClick={() => handleDetailClick(service.id)}
-                    className="w-[120px] h-[40px] bg-color2 dark:bg-color4 text-color5 dark:text-color1 rounded-tl-2xl rounded-br-2xl hover:bg-color4 dark:hover:bg-color3 transition mt-4"
-                  >
-                    İncele
-                  </button>
-                </div>
               </div>
             </motion.div>
           ))}

@@ -66,24 +66,23 @@ const Footer = () => {
                             { id: 5, name: "Hosting & Domain Hizmetleri" },
                             { id: 6, name: "Web Sitesi Bakım ve Güncelleme" }
                         ].map(service => (
-                            <a
+                            <div
                                 key={service.id}
-                                href={`/hizmetler/${service.id}`}
                                 className="flex items-center space-x-2 text-[#392f2f] dark:text-[#d4cfce] hover:text-[#d4cfce] dark:hover:text-[#757174] transition-colors duration-300"
                             >
                                 <IoMdArrowDropright size={20} />
                                 <span className="text-lg">{service.name}</span>
-                            </a>
+                            </div>
                         ))}
                     </div>
 
                     <div className="flex flex-col items-center sm:items-start space-y-4">
                         <h4 className="text-2xl font-semibold text-[#392f2f] dark:text-[#d4cfce] font-inter">Tanıtım Sayfaları</h4>
                         {[
-                            { link: "/", name: "ANASAYFA" },
-                            { link: "/hakkimizda", name: "HAKKIMIZDA" },
-                            { link: "/hizmetlerimiz", name: "HİZMETLER" },
-                            { link: "/iletisim", name: "İLETİŞİM" }
+                            { link: "#", name: "ANASAYFA" },
+                            { link: "#hakkimizda", name: "HAKKIMIZDA" },
+                            { link: "#hizmetlerimiz", name: "HİZMETLER" },
+                            { link: "#iletisim", name: "İLETİŞİM" }
                         ].map(page => (
                             <a
                                 key={page.link}
