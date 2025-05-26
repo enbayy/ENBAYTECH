@@ -23,10 +23,10 @@ const ScrollToTop = () => {
 };
 
 const Loading = () => (
-  <div className="fixed inset-0 flex items-center justify-center bg-white dark:bg-black">
+  <div className="fixed inset-0 flex items-center justify-center bg-[#f9f9f9] dark:bg-[#000003]">
     <div className="flex flex-col items-center space-y-4">
-      <div className="w-16 h-16 border-4 border-yellow-500 border-t-transparent rounded-full animate-spin"></div>
-      <p className="text-lg font-semibold text-gray-700 dark:text-gray-300 animate-pulse">
+      <div className="w-16 h-16 border-4 border-[#757174] border-t-transparent rounded-full animate-spin"></div>
+      <p className="text-lg font-semibold text-[#392f2f] dark:text-[#d4cfce] animate-pulse">
         Yükleniyor...
       </p>
     </div>
