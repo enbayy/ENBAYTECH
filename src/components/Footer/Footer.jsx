@@ -1,19 +1,25 @@
 import React from 'react';
 import { IoMdArrowDropright } from "react-icons/io";
-import logo from '../../assets/enbayLogo.png';
 import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
+import logoLight from "../../assets/enbayLogo.png"
+import logoDark from "../../assets/enbayLogo3.png"
 
 const Footer = () => {
     return (
-        <footer className="bg-[#f9f9f9] dark:bg-gray-900 py-16">
+        <footer className="bg-[#f9f9f9] dark:bg-[#000003] py-16">
             <div className="container mx-auto px-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12">
 
                     <div className="flex flex-col items-center space-y-5">
                         <img
-                            src={logo}
-                            alt="Logo"
-                            className="w-24 h-auto"
+                            src={logoLight}
+                            alt="logo"
+                            className="w-24 block dark:hidden"
+                        />
+                        <img
+                            src={logoDark}
+                            alt="logo dark"
+                            className="h-20 w-20 hidden dark:block"
                         />
                         <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 dark:text-gray-100 font-inter tracking-wide">
                             ENBAYTECH
@@ -51,7 +57,7 @@ const Footer = () => {
                     </div>
 
                     <div className="flex flex-col items-center sm:items-start space-y-4">
-                        <h4 className="text-2xl font-semibold text-gray-800 dark:text-gray-100 font-inter">Hizmetlerimiz</h4>
+                        <h4 className="text-[#392f2f] dark:text-[#d4cfce] text-2xl font-semibold font-inter">Hizmetlerimiz</h4>
                         {[
                             { id: 1, name: "Web Tasarımı" },
                             { id: 2, name: "Logo Tasarımı" },
@@ -63,7 +69,7 @@ const Footer = () => {
                             <a
                                 key={service.id}
                                 href={`/hizmetler/${service.id}`}
-                                className="flex items-center space-x-2 text-gray-700 dark:text-gray-300 hover:text-[#d4cfce] dark:hover:text-[#757174] transition-colors duration-300"
+                                className="flex items-center space-x-2 text-[#392f2f] dark:text-[#d4cfce] hover:text-[#d4cfce] dark:hover:text-[#757174] transition-colors duration-300"
                             >
                                 <IoMdArrowDropright size={20} />
                                 <span className="text-lg">{service.name}</span>
@@ -72,7 +78,7 @@ const Footer = () => {
                     </div>
 
                     <div className="flex flex-col items-center sm:items-start space-y-4">
-                        <h4 className="text-2xl font-semibold text-gray-800 dark:text-gray-100 font-inter">Tanıtım Sayfaları</h4>
+                        <h4 className="text-2xl font-semibold text-[#392f2f] dark:text-[#d4cfce] font-inter">Tanıtım Sayfaları</h4>
                         {[
                             { link: "/", name: "ANASAYFA" },
                             { link: "/hakkimizda", name: "HAKKIMIZDA" },
@@ -82,7 +88,7 @@ const Footer = () => {
                             <a
                                 key={page.link}
                                 href={page.link}
-                                className="flex items-center space-x-2 text-gray-700 dark:text-gray-300 hover:text-[#d4cfce] dark:hover:text-[#757174] transition-colors duration-300"
+                                className="flex items-center space-x-2 text-[#392f2f] dark:text-[#d4cfce]  hover:text-[#d4cfce] dark:hover:text-[#757174] transition-colors duration-300"
                             >
                                 <IoMdArrowDropright size={20} />
                                 <span className="text-lg">{page.name}</span>
@@ -91,16 +97,16 @@ const Footer = () => {
                     </div>
 
                     <div className="flex flex-col items-center sm:items-start space-y-4">
-                        <h4 className="text-2xl font-semibold text-gray-800 dark:text-gray-100 font-inter">İletişim</h4>
-                        <p className="text-lg text-gray-700 dark:text-gray-300">📧 1enesbayar@gmail.com</p>
-                        <p className="text-lg text-gray-700 dark:text-gray-300">📞 +90 552 231 20 86</p>
+                        <h4 className="text-2xl font-semibold text-[#392f2f] dark:text-[#d4cfce] font-inter">İletişim</h4>
+                        <p className="text-lg text-[#392f2f] dark:text-[#d4cfce]">1enesbayar@gmail.com</p>
+                        <p className="text-lg text-[#392f2f] dark:text-[#d4cfce]">+90 552 231 20 86</p>
                     </div>
                 </div>
 
                 <hr className="border-gray-300 dark:border-gray-700 my-10" />
 
                 <div className="text-center -mb-8">
-                    <p className="text-gray-700 dark:text-gray-300 text-sm select-none font-poppins font-semibold">
+                    <p className="text-[#392f2f] dark:text-[#d4cfce] text-sm select-none font-poppins font-semibold">
                         © 2025 ENBAYTECH. Tüm Hakları Saklıdır.
                     </p>
                 </div>

@@ -18,15 +18,15 @@ const About = () => {
     return (
         <section
             id="about"
-            className="bg-[#f9f9f9] text-color1 py-20 px-4 sm:px-8 lg:px-16"
+            className="bg-[#f9f9f9] dark:bg-[#000003] py-20 px-4 sm:px-8 lg:px-16"
             style={{ fontFamily: "'Poppins', sans-serif" }}
         >
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-20" data-aos="fade-up">
-                    <h1 className="text-5xl font-extrabold color2 tracking-wide mb-6">
+                    <h1 className="text-[#392f2f] dark:text-[#d4cfce] text-5xl font-extrabold color2 tracking-wide mb-6">
                         Enbaytech Hakkında
                     </h1>
-                    <p className="max-w-3xl mx-auto text-lg color3 leading-relaxed">
+                    <p className="text-[#392f2f] dark:text-[#d4cfce] max-w-3xl mx-auto text-lg color3 leading-relaxed">
                         Enbaytech, dijital dünyada işletmelerin ihtiyaç duyduğu profesyonel web çözümleri sunan,
                         İstanbul merkezli bir teknoloji firmasıdır. Web tasarımı, logo tasarımı, SEO çalışmaları,
                         hosting ve domain hizmetleri ile web sitesi bakımı alanlarında uzman ekibimizle müşterilerimizin
@@ -42,8 +42,8 @@ const About = () => {
                         <div className="mb-6 text-6xl" aria-hidden="true" style={{ color: "#112224" }}>
                             🎯
                         </div>
-                        <h2 className="text-3xl font-semibold color2 mb-3">Misyonumuz</h2>
-                        <p className="text-lg color3 leading-relaxed max-w-md">
+                        <h2 className="text-[#392f2f] dark:text-[#d4cfce] text-3xl font-semibold color2 mb-3">Misyonumuz</h2>
+                        <p className="text-[#392f2f] dark:text-[#d4cfce] text-lg color3 leading-relaxed max-w-md">
                             Müşterilerimize, yenilikçi ve güvenilir dijital çözümler sunarak; işletmelerin
                             online varlıklarını güçlendirmek, marka değerlerini artırmak ve hedef kitlelerine
                             daha etkili ulaşmalarını sağlamak en büyük önceliğimizdir.
@@ -56,8 +56,8 @@ const About = () => {
                         <div className="mb-6 text-6xl" aria-hidden="true" style={{ color: "#112224" }}>
                             🌟
                         </div>
-                        <h2 className="text-3xl font-semibold color2 mb-3">Vizyonumuz</h2>
-                        <p className="text-lg color3 leading-relaxed max-w-md">
+                        <h2 className="text-[#392f2f] dark:text-[#d4cfce] text-3xl font-semibold color2 mb-3">Vizyonumuz</h2>
+                        <p className="text-[#392f2f] dark:text-[#d4cfce] text-lg color3 leading-relaxed max-w-md">
                             Teknolojideki gelişmeleri yakından takip ederek, müşterilerimize en son
                             dijital trendlerle uyumlu, kaliteli ve sürdürülebilir çözümler sunan öncü firma olmak.
                         </p>

@@ -6,17 +6,15 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import { RiWhatsappFill } from "react-icons/ri";
 import { AboutSection } from "./pages/AboutSection";
+import NavbarUp from "./components/Navbar/NavbarUp";
 
 const Hero = lazy(() => import("./pages/Hero"));
-const References = lazy(() => import("./pages/References/References"));
 const Services = lazy(() => import("./pages/Services/Services"));
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
 const CtaPage = lazy(() => import("./pages/CtaPage"));
 const ServiceDetail = lazy(() => import("./pages/Services/ServiceDetail"));
 const AllServices = lazy(() => import("./pages/Services/AllServicesPage"));
-const AllReferencesPage = lazy(() => import("./pages/References/AllReferencesPage"));
-const ReferencesDetailPage = lazy(() => import("./pages/References/ReferenceDetail"));
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -70,8 +68,8 @@ const App = () => {
   return (
     <div className="bg-[#F8FAFC] dark:bg-[#0F172A] dark:text-white text-black overflow-x-hidden">
       <ScrollToTop />
+      <NavbarUp />
       <Navbar />
-
       <div className="fixed top-0 left-0 right-0 h-1 bg-white dark:bg-black z-30">
         <div
           className="h-full bg-[#757174]"
@@ -104,8 +102,6 @@ const App = () => {
           <Route path="/hizmetlerimiz" element={<AllServices />} />
           <Route path="/hakkimizda" element={<About />} />
           <Route path="/iletisim" element={<Contact />} />
-          <Route path="/referanslar" element={<AllReferencesPage />} />
-          <Route path="/referanslar/:id" element={<ReferencesDetailPage />} />
         </Routes>
       </Suspense>
 

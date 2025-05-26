@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { HiMenuAlt3, HiMenuAlt1 } from "react-icons/hi";
 import ResponsiveMenu from "./ResponsiveMenu";
 import DarkMode from "./DarkMode";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import logoLight from "../../assets/enbayLogo.png";
+import logoDark from "../../assets/enbayLogo3.png";
 
 export const MenuLinks = [
   { id: 1, name: "ANASAYFA", link: "/" },
@@ -14,37 +16,48 @@ export const MenuLinks = [
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const location = useLocation();
-  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
 
   return (
-    <header className="container relative bg-[#f9f9f9] dark:from-color1 dark:to-color2 text-color1 dark:text-color5 z-50">
-      <div className="mx-auto flex justify-between items-center py-5 px-4">
-        <Link
-          to="/"
-          className="text-[#685d5f] dark:text-color5 text-3xl font-bold tracking-wide font-roboto"
-        >
-          ENBAYTECH
-        </Link>
-        <nav className="hidden lg:flex items-center gap-6">
-          <ul className="flex items-center gap-6">
+    <header className="relative bg-[#f9f9f9] dark:bg-[#000003] z-50">
+      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <img
+            src={logoLight}
+            alt="logo"
+            className="h-16 w-16 block dark:hidden"
+          />
+          <img
+            src={logoDark}
+            alt="logo dark"
+            className="h-16 w-16 hidden dark:block"
+          />
+          <Link
+            to="/"
+            className="text-[#392f2f] dark:text-[#d4cfce] text-2xl md:text-3xl font-bold tracking-wide font-roboto"
+          >
+            ENBAYTECH
+          </Link>
+        </div>
+
+        <nav className="hidden lg:flex justify-center flex-1">
+          <ul className="flex items-center gap-8">
             {MenuLinks.map(({ id, name, link }) => (
               <li key={id}>
                 <Link
                   to={link}
-                  className={`relative px-3 py-2 inline-block text-xl font-semibold font-poppins transition-all duration-300
-                ${location.pathname === link
-                      ? "text-[#392f2f] dark:text-[#f9f9f9] border-b-2 border-[#392f2f] dark:border-[#f9f9f9]"
-                      : "text-[#392f2f] dark:text-[#f9f9f9] hover:text-[#000003] dark:hover:text-[#d4cfce]"
+                  className={`relative px-3 py-2 inline-block text-lg font-semibold font-poppins transition-all duration-300
+                  ${location.pathname === link
+                      ? "text-[#392f2f] dark:text-[#d4cfce] border-b-2 border-[#392f2f] dark:border-[#f9f9f9]"
+                      : "text-[#392f2f] dark:text-[#d4cfce] hover:text-[#000003] dark:hover:text-[#f9f9f9]"
                     }
-                before:absolute before:bottom-0 before:left-0 before:w-full before:h-[2px]
-                before:bg-[#757174] before:scale-x-0 before:origin-right 
-                before:transition before:duration-300 before:ease-in-out 
-                hover:before:scale-x-100 hover:before:origin-left
-              `}
+                  before:absolute before:bottom-0 before:left-0 before:w-full before:h-[2px]
+                  before:bg-[#757174] before:scale-x-0 before:origin-right 
+                  before:transition before:duration-300 before:ease-in-out 
+                  hover:before:scale-x-100 hover:before:origin-left`}
                 >
                   {name}
                 </Link>
@@ -52,20 +65,29 @@ const Navbar = () => {
             ))}
           </ul>
         </nav>
+
         <div className="flex items-center gap-4">
           <DarkMode />
           <div className="lg:hidden">
             {showMenu ? (
-              <HiMenuAlt1 onClick={toggleMenu} className="cursor-pointer text-color1 dark:text-color5" size={30} />
+              <HiMenuAlt1
+                onClick={toggleMenu}
+                className="cursor-pointer text-[#392f2f] dark:text-[#d4cfce]"
+                size={30}
+              />
             ) : (
-              <HiMenuAlt3 onClick={toggleMenu} className="cursor-pointer text-color1 dark:text-color5" size={30} />
+              <HiMenuAlt3
+                onClick={toggleMenu}
+                className="cursor-pointer text-[#392f2f] dark:text-[#d4cfce]"
+                size={30}
+              />
             )}
           </div>
         </div>
       </div>
+
       <ResponsiveMenu showMenu={showMenu} toggleMenu={toggleMenu} />
     </header>
-
   );
 };
 

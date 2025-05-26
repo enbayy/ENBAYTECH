@@ -1,47 +1,94 @@
 import React from "react";
+import hero from "../assets/hero.png";
+import { motion } from "framer-motion";
+
+const containerVariants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.3,
+    },
+  },
+};
+
+const textVariants = {
+  hidden: { opacity: 0, y: 30 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+};
+
+const imageVariants = {
+  hidden: { opacity: 0, scale: 0.8 },
+  show: { opacity: 1, scale: 1, transition: { duration: 1, ease: "easeOut" } },
+};
 
 const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative bg-[#f9f9f9] dark:from-color1 dark:to-color2 py-24 px-6 md:px-12 lg:px-20"
+      className="relative bg-[#f9f9f9] dark:bg-[#000003] py-24 px-6 md:px-12 lg:px-20"
     >
-      <div className="container mx-auto flex flex-col-reverse lg:flex-row items-center gap-12">
-        <div className="lg:w-1/2 max-w-xl text-center lg:text-left">
-          <h1 className="text-5xl md:text-6xl font-bold color1 dark:color5 leading-tight font-roboto">
+      <motion.div
+        className="container mx-auto flex flex-col-reverse lg:flex-row items-center gap-16"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        <motion.div
+          className="lg:w-1/2 max-w-xl text-center lg:text-left"
+          variants={textVariants}
+        >
+          <motion.h1
+            className="text-[#392f2f] dark:text-[#d4cfce] text-5xl md:text-6xl font-bold leading-tight font-roboto color1 dark:color5"
+            variants={textVariants}
+          >
             Dijital Varlığınızı <br />
-            <span className="text-color2 dark:text-color4">Profesyonel</span> <br />
+            <span className="text-[#392f2f] dark:text-[#d4cfce]">
+              Profesyonel
+            </span>{" "}
+            <br />
             Tasarımlarla Güçlendirin.
-          </h1>
-          <p className="mt-6 text-lg md:text-xl color3 dark:color4 font-roboto leading-relaxed">
-            İşletmenize özel web çözümleri ve etkileyici marka kimlikleri <br />
-            ile hedef kitleniz üzerinde kalıcı izler bırakın.
-          </p>
+          </motion.h1>
 
-          <div className="mt-10 flex justify-center lg:justify-start gap-6">
+          <motion.p
+            className="mt-6 text-lg md:text-xl font-roboto leading-relaxed text-[#392f2f] dark:text-[#d4cfce]"
+            variants={textVariants}
+          >
+            İşletmenize özel web çözümleri ve etkileyici marka kimlikleri ile <br />
+            hedef kitleniz üzerinde kalıcı izler bırakın.
+          </motion.p>
+
+          <motion.div
+            className="mt-10 flex flex-col sm:flex-row justify-center lg:justify-start gap-4 sm:gap-8"
+            variants={textVariants}
+          >
             <button
               onClick={() => alert("Ücretsiz teklif talebi gönderildi!")}
-              className="bg-color2 hover:bg-color1 dark:bg-color3 dark:hover:bg-color4 text-color5 dark:text-color1 font-semibold px-12 py-4 rounded-full shadow-lg transition duration-300"
+              className="bg-[#112224] hover:bg-[#000003] dark:bg-[#757174] dark:hover:bg-[#d4cfce] text-[#f9f9f9] dark:text-[#000003] font-semibold px-6 py-3 sm:px-10 sm:py-3 md:px-14 md:py-4 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 text-sm sm:text-base"
             >
               Ücretsiz Teklif Alın
             </button>
             <a
               href="#portfolio"
-              className="inline-block px-12 py-4 border-2 border-color2 dark:border-color4 rounded-full font-semibold text-color2 dark:text-color4 hover:bg-color2 hover:text-color5 dark:hover:bg-color4 dark:hover:text-color1 transition duration-300"
+              className="inline-block px-6 py-3 sm:px-10 sm:py-3 md:px-14 md:py-4 border-2 border-[#112224] dark:border-[#d4cfce] rounded-full font-semibold text-[#112224] dark:text-[#d4cfce] hover:bg-[#112224] hover:text-[#f9f9f9] dark:hover:bg-[#d4cfce] dark:hover:text-[#000003] transition duration-300 ease-in-out text-sm sm:text-base"
             >
               Portfolyomuzu İnceleyin
             </a>
-          </div>
-        </div>
+          </motion.div>
 
-        <div className="lg:w-1/2 max-w-xl mx-auto">
+        </motion.div>
+
+        <motion.div
+          className="lg:w-1/2 max-w-xl mx-auto flex justify-center"
+          variants={imageVariants}
+        >
           <img
-            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
+            src={hero}
             alt="ENBAYTECH"
-            className="rounded-3xl shadow-2xl border-4 border-[#685d5f]"
+            className="rounded-3xl shadow-2xl border-4 border-[#112224] dark:border-[#d4cfce] hover:shadow-[#112224] dark:hover:shadow-[#d4cfce] transition-shadow duration-500"
           />
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

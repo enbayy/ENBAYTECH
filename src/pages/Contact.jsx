@@ -8,12 +8,12 @@ const ContactSection = () => {
     return (
         <section
             id="contact"
-            className="bg-[#f9f9f9] text-color1 py-16 px-4 sm:px-8 lg:px-16"
+            className="bg-[#f9f9f9] dark:bg-[#000003] py-12 text-color1 px-4 sm:px-8 lg:px-16"
         >
-            <div className="max-w-4xl mx-auto">
+            <div data-aos="zoom-in" className="max-w-4xl mx-auto">
                 <div className="text-center mb-10">
-                    <h2 className="text-4xl font-bold text-color1">İletişime Geçin</h2>
-                    <p className="text-color3 mt-3">
+                    <h2 className="text-[#392f2f] dark:text-[#d4cfce] text-4xl font-bold text-color1">İletişime Geçin</h2>
+                    <p className="text-[#392f2f] dark:text-[#d4cfce] mt-3">
                         Aşağıdaki formu doldurarak bizimle iletişime geçebilirsiniz.
                     </p>
                 </div>
@@ -21,7 +21,7 @@ const ContactSection = () => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                            <label className="block mb-2 text-color2 font-medium">
+                            <label className="text-[#392f2f] dark:text-[#d4cfce] block mb-2 text-color2 font-medium">
                                 Adınız
                             </label>
                             <input
@@ -32,7 +32,7 @@ const ContactSection = () => {
                             />
                         </div>
                         <div>
-                            <label className="block mb-2 text-color2 font-medium">
+                            <label className="text-[#392f2f] dark:text-[#d4cfce] block mb-2 text-color2 font-medium">
                                 E-posta
                             </label>
                             <input
@@ -45,7 +45,7 @@ const ContactSection = () => {
                     </div>
 
                     <div>
-                        <label className="block mb-2 text-color2 font-medium">
+                        <label className="text-[#392f2f] dark:text-[#d4cfce] block mb-2 text-color2 font-medium">
                             Konu
                         </label>
                         <input
@@ -57,7 +57,7 @@ const ContactSection = () => {
                     </div>
 
                     <div>
-                        <label className="block mb-2 text-color2 font-medium">
+                        <label className="text-[#392f2f] dark:text-[#d4cfce] block mb-2 text-color2 font-medium">
                             Mesajınız
                         </label>
                         <textarea
@@ -71,7 +71,7 @@ const ContactSection = () => {
                     <div className="text-center">
                         <button
                             type="submit"
-                            className="px-8 py-3 bg-color2 text-color5 rounded-lg hover:bg-color1 transition duration-300"
+                            className="text-[#392f2f] dark:text-[#d4cfce] px-8 py-3 bg-color2 text-color5 rounded-lg hover:bg-color1 transition duration-300"
                         >
                             Gönder
                         </button>

@@ -13,8 +13,8 @@ const ResponsiveMenu = ({ showMenu, toggleMenu }) => {
 
   return (
     <div
-      className={`fixed top-0 bottom-0 z-20 h-screen w-[75%] bg-white dark:bg-black 
-      dark:text-white text-black px-8 pb-6 pt-16 shadow-md rounded-r-xl 
+      className={`fixed top-0 bottom-0 z-20 h-screen w-[75%] bg-[#f9f9f9] dark:bg-[#000003] 
+      text-[#392f2f] dark:text-[#d4cfce] px-8 pb-6 pt-16 shadow-md rounded-r-xl 
       transition-all duration-300 flex flex-col justify-between ${showMenu ? "left-0" : "-left-full"}`}
     >
       <div>
@@ -33,14 +33,6 @@ const ResponsiveMenu = ({ showMenu, toggleMenu }) => {
             ))}
           </ul>
         </nav>
-      </div>
-      <div className="pb-6">
-        <button
-          onClick={handleClick}
-          className="bg-[#E76F51] dark:bg-[#E9C46A] hover:bg-[#E9C46A] dark:hover:bg-[#BF3A26] transition-all duration-300 w-full block py-4 font-semibold text-lg text-center rounded-tl-2xl rounded-br-2xl"
-        >
-          TEKLİF AL
-        </button>
       </div>
     </div>
   );

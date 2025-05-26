@@ -17,11 +17,11 @@ export const services = [
     },
     {
         id: 3,
-        title: "SEO Çalışması",
-        name: "Etkili SEO Hizmetleri",
+        title: "Hosting & Domain Hizmetleri",
+        name: "Güvenilir Hosting ve Domain",
         description:
-            "Arama motorlarında üst sıralara çıkmanız için kapsamlı SEO analizleri ve optimizasyonları yapıyoruz. Organik trafik ve görünürlüğünüzü artırıyoruz.",
-        imageSrc: "https://cdn-icons-png.flaticon.com/512/3177/3177440.png",
+            "Web siteleriniz için hızlı ve güvenilir hosting çözümleri ile alan adı yönetimini sağlıyoruz.",
+        imageSrc: "https://cdn-icons-png.flaticon.com/512/760/760893.png",
     },
     {
         id: 4,
@@ -33,11 +33,11 @@ export const services = [
     },
     {
         id: 5,
-        title: "Hosting & Domain Hizmetleri",
-        name: "Güvenilir Hosting ve Domain",
+        title: "SEO Çalışması",
+        name: "Etkili SEO Hizmetleri",
         description:
-            "Web siteleriniz için hızlı ve güvenilir hosting çözümleri ile alan adı yönetimini sağlıyoruz.",
-        imageSrc: "https://cdn-icons-png.flaticon.com/512/760/760893.png",
+            "Arama motorlarında üst sıralara çıkmanız için kapsamlı SEO analizleri ve optimizasyonları yapıyoruz. Organik trafik ve görünürlüğünüzü artırıyoruz.",
+        imageSrc: "https://cdn-icons-png.flaticon.com/512/3177/3177440.png",
     },
     {
         id: 6,
@@ -65,14 +65,6 @@ export const services = [
     },
     {
         id: 9,
-        title: "Mobil Uygulama Tasarımı",
-        name: "Kullanıcı Dostu Mobil Uygulamalar",
-        description:
-            "iOS ve Android platformları için modern, kullanımı kolay mobil uygulama tasarımları geliştiriyoruz.",
-        imageSrc: "https://cdn-icons-png.flaticon.com/512/633/633600.png",
-    },
-    {
-        id: 10,
         title: "E-Ticaret Çözümleri",
         name: "Özel E-Ticaret Siteleri",
         description:
@@ -80,15 +72,7 @@ export const services = [
         imageSrc: "https://cdn-icons-png.flaticon.com/512/263/263142.png",
     },
     {
-        id: 11,
-        title: "İçerik Üretimi",
-        name: "Profesyonel İçerik Hizmetleri",
-        description:
-            "Markanız için özgün ve etkileyici blog yazıları, metinler ve multimedya içerikleri hazırlıyoruz.",
-        imageSrc: "https://cdn-icons-png.flaticon.com/512/2991/2991107.png",
-    },
-    {
-        id: 12,
+        id: 10,
         title: "Marka ve Kurumsal Kimlik",
         name: "Kurumsal Kimlik Tasarımı",
         description:
