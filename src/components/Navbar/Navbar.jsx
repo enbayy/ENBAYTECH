@@ -22,8 +22,8 @@ const Navbar = () => {
   };
 
   return (
-    <header className=" relative bg-white dark:bg-[#1a1f1c] z-50">
-      <div className="container mx-auto py-4 flex items-center justify-between">
+    <header className="container relative bg-white dark:bg-[#1a1f1c] z-50">
+      <div className="mx-auto py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <img
             src={logoLight}

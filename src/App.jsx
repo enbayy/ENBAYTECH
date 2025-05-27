@@ -85,7 +85,6 @@ const App = () => {
                 <Hero />
                 <Services />
                 <AboutSection />
-                <DrawCircleText />
                 <Contact />
               </>
             }

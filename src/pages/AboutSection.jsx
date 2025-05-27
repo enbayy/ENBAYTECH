@@ -13,7 +13,7 @@ export const AboutSection = () => {
 
     return (
         <section className="container bg-white dark:bg-[#1a1f1c] py-12 px-4 sm:px-6 lg:px-8 font-sans">
-            <div className="mx-auto max-w-7xl grid md:grid-cols-2 gap-16 items-center">
+            <div className="mx-auto grid md:grid-cols-2 gap-16 items-center">
                 <motion.div
                     initial={{ x: -60, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}

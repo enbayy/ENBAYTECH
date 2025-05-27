@@ -1,36 +1,38 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { heroData } from "../data/HeroData";
+import 'aos/dist/aos.css';
+import Aos from "aos";
 
 const ShuffleHero = () => {
-  const textVariants = {
-    hidden: { opacity: 0, y: 30 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
-  };
+  useEffect(() => {
+    Aos.init({ once: true });
+  }, []);
   return (
     <section className="container w-full py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 mx-auto">
-      <motion.div>
-        <motion.h1
+      <div data-aos="fade-up">
+        <h1
           className="text-[#0f172a] dark:text-[#e0f2f1] text-5xl md:text-6xl font-extrabold font-roboto leading-tight tracking-tight"
-          variants={textVariants}
         >
           Dijital Varlığınızı <br />
           <span className="text-[#059669] dark:text-[#10b981]">Profesyonel</span>{" "}
           <br />
           Tasarımlarla <span className="underline decoration-[#059669] dark:decoration-[#10b981]">Güçlendirin</span>.
-        </motion.h1>
+        </h1>
 
-        <motion.p
+        <p
           className="mt-6 text-lg md:text-xl font-poppins leading-relaxed text-[#0f172a] dark:text-[#e0f2f1]"
-          variants={textVariants}
+          data-aos="fade-up"
+          data-aos-delay="200"
         >
           İşletmenize özel web çözümleri ve etkileyici marka kimlikleri ile <br />
           hedef kitleniz üzerinde kalıcı izler bırakın.
-        </motion.p>
+        </p>
 
-        <motion.div
+        <div
           className="mt-10 flex justify-center sm:justify-start"
-          variants={textVariants}
+          data-aos="fade-up"
+          data-aos-delay="400"
         >
           <a
             href="#iletisim"
@@ -38,8 +40,8 @@ const ShuffleHero = () => {
           >
             Hemen Başla
           </a>
-        </motion.div>
-      </motion.div >
+        </div>
+      </div>
       <ShuffleGrid />
     </section >
   );
