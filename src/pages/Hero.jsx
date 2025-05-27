@@ -25,7 +25,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative bg-[#fff7ed] dark:bg-[#7c2d12] py-0 md:py-24"
+      className="relative bg-white dark:bg-[#1a1f1c] py-0 md:py-24"
     >
       <motion.div
         className="container mx-auto flex flex-col-reverse lg:flex-row items-center gap-16"
@@ -43,13 +43,9 @@ const Hero = () => {
             variants={textVariants}
           >
             Dijital Varlığınızı <br />
-            <span className="text-[#f97316] dark:text-[#fb923c]">Profesyonel</span>{" "}
+            <span className="text-[#059669] dark:text-[#10b981]">Profesyonel</span>{" "}
             <br />
-            Tasarımlarla{" "}
-            <span className="underline decoration-[#f97316] dark:decoration-[#fb923c]">
-              Güçlendirin
-            </span>
-            .
+            Tasarımlarla <span className="underline decoration-[#059669] dark:decoration-[#10b981]">Güçlendirin</span>.
           </motion.h1>
 
           <motion.p
@@ -66,7 +62,7 @@ const Hero = () => {
           >
             <a
               href="#iletisim"
-              className="inline-block px-6 py-3 sm:px-10 sm:py-3 md:px-14 md:py-4 border-2 border-[#0f172a] dark:border-[#e0f2f1] rounded-full font-semibold text-[#0f172a] dark:text-[#e0f2f1] hover:bg-[#fb923c] hover:text-white dark:hover:bg-[#fb923c] dark:hover:text-[#1a1f1c] transition duration-300 ease-in-out text-sm sm:text-base font-inter"
+              className="inline-block px-6 py-3 sm:px-10 sm:py-3 md:px-14 md:py-4 border-2 border-[#0f172a] dark:border-[#e0f2f1] rounded-full font-semibold text-[#0f172a] dark:text-[#e0f2f1] hover:bg-[#10b981] hover:text-white dark:hover:bg-[#10b981] dark:hover:text-[#1a1f1c] transition duration-300 ease-in-out text-sm sm:text-base font-inter"
             >
               Hemen Başla
             </a>
@@ -80,7 +76,7 @@ const Hero = () => {
           <img
             src={hero}
             alt="ENBAYTECH"
-            className="rounded-3xl shadow-2xl border-4 border-[#f97316] dark:border-[#fb923c] hover:shadow-[#f97316] dark:hover:shadow-[#fb923c] transition-shadow duration-500"
+            className="rounded-3xl shadow-2xl border-4 border-[#059669] dark:border-[#10b981] hover:shadow-[#059669] dark:hover:shadow-[#10b981] transition-shadow duration-500"
           />
         </motion.div>
       </motion.div>
