@@ -1,87 +1,103 @@
-import React from "react";
-import hero from "../assets/hero.png";
 import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { heroData } from "../data/HeroData";
 
-const containerVariants = {
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 0.3,
-    },
-  },
-};
-
-const textVariants = {
-  hidden: { opacity: 0, y: 30 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
-};
-
-const imageVariants = {
-  hidden: { opacity: 0, scale: 0.8 },
-  show: { opacity: 1, scale: 1, transition: { duration: 1, ease: "easeOut" } },
-};
-
-const Hero = () => {
+const ShuffleHero = () => {
+  const textVariants = {
+    hidden: { opacity: 0, y: 30 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+  };
   return (
-    <section
-      id="hero"
-      className="relative bg-white dark:bg-[#1a1f1c] py-0 md:py-24"
-    >
-      <motion.div
-        className="container mx-auto flex flex-col-reverse lg:flex-row items-center gap-16"
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.3 }}
-      >
-        <motion.div
-          className="lg:w-1/2 max-w-xl text-center lg:text-left"
+    <section className="container w-full py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 mx-auto">
+      <motion.div>
+        <motion.h1
+          className="text-[#0f172a] dark:text-[#e0f2f1] text-5xl md:text-6xl font-extrabold font-roboto leading-tight tracking-tight"
           variants={textVariants}
         >
-          <motion.h1
-            className="text-[#0f172a] dark:text-[#e0f2f1] text-5xl md:text-6xl font-extrabold font-roboto leading-tight tracking-tight"
-            variants={textVariants}
-          >
-            Dijital Varlığınızı <br />
-            <span className="text-[#059669] dark:text-[#10b981]">Profesyonel</span>{" "}
-            <br />
-            Tasarımlarla <span className="underline decoration-[#059669] dark:decoration-[#10b981]">Güçlendirin</span>.
-          </motion.h1>
+          Dijital Varlığınızı <br />
+          <span className="text-[#059669] dark:text-[#10b981]">Profesyonel</span>{" "}
+          <br />
+          Tasarımlarla <span className="underline decoration-[#059669] dark:decoration-[#10b981]">Güçlendirin</span>.
+        </motion.h1>
 
-          <motion.p
-            className="mt-6 text-lg md:text-xl font-poppins leading-relaxed text-[#0f172a] dark:text-[#e0f2f1]"
-            variants={textVariants}
-          >
-            İşletmenize özel web çözümleri ve etkileyici marka kimlikleri ile <br />
-            hedef kitleniz üzerinde kalıcı izler bırakın.
-          </motion.p>
-
-          <motion.div
-            className="mt-10 flex justify-center sm:justify-start"
-            variants={textVariants}
-          >
-            <a
-              href="#iletisim"
-              className="inline-block px-6 py-3 sm:px-10 sm:py-3 md:px-14 md:py-4 border-2 border-[#0f172a] dark:border-[#e0f2f1] rounded-full font-semibold text-[#0f172a] dark:text-[#e0f2f1] hover:bg-[#10b981] hover:text-white dark:hover:bg-[#10b981] dark:hover:text-[#1a1f1c] transition duration-300 ease-in-out text-sm sm:text-base font-inter"
-            >
-              Hemen Başla
-            </a>
-          </motion.div>
-        </motion.div>
+        <motion.p
+          className="mt-6 text-lg md:text-xl font-poppins leading-relaxed text-[#0f172a] dark:text-[#e0f2f1]"
+          variants={textVariants}
+        >
+          İşletmenize özel web çözümleri ve etkileyici marka kimlikleri ile <br />
+          hedef kitleniz üzerinde kalıcı izler bırakın.
+        </motion.p>
 
         <motion.div
-          className="lg:w-1/2 max-w-xs sm:max-w-md md:max-w-xl mx-auto flex justify-center"
-          variants={imageVariants}
+          className="mt-10 flex justify-center sm:justify-start"
+          variants={textVariants}
         >
-          <img
-            src={hero}
-            alt="ENBAYTECH"
-            className="rounded-3xl shadow-2xl border-4 border-[#059669] dark:border-[#10b981] hover:shadow-[#059669] dark:hover:shadow-[#10b981] transition-shadow duration-500"
-          />
+          <a
+            href="#iletisim"
+            className="inline-block px-6 py-3 sm:px-10 sm:py-3 md:px-14 md:py-4 border-2 border-[#0f172a] dark:border-[#e0f2f1] rounded-full font-semibold text-[#0f172a] dark:text-[#e0f2f1] hover:bg-[#10b981] hover:text-white dark:hover:bg-[#10b981] dark:hover:text-[#1a1f1c] transition duration-300 ease-in-out text-sm sm:text-base font-inter"
+          >
+            Hemen Başla
+          </a>
         </motion.div>
-      </motion.div>
-    </section>
+      </motion.div >
+      <ShuffleGrid />
+    </section >
   );
 };
 
-export default Hero;
+const shuffle = (array) => {
+  let currentIndex = array.length,
+    randomIndex;
+
+  while (currentIndex != 0) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex],
+      array[currentIndex],
+    ];
+  }
+
+  return array;
+};
+
+const generateSquares = () => {
+  return shuffle(heroData).map((sq) => (
+    <motion.div
+      key={sq.id}
+      layout
+      transition={{ duration: 1.5, type: "spring" }}
+      className="w-full h-full"
+      style={{
+        backgroundImage: `url(${sq.src})`,
+        backgroundSize: "cover",
+      }}
+    ></motion.div>
+  ));
+};
+
+const ShuffleGrid = () => {
+  const timeoutRef = useRef(null);
+  const [squares, setSquares] = useState(generateSquares());
+
+  useEffect(() => {
+    shuffleSquares();
+
+    return () => clearTimeout(timeoutRef.current);
+  }, []);
+
+  const shuffleSquares = () => {
+    setSquares(generateSquares());
+
+    timeoutRef.current = setTimeout(shuffleSquares, 3000);
+  };
+
+  return (
+    <div className="grid grid-cols-4 grid-rows-4 h-[450px] gap-1">
+      {squares.map((sq) => sq)}
+    </div>
+  );
+};
+
+export default ShuffleHero;

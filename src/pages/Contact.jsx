@@ -8,7 +8,7 @@ const ContactSection = () => {
     return (
         <section
             id="contact"
-            className="container bg-white dark:bg-[#1a1f1c] py-12 text-color1"
+            className="container bg-white dark:bg-[#1a1f1c] py-16 text-color1"
         >
             <div data-aos="zoom-in" className="max-w-4xl mx-auto">
                 <div className="text-center mb-10">

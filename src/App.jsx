@@ -7,6 +7,7 @@ import Footer from "./components/Footer/Footer";
 import { RiWhatsappFill } from "react-icons/ri";
 import { AboutSection } from "./pages/AboutSection";
 import NavbarUp from "./components/Navbar/NavbarUp";
+import { DrawCircleText } from "./pages/CTAPage";
 
 const Hero = lazy(() => import("./pages/Hero"));
 const Services = lazy(() => import("./pages/Services/Services"));
@@ -84,6 +85,7 @@ const App = () => {
                 <Hero />
                 <Services />
                 <AboutSection />
+                <DrawCircleText />
                 <Contact />
               </>
             }
