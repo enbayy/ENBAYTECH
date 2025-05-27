@@ -48,13 +48,13 @@ const templates = [
 
 const Templates = () => {
     return (
-        <section className="bg-white py-16 px-4 md:px-20">
+        <section className="bg-white dark:bg-[#1a1f1c] py-16 px-4 md:px-20">
             <h2 className="text-4xl font-bold text-center mb-12 font-inter">ÇALIŞMALARIMIZ</h2>
             <div className="grid gap-0 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                 {templates.map((template) => (
                     <div
                         key={template.id}
-                        className="bg-white rounded-2xl overflow-hidden duration-300 flex flex-col aspect-[9/16] w-full max-w-sm mx-auto"
+                        className="bg-white dark:bg-[#1a1f1c] rounded-2xl overflow-hidden duration-300 flex flex-col aspect-[9/16] w-full max-w-sm mx-auto"
                         data-aos="flip-left"
                     >
                         <img
@@ -64,7 +64,7 @@ const Templates = () => {
                         />
                         <div className="p-4 flex-grow">
                             <h3 className="text-lg font-semibold mb-2 font-inter">{template.title}</h3>
-                            <p className="text-gray-600 text-sm font-poppins">{template.description}</p>
+                            <p className="text-gray-600 dark:text-white text-sm font-poppins">{template.description}</p>
                         </div>
                     </div>
                 ))}
