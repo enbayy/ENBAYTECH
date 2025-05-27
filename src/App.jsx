@@ -8,6 +8,7 @@ import { RiWhatsappFill } from "react-icons/ri";
 import { AboutSection } from "./pages/AboutSection";
 import NavbarUp from "./components/Navbar/NavbarUp";
 import { DrawCircleText } from "./pages/CTAPage";
+import Templates from "./pages/Templates";
 
 const Hero = lazy(() => import("./pages/Hero"));
 const Services = lazy(() => import("./pages/Services/Services"));
@@ -83,6 +84,7 @@ const App = () => {
             element={
               <>
                 <Hero />
+                <Templates />
                 <Services />
                 <AboutSection />
                 <Contact />
