@@ -64,7 +64,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className="bg-[#f0fdf4] dark:bg-[#1a1f1c] dark:text-white text-black overflow-x-hidden">
+    <div className="bg-white dark:bg-[#1a1f1c] dark:text-white text-black overflow-x-hidden">
       <ScrollToTop />
       <NavbarUp />
       <Navbar />
@@ -103,9 +103,8 @@ const App = () => {
       </Suspense>
 
       <Footer />
-
       <a
-        href="https://wa.me/905522312086"
+        href="https://wa.me/905522312086?text=Merhaba%2C%20web%20siteniz%20üzerinden%20sizinle%20iletişime%20geçiyorum.%20Bilgi%20alabilir%20miyim%3F"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-3 right-3 z-50 flex flex-col items-center space-y-2 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full"

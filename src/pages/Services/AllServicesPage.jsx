@@ -4,12 +4,12 @@ import { services } from "../../data/ServicesData";
 import { motion } from "framer-motion";
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 30 },
   visible: (i) => ({
     opacity: 1,
     y: 0,
     transition: {
-      delay: i * 0.15,
+      delay: i * 0.1,
       duration: 0.5,
       ease: "easeOut",
     },
@@ -26,19 +26,19 @@ const AllServices = () => {
   return (
     <section
       id="all-services"
-      className="bg-[#f0fdf4] dark:bg-[#1a1f1c] py-12 px-4"
+      className="container bg-white dark:bg-[#1a1f1c] py-20"
     >
-      <div className="container mx-auto">
+      <div className="mx-auto">
         <div className="text-center mb-16">
           <motion.h1
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className="text-3xl md:text-4xl font-bold text-[#0f172a] dark:text-white font-inter"
+            className="text-4xl md:text-5xl font-bold text-[#0f172a] dark:text-white font-inter"
           >
             TÜM HİZMETLERİMİZ
           </motion.h1>
-          <p className="mt-4 text-base text-gray-600 dark:text-gray-400 mx-auto font-poppins">
+          <p className="mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto font-poppins">
             Ajansımızın sunduğu tüm dijital çözümlerle tanışın.
           </p>
         </div>
@@ -52,21 +52,23 @@ const AllServices = () => {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={cardVariants}
-              className="bg-[#f0fdf4] dark:bg-[#1a1f1c] border border-gray-200 dark:border-gray-700 rounded-2xl p-6 shadow-md hover:shadow-lg shadow-gray-700 hover:-translate-y-1 transition duration-300 cursor-pointer"
+              className="group bg-gradient-to-br from-white to-gray-50 dark:from-[#1a1f1c] dark:to-[#111411] border border-gray-200 dark:border-gray-700 rounded-3xl p-8 shadow-lg hover:shadow-xl transition-transform duration-300 hover:-translate-y-2 cursor-pointer"
               onClick={() => handleDetailClick(service.id)}
             >
-              <div className="flex items-center gap-4 mb-4">
-                <div className="bg-[#ecfdf5] dark:bg-[#065f46] p-3 rounded-full">
-                  {service.icon}
+              <div className="flex items-center gap-4 mb-6">
+                <div className="bg-gradient-to-tr from-[#d1fae5] to-[#10b981] dark:from-[#065f46] dark:to-[#10b981] p-4 rounded-full shadow-md transition-transform duration-300 group-hover:scale-105">
+                  <span className="text-2xl text-[#065f46] dark:text-white">
+                    {service.icon}
+                  </span>
                 </div>
-                <h2 className="text-xl font-semibold text-gray-900 dark:text-white font-inter">
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white font-inter">
                   {service.title}
                 </h2>
               </div>
-              <h3 className="text-sm text-gray-500 dark:text-gray-400 mb-2 font-medium">
+              <h3 className="text-md text-gray-500 dark:text-gray-400 mb-3 font-semibold font-poppins uppercase tracking-wide">
                 {service.name}
               </h3>
-              <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed font-poppins line-clamp-5">
+              <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed font-poppins line-clamp-5">
                 {service.description}
               </p>
             </motion.div>
