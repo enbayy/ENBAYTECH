@@ -49,7 +49,7 @@ const templates = [
 const Templates = () => {
     return (
         <section className="bg-white py-16 px-4 md:px-20">
-            <h2 className="text-4xl font-bold text-center mb-12">Hazır Web Site Şablonları</h2>
+            <h2 className="text-4xl font-bold text-center mb-12 font-inter">ÇALIŞMALARIMIZ</h2>
             <div className="grid gap-0 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                 {templates.map((template) => (
                     <div
