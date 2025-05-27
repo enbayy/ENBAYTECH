@@ -27,7 +27,7 @@ const Footer = () => {
 
                         <div className="flex space-x-6">
                             <a
-                                href="https://www.linkedin.com/in/enbayar"
+                                href="https://www.linkedin.com/in/enesbayarr/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-gray-700 dark:text-gray-300 hover:text-[#10b981] dark:hover:text-[#10b981] transition-colors duration-300"
@@ -45,7 +45,7 @@ const Footer = () => {
                                 <FaGithub size={28} />
                             </a>
                             <a
-                                href="https://www.instagram.com/enbayar"
+                                href="https://www.instagram.com/enesbayaar/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-gray-700 dark:text-gray-300 hover:text-[#10b981] dark:hover:text-[#10b981] transition-colors duration-300"

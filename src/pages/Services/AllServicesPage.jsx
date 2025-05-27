@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { services } from "../../data/ServicesData";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import "../../index.css";
 
 const AllServices = () => {
   const navigate = useNavigate();
@@ -40,10 +41,12 @@ const AllServices = () => {
               onClick={() => handleDetailClick(service.id)}
             >
               <div className="flex items-center gap-4 mb-6">
-                <div className="bg-gradient-to-tr from-[#d1fae5] to-[#10b981] dark:from-[#065f46] dark:to-[#10b981] p-4 rounded-full shadow-md transition-transform duration-300 group-hover:scale-105">
-                  <span className="text-2xl text-[#065f46] dark:text-white">
-                    {service.icon}
-                  </span>
+                <div className="relative p-[2px] rounded-full bg-gradient-to-tr from-[#10b981] to-[#34d399] group-hover:rotate-45 transition-transform duration-500">
+                  <div className="relative p-[2px] rounded-full bg-gradient-to-tr from-[#10b981] to-[#34d399] group-hover:rotate-45 transition-transform duration-500">
+                    <div className="bg-white dark:bg-[#1a1f1c] p-4 rounded-full slow-spin">
+                      {service.icon}
+                    </div>
+                  </div>
                 </div>
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white font-inter">
                   {service.title}

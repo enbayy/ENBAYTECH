@@ -3,6 +3,7 @@ import { services } from "../../data/ServicesData";
 import { useNavigate } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import "../../index.css"
 
 const Services = () => {
     const navigate = useNavigate();
@@ -36,11 +37,14 @@ const Services = () => {
                             data-aos-delay={index * 200}
                         >
                             <div className="flex items-center gap-4 mb-6">
-                                <div className="bg-gradient-to-tr from-[#d1fae5] to-[#10b981] dark:from-[#065f46] dark:to-[#10b981] p-4 rounded-full shadow-md transition-transform duration-300 group-hover:scale-105">
-                                    <span className="text-2xl text-[#065f46] dark:text-white">
-                                        {service.icon}
-                                    </span>
+                                <div className="relative p-[2px] rounded-full bg-gradient-to-tr from-[#10b981] to-[#34d399] group-hover:rotate-45 transition-transform duration-500">
+                                    <div className="relative p-[2px] rounded-full bg-gradient-to-tr from-[#10b981] to-[#34d399] group-hover:rotate-45 transition-transform duration-500">
+                                        <div className="bg-white dark:bg-[#1a1f1c] p-4 rounded-full slow-spin">
+                                            {service.icon}
+                                        </div>
+                                    </div>
                                 </div>
+
                                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white font-inter">
                                     {service.title}
                                 </h2>
@@ -58,7 +62,7 @@ const Services = () => {
                 <div className="text-center mt-12" data-aos="zoom-in">
                     <button
                         onClick={() => navigate("/hizmetlerimiz")}
-                        className="px-6 py-3 bg-[#10b981] dark:bg-[#059669] text-white text-base font-medium rounded-full hover:scale-105 transition"
+                        className="inline-block px-6 py-3 sm:px-10 sm:py-3 md:px-14 md:py-4 border-2 border-[#0f172a] dark:border-[#e0f2f1] rounded-full font-semibold text-[#0f172a] dark:text-[#e0f2f1] hover:bg-[#10b981] hover:text-white dark:hover:bg-[#10b981] dark:hover:text-[#1a1f1c] transition duration-300 ease-in-out text-sm sm:text-base font-inter"
                     >
                         Tüm Hizmetlerimizi Gör
                     </button>
