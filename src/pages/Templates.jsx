@@ -11,7 +11,7 @@ const Templates = () => {
     return (
         <section className="bg-white dark:bg-[#1a1f1c] py-20 px-4 md:px-20">
             <h2 className="text-4xl font-bold text-center mb-16 font-inter text-gray-800 dark:text-white" data-aos="fade-down">
-                ÇALIŞMALARIMIZ
+                PROJELERİMİZ
             </h2>
             <div className="grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                 {templates.map((template, index) => (
