@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from '@emailjs/browser';
 
 const ContactSection = () => {
-    const handleSubmit = (e) => {
+    const form = useRef();
+
+    const sendEmail = (e) => {
         e.preventDefault();
+
+        emailjs
+            .sendForm('service_0et0z18', 'template_aq1ig3s', form.current, {
+                publicKey: 'jb5JnAoaIUFNs0sVR',
+            })
+            .then(() => {
+                alert('Mesajınız başarıyla gönderildi!');
+                form.current.reset();
+            }, (error) => {
+                alert('Mesaj gönderilemedi. Lütfen tekrar deneyin.');
+                console.log('FAILED...', error.text);
+            });
     };
 
     return (
@@ -18,13 +33,14 @@ const ContactSection = () => {
                     </p>
                 </div>
 
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form ref={form} onSubmit={sendEmail} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label className="text-[#0f172a] dark:text-[#e0f2f1] block mb-2 text-color2 font-medium font-poppins">
                                 Adınız
                             </label>
                             <input
+                                name="user_name"
                                 type="text"
                                 placeholder="Ad Soyad"
                                 className="w-full px-4 py-3 bg-color4 text-color1 rounded-lg outline-none border-2 focus:ring-2 focus:ring-[#10b981]"
@@ -36,6 +52,7 @@ const ContactSection = () => {
                                 E-posta
                             </label>
                             <input
+                                name="user_email"
                                 type="email"
                                 placeholder="ornek@gmail.com"
                                 className="w-full px-4 py-3 bg-color4 text-color1 rounded-lg outline-none border-2 focus:ring-2 focus:ring-[#10b981]"
@@ -49,6 +66,7 @@ const ContactSection = () => {
                             Konu
                         </label>
                         <input
+                            name="subject"
                             type="text"
                             placeholder="Konu başlığı"
                             className="w-full px-4 py-3 bg-color4 text-color1 rounded-lg outline-none border-2 focus:ring-2 focus:ring-[#10b981]"
@@ -61,6 +79,7 @@ const ContactSection = () => {
                             Mesajınız
                         </label>
                         <textarea
+                            name="message"
                             rows="5"
                             placeholder="Mesajınızı buraya yazabilirsiniz..."
                             className="w-full px-4 py-3 bg-color4 text-color1 rounded-lg outline-none border-2 focus:ring-2 focus:ring-[#10b981]"
