@@ -9,7 +9,7 @@ const Templates = () => {
     }, []);
 
     return (
-        <section className="bg-white dark:bg-[#1a1f1c] py-20 px-4 md:px-20">
+        <section className="container bg-white dark:bg-[#1a1f1c] py-20">
             <h2 className="text-4xl font-bold text-center mb-16 font-inter text-gray-800 dark:text-white" data-aos="fade-down">
                 PROJELERİMİZ
             </h2>
