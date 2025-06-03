@@ -1,5 +1,5 @@
 {
-  "name": "ENBAYTECH",
+  "name": "enbaytech",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -13,6 +13,8 @@
     "@emailjs/browser": "^4.4.1",
     "@heroicons/react": "^1.0.6",
     "aos": "^2.3.4",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
     "framer-motion": "^12.14.0",
     "lucide-react": "^0.511.0",
     "react": "^18.2.0",
@@ -36,5 +38,18 @@
     "postcss": "^8.4.32",
     "tailwindcss": "^3.3.6",
     "vite": "^5.0.8"
-  }
+  },
+  "description": "<!---->",
+  "main": "postcss.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enbayy/ENBAYTECH.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/enbayy/ENBAYTECH/issues"
+  },
+  "homepage": "https://github.com/enbayy/ENBAYTECH#readme"
 }

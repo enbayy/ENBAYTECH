@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { FaPhone, FaEnvelope } from 'react-icons/fa';
 
 const NavbarUp = () => {
-    const [visitCount, setVisitCount] = useState(0);
+    const [visitCount, setVisitCount] = useState(null);
 
     useEffect(() => {
-        const storedCount = localStorage.getItem('visitCount');
-        const newCount = storedCount ? parseInt(storedCount) + 1 : 1;
-        setVisitCount(newCount);
-        localStorage.setItem('visitCount', newCount.toString());
+        fetch('http://localhost:5000/api/visit')
+            .then(res => res.json())
+            .then(data => setVisitCount(data.visitCount))
+            .catch(err => console.error('Error fetching visit count:', err));
     }, []);
 
     return (
@@ -34,9 +34,11 @@ const NavbarUp = () => {
                             </a>
                         </div>
                     </div>
-                    <div className="text-sm text-[#0f172a] dark:text-[#e0f2f1] font-medium">
-                        Sayfa Ziyaret Sayısı: {visitCount}
-                    </div>
+                    {visitCount !== null && (
+                        <div className="text-[#0f172a] dark:text-[#e0f2f1] font-semibold">
+                            Ziyaretçi Sayısı: {visitCount}
+                        </div>
+                    )}
                 </div>
             </div>
         </div>
