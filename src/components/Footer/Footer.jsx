@@ -30,7 +30,7 @@ const Footer = () => {
                                 href="https://www.linkedin.com/company/enbaytech"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-700 dark:text-gray-300 hover:text-[#10b981] dark:hover:text-[#10b981] transition-colors duration-300"
+                                className="text-[#0f172a] dark:text-[#e0f2f1] hover:text-[#10b981] dark:hover:text-[#10b981] transition-colors duration-300"
                                 aria-label="LinkedIn"
                             >
                                 <FaLinkedin size={28} />
@@ -39,7 +39,7 @@ const Footer = () => {
                                 href="https://wa.me/905522312086"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-700 dark:text-gray-300 hover:text-[#10b981] dark:hover:text-[#10b981] transition-colors duration-300"
+                                className="text-[#0f172a] dark:text-[#e0f2f1] hover:text-[#10b981] dark:hover:text-[#10b981] transition-colors duration-300"
                                 aria-label="WhatsApp"
                             >
                                 <FaWhatsapp size={28} />
@@ -48,7 +48,7 @@ const Footer = () => {
                                 href="https://www.instagram.com/enesbayaar/"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-700 dark:text-gray-300 hover:text-[#10b981] dark:hover:text-[#10b981] transition-colors duration-300"
+                                className="text-[#0f172a] dark:text-[#e0f2f1] hover:text-[#10b981] dark:hover:text-[#10b981] transition-colors duration-300"
                                 aria-label="Instagram"
                             >
                                 <FaInstagram size={28} />
@@ -68,7 +68,7 @@ const Footer = () => {
                         ].map(service => (
                             <div
                                 key={service.id}
-                                className="flex items-center space-x-2 text-[#392f2f] font-poppins dark:text-[#d4cfce] hover:text-[#10b981] dark:hover:text-[#10b981] transition-colors duration-300"
+                                className="flex items-center space-x-2 text-[#0f172a] dark:text-[#e0f2f1] font-poppins hover:text-[#10b981] dark:hover:text-[#10b981] transition-colors duration-300"
                             >
                                 <IoMdArrowDropright size={20} />
                                 <span className="text-lg">{service.name}</span>
