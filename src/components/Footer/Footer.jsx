@@ -1,6 +1,6 @@
 import React from 'react';
 import { IoMdArrowDropright } from "react-icons/io";
-import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
+import { FaLinkedin, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import logoLight from "../../assets/enbayLogo.png"
 import logoDark from "../../assets/enbayLogo3.png"
 
@@ -27,7 +27,7 @@ const Footer = () => {
 
                         <div className="flex space-x-6">
                             <a
-                                href="https://www.linkedin.com/in/enesbayarr/"
+                                href="https://www.linkedin.com/company/enbaytech"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-gray-700 dark:text-gray-300 hover:text-[#10b981] dark:hover:text-[#10b981] transition-colors duration-300"
@@ -36,13 +36,13 @@ const Footer = () => {
                                 <FaLinkedin size={28} />
                             </a>
                             <a
-                                href="https://github.com/enbayy"
+                                href="https://wa.me/905522312086"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-gray-700 dark:text-gray-300 hover:text-[#10b981] dark:hover:text-[#10b981] transition-colors duration-300"
-                                aria-label="GitHub"
+                                aria-label="WhatsApp"
                             >
-                                <FaGithub size={28} />
+                                <FaWhatsapp size={28} />
                             </a>
                             <a
                                 href="https://www.instagram.com/enesbayaar/"

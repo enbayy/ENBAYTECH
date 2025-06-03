@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaPhone, FaEnvelope } from 'react-icons/fa';
 
 const NavbarUp = () => {
+    const [visitCount, setVisitCount] = useState(0);
+
+    useEffect(() => {
+        const storedCount = localStorage.getItem('visitCount');
+        const newCount = storedCount ? parseInt(storedCount) + 1 : 1;
+        setVisitCount(newCount);
+        localStorage.setItem('visitCount', newCount.toString());
+    }, []);
+
     return (
         <div className="bg-white dark:bg-[#1a1f1c] flex items-center justify-center py-1">
             <div className="container mx-auto px-4 py-2 max-w-screen-lg">
@@ -24,6 +33,9 @@ const NavbarUp = () => {
                                 info@enbaytech.com
                             </a>
                         </div>
+                    </div>
+                    <div className="text-sm text-[#0f172a] dark:text-[#e0f2f1] font-medium">
+                        Sayfa Ziyaret Sayısı: {visitCount}
                     </div>
                 </div>
             </div>
