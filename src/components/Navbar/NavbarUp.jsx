@@ -1,20 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { FaPhone, FaEnvelope } from 'react-icons/fa';
 
 const NavbarUp = () => {
-    const [visitCount, setVisitCount] = useState(null);
-
-    useEffect(() => {
-        fetch('http://localhost:5000/api/visit')
-            .then(res => res.json())
-            .then(data => setVisitCount(data.visitCount))
-            .catch(err => console.error('Error fetching visit count:', err));
-    }, []);
-
     return (
         <div className="bg-white dark:bg-[#1a1f1c] flex items-center justify-center py-1">
             <div className="container mx-auto px-4 py-2 max-w-screen-lg">
-                <div className="flex flex-col items-center justify-center gap-4 md:flex-row md:justify-around md:items-center">
+                <div className="flex flex-wrap justify-center md:justify-around items-center gap-4 md:gap-8">
                     <div className="flex items-center gap-2 md:gap-2">
                         <FaPhone size={20} className="text-[#059669] dark:text-[#10b981]" />
                         <div className="flex gap-2 flex-wrap">
@@ -34,11 +25,6 @@ const NavbarUp = () => {
                             </a>
                         </div>
                     </div>
-                    {visitCount !== null && (
-                        <div className="text-[#0f172a] dark:text-[#e0f2f1] font-poppins text-xs">
-                            Ziyaret Sayısı: {visitCount}
-                        </div>
-                    )}
                 </div>
             </div>
         </div>
