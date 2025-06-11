@@ -5,9 +5,12 @@ import App from "./App.jsx";
 import "./index.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-    <HashRouter>
+  <HashRouter>
+    <ParallaxProvider>
       <App />
-    </HashRouter>
+    </ParallaxProvider>
+  </HashRouter>
 );
