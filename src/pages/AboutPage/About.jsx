@@ -111,7 +111,7 @@ const About = () => {
                         {services.map((service, idx) => (
                             <div
                                 key={service.id}
-                                className="bg-white dark:bg-[#213b29] rounded-xl p-6 shadow-md hover:shadow-xl transition-shadow cursor-pointer"
+                                className="bg-white dark:bg-[#213b29] rounded-xl p-6 shadow-md transition-shadow"
                                 data-aos="fade-up"
                                 data-aos-delay={idx * 150}
                             >
@@ -129,7 +129,7 @@ const About = () => {
                 <div className="mt-20" data-aos="zoom-in">
                     <button
                         onClick={handleContactClick}
-                        className="bg-gradient-to-r from-green-500 to-green-700 text-white text-lg font-semibold px-10 py-3 rounded-full shadow-lg hover:from-green-600 hover:to-green-800 transition transform hover:scale-105"
+                        className="inline-block px-6 py-3 sm:px-10 sm:py-3 md:px-14 md:py-4 border-2 border-[#0f172a] dark:border-[#e0f2f1] rounded-full font-semibold text-[#0f172a] dark:text-[#e0f2f1] hover:bg-[#10b981] hover:text-white dark:hover:bg-[#10b981] dark:hover:text-[#1a1f1c] transition duration-300 ease-in-out text-sm sm:text-base font-inter"
                     >
                         İletişime Geç
                     </button>

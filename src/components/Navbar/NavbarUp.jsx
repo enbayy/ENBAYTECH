@@ -12,9 +12,14 @@ const NavbarUp = () => {
                             <p className="text-[#0f172a] dark:text-[#e0f2f1] font-semibold font-poppins">
                                 TELEFON:
                             </p>
-                            <p className="text-[#0f172a] dark:text-[#e0f2f1] font-semibold font-poppins">
+                            <a
+                                href="https://wa.me/905522312086"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-[#0f172a] dark:text-[#e0f2f1] font-semibold font-poppins hover:underline"
+                            >
                                 0552 231 2086
-                            </p>
+                            </a>
                         </div>
                     </div>
                     <div className="flex items-center gap-2 md:gap-2">
@@ -23,12 +28,11 @@ const NavbarUp = () => {
                             <p className="text-[#0f172a] dark:text-[#e0f2f1] font-semibold font-poppins">
                                 E-MAİL:
                             </p>
-                            <a
-                                href="mailto:1enesbayar@gmail.com"
-                                className="text-[#0f172a] dark:text-[#e0f2f1] hover:underline font-semibold font-poppins"
+                            <p
+                                className="text-[#0f172a] dark:text-[#e0f2f1] font-semibold font-poppins"
                             >
                                 info@enbaytech.com
-                            </a>
+                            </p>
                         </div>
                     </div>
                 </div>

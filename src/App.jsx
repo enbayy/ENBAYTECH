@@ -4,7 +4,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
-import { RiWhatsappFill } from "react-icons/ri";
 import NavbarUp from "./components/Navbar/NavbarUp";
 import Templates from "./pages/Templates";
 import ParallaxSection from "./components/Parallax/parallax";
@@ -103,14 +102,6 @@ const App = () => {
         </Routes>
       </Suspense>
       <Footer />
-      <a
-        href="https://wa.me/905522312086?text=Merhaba%2C%20web%20siteniz%20üzerinden%20sizinle%20iletişime%20geçiyorum.%20Bilgi%20alabilir%20miyim%3F"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-3 right-3 z-50 flex flex-col items-center space-y-2 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full"
-      >
-        <RiWhatsappFill size={25} />
-      </a>
     </div>
   );
 };
