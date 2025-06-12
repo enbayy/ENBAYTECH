@@ -17,22 +17,22 @@ const Templates = () => {
                 {templates.map((template, index) => (
                     <div
                         key={template.id}
-                        className="bg-gradient-to-br from-white to-gray-50 dark:from-[#1a1f1c] dark:to-[#111411] border border-gray-200 dark:border-gray-700 rounded-3xl overflow-hidden transform hover:-translate-y-2 transition-all duration-300 max-w-sm mx-auto"
+                        className="bg-gradient-to-br from-white to-gray-50 dark:from-[#1a1f1c] dark:to-[#111411] border border-gray-200 dark:border-gray-700 rounded-3xl overflow-hidden transform hover:-translate-y-2 transition-all duration-300 max-w-[280px] mx-auto sm:max-w-sm"
                         data-aos="zoom-in-up"
                         data-aos-delay={index * 150}
                     >
-                        <div className="w-full h-72">
+                        <div className="w-full h-56 sm:h-72">
                             <img
                                 src={template.imageUrl}
                                 alt={template.title}
                                 className="w-full h-full object-cover"
                             />
                         </div>
-                        <div className="p-6">
-                            <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white font-inter">
+                        <div className="p-4 sm:p-6">
+                            <h3 className="text-lg sm:text-xl font-bold mb-1 sm:mb-2 text-gray-900 dark:text-white font-inter">
                                 {template.title}
                             </h3>
-                            <p className="text-gray-600 dark:text-gray-300 text-sm font-poppins leading-relaxed">
+                            <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm font-poppins leading-relaxed">
                                 {template.description}
                             </p>
                         </div>
