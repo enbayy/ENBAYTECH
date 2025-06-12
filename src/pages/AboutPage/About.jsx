@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { services } from "../data/ServicesData";
-import logoLight from "../assets/enbayLogo.png";
-import logoDark from "../assets/enbayLogo3.png";
+import logoLight from "../../assets/enbayLogo.png";
+import logoDark from "../../assets/enbayLogo3.png";
+import { services } from "../../data/ServicesData";
 
 const About = () => {
     const navigate = useNavigate();

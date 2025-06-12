@@ -11,7 +11,7 @@ import ParallaxSection from "./components/Parallax/parallax";
 
 const Hero = lazy(() => import("./pages/Hero"));
 const Services = lazy(() => import("./pages/Services/Services"));
-const About = lazy(() => import("./pages/About"));
+const About = lazy(() => import("./pages/AboutPage/About.jsx"));
 const Contact = lazy(() => import("./pages/Contact"));
 const AllServices = lazy(() => import("./pages/Services/AllServicesPage"));
 
