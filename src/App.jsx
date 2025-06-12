@@ -5,9 +5,7 @@ import "aos/dist/aos.css";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import { RiWhatsappFill } from "react-icons/ri";
-import { AboutSection } from "./pages/AboutSection";
 import NavbarUp from "./components/Navbar/NavbarUp";
-import { DrawCircleText } from "./pages/CTAPage";
 import Templates from "./pages/Templates";
 import ParallaxSection from "./components/parallax";
 
@@ -77,7 +75,6 @@ const App = () => {
           style={{ width: `${scrollPercentage}%` }}
         />
       </div>
-
       <Suspense fallback={<Loading />}>
         <Routes>
           <Route
@@ -88,7 +85,6 @@ const App = () => {
                 <Templates />
                 <Services />
                 <ParallaxSection />
-                <AboutSection />
                 <Contact />
               </>
             }
@@ -106,7 +102,6 @@ const App = () => {
           <Route path="/iletisim" element={<Contact />} />
         </Routes>
       </Suspense>
-
       <Footer />
       <a
         href="https://wa.me/905522312086?text=Merhaba%2C%20web%20siteniz%20üzerinden%20sizinle%20iletişime%20geçiyorum.%20Bilgi%20alabilir%20miyim%3F"
