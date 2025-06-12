@@ -17,7 +17,7 @@ const Templates = () => {
                 {templates.map((template, index) => (
                     <div
                         key={template.id}
-                        className="bg-gradient-to-br from-white to-gray-50 dark:from-[#1a1f1c] dark:to-[#111411] border border-gray-200 dark:border-gray-700 rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 max-w-sm mx-auto"
+                        className="bg-gradient-to-br from-white to-gray-50 dark:from-[#1a1f1c] dark:to-[#111411] border border-gray-200 dark:border-gray-700 rounded-3xl overflow-hidden transform hover:-translate-y-2 transition-all duration-300 max-w-sm mx-auto"
                         data-aos="zoom-in-up"
                         data-aos-delay={index * 150}
                     >

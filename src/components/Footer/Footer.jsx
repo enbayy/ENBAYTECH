@@ -3,6 +3,7 @@ import { IoMdArrowDropright } from "react-icons/io";
 import { FaLinkedin, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import logoLight from "../../assets/enbayLogo.png"
 import logoDark from "../../assets/enbayLogo3.png"
+import VisitsCounter from "../VisitCounter";
 
 const Footer = () => {
     return (
@@ -53,6 +54,11 @@ const Footer = () => {
                             >
                                 <FaInstagram size={28} />
                             </a>
+                        </div>
+                        <div className="text-center mb-4">
+                            <p className="text-[#0f172a] dark:text-[#e0f2f1] text-sm font-poppins font-medium">
+                                <VisitsCounter />
+                            </p>
                         </div>
                     </div>
 

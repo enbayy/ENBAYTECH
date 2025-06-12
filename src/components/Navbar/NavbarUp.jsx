@@ -1,6 +1,5 @@
 import React from "react";
 import { FaPhone, FaEnvelope } from "react-icons/fa";
-import VisitsCounter from "../VisitCounter";
 
 const NavbarUp = () => {
     return (
@@ -31,10 +30,6 @@ const NavbarUp = () => {
                                 info@enbaytech.com
                             </a>
                         </div>
-                    </div>
-
-                    <div className="text-[#0f172a] dark:text-[#e0f2f1] font-medium">
-                        <VisitsCounter />
                     </div>
                 </div>
             </div>
