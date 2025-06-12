@@ -43,7 +43,7 @@ const ContactSection = () => {
                                 name="user_name"
                                 type="text"
                                 placeholder="Ad Soyad"
-                                className="w-full px-4 py-3 bg-color4 text-color1 rounded-lg outline-none border-2 focus:ring-2 focus:ring-[#10b981]"
+                                className="w-full px-4 py-3 bg-color4 text-color1 rounded-lg outline-none border-2 focus:ring-2 focus:ring-[#10b981] font-inter"
                                 required
                             />
                         </div>
@@ -55,7 +55,7 @@ const ContactSection = () => {
                                 name="user_email"
                                 type="email"
                                 placeholder="ornek@gmail.com"
-                                className="w-full px-4 py-3 bg-color4 text-color1 rounded-lg outline-none border-2 focus:ring-2 focus:ring-[#10b981]"
+                                className="w-full px-4 py-3 bg-color4 text-color1 rounded-lg outline-none border-2 focus:ring-2 focus:ring-[#10b981] font-inter"
                                 required
                             />
                         </div>
@@ -69,7 +69,7 @@ const ContactSection = () => {
                             name="subject"
                             type="text"
                             placeholder="Konu başlığı"
-                            className="w-full px-4 py-3 bg-color4 text-color1 rounded-lg outline-none border-2 focus:ring-2 focus:ring-[#10b981]"
+                            className="w-full px-4 py-3 bg-color4 text-color1 rounded-lg outline-none border-2 focus:ring-2 focus:ring-[#10b981] font-inter"
                             required
                         />
                     </div>
@@ -82,7 +82,7 @@ const ContactSection = () => {
                             name="message"
                             rows="5"
                             placeholder="Mesajınızı buraya yazabilirsiniz..."
-                            className="w-full px-4 py-3 bg-color4 text-color1 rounded-lg outline-none border-2 focus:ring-2 focus:ring-[#10b981]"
+                            className="w-full px-4 py-3 bg-color4 text-color1 rounded-lg outline-none border-2 focus:ring-2 focus:ring-[#10b981] font-inter"
                             required
                         ></textarea>
                     </div>
