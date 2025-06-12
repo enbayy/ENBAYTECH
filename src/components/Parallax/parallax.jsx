@@ -1,8 +1,8 @@
 import { ParallaxBanner } from "react-scroll-parallax";
 import "./ParallaxSection.css";
-import logo from "../assets/enbayLogo.png";
+import logo from "../../assets/enbayLogo.png";
 import { useNavigate } from "react-router-dom";
-import foto from "../assets/foto1.jpg"
+import foto from "../../assets/foto1.jpg"
 
 const ParallaxSection = () => {
     const navigate = useNavigate();

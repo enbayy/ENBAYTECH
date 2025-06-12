@@ -3,7 +3,7 @@ import { IoMdArrowDropright } from "react-icons/io";
 import { FaLinkedin, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import logoLight from "../../assets/enbayLogo.png"
 import logoDark from "../../assets/enbayLogo3.png"
-import VisitsCounter from "../VisitCounter";
+import VisitsCounter from "./VisitCounter.jsx";
 
 const Footer = () => {
     return (
