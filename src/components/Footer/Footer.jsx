@@ -56,9 +56,9 @@ const Footer = () => {
                             </a>
                         </div>
                         <div className="text-center mb-4">
-                            <p className="text-[#0f172a] dark:text-[#e0f2f1] text-sm font-poppins font-medium">
+                            <div className="text-[#0f172a] dark:text-[#e0f2f1] text-sm font-poppins font-medium">
                                 <VisitsCounter />
-                            </p>
+                            </div>
                         </div>
                     </div>
 

@@ -7,7 +7,7 @@ import Footer from "./components/Footer/Footer";
 import { RiWhatsappFill } from "react-icons/ri";
 import NavbarUp from "./components/Navbar/NavbarUp";
 import Templates from "./pages/Templates";
-import ParallaxSection from "./components/parallax";
+import ParallaxSection from "./components/parallax.jsx";
 
 const Hero = lazy(() => import("./pages/Hero"));
 const Services = lazy(() => import("./pages/Services/Services"));
