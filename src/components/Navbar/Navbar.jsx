@@ -5,6 +5,7 @@ import DarkMode from "./DarkMode";
 import { Link, useLocation } from "react-router-dom";
 import logoLight from "../../assets/enbayLogo.png";
 import logoDark from "../../assets/enbayLogo3.png";
+import TrueFocus from "../Effects/TrueFocus";
 
 export const MenuLinks = [
   { id: 1, name: "ANASAYFA", link: "/" },
@@ -35,12 +36,14 @@ const Navbar = () => {
             alt="logo dark"
             className="h-16 w-16 hidden dark:block"
           />
-          <Link
-            to="/"
-            className="text-[#0f172a] dark:text-[#e0f2f1] text-2xl md:text-3xl font-bold tracking-wide font-roboto"
-          >
-            ENBAYTECH
-          </Link>
+          <TrueFocus
+            sentence="ENBAYTECH"
+            manualMode={false}
+            blurAmount={5}
+            borderColor="#059669"
+            animationDuration={0.4}
+            pauseBetweenAnimations={0.1}
+          />
         </div>
 
         <nav className="hidden lg:flex justify-center flex-1">

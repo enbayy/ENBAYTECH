@@ -5,6 +5,7 @@ import "aos/dist/aos.css";
 import logoLight from "../../assets/enbayLogo.png";
 import logoDark from "../../assets/enbayLogo3.png";
 import { services } from "../../data/ServicesData";
+import FuzzyText from "../../components/Effects/FuzzyText";
 
 const About = () => {
     const navigate = useNavigate();
@@ -34,9 +35,17 @@ const About = () => {
                         alt="logo dark"
                         className="h-32 w-32 hidden dark:block"
                     />
-                    <h1 className="text-6xl font-extrabold text-[#059669] dark:text-[#a3d9b1] tracking-tight font-inter">
+                    <FuzzyText
+                        fontSize="clamp(3rem, 6vw, 3rem)"
+                        fontWeight={800}
+                        fontFamily="Poppins, sans-serif"
+                        color="#059669"
+                        enableHover={true}
+                        baseIntensity={0.1}
+                        hoverIntensity={0.3}
+                    >
                         ENBAYTECH
-                    </h1>
+                    </FuzzyText>
                     <p className="mt-4 text-gray-700 dark:text-gray-300 text-lg max-w-xl leading-relaxed font-poppins">
                         Yenilikçi, güvenilir ve sürdürülebilir dijital çözümlerle markanızı geleceğe taşıyoruz.
                     </p>
