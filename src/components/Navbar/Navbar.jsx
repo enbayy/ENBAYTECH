@@ -22,7 +22,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="container relative bg-white dark:bg-[#1a1f1c] z-50">
+    <header className="container relative z-50">
       <div className="mx-auto py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <img
