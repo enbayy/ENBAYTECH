@@ -1,20 +1,13 @@
 import React, { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import { services } from "../../data/ServicesData";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../../index.css";
 
 const AllServices = () => {
-  const navigate = useNavigate();
-
   useEffect(() => {
     AOS.init({ once: true, duration: 800 });
   }, []);
-
-  const handleDetailClick = (id) => {
-    navigate(`/hizmetler/${id}`);
-  };
 
   return (
     <section
@@ -35,10 +28,9 @@ const AllServices = () => {
           {services.map((service, index) => (
             <div
               key={service.id}
-              className="group bg-gradient-to-br from-white to-gray-50 dark:from-[#1a1f1c] dark:to-[#111411] border border-gray-200 dark:border-gray-700 rounded-3xl p-8 shadow-lg hover:shadow-xl transition-transform duration-300 hover:-translate-y-2 cursor-pointer"
+              className="group bg-gradient-to-br from-white to-gray-50 dark:from-[#1a1f1c] dark:to-[#111411] border border-gray-200 dark:border-gray-700 rounded-3xl p-8 hover:shadow-xl transition-transform duration-300 hover:-translate-y-2"
               data-aos="flip-left"
               data-aos-delay={index * 200}
-              onClick={() => handleDetailClick(service.id)}
             >
               <div className="flex items-center gap-4 mb-6">
                 <div className="relative p-[2px] rounded-full bg-gradient-to-tr from-[#10b981] to-[#34d399] group-hover:rotate-45 transition-transform duration-500">

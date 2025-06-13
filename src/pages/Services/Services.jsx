@@ -32,7 +32,7 @@ const Services = () => {
                     {firstSixServices.map((service, index) => (
                         <div
                             key={service.id}
-                            className="group bg-gradient-to-br from-white to-gray-50 dark:from-[#1a1f1c] dark:to-[#111411] border border-gray-200 dark:border-gray-700 rounded-3xl p-8 shadow-lg hover:shadow-xl transition-transform duration-300 hover:-translate-y-2"
+                            className="group bg-gradient-to-br from-white to-gray-50 dark:from-[#1a1f1c] dark:to-[#111411] border border-gray-200 dark:border-gray-700 rounded-3xl p-8  hover:shadow-xl transition-transform duration-300 hover:-translate-y-2"
                             data-aos="flip-left"
                             data-aos-delay={index * 200}
                         >
