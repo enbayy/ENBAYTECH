@@ -5,7 +5,6 @@ import "aos/dist/aos.css";
 import logoLight from "../../assets/enbayLogo.png";
 import logoDark from "../../assets/enbayLogo3.png";
 import { services } from "../../data/ServicesData";
-import FuzzyText from "../../components/Effects/FuzzyText";
 
 const About = () => {
     const navigate = useNavigate();
@@ -35,17 +34,9 @@ const About = () => {
                         alt="logo dark"
                         className="h-32 w-32 hidden dark:block"
                     />
-                    <FuzzyText
-                        fontSize="clamp(3rem, 6vw, 3rem)"
-                        fontWeight={800}
-                        fontFamily="Poppins, sans-serif"
-                        color="#059669"
-                        enableHover={true}
-                        baseIntensity={0.1}
-                        hoverIntensity={0.3}
-                    >
+                    <h1 className="text-5xl font-extrabold text-[#059669] dark:text-[#a3d9b1] tracking-tight font-inter">
                         ENBAYTECH
-                    </FuzzyText>
+                    </h1>
                     <p className="mt-4 text-gray-700 dark:text-gray-300 text-lg max-w-xl leading-relaxed font-poppins">
                         Yenilikçi, güvenilir ve sürdürülebilir dijital çözümlerle markanızı geleceğe taşıyoruz.
                     </p>
@@ -53,10 +44,10 @@ const About = () => {
 
                 <div className="grid md:grid-cols-2 gap-12 mb-20">
                     <div
-                        className="bg-white dark:bg-[#1e3227] rounded-2xl shadow-lg p-10 text-left"
+                        className="bg-gradient-to-br from-white to-gray-50 dark:from-[#1a1f1c] dark:to-[#111411] rounded-2xl p-4 text-center border border-gray-200 dark:border-gray-700"
                         data-aos="fade-right"
                     >
-                        <div className="flex items-center mb-6">
+                        <div className="flex items-center justify-center mb-6">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 className="h-10 w-10 text-green-500 mr-4"
@@ -81,10 +72,10 @@ const About = () => {
                     </div>
 
                     <div
-                        className="bg-white dark:bg-[#1e3227] rounded-2xl shadow-lg p-10 text-left"
+                        className="bg-gradient-to-br from-white to-gray-50 dark:from-[#1a1f1c] dark:to-[#111411] rounded-2xl p-4 text-center border border-gray-200 dark:border-gray-700"
                         data-aos="fade-left"
                     >
-                        <div className="flex items-center mb-6">
+                        <div className="flex items-center justify-center mb-6">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 className="h-10 w-10 text-green-500 mr-4"
