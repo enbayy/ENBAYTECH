@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
 
 const ContactSection = () => {
     const form = useRef();
@@ -12,14 +13,17 @@ const ContactSection = () => {
                 publicKey: 'jb5JnAoaIUFNs0sVR',
             })
             .then(() => {
-                alert('Mesajınız başarıyla gönderildi!');
+                toast.success(
+                    <p className="font-inter text-sm">Mesajınız başarıyla gönderildi!</p>
+                );
                 form.current.reset();
             }, (error) => {
-                alert('Mesaj gönderilemedi. Lütfen tekrar deneyin.');
+                toast.error(
+                    <p className="font-inter text-sm">Mesaj gönderilemedi. Lütfen tekrar deneyin.</p>
+                );
                 console.log('FAILED...', error.text);
             });
     };
-
     return (
         <section
             id="contact"
@@ -27,16 +31,15 @@ const ContactSection = () => {
         >
             <div data-aos="zoom-in" className="max-w-4xl mx-auto">
                 <div className="text-center mb-10">
-                    <h2 className="text-[#0f172a] dark:text-[#e0f2f1] text-4xl font-semibold text-color1 font-inter">İLETİŞİME GEÇ</h2>
+                    <h2 className="text-[#0f172a] dark:text-[#e0f2f1] text-4xl font-semibold font-inter">İLETİŞİME GEÇ</h2>
                     <p className="text-[#0f172a] dark:text-[#e0f2f1] mt-3 font-poppins text-sm">
                         Aşağıdaki formu doldurarak bizimle iletişime geçebilirsiniz.
                     </p>
                 </div>
-
                 <form ref={form} onSubmit={sendEmail} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                            <label className="text-[#0f172a] dark:text-[#e0f2f1] block mb-2 text-color2 font-medium font-poppins">
+                            <label className="text-[#0f172a] dark:text-[#e0f2f1] block mb-2 font-medium font-poppins">
                                 Adınız
                             </label>
                             <input
@@ -48,7 +51,7 @@ const ContactSection = () => {
                             />
                         </div>
                         <div>
-                            <label className="text-[#0f172a] dark:text-[#e0f2f1] block mb-2 text-color2 font-medium font-poppins">
+                            <label className="text-[#0f172a] dark:text-[#e0f2f1] block mb-2 font-medium font-poppins">
                                 E-posta
                             </label>
                             <input
@@ -60,9 +63,8 @@ const ContactSection = () => {
                             />
                         </div>
                     </div>
-
                     <div>
-                        <label className="text-[#0f172a] dark:text-[#e0f2f1] block mb-2 text-color2 font-medium font-poppins">
+                        <label className="text-[#0f172a] dark:text-[#e0f2f1] block mb-2 font-medium font-poppins">
                             Konu
                         </label>
                         <input
@@ -73,9 +75,8 @@ const ContactSection = () => {
                             required
                         />
                     </div>
-
                     <div>
-                        <label className="text-[#0f172a] dark:text-[#e0f2f1] block mb-2 text-color2 font-medium font-poppins">
+                        <label className="text-[#0f172a] dark:text-[#e0f2f1] block mb-2 font-medium font-poppins">
                             Mesajınız
                         </label>
                         <textarea
@@ -86,7 +87,6 @@ const ContactSection = () => {
                             required
                         ></textarea>
                     </div>
-
                     <div className="text-center">
                         <button
                             type="submit"
@@ -97,6 +97,7 @@ const ContactSection = () => {
                     </div>
                 </form>
             </div>
+            <ToastContainer />
         </section>
     );
 };
