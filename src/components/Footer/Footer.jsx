@@ -1,5 +1,6 @@
 import React from 'react';
 import { IoMdArrowDropright } from "react-icons/io";
+import { HiOutlineMail, HiOutlinePhone } from "react-icons/hi";
 import { FaLinkedin, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import logoLight from "../../assets/enbayLogo.png"
 import logoDark from "../../assets/enbayLogo3.png"
@@ -10,7 +11,6 @@ const Footer = () => {
         <footer className="container bg-white dark:bg-[#1a1f1c] py-16">
             <div className="mx-auto">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12">
-
                     <div className="flex flex-col items-center space-y-5">
                         <img
                             src={logoLight}
@@ -103,8 +103,16 @@ const Footer = () => {
 
                     <div className="flex flex-col items-center sm:items-start space-y-4">
                         <h4 className="text-2xl font-semibold text-[#0f172a] dark:text-[#e0f2f1] font-inter">İLETİŞİM</h4>
-                        <p className="text-lg text-[#0f172a] dark:text-[#e0f2f1] font-poppins">info@enbaytech.com</p>
-                        <p className="text-lg text-[#0f172a] dark:text-[#e0f2f1] font-poppins">+90 552 231 20 86</p>
+
+                        <div className="flex items-center space-x-2 text-lg text-[#0f172a] dark:text-[#e0f2f1] font-poppins">
+                            <HiOutlineMail size={22} className="text-[#10b981]" />
+                            <p>info@enbaytech.com</p>
+                        </div>
+
+                        <div className="flex items-center space-x-2 text-lg text-[#0f172a] dark:text-[#e0f2f1] font-poppins">
+                            <HiOutlinePhone size={22} className="text-[#10b981]" />
+                            <p>+90 552 231 20 86</p>
+                        </div>
                     </div>
                 </div>
 
