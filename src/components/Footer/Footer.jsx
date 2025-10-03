@@ -46,7 +46,7 @@ const Footer = () => {
                                 <FaWhatsapp size={28} />
                             </a>
                             <a
-                                href="https://www.instagram.com/enesbayaar/"
+                                href="https://www.instagram.com/enbaytech/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-[#0f172a] dark:text-[#e0f2f1] hover:text-[#10b981] dark:hover:text-[#10b981] transition-colors duration-300"
