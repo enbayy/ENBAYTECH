@@ -20,7 +20,7 @@ const About = () => {
     return (
         <section
             id="about"
-            className="container mx-auto px-6 py-12 sm:px-12 lg:px-24 font-poppins bg-white dark:bg-[#1a1f1c]"
+            className="container mx-auto px-6 py-12 sm:px-12 lg:px-24 font-poppins bg-white dark:bg-[#000000]"
         >
             <div className="max-w-5xl mx-auto text-center">
                 <div className="flex flex-col items-center mb-12" data-aos="zoom-in">
@@ -44,7 +44,7 @@ const About = () => {
 
                 <div className="grid md:grid-cols-2 gap-12 mb-20">
                     <div
-                        className="bg-gradient-to-br from-white to-gray-50 dark:from-[#1a1f1c] dark:to-[#111411] rounded-2xl p-4 text-center border border-gray-200 dark:border-gray-700"
+                        className="bg-gradient-to-br from-white to-gray-50 dark:from-[#000000] dark:to-[#111411] rounded-2xl p-4 text-center border border-gray-200 dark:border-gray-700"
                         data-aos="fade-right"
                     >
                         <div className="flex items-center justify-center mb-6">
@@ -72,7 +72,7 @@ const About = () => {
                     </div>
 
                     <div
-                        className="bg-gradient-to-br from-white to-gray-50 dark:from-[#1a1f1c] dark:to-[#111411] rounded-2xl p-4 text-center border border-gray-200 dark:border-gray-700"
+                        className="bg-gradient-to-br from-white to-gray-50 dark:from-[#000000] dark:to-[#111411] rounded-2xl p-4 text-center border border-gray-200 dark:border-gray-700"
                         data-aos="fade-left"
                     >
                         <div className="flex items-center justify-center mb-6">
@@ -129,7 +129,7 @@ const About = () => {
                 <div className="mt-20" data-aos="zoom-in">
                     <button
                         onClick={handleContactClick}
-                        className="inline-block px-6 py-3 sm:px-10 sm:py-3 md:px-14 md:py-4 border-2 border-[#0f172a] dark:border-[#e0f2f1] rounded-full font-semibold text-[#0f172a] dark:text-[#e0f2f1] hover:bg-[#FF7F00] hover:text-white dark:hover:bg-[#FF7F00] dark:hover:text-[#1a1f1c] transition duration-300 ease-in-out text-sm sm:text-base font-inter"
+                        className="inline-block px-6 py-3 sm:px-10 sm:py-3 md:px-14 md:py-4 border-2 border-[#0f172a] dark:border-[#e0f2f1] rounded-full font-semibold text-[#0f172a] dark:text-[#e0f2f1] hover:bg-[#FF7F00] hover:text-white dark:hover:bg-[#FF7F00] dark:hover:text-[#000000] transition duration-300 ease-in-out text-sm sm:text-base font-inter"
                     >
                         İletişime Geç
                     </button>

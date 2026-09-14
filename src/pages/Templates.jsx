@@ -9,7 +9,7 @@ const Templates = () => {
     }, []);
 
     return (
-        <section className="container bg-white dark:bg-[#1a1f1c] py-20">
+        <section className="container bg-white dark:bg-[#000000] py-20">
             <h2 className="text-4xl font-bold text-center mb-16 font-inter text-gray-800 dark:text-white" data-aos="fade-down">
                 PROJELERİMİZ
             </h2>
@@ -17,7 +17,7 @@ const Templates = () => {
                 {templates.map((template, index) => (
                     <div
                         key={template.id}
-                        className="group bg-gradient-to-br from-white to-gray-50 dark:from-[#1a1f1c] dark:to-[#111411] border border-gray-200 dark:border-gray-700 rounded-3xl overflow-hidden transform hover:-translate-y-2 hover:shadow-xl hover:shadow-orange-500/10 transition-all duration-300 max-w-[280px] mx-auto sm:max-w-sm"
+                        className="group bg-gradient-to-br from-white to-gray-50 dark:from-[#000000] dark:to-[#111411] border border-gray-200 dark:border-gray-700 rounded-3xl overflow-hidden transform hover:-translate-y-2 hover:shadow-xl hover:shadow-orange-500/10 transition-all duration-300 max-w-[280px] mx-auto sm:max-w-sm"
                         data-aos="zoom-in-up"
                         data-aos-delay={index * 150}
                     >

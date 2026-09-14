@@ -1,14 +1,32 @@
+```jsx
 import React from "react";
 import { motion } from "framer-motion";
 
 export const DrawCircleText = () => {
     return (
-        <div className="grid place-content-center px-4 py-12 text-yellow-50 bg-gradient-to-r from-orange-900 via-orange-700 to-orange-900">
+        <div
+            className="
+                grid
+                place-content-center
+                px-4
+                py-12
+                text-yellow-50
+                bg-gradient-to-r
+                from-orange-900
+                via-orange-700
+                to-orange-900
+                dark:bg-black
+                dark:bg-none
+            "
+        >
             <div className="max-w-2xl mx-auto flex flex-col sm:block items-center gap-6 sm:gap-0">
+
                 <h1 className="text-center text-3xl sm:text-5xl leading-snug font-poppins mb-6 sm:mb-8 px-2 sm:px-0">
                     Markanızı{" "}
+
                     <span className="relative font-poppins whitespace-nowrap inline-block">
                         enbaytech
+
                         <svg
                             viewBox="0 0 286 73"
                             fill="none"
@@ -27,17 +45,45 @@ export const DrawCircleText = () => {
                             />
                         </svg>
                     </span>{" "}
+
                     profesyonel tasarımlarla büyütün
                 </h1>
+
                 <motion.div className="flex justify-center sm:justify-center">
                     <a
                         href="#iletisim"
-                        className="inline-block px-5 py-2 sm:px-10 sm:py-3 md:px-14 md:py-4 border-2 border-white rounded-full font-semibold text-white hover:bg-[#FF7F00] hover:text-white dark:hover:bg-[#FF7F00] dark:hover:text-[#1a1f1c] transition duration-300 ease-in-out text-sm sm:text-base font-inter whitespace-nowrap"
+                        className="
+                            inline-block
+                            px-5
+                            py-2
+                            sm:px-10
+                            sm:py-3
+                            md:px-14
+                            md:py-4
+                            border-2
+                            border-white
+                            rounded-full
+                            font-semibold
+                            text-white
+                            hover:bg-[#FF7F00]
+                            hover:text-white
+                            dark:hover:bg-[#FF7F00]
+                            dark:hover:text-black
+                            transition
+                            duration-300
+                            ease-in-out
+                            text-sm
+                            sm:text-base
+                            font-inter
+                            whitespace-nowrap
+                        "
                     >
                         Hemen Başla
                     </a>
                 </motion.div>
+
             </div>
         </div>
     );
 };
+```

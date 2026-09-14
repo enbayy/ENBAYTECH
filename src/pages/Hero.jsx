@@ -36,7 +36,7 @@ const ShuffleHero = () => {
         >
           <a
             href="#iletisim"
-            className="inline-block px-6 py-3 sm:px-10 sm:py-3 md:px-14 md:py-4 border-2 border-[#0f172a] dark:border-[#e0f2f1] rounded-full font-semibold text-[#0f172a] dark:text-[#e0f2f1] hover:bg-[#FF7F00] hover:text-white dark:hover:bg-[#FF7F00] dark:hover:text-[#1a1f1c] transition duration-300 ease-in-out text-sm sm:text-base font-inter"
+            className="inline-block px-6 py-3 sm:px-10 sm:py-3 md:px-14 md:py-4 border-2 border-[#0f172a] dark:border-[#e0f2f1] rounded-full font-semibold text-[#0f172a] dark:text-[#e0f2f1] hover:bg-[#FF7F00] hover:text-white dark:hover:bg-[#FF7F00] dark:hover:text-[#000000] transition duration-300 ease-in-out text-sm sm:text-base font-inter"
           >
             Hemen Başla
           </a>

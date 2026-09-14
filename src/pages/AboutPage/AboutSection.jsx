@@ -12,7 +12,7 @@ export const AboutSection = () => {
     ];
 
     return (
-        <section className="container bg-white dark:bg-[#1a1f1c] py-12 px-4 sm:px-6 lg:px-8 font-sans">
+        <section className="container bg-white dark:bg-[#000000] py-12 px-4 sm:px-6 lg:px-8 font-sans">
             <div className="mx-auto grid md:grid-cols-2 gap-16 items-center">
                 <motion.div
                     initial={{ x: -60, opacity: 0 }}
@@ -38,7 +38,7 @@ export const AboutSection = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: index * 0.15, duration: 0.5 }}
                                 viewport={{ once: true }}
-                                className="bg-white dark:bg-[#1a1f1c] border border-gray-200 dark:border-gray-700 rounded-2xl text-[#0f172a] dark:text-[#e0f2f1] font-semibold font-inter shadow-md hover:shadow-lg hover:shadow-orange-500/30 transition duration-300 px-6 py-4 flex items-center gap-3 group"
+                                className="bg-white dark:bg-[#000000] border border-gray-200 dark:border-gray-700 rounded-2xl text-[#0f172a] dark:text-[#e0f2f1] font-semibold font-inter shadow-md hover:shadow-lg hover:shadow-orange-500/30 transition duration-300 px-6 py-4 flex items-center gap-3 group"
                             >
                                 <span className="text-2xl group-hover:scale-110 transition-transform duration-300">
                                     {icon}

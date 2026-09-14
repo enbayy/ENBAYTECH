@@ -12,7 +12,7 @@ const AllServices = () => {
   return (
     <section
       id="all-services"
-      className="container bg-white dark:bg-[#1a1f1c] py-20"
+      className="container bg-white dark:bg-[#000000] py-20"
     >
       <div className="mx-auto">
         <div className="text-center mb-16" data-aos="fade-down">
@@ -28,14 +28,14 @@ const AllServices = () => {
           {services.map((service, index) => (
             <div
               key={service.id}
-              className="group bg-gradient-to-br from-white to-gray-50 dark:from-[#1a1f1c] dark:to-[#111411] border border-gray-200 dark:border-gray-700 rounded-3xl p-8 hover:shadow-xl transition-transform duration-300 hover:-translate-y-2"
+              className="group bg-gradient-to-br from-white to-gray-50 dark:from-[#000000] dark:to-[#111411] border border-gray-200 dark:border-gray-700 rounded-3xl p-8 hover:shadow-xl transition-transform duration-300 hover:-translate-y-2"
               data-aos="flip-left"
               data-aos-delay={index * 200}
             >
               <div className="flex items-center gap-4 mb-6">
                 <div className="relative p-[2px] rounded-full bg-gradient-to-tr from-[#FF7F00] to-[#FFB347] group-hover:rotate-45 transition-transform duration-500">
                   <div className="relative p-[2px] rounded-full bg-gradient-to-tr from-[#FF7F00] to-[#FFB347] group-hover:rotate-45 transition-transform duration-500">
-                    <div className="bg-white dark:bg-[#1a1f1c] p-4 rounded-full slow-spin">
+                    <div className="bg-white dark:bg-[#000000] p-4 rounded-full slow-spin">
                       {service.icon}
                     </div>
                   </div>
