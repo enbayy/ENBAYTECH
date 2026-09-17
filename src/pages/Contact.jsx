@@ -1,6 +1,8 @@
 import React, { useRef } from "react";
-import emailjs from '@emailjs/browser';
-import { ToastContainer, toast } from 'react-toastify';
+
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import { FaWhatsapp } from "react-icons/fa";
 
 const ContactSection = () => {
     const form = useRef();
@@ -9,21 +11,42 @@ const ContactSection = () => {
         e.preventDefault();
 
         emailjs
-            .sendForm('service_0et0z18', 'template_aq1ig3s', form.current, {
-                publicKey: 'jb5JnAoaIUFNs0sVR',
-            })
+            .sendForm(
+                "service_0et0z18",
+                "template_aq1ig3s",
+                form.current,
+                {
+                    publicKey: "jb5JnAoaIUFNs0sVR",
+                }
+            )
             .then(() => {
                 toast.success(
-                    <p className="font-inter text-sm">Mesajınız başarıyla gönderildi!</p>
+                    <p className="font-inter text-sm">
+                        Mesajınız başarıyla gönderildi!
+                    </p>
                 );
                 form.current.reset();
-            }, (error) => {
+            })
+            .catch((error) => {
                 toast.error(
-                    <p className="font-inter text-sm">Mesaj gönderilemedi. Lütfen tekrar deneyin.</p>
+                    <p className="font-inter text-sm">
+                        Mesaj gönderilemedi. Lütfen tekrar deneyin.
+                    </p>
                 );
-                console.log('FAILED...', error.text);
+                console.log("FAILED...", error.text);
             });
     };
+
+    const openWhatsApp = () => {
+        const phoneNumber = "905522312086";
+        const message = "Merhaba, bilgi almak istiyorum.";
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+            message
+        )}`;
+
+        window.open(whatsappUrl, "_blank");
+    };
+
     return (
         <section
             id="contact"
@@ -31,17 +54,26 @@ const ContactSection = () => {
         >
             <div data-aos="zoom-in" className="max-w-4xl mx-auto">
                 <div className="text-center mb-10">
-                    <h2 className="text-[#0f172a] dark:text-[#e0f2f1] text-4xl font-semibold font-inter">İLETİŞİME GEÇ</h2>
+                    <h2 className="text-[#0f172a] dark:text-[#e0f2f1] text-4xl font-semibold font-inter">
+                        İLETİŞİME GEÇ
+                    </h2>
+
                     <p className="text-[#0f172a] dark:text-[#e0f2f1] mt-3 font-poppins text-sm">
                         Aşağıdaki formu doldurarak bizimle iletişime geçebilirsiniz.
                     </p>
                 </div>
-                <form ref={form} onSubmit={sendEmail} className="space-y-6">
+
+                <form
+                    ref={form}
+                    onSubmit={sendEmail}
+                    className="space-y-6"
+                >
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label className="text-[#0f172a] dark:text-[#e0f2f1] block mb-2 font-medium font-poppins">
                                 Adınız
                             </label>
+
                             <input
                                 name="user_name"
                                 type="text"
@@ -50,10 +82,12 @@ const ContactSection = () => {
                                 required
                             />
                         </div>
+
                         <div>
                             <label className="text-[#0f172a] dark:text-[#e0f2f1] block mb-2 font-medium font-poppins">
                                 E-posta
                             </label>
+
                             <input
                                 name="user_email"
                                 type="email"
@@ -63,10 +97,12 @@ const ContactSection = () => {
                             />
                         </div>
                     </div>
+
                     <div>
                         <label className="text-[#0f172a] dark:text-[#e0f2f1] block mb-2 font-medium font-poppins">
                             Konu
                         </label>
+
                         <input
                             name="subject"
                             type="text"
@@ -75,10 +111,12 @@ const ContactSection = () => {
                             required
                         />
                     </div>
+
                     <div>
                         <label className="text-[#0f172a] dark:text-[#e0f2f1] block mb-2 font-medium font-poppins">
                             Mesajınız
                         </label>
+
                         <textarea
                             name="message"
                             rows="5"
@@ -87,16 +125,33 @@ const ContactSection = () => {
                             required
                         ></textarea>
                     </div>
-                    <div className="text-center">
+
+                    {/* Butonlar */}
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+
+                        {/* Gönder - Pasif */}
                         <button
-                            type="submit"
-                            className="inline-block px-6 py-3 sm:px-10 sm:py-3 md:px-14 md:py-4 border-2 border-[#0f172a] dark:border-[#e0f2f1] rounded-full font-semibold text-[#0f172a] dark:text-[#e0f2f1] hover:bg-[#FF7F00] hover:text-white dark:hover:bg-[#FF7F00] dark:hover:text-[#000000] transition duration-300 ease-in-out text-sm sm:text-base font-inter"
+                            type="button"
+                            disabled
+                            className="inline-block px-6 py-3 sm:px-10 sm:py-3 md:px-14 md:py-4 border-2 border-[#0f172a] dark:border-[#e0f2f1] rounded-full font-semibold text-[#0f172a] dark:text-[#e0f2f1] opacity-50 cursor-not-allowed text-sm sm:text-base font-inter"
                         >
                             Gönder
                         </button>
+
+                        {/* WhatsApp */}
+                        <button
+                            type="button"
+                            onClick={openWhatsApp}
+                            className="inline-flex items-center justify-center gap-2 px-6 py-3 sm:px-8 sm:py-3 md:px-10 md:py-4 rounded-full font-semibold bg-[#25D366] text-white hover:bg-[#1ebe5d] transition duration-300 ease-in-out text-sm sm:text-base font-inter"
+                        >
+                            <FaWhatsapp className="text-xl sm:text-2xl" />
+                            Bize Ulaşın
+                        </button>
+
                     </div>
                 </form>
             </div>
+
             <ToastContainer />
         </section>
     );
