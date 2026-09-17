@@ -142,7 +142,7 @@ const ContactSection = () => {
                         <button
                             type="button"
                             onClick={openWhatsApp}
-                            className="inline-flex items-center justify-center gap-2 px-6 py-3 sm:px-8 sm:py-3 md:px-10 md:py-4 rounded-full font-semibold bg-[#25D366] text-white hover:bg-[#1ebe5d] transition duration-300 ease-in-out text-sm sm:text-base font-inter"
+                            className="inline-flex items-center justify-center gap-2 px-6 py-3 sm:px-8 sm:py-3 md:px-10 md:py-4 rounded-full font-semibold bg-[#1FBD5B] text-white hover:bg-[#169447] transition duration-300 ease-in-out text-sm sm:text-base font-inter"
                         >
                             <FaWhatsapp className="text-xl sm:text-2xl" />
                             Bize Ulaşın
